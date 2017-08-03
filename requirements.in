@@ -1,0 +1,6 @@
+Sphinx
+sphinx-intl
+transifex-client
+sphinx_rtd_theme
+# recommonmark commit pinned from master branch
+-e git+https://github.com/rtfd/recommonmark.git@c410abb565a3c4ad4de0ce204ab2fa2db8031cf1#egg=recommonmark
