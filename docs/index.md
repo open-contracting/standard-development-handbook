@@ -21,11 +21,20 @@ Next steps:
 * [ ] Developing the table of contents / outline for this handbook;
 * [ ] Start writing documentation.
 
+
+## Draft table of contents
+
+* **Staging** - Steps involved in staging a new version of the standard
+* **Deployment** - steps involved in deploying a new version of the standard
+
+
 ## Contents
 
 ```eval_rst
 .. toctree::
    :maxdepth: 2
-   :glob: *
+   :glob:
+   
+   *
 
 ```
