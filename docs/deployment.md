@@ -32,8 +32,23 @@ This is currently achieved by:
 
 ### To pin extensions: worked example
 
-ADD DOCUMENTATION HERE
+For each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions):
 
+#### Review outstanding pull requests and changes since last release
+
+1. Open the relevant repository in the Github web interface ([example](https://github.com/open-contracting/ocds_lots_extension))
+1. Review any outstanding [pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls) and discuss these to determine whether they should be merged before pinning the extension
+1. Under the repository title and description, click **Releases** to view the list of existing releases ([example](https://github.com/open-contracting/ocds_lots_extension/releases))
+1. Under the title of the most recent release, the number of commits since that release will be listed, if there are no commits since the last release then skip to 'Publish a new release', otherwise click the link to view the list of changes since the last release ([example](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master))
+1. Check the list of changes since the last release against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
+1. Before publishing the release, discuss any substantive changes, i.e. not simple typo or documentation updates, which aren't included in the changelog
+
+#### Publish a new release
+
+1. From the list of releases, click **Draft a new release**
+1. In the 'Tag version' field, enter the version of OCDS being deployed in vmajor.minor.patch format, e.g. `v1.1.1`
+1. In the 'Release title' field, enter a title, e.g. 'Fixed version for OCDS 1.1.1'
+1. Enter a brief summary of changes, e.g. 'Typo fixes', and click **Publish release**
 
 ## (2) Check schema IDs
 
