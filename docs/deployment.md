@@ -89,7 +89,6 @@ If the 1.1 schema files were copied correctly, they should now appear at [http:/
 ## 8. Further deployment step (WIP)
 
 
-
 ## FAQ
 
 **How can I find out what the standard looked like at 1.0?**
@@ -99,4 +98,3 @@ To find the latest (patch) version of a minor release, look at the contents of t
 **How can I find out what the standard looked like at 1.1.0?**
 
 TBC. (Is the answer to look for a tagged release?)
-
