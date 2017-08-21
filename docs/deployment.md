@@ -1,38 +1,23 @@
 # Deployment
 
-The section describes the steps involved in deploying an updated version of the standard to become the live version.
+This section describes the steps involved in deploying an updated version of the standard to become the live version.
 
 This process is used for major, minor and patch upgrades.
 
-### Branch naming (ToMove)
 
-A branch exists in the repository for each deployed (live) minor version of OCDS, named after the branch version. These version branches should be protected. 
+## 1. Freeze extensions
 
-For each version, a '-dev' branch may be created as the working copy. 
-
-Patch versions may further branch off the '-dev' copy, with work merged into -dev before being merged into the live branch.
-
-Worked example of branch structure:
-
-* **1.0** - contains the latest deployed patch release of OCDS 1.0 (e.g. 1.0.2)
-* **1.1** - contains the latest deployed patch release of OCDS 1.1 (e.g. 1.1.0)
-  * **1.1-dev** - used to stage changes to version 1.1 (such as minor documentation changes)
-  * **1.1.1-dev** - used to work on a 1.1.1 version (including schema changes and fixes)
-
-
-## (1) Freeze extensions
-
-Each release of the standard should pin to specific versions of each **core** extension. Community extensions are not pinned. 
+Each release of the standard should pin to specific versions of each extension in [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned. 
 
 This is currently achieved by:
 
-* Creating a tagged release of each extension;
-* Creating a tagged release of the extension registry that points to these specific versions;
-* Setting the documentation build process to refer to the relevant extension registry tag;
+* Creating a tagged release of each extension
+* Creating a tagged release of the extension registry that points to these specific versions
+* Setting the documentation build process to refer to the relevant extension registry tag
 
-### To pin extensions: worked example
+### Pinning extensions: worked example
 
-For each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions):
+For each **core extension**:
 
 #### Review outstanding pull requests and changes since last release
 
@@ -46,11 +31,11 @@ For each [core extension](http://standard.open-contracting.org/latest/en/extensi
 #### Publish a new release
 
 1. From the list of releases, click **Draft a new release**
-1. In the 'Tag version' field, enter the version of OCDS being deployed in vmajor.minor.patch format, e.g. `v1.1.1`
+1. In the 'Tag version' field, enter the version of OCDS being deployed in _vmajor.minor.patch_ format, e.g. `v1.1.1`
 1. In the 'Release title' field, enter a title, e.g. 'Fixed version for OCDS 1.1.1'
 1. Enter a brief summary of changes, e.g. 'Typo fixes', and click **Publish release**
 
-## (2) Check schema IDs
+## 2. Check schema IDs
 
 Check that the `id` property at the top of each JSON schema file have been updated to reflect the current major__minor__patch version number. 
 
@@ -63,7 +48,7 @@ For example:
 }
 ```
 
-## (3) Make validation schema
+## 3. Make validation schema
 
 The 'versioned-release-validation-schema.json' file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. 
 
@@ -74,7 +59,7 @@ To run this script:
 
 Then commit the updated 'versioned-release-validation-schema.json' file to the repository. 
 
-## (4) Push and pull updated translations
+## 4. Push and pull updated translations
 
 Run `tx push -s` to push updated sources files to Transifex
 
@@ -84,28 +69,28 @@ Commit the updated translations to the repository.
 
 **ToDo**: How can we test translation and be sure all strings had valid translations? 
 
-## (5) Merge standard
+## 5. Merge standard
 
 The '-dev' working branch should be merged into the relevant live branch. 
 
 (If required, this may happen by first merging a patch '-dev' branch into the '-dev' branch for a major or minor version, and then merging onwards into the live branch)
 
 
-## (6) Create a tagged release
+## 6. Create a tagged release
 
 Named e.g. 1__1__0
 
 
-## (7) Copy the schema into place
+## 7. Copy the schema into place
 
-See guidance at https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls
-If the 1.1 schema files were copied correctly, they should now appear at http://standard.open-contracting.org/schema/1__1__0/
+See guidance at [https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls).
+If the 1.1 schema files were copied correctly, they should now appear at [http://standard.open-contracting.org/schema/1__1__0/](http://standard.open-contracting.org/schema/1__1__0/).
 
-## (7) FURTHER DEPLOYMENT STEPS
+## 8. Further deployment step (WIP)
 
 
 
-## Questions
+## FAQ
 
 **How can I find out what the standard looked like at 1.0?**
 
