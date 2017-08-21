@@ -50,14 +50,14 @@ For example:
 
 ## 3. Make validation schema
 
-The 'versioned-release-validation-schema.json' file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. 
+The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. 
 
 To run this script:
 
-1. Update 'standard/schema/make_validation_schema.py' to refer to the correct version number (Line 94)
+1. Update _standard/schema/make_validation_schema.py_ to refer to the correct version number (Line 94)
 2. Run make_validation_schema.py
 
-Then commit the updated 'versioned-release-validation-schema.json' file to the repository. 
+Then commit the updated _versioned-release-validation-schema.json_ file to the repository. 
 
 ## 4. Push and pull updated translations
 
@@ -71,9 +71,9 @@ Commit the updated translations to the repository.
 
 ## 5. Merge standard
 
-The '-dev' working branch should be merged into the relevant live branch. 
+The dev working branch should be merged into the relevant live branch. 
 
-(If required, this may happen by first merging a patch '-dev' branch into the '-dev' branch for a major or minor version, and then merging onwards into the live branch)
+(If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch)
 
 
 ## 6. Create a tagged release
