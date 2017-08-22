@@ -31,6 +31,7 @@ Next steps:
 
    repository
    extensions
+   profiles
    staging
    deployment
    tools
