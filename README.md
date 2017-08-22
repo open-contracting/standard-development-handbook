@@ -1,6 +1,6 @@
 # Standard Development Handbook
 
-A guide for developers and maintainers of the Open Contracting Data Standard 
+A guide for developers and maintainers of the Open Contracting Data Standard
 
 Config in this repo from OpenDataServices' [sphinx-base](https://github.com/OpenDataServices/sphinx-base). Also there are [instructions on the ReadTheDocs setup](https://github.com/OpenDataServices/sphinx-base#building-on-readthedocs).
 

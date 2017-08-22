@@ -17,5 +17,6 @@ Used only to build these docs, see [the README](https://github.com/open-contract
 Emails code [at] opendataservices [dot] coop when a requirement we're using has a security vulnerability. This can be configured on the [requires.io hooks page](https://requires.io/github/open-contracting/hooks/).
 
 The web interface can also we used to see what requirements are out of date:
+
 * [standard](https://requires.io/github/open-contracting/standard/requirements/)
 * [sample-data](https://requires.io/github/open-contracting/sample-data/requirements/)
