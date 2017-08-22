@@ -30,10 +30,10 @@ Next steps:
    :glob:
 
    repository
+   extensions
    staging
    deployment
    tools
-   extensions
    resources
 
 ```
