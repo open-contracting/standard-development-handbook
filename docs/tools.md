@@ -3,13 +3,17 @@
 ## Validator
 [OCDS validator](http://standard.open-contracting.org/validator/)
 
-[COve GitHub](https://github.com/OpenDataServices/cove)
+[COve in GitHub](https://github.com/OpenDataServices/cove)
 
 ## OCDS Show
-[OCDS Show](https://github.com/open-contracting/ocds-show)
+[OCDS show](https://github.com/open-contracting/ocds-show)
+
+## OCDS Merge
+[OCDS merge](https://github.com/open-contracting/ocds-merge)
 
 ## OCDS Faker
 [OCDS faker](https://github.com/open-contracting/ocds-faker)
+
 
 ## Extension tools
 
