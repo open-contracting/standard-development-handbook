@@ -34,6 +34,7 @@ Next steps:
    profiles
    staging
    deployment
+   github_integrations
    tools
    resources
 
