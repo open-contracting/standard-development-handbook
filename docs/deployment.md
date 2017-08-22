@@ -4,6 +4,10 @@ This section describes the steps involved in deploying an updated version of the
 
 This process is used for major, minor and patch upgrades.
 
+For changes just to documentation (no schema changes), start from step 4.
+
+For theme changes, start from step 8.
+
 
 ## 1. Freeze extensions
 
@@ -73,21 +77,79 @@ Commit the updated translations to the repository.
 
 The dev working branch should be merged into the relevant live branch. 
 
-(If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch)
+e.g. merge 1.1-dev onto 1.1
 
+Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated).
+
+(If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch)
 
 ## 6. Create a tagged release
 
 Named e.g. 1__1__0
 
-
 ## 7. Copy the schema into place
 
-See guidance at [https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs-live.sls).
-If the 1.1 schema files were copied correctly, they should now appear at [http://standard.open-contracting.org/schema/1__1__0/](http://standard.open-contracting.org/schema/1__1__0/).
+If you've made a semantic update to the schema, that should be tagged with a
+patch version (e.g. 1__0__1 on GitHub), and the json should be copied to
+/home/ocds-docs/web/schema on live2.
 
-## 8. Further deployment step (WIP)
+e.g. for 1.1.1 there should be JSON files at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
 
+
+## 8. Build on travis
+
+Step 5. will trigger a build on travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
+
+Once this is done, check the staging site, e.g. for 1.1:
+http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/
+
+## 9. Copy the files:
+
+```bash
+VER=1.1            # (for example)
+DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3
+                   # (see ${VER}/en/index.html)
+SEQ=1              # To deploy again on the same day, increment to 2 etc
+```
+
+Copy from dev3 to your local box:
+
+```bash
+scp -r \
+  root@dev3.default.opendataservices.uk0.bigv.io:/home/ocds-docs/web/${VER} \
+  ${VER}-${DATE}-${SEQ}
+```
+
+Copy from your local box to live2:
+
+```bash
+scp -r \
+  ${VER}-${DATE}-${SEQ} \
+  root@live2.default.opendataservices.uk0.bigv.io:/home/ocds-docs/web/
+```
+
+Symlink the version number:
+
+```bash
+ssh root@live2.default.opendataservices.uk0.bigv.io \
+  "rm /home/ocds-docs/web/${VER}; ln -sf ${VER}-${DATE}-${SEQ} /home/ocds-docs/web/${VER}"
+```
+
+## 10. /latest/
+
+If the build should also appear on /latest/ then update the `latest`
+branch on GitHub, and repeat the steps above for VER=latest.
+This is necessary because some aspects of the travis build depend on the
+branch (e.g. to construct urls correctly).
+
+## 11. (Minor/Major version only)  Update Apache config
+
+See:
+
+```
+  salt/apache/ocds-docs-live.conf ("set live_versions = [...]")
+  salt/ocds-docs/include/banner_* and version-options.html
+```
 
 ## FAQ
 
