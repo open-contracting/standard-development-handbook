@@ -1,5 +1,4 @@
-OCDS: Standard Development Handbook
-====================================
+# OCDS: Standard Development Handbook
 
 This handbook documents:
 
@@ -20,7 +19,6 @@ Next steps:
 * [ ] Developing a style guide for this handbook;
 * [ ] Developing the table of contents / outline for this handbook;
 * [ ] Start writing documentation.
-
 
 ## Table of Contents
 

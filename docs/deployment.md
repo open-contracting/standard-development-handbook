@@ -4,10 +4,9 @@ This section describes the steps involved in deploying an updated version of the
 
 This process is used for major, minor and patch upgrades.
 
-
 ## 1. Freeze extensions
 
-Each release of the standard should pin to specific versions of each extension in [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned. 
+Each release of the standard should pin to specific versions of each extension in [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned.
 
 This is currently achieved by:
 
@@ -37,9 +36,9 @@ For each **core extension**:
 
 ## 2. Check schema IDs
 
-Check that the `id` property at the top of each JSON schema file have been updated to reflect the current major__minor__patch version number. 
+Check that the `id` property at the top of each JSON schema file have been updated to reflect the current major__minor__patch version number.
 
-For example: 
+For example:
 
 ```json
 {
@@ -50,14 +49,14 @@ For example:
 
 ## 3. Make validation schema
 
-The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. 
+The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository.
 
 To run this script:
 
 1. Update _standard/schema/make_validation_schema.py_ to refer to the correct version number (Line 94)
-2. Run make_validation_schema.py
+1. Run make_validation_schema.py
 
-Then commit the updated _versioned-release-validation-schema.json_ file to the repository. 
+Then commit the updated _versioned-release-validation-schema.json_ file to the repository.
 
 ## 4. Push and pull updated translations
 
@@ -65,21 +64,19 @@ Run `tx push -s` to push updated sources files to Transifex
 
 Run `tx pull -a -f` to pull all updated translation files down locally.
 
-Commit the updated translations to the repository. 
+Commit the updated translations to the repository.
 
-**ToDo**: How can we test translation and be sure all strings had valid translations? 
+**ToDo**: How can we test translation and be sure all strings had valid translations?
 
 ## 5. Merge standard
 
-The dev working branch should be merged into the relevant live branch. 
+The dev working branch should be merged into the relevant live branch.
 
 (If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch)
-
 
 ## 6. Create a tagged release
 
 Named e.g. 1__1__0
-
 
 ## 7. Copy the schema into place
 
@@ -87,7 +84,6 @@ See guidance at [https://github.com/OpenDataServices/opendataservices-deploy/blo
 If the 1.1 schema files were copied correctly, they should now appear at [http://standard.open-contracting.org/schema/1__1__0/](http://standard.open-contracting.org/schema/1__1__0/).
 
 ## 8. Further deployment step (WIP)
-
 
 ## FAQ
 
