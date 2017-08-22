@@ -1,14 +1,9 @@
-# Open Data Services Sphinx Base
+# Standard Development Handbook
 
-The base Sphinx setup (recommonmark + internationalisation) for Open Data
-Services docs projects.
+A guide for developers and maintainers of the Open Contracting Data Standard 
 
-## Features
-
-* Markdown support (thanks to recommonmark)
-* Internationalisation
-* Wrapping text in tables, to avoid having horizontal scrollbars
-
+Config in this repo from OpenDataServices' sphinx-base: https://github.com/OpenDataServices/sphinx-base
+Also there are [instructions on the ReadTheDocs setup](https://github.com/OpenDataServices/sphinx-base#building-on-readthedocs).
 
 ## Building the documentation
 
@@ -43,56 +38,3 @@ python -m http.server
 
 Then go to http://localhost:8000/ in a browser.
 
-
-### Building on readthedocs
-
-* Select your repo at: https://readthedocs.org/dashboard/import/
-* Tick: "Edit advanced project options:"
-* Click "Next" button
-* Documentation type: "Sphinx HtmlDir"
-* Click "Finish" button
-* Click "Admin" button, then "Advanced Settings" in the left hand nav
-* Requirements file: "requirements.txt"
-* Python interpreter: "CPython 3.x"
-* Click "Submit" button
-
-
-
-### Translations
-
-Translations are generally done using this transifex project.
-Create one at https://www.transifex.com/OpenDataServices/add/ :
-* Select "Public project" and "File-based Project".
-* Add the url of the project to this README, e.g. https://www.transifex.com/OpenDataServices/sphinx-base/dashboard/
-
-How to push new text up to Transifex:
-
-First, do a local build, then:
-
-```
-cd docs
-make gettext
-sphinx-intl update-txconfig-resources --transifex-project-name <project-name>
-tx push -s
-```
-
-When the translations are filled in transifex you need to run:
-
-```
-tx pull -a -f
-```
-
-These should then be commited and then pushed to GitHub (so that actual
-deployed translations are always version controlled).
-
-Running the build in another language:
-
-```
-make -e SPHINXOPTS="-D language='<language code>'" html
-```
-
-If translations are added locally, these can also be pushed up to Transifex:
-
-```
-tx push -t --skip
-```

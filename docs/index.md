@@ -31,8 +31,10 @@ Next steps:
 
    repository
    extensions
+   profiles
    staging
    deployment
+   github_integrations
    tools
    resources
 
