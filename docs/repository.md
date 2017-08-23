@@ -4,7 +4,6 @@ The repository for the standard for open contracting is developed and maintained
 
 The standard uses [semantic versioning](http://semver.org/), with versions following the _MAJOR.MINOR.PATCH_ name convention.
 
-
 ## Branch naming
 
 Each deployed (live) minor version of OCDS is based on a repository branch named after the version. These version branches should be [protected](https://help.github.com/articles/about-protected-branches/).

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# flake8: noqa
 #
 # Open Data Services sphinx base documentation build configuration file,
 # created by sphinx-quickstart on Wed Nov  2 14:17:45 2016.
