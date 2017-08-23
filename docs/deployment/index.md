@@ -6,5 +6,6 @@
    :glob:
 
    standard-live
+   servers
 
 ```

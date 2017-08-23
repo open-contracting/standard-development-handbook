@@ -44,6 +44,8 @@ Each branch of the [public-private-partnerships](https://github.com/open-contrac
 
 ## Copying live deploy into place
 
+(See the [servers](deployment/servers) page for more info on how our servers are set up.)
+
 ```bash
 VER=1.0            # (for example)
 DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3
