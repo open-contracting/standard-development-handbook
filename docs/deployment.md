@@ -8,10 +8,9 @@ For changes just to documentation (no schema changes), start from step 4.
 
 For theme changes, start from step 8.
 
-
 ## 1. Freeze extensions
 
-Each release of the standard should pin to specific versions of each extension in [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned. 
+Each release of the standard should pin to specific versions of each extension in [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned.
 
 This is currently achieved by:
 
@@ -41,9 +40,9 @@ For each **core extension**:
 
 ## 2. Check schema IDs
 
-Check that the `id` property at the top of each JSON schema file have been updated to reflect the current major__minor__patch version number. 
+Check that the `id` property at the top of each JSON schema file have been updated to reflect the current major__minor__patch version number.
 
-For example: 
+For example:
 
 ```json
 {
@@ -54,14 +53,14 @@ For example:
 
 ## 3. Make validation schema
 
-The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. 
+The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository.
 
 To run this script:
 
 1. Update _standard/schema/make_validation_schema.py_ to refer to the correct version number (Line 94)
-2. Run make_validation_schema.py
+1. Run make_validation_schema.py
 
-Then commit the updated _versioned-release-validation-schema.json_ file to the repository. 
+Then commit the updated _versioned-release-validation-schema.json_ file to the repository.
 
 ## 4. Push and pull updated translations
 
@@ -69,13 +68,13 @@ Run `tx push -s` to push updated sources files to Transifex
 
 Run `tx pull -a -f` to pull all updated translation files down locally.
 
-Commit the updated translations to the repository. 
+Commit the updated translations to the repository.
 
-**ToDo**: How can we test translation and be sure all strings had valid translations? 
+**ToDo**: How can we test translation and be sure all strings had valid translations?
 
 ## 5. Merge standard
 
-The dev working branch should be merged into the relevant live branch. 
+The dev working branch should be merged into the relevant live branch.
 
 e.g. merge 1.1-dev onto 1.1
 
@@ -95,15 +94,14 @@ patch version (e.g. 1__0__1 on GitHub), and the json should be copied to
 
 e.g. for 1.1.1 there should be JSON files at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
 
-
 ## 8. Build on travis
 
 Step 5. will trigger a build on travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Once this is done, check the staging site, e.g. for 1.1:
-http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/
+[http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/)
 
-## 9. Copy the files:
+## 9. Copy the files
 
 ```bash
 VER=1.1            # (for example)

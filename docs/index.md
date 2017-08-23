@@ -1,5 +1,4 @@
-OCDS: Standard Development Handbook
-====================================
+# OCDS: Standard Development Handbook
 
 This handbook documents:
 
@@ -21,7 +20,6 @@ Next steps:
 * [ ] Developing the table of contents / outline for this handbook;
 * [ ] Start writing documentation.
 
-
 ## Table of Contents
 
 ```eval_rst
@@ -31,8 +29,10 @@ Next steps:
 
    repository
    extensions
+   profiles
    staging
    deployment
+   github_integrations
    tools
    resources
 
