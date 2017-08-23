@@ -54,7 +54,6 @@ As in the code standard repository, in the [standard extension template](https:/
 Codelists are CSV files with camel case names , e.g. _contractStatus.csv_. Be aware that a codelist in your extension using the same name of an existing codelist in the standard repository will override the existing codelist.
 
 
-
 ## Versioning Extensions
 
 The standard [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) are currently versioned using [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) via the [releases feature in GitHub](https://help.github.com/categories/releases/) (which builds on Git tags).
@@ -64,6 +63,7 @@ This is particularly important for new releases and deployments of OCDS, as each
 [Community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), on the other hand, are externally maintained and not pinned to releases of the standard.
 
 N.B. The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the _same_ standard release cycle) and 'externally' (with reference to _different_ standard versions) is likely to change in the future. Take a look at this [GitHub issue](https://github.com/open-contracting/extension_registry/issues/47) in the [extension registry](https://github.com/open-contracting/extension_registry) repo for more information on this topic.
+
 
 ## Tools
 
@@ -77,6 +77,7 @@ The tool will create a zip file to download, containing the patch schema file pl
 ### Extension tester
 
 Another useful tool to help creating extensions is the [Extension tester](https://github.com/open-contracting/extension_tester), which provides a simple way of testing your extensions on your local machine.
+
 
 ## Extension registry
 The [Extensions registry](https://github.com/open-contracting/extension_registry) is the place where extensions are recorded in order to be included in the OCDS documentation.

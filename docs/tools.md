@@ -20,14 +20,6 @@
 
 ## Extension tools
 
-### Extension template
+References to existing tools for extensions can be found in the [Extension page tool section](../extensions#tools) of this handbook.
 
-[Extension template](https://github.com/open-contracting/standard_extension_template)
-
-### Extension creator
-
-[Extension creator](https://github.com/open-contracting/extension_creator)
-
-### Extension tester
-
-[Extension tester](https://github.com/open-contracting/extension_tester)
+For general guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template), see [creating extensions](../extensions#creating-extensions).
