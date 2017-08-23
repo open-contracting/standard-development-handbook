@@ -4,9 +4,9 @@ This section describes the steps involved in deploying an updated version of the
 
 This process is used for major, minor and patch upgrades.
 
-For changes just to documentation (no schema changes), start from step 4.
+For changes to documentation only (no schema changes), start from step 4.
 
-For theme changes, start from step 8.
+For changes to the theme only, start from step 7.
 
 ## 1. Freeze extensions
 
@@ -86,22 +86,20 @@ Do this in the GitHub interface, or locally with a no-ff merge (so that we get a
 
 Named e.g. 1__1__0
 
-## 7. Copy the schema into place
-
-If you've made a semantic update to the schema, that should be tagged with a
-patch version (e.g. 1__0__1 on GitHub), and the json should be copied to
-/home/ocds-docs/web/schema on live2.
-
-e.g. for 1.1.1 there should be JSON files at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
-
-## 8. Build on travis
+## 7. Build on travis
 
 Step 5. will trigger a build on travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
-Once this is done, check the staging site, e.g. for 1.1:
+Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
 [http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/)
 
-## 9. Copy the files
+## 8. Copy the files to the live server
+
+Each deploy has it's own unique folder on the live server (including the date
+and a sequence number). The bare version number is then symlinked. This makes
+it easy to roll back the live docs.
+
+Set some variables:
 
 ```bash
 VER=1.1            # (for example)
@@ -110,7 +108,7 @@ DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3
 SEQ=1              # To deploy again on the same day, increment to 2 etc
 ```
 
-Copy from dev3 to your local box:
+Copy from dev server to your local box:
 
 ```bash
 scp -r \
@@ -118,7 +116,7 @@ scp -r \
   ${VER}-${DATE}-${SEQ}
 ```
 
-Copy from your local box to live2:
+Copy from your local box to the live server:
 
 ```bash
 scp -r \
@@ -133,21 +131,37 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
   "rm /home/ocds-docs/web/${VER}; ln -sf ${VER}-${DATE}-${SEQ} /home/ocds-docs/web/${VER}"
 ```
 
-## 10. /latest/
+## 9. (Major/Minor/Patch only) Copy the schema into place
 
-If the build should also appear on /latest/ then update the `latest`
-branch on GitHub, and repeat the steps above for VER=latest.
-This is necessary because some aspects of the travis build depend on the
-branch (e.g. to construct urls correctly).
+Copy the JSON from the schema directory of the build to
+`/home/ocds-docs/web/schema/[release_tag]` on the live server.
 
-## 11. (Minor/Major version only)  Update Apache config
+e.g. for 1.1.1:
 
-See:
-
+```bash
+ssh root@live2.default.opendataservices.uk0.bigv.io
+mkdir /home/ocds-docs/web/schema/1__1__1/
+cp -r /home/ocds-docs/web/1.1/en/*.json /home/ocds-docs/web/schema/1__1__1/
 ```
-  salt/apache/ocds-docs-live.conf ("set live_versions = [...]")
-  salt/ocds-docs/include/banner_* and version-options.html
-```
+
+The JSON files are then visible at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
+
+## 10. "latest" branch
+
+If the build should also appear at
+[/latest/](http://standard.open-contracting.org/latest/)
+then update the `latest` branch on GitHub to point to the same commit. Wait for
+the travis build, then repeat step 8 with `VER=latest`.
+
+Doing a build is necessary because some urls are updated with the branch name (e.g. links in the schema).
+
+## 11. (Major/Minor versions only)  Update Apache config
+
+For a new live version, you will need to edit:
+
+* [live_versions in the Apache config](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
+* [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
+* [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
 ## FAQ
 
