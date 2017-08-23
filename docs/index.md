@@ -31,7 +31,7 @@ Next steps:
    extensions
    profiles
    staging
-   deployment
+   deployment/index
    github_integrations
    tools
    resources
