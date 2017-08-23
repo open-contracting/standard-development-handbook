@@ -1,4 +1,4 @@
-# Deployment
+# Standard Live Deploy
 
 This section describes the steps involved in deploying an updated version of the standard to become the live version.
 
