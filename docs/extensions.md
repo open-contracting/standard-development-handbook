@@ -84,3 +84,11 @@ Every extension recorded in the registry must have an _entry.json_ file valid ag
 new extensions or changes to existing ones.
 
 `python compile.py` will generate two non version-controlled files (_extensions.json_ and _extension.js_) which are the reference files that OCDS needs to build the documentation on extensions.
+
+## Extension issues
+
+There is an [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions) dedicated to gather issues for all extensions.
+
+You should submit issues to that repository rather than to the repositories of individual extensions. Doing so will give much more visibility to your issues and therefore a higher likelihood of getting closed soon. Also, collecting all issues in a single place helps to identify related issues across extensions.
+
+If you think you have identified a problem with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), you may consider opening an issue in the [core standard repository](https://github.com/open-contracting/standard) pinning the _Extensions_ tag to that issue.
