@@ -48,13 +48,13 @@ Here are some guidelines for writing the text for the mandatory field `"descript
 * Do not include in the description the development status of the extension (e.g. _draft_). If you need to add current status, do so in a _README_ file, it will be much more visible and therefore less prone to be forgotten and not updated.
 * Avoid descriptions that simply duplicate or paraphrase the extension name.
 
-  > e.g. for _ocds_performance_failures_extension_, this is not a good description:
-  >
-  > _"An extension covering performance failures in OCDS."_ &#x2715;
-  >
-  > This one is much better:
-  >
-  > _"This extension introduces a performance failures array to the implementation section of OCDS, based on the performance failures reporting table defined in the framework for disclosure in PPPs."_ &#10003;
+For example, for [ocds_performance_failures_extension](https://github.com/open-contracting/ocds_performance_failures) , this wouldn't be a good description:
+
+  > _"An extension covering performance failures in OCDS."_
+
+Much better the actual description in the extension:
+
+  > _"This extension introduces a performance failures array to the implementation section of OCDS, based on the performance failures reporting table defined in the framework for disclosure in PPPs."_
 
 ## Extension codelists
 
