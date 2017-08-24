@@ -15,44 +15,42 @@ _versioned-release-validation-schema.json_ is produced programmaticallly (see [M
 
 **TODO**: Mechanisn for extension authors to create _versioned-release-validation-schema.json_ in their extensions.
 
-All extensions must have an [extension.json](https://github.com/open-contracting/standard_extension_template/blob/master/extension.json), with ```"name"``` and ```"description"``` fields required.
+All extensions must have an [extension.json](https://github.com/open-contracting/standard_extension_template/blob/master/extension.json), with `"name"` and `"description"` fields required.
 
 Extensions must include at least one schema file. In most cases, the extension will have a _release-schema.json_ with the minimal changes required to patch the schema, although there may be more marginal user cases requiring metadata patches for _release-package-schema.json_ and/or _record-package-schema.json_. Empty schema files should not be included in the extension.
-
 
 ## Naming extensions
 
 Names for extensions should conform to the following pattern:
 
-```ocds_[name]_extension```
+`ocds_[name]_extension`
 
-```[name]``` should be based on a JSON Pointer fragment for the name of the primary field or the primary object being added, or both if necessary. The idea is that the name should be a good indication of which part of the schema is being targeted, thus contributing to self-documenting the extension.
+`[name]` should be based on a JSON Pointer fragment for the name of the primary field or the primary object being added, or both if necessary. The idea is that the name should be a good indication of which part of the schema is being targeted, thus contributing to self-documenting the extension.
 
 When naming an extension, camel case (_camelCase_) should be replace with lowercase plus underscores (_camel_case_).
 
-
 ## Extension descriptions
 
-Here are some guidelines for writing the text for the mandatory field ```"description"``` in _extension.json_ :
+Here are some guidelines for writing the text for the mandatory field `"description"` in _extension.json_ :
 
 * There is no maximum length for the description, but you should try to keep it concise. In any case, do not sacrifice clarity for the sake of brevity.
 * Refer to the part(s) of the schema the extension is modifying.
 * Do not include in the description the development status of the extension (e.g. _draft_). If you need to add current status, do so in a _README_ file, it will be much more visible and therefore less prone to be forgotten and not updated.
-* Avoid descriptions simply duplicating or paraphrasing the extension name:
+* Avoid descriptions that simply duplicate or paraphrase the extension name.
 
-  > e.g. for _ocds_performance_failures_extension_ :
-
-  > &#x2715;  bad description: _"An extension covering performance failures in OCDS."_
-
-  > &#10003;  good description: _"This extension introduces a performance failures array to the implementation section of OCDS, based on the performance failures reporting table defined in the framework for disclosure in PPPs."_
-
+  > e.g. for _ocds_performance_failures_extension_, this is not a good description:
+  >
+  > _"An extension covering performance failures in OCDS."_ &#x2715;
+  >
+  > This one is much better:
+  >
+  > _"This extension introduces a performance failures array to the implementation section of OCDS, based on the performance failures reporting table defined in the framework for disclosure in PPPs."_ &#10003;
 
 ## Extension codelists
 
-As in the code standard repository, in the [standard extension template](https://github.com/open-contracting/standard_extension_template) there is also a [codelists folder](https://github.com/open-contracting/standard_extension_template/tree/master/codelists) to store extension-specific codelists. 
+As in the code standard repository, in the [standard extension template](https://github.com/open-contracting/standard_extension_template) there is also a [codelists folder](https://github.com/open-contracting/standard_extension_template/tree/master/codelists) to store extension-specific codelists.
 
 Codelists are CSV files with camel case names , e.g. _contractStatus.csv_. Be aware that a codelist in your extension using the same name of an existing codelist in the standard repository will override the existing codelist.
-
 
 ## Versioning Extensions
 
@@ -64,7 +62,6 @@ This is particularly important for new releases and deployments of OCDS, as each
 
 N.B. The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the _same_ standard release cycle) and 'externally' (with reference to _different_ standard versions) is likely to change in the future. Take a look at this [GitHub issue](https://github.com/open-contracting/extension_registry/issues/47) in the [extension registry](https://github.com/open-contracting/extension_registry) repo for more information on this topic.
 
-
 ## Tools
 
 ### Extension creator
@@ -73,18 +70,17 @@ The [Extension creator](https://github.com/open-contracting/extension_creator) i
 
 The tool will create a zip file to download, containing the patch schema file plus the _extension.json_ file with the name and description given by you.
 
-
 ### Extension tester
 
 Another useful tool to help creating extensions is the [Extension tester](https://github.com/open-contracting/extension_tester), which provides a simple way of testing your extensions on your local machine.
 
-
 ## Extension registry
+
 The [Extensions registry](https://github.com/open-contracting/extension_registry) is the place where extensions are recorded in order to be included in the OCDS documentation.
 
 Every extension recorded in the registry must have an _entry.json_ file valid against the [entry-schema.json](https://github.com/open-contracting/extension_registry/blob/master/entry-schema.json).
 
-[compile.py](https://github.com/open-contracting/extension_registry/blob/master/compile.py) needs to be run for the docs to pick up 
+[compile.py](https://github.com/open-contracting/extension_registry/blob/master/compile.py) needs to be run for the docs to pick up
 new extensions or changes to existing ones.
 
-``` python compile.py``` will generate two non version-controlled files (_extensions.json_ and _extension.js_) which are the reference files that OCDS needs to build the documentation on extensions.
+`python compile.py` will generate two non version-controlled files (_extensions.json_ and _extension.js_) which are the reference files that OCDS needs to build the documentation on extensions.
