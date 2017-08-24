@@ -19,6 +19,16 @@ All extensions must have an [extension.json](https://github.com/open-contracting
 
 Extensions must include at least one schema file. In most cases, the extension will have a _release-schema.json_ with the minimal changes required to patch the schema, although there may be more marginal user cases requiring metadata patches for _release-package-schema.json_ and/or _record-package-schema.json_. Empty schema files should not be included in the extension.
 
+Repositories for [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should have issue submissions disable by default and should direct developers to the [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions) to file issues. Best practice is to add that information to the _README.md_ file in every core extension using the following template:
+
+  > _&#35;&#35;&#35; Reporting issues_
+  > 
+  > _By default, issues are disabled for individual OCDS core extensions. Instead, there is a &#91;ocds extension repository &#93;&#40;https://github.com/open-contracting/ocds-extensions/&#41; to gather issues for all extensions in a single place._
+  > 
+  > _If you have an issue to report, please submit it there. Make sure you indicate the appropriate extension following this format in the title: &#42;&#42;&#95;extension_name: issue title&#95;&#42;&#42;._
+
+For [community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) there is no specific requirements regarding issue management.
+
 ## Naming extensions
 
 Names for extensions should conform to the following pattern:
@@ -87,8 +97,14 @@ new extensions or changes to existing ones.
 
 ## Extension issues
 
-There is an [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions) dedicated to gather issues for all extensions.
+[GitHub issues](https://help.github.com/articles/about-issues/) for [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should be submitted to the [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions), which is dedicated to gather issues for all core extensions. 
 
-You should submit issues to that repository rather than to the repositories of individual extensions. Doing so will give much more visibility to your issues and therefore a higher likelihood of getting closed soon. Also, collecting all issues in a single place helps to identify related issues across extensions.
+You should submit extension-specific issues to that repository. Collecting all issues in a single place gives much more visibility to them and therefore a higher likelihood of getting closed soon. Also, it helps to identify related issues across extensions.
 
-If you think you have identified a problem with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), you may consider opening an issue in the [core standard repository](https://github.com/open-contracting/standard) pinning the _Extensions_ tag to that issue.
+When creating an issue, make sure you indicate the appropriate standard extension following the title format **_extension_name: issue title_**.
+
+If you think you have identified a problem with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), you may consider opening an issue in the [core standard repository](https://github.com/open-contracting/standard) pinning the `Extensions` tag to that issue.
+
+For [community extension](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) issues refer to each extension specific documentation.
+
+
