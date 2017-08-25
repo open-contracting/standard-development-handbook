@@ -21,11 +21,15 @@ Extensions must include at least one schema file. In most cases, the extension w
 
 Repositories for [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should have issue submissions disable by default and should direct developers to the [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions) to file issues. Best practice is to add that information to the _README.md_ file in every core extension using the following template:
 
-  > _&#35;&#35;&#35; Reporting issues_
-  >
-  > _By default, issues are disabled for individual OCDS core extensions. Instead, there is a &#91;ocds extension repository &#93;&#40;https&#58;&#47;&#47;github.com/open-contracting/ocds-extensions/&#41; to gather issues for all extensions in a single place._
-  >
-  > _If you have an issue to report, please submit it there. Make sure you indicate the appropriate extension following this format in the title: &#42;&#42;&#95;extension_name: issue title&#95;&#42;&#42;._
+```none
+
+### Reporting issues
+
+By default, issues are disabled for individual OCDS core extensions. Instead, there is an [ocds extension repository](https://github.com/open-contracting/ocds-extensions) to gather issues for all extensions in a single place.
+
+If you have an issue to report, please submit it there. Make sure you indicate the appropriate extension following this format in the title: **_extension_name: issue title_**.
+
+```
 
 For [community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) there is no specific requirements regarding issue management.
 
@@ -52,7 +56,7 @@ For example, for [ocds_performance_failures_extension](https://github.com/open-c
 
   > _"An extension covering performance failures in OCDS."_
 
-Much better the actual description in the extension:
+The actual description in the extension is much better:
 
   > _"This extension introduces a performance failures array to the implementation section of OCDS, based on the performance failures reporting table defined in the framework for disclosure in PPPs."_
 
