@@ -2,22 +2,15 @@
 
 ## Creating extensions
 
-OCDS extensions follow the structure of the [standard extension template](https://github.com/open-contracting/standard_extension_template). The template copies the structure of the core schema (except for _versioned-release-validation-schema.json_, see below) and allows you to add or update fields in those places where the extension should modify the schema using [JSON merge patch](https://tools.ietf.org/html/rfc7396).
-
-The core repository for OCDS has 4 [schema files](https://github.com/open-contracting/standard/tree/master/standard/schema):
+To create a new extension, you should use the [standard extension template](https://github.com/open-contracting/standard_extension_template), which following the [core OCDS schema](https://github.com/open-contracting/standard/tree/master/standard/schema) includes the following files:
 
 * release-schema.json
 * release-package-schema.json
 * record-package-schema.json
-* versioned-release-validation-schema.json
-
-_versioned-release-validation-schema.json_ is produced programmaticallly (see [Make validation schema](../deployment/standard-live#make-validation-schema) in the standard deployment section), which means that you don't have to author it manually when creating an extension.
-
-**TODO**: Mechanisn for extension authors to create _versioned-release-validation-schema.json_ in their extensions.
-
-All extensions must have an [extension.json](https://github.com/open-contracting/standard_extension_template/blob/master/extension.json), with `"name"` and `"description"` fields required.
 
 Extensions must include at least one schema file. In most cases, the extension will have a _release-schema.json_ with the minimal changes required to patch the schema, although there may be more marginal user cases requiring metadata patches for _release-package-schema.json_ and/or _record-package-schema.json_. Empty schema files should not be included in the extension.
+
+Under the hood, OCDS extensions use JSON merge patch to apply changes to the target schema. To know more, see [JSON merge patch documentation](https://tools.ietf.org/html/rfc7396).
 
 Repositories for [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should have issue submissions disable by default and should direct developers to the [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions) to file issues. Best practice is to add that information to the _README.md_ file in every core extension using the following template:
 
