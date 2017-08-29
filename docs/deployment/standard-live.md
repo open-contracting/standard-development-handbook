@@ -82,7 +82,7 @@ Do this in the GitHub interface, or locally with a no-ff merge (so that we get a
 
 (If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch)
 
-## 6. Create a tagged release
+## 6. (Major/Minor/Patch only) Create a tagged release
 
 Named e.g. 1__1__0
 
