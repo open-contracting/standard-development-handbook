@@ -2,13 +2,7 @@
 
 ## Creating extensions
 
-To create a new extension, you should use the [standard extension template](https://github.com/open-contracting/standard_extension_template), which following the core OCDS schema includes the following files:
-
-* release-schema.json
-* release-package-schema.json
-* record-package-schema.json
-
-Extensions must include at least one schema file. In most cases, the extension will have a _release-schema.json_ with the minimal changes required to patch the schema, although there may be more marginal user cases requiring metadata patches for _release-package-schema.json_ and/or _record-package-schema.json_. Empty schema files should not be included in the extension.
+To create a new extension, it is recommended to use the [standard extension template](https://github.com/open-contracting/standard_extension_template).
 
 Under the hood, OCDS extensions use JSON merge patch to apply changes to the target schema. To know more, see [JSON merge patch documentation](https://tools.ietf.org/html/rfc7396).
 
@@ -59,5 +53,3 @@ When creating an issue, make sure you indicate the appropriate standard extensio
 If you think you have identified a problem with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), you may consider opening an issue in the [core standard repository](https://github.com/open-contracting/standard) pinning the `Extensions` tag to that issue.
 
 For [community extension](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) issues refer to each extension specific documentation.
-
-
