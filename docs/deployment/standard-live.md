@@ -16,6 +16,7 @@ This is currently achieved by:
 
 * Creating a tagged release of each extension
 * Creating a tagged release of the extension registry that points to these specific versions
+* Pulling extension documentation md files
 * Setting the documentation build process to refer to the relevant extension registry tag
 
 ### Pinning extensions: worked example
@@ -37,6 +38,18 @@ For each **core extension**:
 1. In the 'Tag version' field, enter the version of OCDS being deployed in _vmajor.minor.patch_ format, e.g. `v1.1.1`
 1. In the 'Release title' field, enter a title, e.g. 'Fixed version for OCDS 1.1.1'
 1. Enter a brief summary of changes, e.g. 'Typo fixes', and click **Publish release**
+
+### Pulling extension documentation
+
+```bash
+cd standard/docs/en/extensions
+# edit get-readmes.py and set GIT_REF to e.g. `v1.1.1`
+./get-readmes.py
+```
+
+### Setting documentation build extension registry tag
+
+Edit `standard/docs/en/conf.py` and set `extension_registry_git_ref` to e.g. `v1.1.1`.
 
 ## 2. Check schema IDs
 
