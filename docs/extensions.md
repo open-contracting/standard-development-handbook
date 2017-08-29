@@ -2,7 +2,7 @@
 
 ## Creating extensions
 
-To create a new extension, you should use the [standard extension template](https://github.com/open-contracting/standard_extension_template), which following the [core OCDS schema](https://github.com/open-contracting/standard/tree/master/standard/schema) includes the following files:
+To create a new extension, you should use the [standard extension template](https://github.com/open-contracting/standard_extension_template), which following the core OCDS schema includes the following files:
 
 * release-schema.json
 * release-package-schema.json
@@ -23,39 +23,6 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ```
 
 For [community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) there is no specific requirements regarding issue management.
-
-## Naming extensions
-
-Names for extensions should conform to the following pattern:
-
-`ocds_[name]_extension`
-
-`[name]` should be based on a JSON Pointer fragment for the name of the primary field or the primary object being added, or both if necessary. The idea is that the name should be a good indication of which part of the schema is being targeted, thus contributing to self-documenting the extension.
-
-When naming an extension, camel case (_camelCase_) should be replace with lowercase plus underscores (_camel_case_).
-
-## Extension descriptions
-
-Here are some guidelines for writing the text for the mandatory field `"description"` in _extension.json_ :
-
-* There is no maximum length for the description, but you should try to keep it concise. In any case, do not sacrifice clarity for the sake of brevity.
-* Refer to the part(s) of the schema the extension is modifying.
-* Do not include in the description the development status of the extension (e.g. _draft_). If you need to add current status, do so in a _README_ file, it will be much more visible and therefore less prone to be forgotten and not updated.
-* Avoid descriptions that simply duplicate or paraphrase the extension name.
-
-For example, for [ocds_performance_failures_extension](https://github.com/open-contracting/ocds_performance_failures) , this wouldn't be a good description:
-
-  > _"An extension covering performance failures in OCDS."_
-
-The actual description in the extension is much better:
-
-  > _"This extension introduces a performance failures array to the implementation section of OCDS, based on the performance failures reporting table defined in the framework for disclosure in PPPs."_
-
-## Extension codelists
-
-As in the code standard repository, in the [standard extension template](https://github.com/open-contracting/standard_extension_template) there is also a [codelists folder](https://github.com/open-contracting/standard_extension_template/tree/master/codelists) to store extension-specific codelists.
-
-Codelists are CSV files with camel case names , e.g. _contractStatus.csv_. Be aware that a codelist in your extension using the same name of an existing codelist in the standard repository will override the existing codelist.
 
 ## Versioning Extensions
 
