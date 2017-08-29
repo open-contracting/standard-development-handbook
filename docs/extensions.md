@@ -73,22 +73,13 @@ N.B. The mechanism for versioning extensions both 'internally' (addressing chang
 
 The [Extension creator](https://github.com/open-contracting/extension_creator) is a GUI that allows you to modify any of the schema files and get the corresponding patch file for the extension.
 
-The tool will create a zip file to download, containing the patch schema file plus the _extension.json_ file with the name and description given by you.
-
 ### Extension tester
 
-Another useful tool to help creating extensions is the [Extension tester](https://github.com/open-contracting/extension_tester), which provides a simple way of testing your extensions on your local machine.
+The [Extension tester](https://github.com/open-contracting/extension_tester) provides a simple way to test your extensions on your local machine.
 
 ## Extension registry
 
 The [Extensions registry](https://github.com/open-contracting/extension_registry) is the place where extensions are recorded in order to be included in the OCDS documentation.
-
-Every extension recorded in the registry must have an _entry.json_ file valid against the [entry-schema.json](https://github.com/open-contracting/extension_registry/blob/master/entry-schema.json).
-
-[compile.py](https://github.com/open-contracting/extension_registry/blob/master/compile.py) needs to be run for the docs to pick up
-new extensions or changes to existing ones.
-
-`python compile.py` will generate two non version-controlled files (_extensions.json_ and _extension.js_) which are the reference files that OCDS needs to build the documentation on extensions.
 
 ## Extension issues
 
