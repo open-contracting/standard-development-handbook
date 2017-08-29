@@ -18,9 +18,7 @@ Repositories for [core extensions](http://standard.open-contracting.org/latest/e
 
 ### Reporting issues
 
-By default, issues are disabled for individual OCDS core extensions. Instead, there is an [ocds extension repository](https://github.com/open-contracting/ocds-extensions) to gather issues for all extensions in a single place.
-
-If you have an issue to report, please submit it there. Make sure you indicate the appropriate extension following this format in the title: **_extension_name: issue title_**.
+Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ```
 
