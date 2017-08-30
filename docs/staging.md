@@ -1,3 +1,0 @@
-# Staging
-
-Nothing here yet...

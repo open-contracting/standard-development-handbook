@@ -16,8 +16,8 @@ It is inteded as a reference for the standard developers to:
 
 Next steps:
 
-* [ ] Developing a style guide for this handbook;
-* [ ] Developing the table of contents / outline for this handbook;
+* [X] Developing a [style guide for this handbook](meta.md);
+* [X] Developing the table of contents / outline for this handbook;
 * [ ] Start writing documentation.
 
 ## Table of Contents
@@ -27,13 +27,14 @@ Next steps:
    :maxdepth: 2
    :glob:
 
-   repository
-   extensions
-   profiles
+   standard/index
+   extensions/index
+   profiles/index
+   systems/index
+   tools/index
    staging
-   deployment/index
-   github_integrations
-   tools
+   
    resources
+   *
 
 ```
