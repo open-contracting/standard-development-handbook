@@ -16,7 +16,7 @@ It is inteded as a reference for the standard developers to:
 
 Next steps:
 
-* [X] Developing a [style guide for this handbook](meta.md);
+* [X] Developing a [style guide for this handbook](meta);
 * [X] Developing the table of contents / outline for this handbook;
 * [ ] Start writing documentation.
 
