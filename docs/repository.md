@@ -19,19 +19,19 @@ Worked example of branch structure:
 
 ## Repository structure
 
-* [.tx/config](https://github.com/open-contracting/standard/blob/1.1-dev/.tx/config) - config file for transifex
-* [standard/schema/](https://github.com/open-contracting/standard/tree/1.1-dev/standard/schema) - schema related files
+* [.tx/config](https://github.com/open-contracting/standard/blob/HEAD/.tx/config) - config file for transifex
+* [standard/schema/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema) - schema related files
   * `*.json` - json schema files
-  * [codelists/](https://github.com/open-contracting/standard/tree/1.1-dev/standard/schema/codelists) - codelist csvs
-  * [tests/](https://github.com/open-contracting/standard/tree/1.1-dev/standard/schema/tests) - python tests of the JSON schema
-  * [utils/](https://github.com/open-contracting/standard/tree/1.1-dev/standard/schema/utils) - python scripts for working with the JSON schema and codelist CSVs
-* [standard/docs/en](https://github.com/open-contracting/standard/tree/1.1-dev/standard/docs/en) - English documentation
+  * [codelists/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/codelists) - codelist csvs
+  * [tests/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/tests) - python tests of the JSON schema
+  * [utils/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/utils) - python scripts for working with the JSON schema and codelist CSVs
+* [standard/docs/en](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/en) - English documentation
   * `*.md` `*/*.md` - English documentation text
-  * [conf.py](https://github.com/open-contracting/standard/blob/1.1-dev/standard/docs/en/conf.py) - configuration of the docs site
-  * [_static](https://github.com/open-contracting/standard/tree/1.1-dev/standard/docs/en/_static) - css and javascript for the docs site
-  * [_templates](https://github.com/open-contracting/standard/tree/1.1-dev/standard/docs/en/_templates) - Jinja templates for the docs site - these contain only small overrides, as [we have our own theme](https://github.com/open-contracting/standard_theme)
-* [standard/docs/locale](https://github.com/open-contracting/standard/tree/1.1-dev/standard/docs/locale) - translations
-* [standard/assets](https://github.com/open-contracting/standard/tree/1.1-dev/standard/assets) - images for inclusion of the docs
+  * [conf.py](https://github.com/open-contracting/standard/blob/HEAD/standard/docs/en/conf.py) - configuration of the docs site
+  * [_static](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/en/_static) - css and javascript for the docs site
+  * [_templates](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/en/_templates) - Jinja templates for the docs site - these contain only small overrides, as [we have our own theme](https://github.com/open-contracting/standard_theme)
+* [standard/docs/locale](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/locale) - translations
+* [standard/assets](https://github.com/open-contracting/standard/tree/HEAD/standard/assets) - images for inclusion of the docs
 
 Created by running a build (not checked in):
 
