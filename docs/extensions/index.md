@@ -4,48 +4,42 @@
 
 To create a new extension, it is recommended to use the [standard extension template](https://github.com/open-contracting/standard_extension_template).
 
-Under the hood, OCDS extensions use JSON merge patch to apply changes to the target schema. To know more, see [JSON merge patch documentation](https://tools.ietf.org/html/rfc7396).
+The mechanism for extending a core JSON Schema file, like `release-schema.json`, is to author a small, similar-looking JSON Schema file, that is applied to the core file using [JSON Merge Patch](https://tools.ietf.org/html/rfc7396).
 
-Repositories for [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should have issue submissions disable by default and should direct developers to the [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions) to file issues. Best practice is to add that information to the _README.md_ file in every core extension using the following template:
+When creating a [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions), the GitHub repository should have issues disabled (see [reporting issues on extensions](#reporting-issues-on-extensions) below). Its `README.md` file should include the following text:
 
-### Reporting issues
+```
+## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
+```
 
-For [community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) there is no specific requirements regarding issue management.
+When creating a [community extension](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), there are no requirements regarding issues.
 
-## Versioning Extensions
+## Versioning extensions
 
-The standard [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) are currently versioned using [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) via the [releases feature in GitHub](https://help.github.com/categories/releases/) (which builds on Git tags).
+The [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) are versioned using [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and made available as [releases on GitHub](https://help.github.com/categories/releases/) (which depend on tags).
 
-This is particularly important for new releases and deployments of OCDS, as each release of the standard should point to specific versions of each extensions. For more information, see [freeze extensions](../deployment/standard-live#freeze-extensions) in the standard deployment section.
+This is particularly important for new versions of the standard, as each version's documentation should point to specific versions of its extensions. For more information, see [freezing extensions](../standard/deployment#freeze-extensions).
 
-[Community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), on the other hand, are externally maintained and not pinned to releases of the standard.
+[Community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), on the other hand, are externally maintained and not associated to each version of the standard.
 
-N.B. The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the _same_ standard release cycle) and 'externally' (with reference to _different_ standard versions) is likely to change in the future. Take a look at this [GitHub issue](https://github.com/open-contracting/extension_registry/issues/47) in the [extension registry](https://github.com/open-contracting/extension_registry) repo for more information on this topic.
+```eval_rst
+  .. note::
+    The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the _same_ standard release cycle) and 'externally' (with reference to _different_ standard versions) is likely to change in the future. See [this issue](https://github.com/open-contracting/extension_registry/issues/47) for more.
+```
+
+## Reporting issues on extensions
+
+[Issues](https://help.github.com/articles/about-issues/) on [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should be reported to the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions). Collecting issues in one place gives each more visibility and therefore a higher likelihood of being closed. It also helps to identify related issues across different extensions. When creating an issue, indicate the extension in the issue's title, e.g. *extension name: issue title*.
+
+To report issues on [community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), refer to each extension's documentation.
+
+If the issue is with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), report it on the [`standard` repository](https://github.com/open-contracting/standard) and add the `Focus - Extensions` label to the issue.
 
 ## Tools
 
-### Extension creator
-
-The [Extension creator](https://github.com/open-contracting/extension_creator) is a GUI that allows you to modify any of the schema files and get the corresponding patch file for the extension.
-
-### Extension tester
-
-The [Extension tester](https://github.com/open-contracting/extension_tester) provides a simple way to test your extensions on your local machine.
-
-## Extension registry
-
-The [Extensions registry](https://github.com/open-contracting/extension_registry) is the place where extensions are recorded in order to be included in the OCDS documentation.
-
-## Extension issues
-
-[GitHub issues](https://help.github.com/articles/about-issues/) for [core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) should be submitted to the [OCDS extension issues repository](https://github.com/open-contracting/ocds-extensions), which is dedicated to gather issues for all core extensions.
-
-You should submit extension-specific issues to that repository. Collecting all issues in a single place gives much more visibility to them and therefore a higher likelihood of getting closed soon. Also, it helps to identify related issues across extensions.
-
-When creating an issue, make sure you indicate the appropriate standard extension following the title format **_extension_name: issue title_**.
-
-If you think you have identified a problem with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), you may consider opening an issue in the [core standard repository](https://github.com/open-contracting/standard) pinning the `Extensions` tag to that issue.
-
-For [community extension](http://standard.open-contracting.org/latest/en/extensions/#community-extensions) issues refer to each extension specific documentation.
+* [standard_extension_template](https://github.com/open-contracting/standard_extension_template)
+* [extension_creator](https://github.com/open-contracting/extension_creator) is a web interface for modifying any of OCDS' schema files and either generating the corresponding patch file or the complete corresponding extension.
+* [extension_tester](https://github.com/open-contracting/extension_tester) provides a simple way to test your extensions on your local machine.
+* [extension_registry](https://github.com/open-contracting/extension_registry) is an inventory of the extensions that are included in the standard's documentation.

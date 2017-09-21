@@ -1,20 +1,20 @@
 # Handbook style guide
 
-This is the style guide for authors contributing to this handbook. Authors should follow this guidance as far as possible.
+Handbook contributors should follow this style guide.
 
 ## Structure
 
-Each page should start with a description of the page contents.
+Unless a page is short, it should start with a description of its contents.
 
-Wherever relevant, pages should include a section on **testing** that sets out the appropriate tests that can be run to verify work.
+If relevant, a page should include a section on **testing** that describes the tests to verify work.
 
 ## Admonitions
 
-Admonitions (box outs) can be added to the documentation using the **hint**, **note** and **warning** styles.
+Admonitions (box outs) can be added using the **hint**, **note** and **warning** styles.
 
 ```eval_rst
   .. todo::
-    Use a todo admonition to indicate issues that need to be addressed in updates to the documentation. Include a link to relevant GitHub issues using the : issue : ` nn ` syntax
+    Use a todo admonition to indicate issues that need to be addressed in updates to the documentation. Include a link to relevant GitHub issues using the : issue : ` nn ` syntax.
 ```
 
 ```eval_rst
@@ -24,7 +24,7 @@ Admonitions (box outs) can be added to the documentation using the **hint**, **n
 
 ```eval_rst
   .. note::
-    Use a note admonition to indicate that there are areas where the documentation requires further improvement, but there these do not block use of the current information.
+    Use a note admonition to indicate that there are areas where the documentation requires further improvement, but this does not block use of the current information.
 ```
 
 ```eval_rst

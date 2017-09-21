@@ -1,25 +1,17 @@
-# Tools
+# Tools and resources
 
-## Validator
+```eval_rst
+  .. todo::
+    Expand each bullet into a sentence.
+```
 
-[OCDS validator](http://standard.open-contracting.org/validator/)
+* The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove)
+* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
+* [ocds-faker](https://github.com/open-contracting/ocds-faker)
+* [ocds-merge](https://github.com/open-contracting/ocds-merge)
+* [ocds-show](https://github.com/open-contracting/ocds-show)
+* [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp)
+* [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate)
+* [sample-data](https://github.com/open-contracting/sample-data)
 
-[COve in GitHub](https://github.com/OpenDataServices/cove)
-
-## OCDS Show
-
-[OCDS show](https://github.com/open-contracting/ocds-show)
-
-## OCDS Merge
-
-[OCDS merge](https://github.com/open-contracting/ocds-merge)
-
-## OCDS Faker
-
-[OCDS faker](https://github.com/open-contracting/ocds-faker)
-
-## Extension tools
-
-References to existing tools for extensions can be found in the [Extension page tool section](../extensions#tools) of this handbook.
-
-For general guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template), see [creating extensions](../extensions#creating-extensions).
+For tools relating to extensions, see [extensions tools](../extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions#creating-extensions).
