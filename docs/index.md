@@ -32,6 +32,7 @@ Next steps:
    profiles
    staging
    deployment
+   github_issue_labels
    github_integrations
    tools
    resources
