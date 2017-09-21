@@ -1,4 +1,4 @@
-# Meta: Documentation philosophy
+# Documentation philosophy
 
 ## Proximity
 
