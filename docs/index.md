@@ -31,6 +31,7 @@ Next steps:
    extensions/index
    profiles/index
    systems/index
+   github/index
    tools/index
    staging
    
