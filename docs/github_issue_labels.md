@@ -1,4 +1,4 @@
-# GitHub Issue Labels
+# GitHub: Issue Labels
 
 Every issue in the standard repository should have a Focus label.
 
