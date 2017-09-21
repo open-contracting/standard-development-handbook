@@ -1,7 +1,7 @@
 # Standard
 
-```eval_rst 
-  .. todo:: 
+```eval_rst
+  .. todo::
     Identify clearly which sections of the documentation are normative and which are non-normative. :issue:`25`
 ```
 
@@ -18,7 +18,7 @@ The Open Contracting Data Standard consists of:
 * **Guidance on publication levels** describing recommended fields and approaches to data publication;
 * **An extensions mechanism** for declaring additional fields not covered by the core standard.
 
-This section describes the processes for maintaining these assets. 
+This section describes the processes for maintaining these assets.
 
 ```eval_rst
 .. toctree::
@@ -33,13 +33,11 @@ This section describes the processes for maintaining these assets.
    repository
    deployment
    *
-   
 ```
 
 ## Getting started
 
-
-```eval_rst 
-  .. todo:: 
-    Move documentation on setting up a working environment with the standard from repo to here? 
+```eval_rst
+  .. todo::
+    Move documentation on setting up a working environment with the standard from repo to here?
 ```

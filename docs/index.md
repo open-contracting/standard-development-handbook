@@ -7,7 +7,7 @@ This handbook documents:
 
 For documentation on the Open Contracting Data Standard itself see [http://standard.open-contracting.org/](http://standard.open-contracting.org/)
 
-It is inteded as a reference for the standard developers to:
+It is intended as a reference for the standard developers to:
 
 * Document how things currently work
 * Review what needs to improve
@@ -34,7 +34,6 @@ Next steps:
    github/index
    tools/index
    staging
-   
    resources
    *
 
