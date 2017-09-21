@@ -1,4 +1,4 @@
-# GitHub Integrations
+# GitHub: Integrations
 
 ## Travis CI
 
