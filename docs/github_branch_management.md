@@ -1,4 +1,4 @@
-# GitHub Branch Management
+# GitHub: Branch Management
 
 Repositories should have only a default branch (usually `master`) and pull request branches. If the repository is a fork, it may have a `master` branch for the source branch and an `opencontracting` (or `open_contracting`) branch for the fork branch. The default branch should be [protected](https://help.github.com/articles/about-protected-branches/) with these options:
 
