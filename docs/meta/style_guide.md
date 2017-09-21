@@ -1,4 +1,4 @@
-# Meta: Handbook style guide
+# Handbook style guide
 
 This is the style guide for authors contributing to this handbook. Authors should follow this guidance as far as possible.
 

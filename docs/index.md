@@ -1,24 +1,11 @@
 # OCDS: Standard Development Handbook
 
-This handbook documents:
+This handbook is for the standard developers. It documents:
 
-* The process for developing and maintaining the Open Contracting Data Standard
+* The processes for developing and maintaining the Open Contracting Data Standard
 * The software and tools that support the standard
 
 For documentation on the Open Contracting Data Standard itself see [http://standard.open-contracting.org/](http://standard.open-contracting.org/)
-
-It is intended as a reference for the standard developers to:
-
-* Document how things currently work
-* Review what needs to improve
-* Make the improvement
-* Update the documentation
-
-Next steps:
-
-* [X] Developing a [style guide for this handbook](meta);
-* [X] Developing the table of contents / outline for this handbook;
-* [ ] Start writing documentation.
 
 ## Table of Contents
 
@@ -27,6 +14,7 @@ Next steps:
    :maxdepth: 2
    :glob:
 
+   meta/index
    standard/index
    extensions/index
    profiles/index

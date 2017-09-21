@@ -1,4 +1,4 @@
-# GitHub: People
+# People
 
 The staff of the following organizations may be [members](https://github.com/orgs/open-contracting/people) of the [open-contracting](https://github.com/open-contracting) GitHub organization:
 
