@@ -7,7 +7,7 @@ This handbook documents:
 
 For documentation on the Open Contracting Data Standard itself see [http://standard.open-contracting.org/](http://standard.open-contracting.org/)
 
-It is inteded as a reference for the standard developers to:
+It is intended as a reference for the standard developers to:
 
 * Document how things currently work
 * Review what needs to improve
@@ -16,8 +16,8 @@ It is inteded as a reference for the standard developers to:
 
 Next steps:
 
-* [ ] Developing a style guide for this handbook;
-* [ ] Developing the table of contents / outline for this handbook;
+* [X] Developing a [style guide for this handbook](meta);
+* [X] Developing the table of contents / outline for this handbook;
 * [ ] Start writing documentation.
 
 ## Table of Contents
@@ -27,16 +27,14 @@ Next steps:
    :maxdepth: 2
    :glob:
 
-   repository
-   extensions
-   profiles
+   standard/index
+   extensions/index
+   profiles/index
+   systems/index
+   github/index
+   tools/index
    staging
-   deployment/index
-   github_issue_labels
-   github_branch_management
-   github_people
-   github_integrations
-   tools
    resources
+   *
 
 ```

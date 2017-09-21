@@ -1,4 +1,4 @@
-# Standard Repository
+# Standard repository
 
 The repository for the standard for open contracting is developed and maintained by Open Contracting Partnership in [GitHub](https://github.com/open-contracting/standard/tree/master/standard).
 
