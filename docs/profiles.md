@@ -2,9 +2,27 @@
 
 e.g. [http://standard.open-contracting.org/profiles/ppp/latest/en/](http://standard.open-contracting.org/profiles/ppp/latest/en/)
 
-## Updating the schema and codelists
+## Profile repository
 
-The PPP profile is built by patching the core OCDS schema and codelists with various extensions.
+The repository for PPP profile is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting/public-private-partnerships).
+
+### Versioning
+
+Currently the PPP profile doesn't have a version number.
+
+### Branch naming
+
+The working copy of the PPP profile is on the `master` branch.
+
+A `live` branch will be created to reflect the version which is deployed for the launch of the PPP profile.
+
+## Schema and codelists
+
+The PPP profile is built by patching the core OCDS schema and codelists with various extensions by running [apply-extensions.py].
+
+The list of extensions to patch the core standard with is defined in the `extensions_to_merge` list in [apply-extensions.py]
+
+The compiled schema and codelists are located in the [`schema`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema) and [`compiledCodelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/compiledCodelists) folders respectively.
 
 ### Pulling in updated extensions
 
@@ -15,7 +33,7 @@ To include an updated extension in the PPP profile build:
 1. Run [apply-extensions.py](https://github.com/open-contracting/public-private-partnerships/blob/master/schema/apply-extensions.py)
 1. If the updated extension introduces or removes codelists from the extension, update [codelists.md](https://github.com/open-contracting/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
 
-### Updating the base schema and codeliste
+### Updating the base schema and codelist
 
 To update the base schema and codelists that the PPP extension is built on:
 
@@ -34,7 +52,11 @@ To include a new extension in the PPP profile build:
 1. Run [apply-extensions.py](https://github.com/open-contracting/public-private-partnerships/blob/master/schema/apply-extensions.py)
 1. If the new extension introduces or removes codelists, update [codelists.md](https://github.com/open-contracting/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
 
-*Note: Currently apply-extensions.py will only work wih extensions hosted under the open-contracting Github organization.*
+*Note: Currently apply-extensions.py will only work with extensions hosted under the open-contracting Github organization.*
+
+## Translation
+
+A Spanish translation of the PPP profile is maintained using Transifex.
 
 ## Travis
 
