@@ -39,5 +39,5 @@ This section describes the processes for maintaining these assets.
 
 ```eval_rst
   .. todo::
-    Move documentation on setting up a working environment from the `standard` repository to here?
+    Move documentation on setting up a working environment from the `standard` repository to here? :issue:`64`
 ```
