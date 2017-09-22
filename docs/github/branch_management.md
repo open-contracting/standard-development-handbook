@@ -10,6 +10,7 @@ It isn't possible to commit directly to protected branches. The overhead of open
 
 ## Pruning branches
 
+* After merging a pull request, delete its branch.
 * If a branch has no commits ahead of the default branch, and is merged, delete it.
 * If a branch has no commits ahead of the default branch, and is not merged but is a month old, delete it.
 

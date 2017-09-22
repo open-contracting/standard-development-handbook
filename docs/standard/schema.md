@@ -32,6 +32,8 @@ Restarting the discussion with a new issue causes the following problems:
 * New participants need to diligently read all issues referencing the new issue to rebuild the context.
 * If the old issue is closed in favor of a new issue, and the new issue is thereafter not resolved but is closed (for whatever reason, like insufficient demand), a reader of the old issue may assume that the new issue is either open or resolved. They would need to follow the chain to realize that it's unresolved and closed, before adding a comment to say, "I need this."
 
+When creating a pull request that fixes one or more issues, add the text "fixes #42" or "closes #42, #43, #44" in the pull request's description so that GitHub automatically closes the issues when the pull request is merged.
+
 ## Forward and backwards compatibility
 
 A conformance statement in the standard's documentation provides guidance on how forward and backwards compatibility should be interpreted.
