@@ -1,4 +1,4 @@
-# OCDS Profiles
+# Profiles
 
 ## Public Private Partnerships
 
