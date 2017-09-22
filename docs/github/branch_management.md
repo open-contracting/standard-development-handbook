@@ -4,15 +4,7 @@ Repositories should have only a default branch (usually `master`) and pull reque
 
 ## Protecting branches
 
-The default branch should be [protected](https://help.github.com/articles/about-protected-branches/) with these options:
-
-* Protect this branch
-  * Require status checks to pass before merging
-    * Require branches to be up to date before merging
-    * continuous-integration/travis-ci (if available)
-  * Include administrators
-
-On the [`standard` repository](https://github.com/open-contracting/standard) are protected, the `latest`, `#.#` and `#.#-dev` branches are also protected.
+The default branch should be [protected](https://help.github.com/articles/about-protected-branches/) as described under [repository configuration](../repository_configuration). On the [`standard` repository](https://github.com/open-contracting/standard) are protected, the `latest`, `#.#` and `#.#-dev` branches are also protected.
 
 It isn't possible to commit directly to protected branches. The overhead of opening a pull request for even minor changes like small typos is acceptable so far, considering pull request reviews are not required, and considering opening a pull request ensures that the build is never accidentally broken, as all pull requests are tested on Travis before merging. :issue:`22`
 
