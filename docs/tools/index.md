@@ -1,10 +1,5 @@
 # Tools and resources
 
-```eval_rst
-  .. todo::
-    Expand each bullet into a sentence.
-```
-
 * The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove)
 * [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
 * [ocds-faker](https://github.com/open-contracting/ocds-faker)

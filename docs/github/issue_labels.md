@@ -1,6 +1,6 @@
 # Issue labels
 
-Every issue in the standard repository should have a Focus label.
+Every issue in the [`standard` repository](https://github.com/open-contracting/standard) should have a Focus label.
 
 Issues are given labels to indicate their relation to:
 

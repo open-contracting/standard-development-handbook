@@ -14,7 +14,7 @@ Admonitions (box outs) can be added using the **hint**, **note** and **warning**
 
 ```eval_rst
   .. todo::
-    Use a todo admonition to indicate issues that need to be addressed in updates to the documentation. Include a link to relevant GitHub issues using the : issue : ` nn ` syntax.
+    Use a todo admonition to indicate issues in the documentation that need to be addressed, but only if a corresponding GitHub issue exists and is linked from the documentation using the :issue:`nn` syntax.
 ```
 
 ```eval_rst
@@ -31,3 +31,7 @@ Admonitions (box outs) can be added using the **hint**, **note** and **warning**
   .. warning::
     Use a warning admonition to indicate that the documentation on a page may not accurately reflect current practice, or that substantial caveats exist that should be noted before following the documented process.
 ```
+
+## Email addresses
+
+If an email address is discoverable on Google, there is no use in simple obfuscations like [at] and [dot] that make the text less readable. If an email address is not yet public, it is best to keep it that way than to attempt obfuscation.
