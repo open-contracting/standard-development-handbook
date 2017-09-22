@@ -1,6 +1,6 @@
 # Notifications
 
-For CRM-related notifications, see the [CRM's wiki](). Otherwise:
+For CRM-related notifications, see the [CRM's wiki](https://crm.open-contracting.org/projects/ocds/wiki/Alert_settings). Otherwise:
 
 * GitHub issue activity notifies all repository watchers and all issue subscribers. The GitHub accounts of many Open Data Services developers are configured to automatically watch new repositories. (Same for pull requests.)
 * Travis, by default, notifies the email address of the committer of the last commit about the build's success or failure.
