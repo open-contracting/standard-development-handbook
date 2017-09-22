@@ -1,4 +1,4 @@
-# Standard Live Deploy
+# Deployment
 
 This section describes the steps involved in deploying an updated version of the standard to become the live version.
 
@@ -16,7 +16,7 @@ This is currently achieved by:
 
 * Creating a tagged release of each extension
 * Creating a tagged release of the extension registry that points to these specific versions
-* Pulling extension documentation md files
+* Pulling extensions' Markdown files
 * Setting the documentation build process to refer to the relevant extension registry tag
 
 ### Pinning extensions: worked example
@@ -25,7 +25,7 @@ For each **core extension**:
 
 #### Review outstanding pull requests and changes since last release
 
-1. Open the relevant repository in the Github web interface ([example](https://github.com/open-contracting/ocds_lots_extension))
+1. Open the relevant repository in the GitHub web interface ([example](https://github.com/open-contracting/ocds_lots_extension))
 1. Review any outstanding [pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls) and discuss these to determine whether they should be merged before pinning the extension
 1. Under the repository title and description, click **Releases** to view the list of existing releases ([example](https://github.com/open-contracting/ocds_lots_extension/releases))
 1. Under the title of the most recent release, the number of commits since that release will be listed, if there are no commits since the last release then skip to 'Publish a new release', otherwise click the link to view the list of changes since the last release ([example](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master))
@@ -70,49 +70,44 @@ The _versioned-release-validation-schema.json_ file exists for validation of ver
 
 To run this script:
 
-1. Update _standard/schema/make_validation_schema.py_ to refer to the correct version number (Line 94)
-1. Run make_validation_schema.py
+1. Update `standard/schema/make_validation_schema.py` to refer to the correct version number (Line 94)
+1. Run `make_validation_schema.py`
 
 Then commit the updated _versioned-release-validation-schema.json_ file to the repository.
 
 ## 4. Push and pull updated translations
 
-Run `tx push -s` to push updated sources files to Transifex
+Run `tx push -s` to push updated sources files to Transifex.
 
 Run `tx pull -a -f` to pull all updated translation files down locally.
 
 Commit the updated translations to the repository.
 
-**ToDo**: How can we test translation and be sure all strings had valid translations?
+```eval_rst
+  .. todo::
+    How can we test translation and be sure all strings had valid translations?
+```
 
 ## 5. Merge standard
 
-The dev working branch should be merged into the relevant live branch.
-
-e.g. merge 1.1-dev onto 1.1
-
-Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated).
-
-(If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch)
+The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch.
 
 ## 6. (Major/Minor/Patch only) Create a tagged release
 
-Named e.g. 1__1__0
+Named e.g. `1__1__0`
 
 ## 7. Build on travis
 
-Step 5. will trigger a build on travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
+Step 5 will trigger a build on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
 [http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/)
 
 ## 8. Copy the files to the live server
 
-(See the [servers](servers) page for more info on how our servers are set up.)
+(See the [servers](../servers) page for more info on how our servers are set up.)
 
-Each deploy has it's own unique folder on the live server (including the date
-and a sequence number). The bare version number is then symlinked. This makes
-it easy to roll back the live docs.
+Each deploy has its own unique folder on the live server (including the date and a sequence number). The bare version number is then symlinked. This makes it easy to roll back the live docs.
 
 Set some variables:
 
@@ -148,10 +143,7 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
 
 ## 9. (Major/Minor/Patch only) Copy the schema into place
 
-Copy the JSON from the schema directory of the build to
-`/home/ocds-docs/web/schema/[release_tag]` on the live server.
-
-e.g. for 1.1.1:
+Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
 
 ```bash
 ssh root@live2.default.opendataservices.uk0.bigv.io
@@ -163,12 +155,9 @@ The JSON files are then visible at [http://standard.open-contracting.org/schema/
 
 ## 10. "latest" branch
 
-If the build should also appear at
-[/latest/](http://standard.open-contracting.org/latest/)
-then update the `latest` branch on GitHub to point to the same commit. Wait for
-the travis build, then repeat step 8 with `VER=latest`.
+If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), then update the `latest` branch on GitHub to point to the same commit. Wait for the travis build, then repeat step 8 with `VER=latest`.
 
-Doing a build is necessary because some urls are updated with the branch name (e.g. links in the schema).
+Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
 ## 11. (Major/Minor versions only)  Update Apache config
 
