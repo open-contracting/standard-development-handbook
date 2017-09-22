@@ -14,7 +14,7 @@ Admonitions (box outs) can be added using the **hint**, **note** and **warning**
 
 ```eval_rst
   .. todo::
-    Use a todo admonition to indicate issues that need to be addressed in updates to the documentation. Include a link to relevant GitHub issues using the : issue : ` nn ` syntax.
+    Use a todo admonition to indicate issues in the documentation that need to be addressed, but only if a corresponding GitHub issue exists and is linked from the documentation using the :issue:`nn` syntax.
 ```
 
 ```eval_rst
