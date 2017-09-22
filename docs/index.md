@@ -12,9 +12,9 @@ For documentation on the Open Contracting Data Standard itself see [http://stand
 * The root `README.md` files of non-extension repositories document the repository.
 * In the `sample-data` repository: the many, nested Markdown files.
 * In the `standard` repository:
-   * [CONTRIBUTING.md](https://github.com/open-contracting/standard/blob/HEAD/CONTRIBUTING.md)
-   * [standard/assets/README.md](https://github.com/open-contracting/standard/blob/HEAD/standard/assets/README.md)
-   * [standard/schema/utils/README.md](https://github.com/open-contracting/standard/blob/HEAD/standard/schema/utils/README.md)
+  * [CONTRIBUTING.md](https://github.com/open-contracting/standard/blob/HEAD/CONTRIBUTING.md)
+  * [standard/assets/README.md](https://github.com/open-contracting/standard/blob/HEAD/standard/assets/README.md)
+  * [standard/schema/utils/README.md](https://github.com/open-contracting/standard/blob/HEAD/standard/schema/utils/README.md)
 * In the `public-private-partnerships` repository: [README-Docs.md](https://github.com/open-contracting/public-private-partnerships/blob/master/README-Docs.md)
 
 ## Table of Contents
