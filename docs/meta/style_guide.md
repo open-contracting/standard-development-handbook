@@ -31,3 +31,7 @@ Admonitions (box outs) can be added using the **hint**, **note** and **warning**
   .. warning::
     Use a warning admonition to indicate that the documentation on a page may not accurately reflect current practice, or that substantial caveats exist that should be noted before following the documented process.
 ```
+
+## Email addresses
+
+If an email address is discoverable on Google, there is no use in simple obfuscations like [at] and [dot] that make the text less readable. If an email address is not yet public, it is best to keep it that way than to attempt obfuscation.
