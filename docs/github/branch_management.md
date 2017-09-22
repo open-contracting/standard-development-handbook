@@ -8,7 +8,7 @@ The default branch should be [protected](https://help.github.com/articles/about-
 
 It isn't possible to commit directly to protected branches. The overhead of opening a pull request for even minor changes like small typos is acceptable so far, considering pull request reviews are not required, and considering opening a pull request ensures that the build is never accidentally broken, as all pull requests are tested on Travis before merging. :issue:`22`
 
-## Managing branches
+## Pruning branches
 
 * If a branch has no commits ahead of the default branch, and is merged, delete it.
 * If a branch has no commits ahead of the default branch, and is not merged but is a month old, delete it.
