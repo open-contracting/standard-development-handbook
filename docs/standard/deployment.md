@@ -92,9 +92,9 @@ Commit the updated translations to the repository.
 
 The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch.
 
-## 6. (Major/Minor/Patch only) Create a tagged release
+## 6. Create a tagged release
 
-Named e.g. `1__1__0`
+(Major/Minor/Patch versions only) Create a tagged release named e.g. `1__1__0`
 
 ## 7. Build on travis
 
@@ -141,9 +141,9 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
   "rm /home/ocds-docs/web/${VER}; ln -sf ${VER}-${DATE}-${SEQ} /home/ocds-docs/web/${VER}"
 ```
 
-## 9. (Major/Minor/Patch only) Copy the schema into place
+## 9. Copy the schema into place
 
-Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
+(Major/Minor/Patch versions only) Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
 
 ```bash
 ssh root@live2.default.opendataservices.uk0.bigv.io
@@ -159,9 +159,9 @@ If the build should also appear at [/latest/](http://standard.open-contracting.o
 
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
-## 11. (Major/Minor versions only)  Update Apache config
+## 11. Update Apache config
 
-For a new live version, you will need to edit:
+(Major/Minor versions only) For a new live version, you will need to edit:
 
 * [live_versions in the Apache config](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
 * [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)

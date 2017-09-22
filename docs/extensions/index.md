@@ -1,5 +1,12 @@
 # Extensions
 
+## When to create a core extension
+
+* An extension can be authored to limit 'scope creep' of the core standard, especially in cases where we lack implementation experience with the proposed changes. The extension may serve as a way to externalize the risk of permanent changes to the core standard.
+* An extension may lower risks associated to the 'compliance mindset' (e.g. if a publisher sees bids in the standard but is prevented by law from publishing bids, they may object to adopting the standard entirely).
+* An extension externalizes confusing, complex, or non-universal concepts. For example, lots are not universal and may be complex. Gazetteers (as in the location extension) are not universal.
+* An extension can be a means of breaking backwards compatibility (for example, removing codes from codelists), which would otherwise require a 2.0 version of OCDS.
+
 ## Creating extensions
 
 To create a new extension, it is recommended to use the [standard extension template](https://github.com/open-contracting/standard_extension_template).
