@@ -9,7 +9,7 @@
 
 ## Creating extensions
 
-To create a new extension, it is recommended to use the [standard extension template](https://github.com/open-contracting/standard_extension_template).
+To create a new extension, it is recommended to use the [standard extension template](https://github.com/open-contracting/standard_extension_template). All core extensions are released under the [Apache License 2.0](https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/master/LICENSE).
 
 The mechanism for extending a core JSON Schema file, like `release-schema.json`, is to author a small, similar-looking JSON Schema file, that is applied to the core file using [JSON Merge Patch](https://tools.ietf.org/html/rfc7396).
 
