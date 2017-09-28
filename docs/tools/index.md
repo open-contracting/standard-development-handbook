@@ -9,7 +9,7 @@
 * [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate)
 * [sample-data](https://github.com/open-contracting/sample-data)
 
-For tools relating to extensions, see [extensions tools](../extensions/creating_extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions/creating_extensions).
+For tools relating to extensions, see [extensions tools](../extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions#creating-extensions).
 
 ## Adding tools to the OGP Toolbox
 
