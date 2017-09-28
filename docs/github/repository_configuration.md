@@ -8,6 +8,10 @@
 
 * Protect this branch
   * Require status checks to pass before merging
-    * Require branches to be up to date before merging
     * continuous-integration/travis-ci (if available)
   * Include administrators
+
+We don't enable the following behaviors for the provided reasons:
+
+* **Require branches to be up to date before merging**: While this may avoid introducing errors, it slows development in an environment in which there are many simultaneous pull requests, because each would require an extra step before merging. If the automated tests fail after merging, the error can be corrected, or the changes can be reverted.
+* **Require pull request reviews before merging**: While this is a best practice, it slows development as the team is not sufficiently large to staff it. It is okay, for example, for an author to self-merge a simple change. Authors may, of course, request reviews for significant changes.
