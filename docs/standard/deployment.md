@@ -88,7 +88,7 @@ Commit the updated translations to the repository.
     How can we test translation and be sure all strings had valid translations?
 ```
 
-## 5. Merge standard
+## 5. Merge the dev branch
 
 The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch.
 
@@ -96,7 +96,7 @@ The dev working branch should be merged into the relevant live branch, e.g. merg
 
 (Major/Minor/Patch versions only) Create a tagged release named e.g. `1__1__0`
 
-## 7. Build on travis
+## 7. Build on Travis
 
 Step 5 will trigger a build on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
@@ -141,6 +141,8 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
   "rm /home/ocds-docs/web/${VER}; ln -sf ${VER}-${DATE}-${SEQ} /home/ocds-docs/web/${VER}"
 ```
 
+If a new language is supported, edit `http://standard.open-contracting.org/robots.txt`
+
 ## 9. Copy the schema into place
 
 (Major/Minor/Patch versions only) Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
@@ -153,19 +155,26 @@ cp -r /home/ocds-docs/web/1.1/en/*.json /home/ocds-docs/web/schema/1__1__1/
 
 The JSON files are then visible at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
 
-## 10. "latest" branch
+## 10. Update the "latest" branch
 
 If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), then update the `latest` branch on GitHub to point to the same commit. Wait for the travis build, then repeat step 8 with `VER=latest`.
 
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
-## 11. Update Apache config
+## 11. Update the Apache config
 
 (Major/Minor versions only) For a new live version, you will need to edit:
 
 * [live_versions in the Apache config](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
 * [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
 * [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
+
+## 12. Update the OCDS validator
+
+(Major/Minor versions only)
+
+* Set up a development instance of CoVE using the new schema, and run tests against it
+* Update the live CoVE deployment to use the new schema
 
 ## FAQ
 

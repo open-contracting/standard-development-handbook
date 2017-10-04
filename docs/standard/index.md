@@ -31,6 +31,7 @@ This section describes the processes for maintaining these assets.
    extensions
    translation
    repository
+   build
    deployment
    *
 ```
