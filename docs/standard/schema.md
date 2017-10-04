@@ -36,7 +36,7 @@ When creating a pull request that fixes one or more issues, add the text "fixes 
 
 ## Forward and backwards compatibility
 
-A conformance statement in the standard's documentation provides guidance on how forward and backwards compatibility should be interpreted.
+The standard's documentation contains a [deprecation policy](http://standard.open-contracting.org/latest/en/schema/deprecation/) and a description of its approach to [semantic versioning](http://standard.open-contracting.org/latest/en/support/governance/#versions).
 
 ```eval_rst
   .. todo::
