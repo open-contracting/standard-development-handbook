@@ -1,7 +1,7 @@
 # Tools and resources
 
 * The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove)
-* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
+* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator) generates a flattened representation of a schema
 * [ocds-faker](https://github.com/open-contracting/ocds-faker)
 * [ocds-merge](https://github.com/open-contracting/ocds-merge)
 * [ocds-show](https://github.com/open-contracting/ocds-show)
