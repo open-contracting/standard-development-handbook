@@ -17,7 +17,7 @@ Sample branch structure:
 
 The published documentation has versions on different `MAJOR.MINOR` [branches](https://github.com/open-contracting/standard/branches/all) (e.g. [http://standard.open-contracting.org/1.0/en/](http://standard.open-contracting.org/1.0/en/)), whereas the published schema files have versions on different `MAJOR__MINOR__PATCH` tagged [releases](https://github.com/open-contracting/standard/releases) (e.g. [http://standard.open-contracting.org/schema/1__0__1/release-schema.json](http://standard.open-contracting.org/schema/1__0__1/release-schema.json). This use of branches and tags allows us to update the documentation between versions, while ensuring the schema files aren't changed between versions.
 
-[standard.open-contracting.org](standard.open-contracting.org) redirects to (`http://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent numbered branch. This makes it possible to link to the latest version of the documentation without specifying the version number.
+[standard.open-contracting.org](http://standard.open-contracting.org/) redirects to (`http://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent numbered branch. This makes it possible to link to the latest version of the documentation without specifying the version number.
 
 ## Repository structure
 
