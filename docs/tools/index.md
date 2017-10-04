@@ -15,6 +15,8 @@ For tools relating to extensions, see [extensions tools](../extensions#tools). F
 
 The [OGP Toolbox](https://ogptoolbox.org/) has a collection of [Open Contracting Tools](https://ogptoolbox.org/en/collections/10).
 
+"Reusable tools, applications and processes that consume OCDS data" (from OCP's objectives) are added to the OGP Toolbox.
+
 1. Create a [new tool](https://ogptoolbox.org/en/tools/new) in the toolbox
 1. Fill in at least the Name, Description, Logo and Website fields
 1. Copy the tool's link
@@ -23,6 +25,8 @@ The [OGP Toolbox](https://ogptoolbox.org/) has a collection of [Open Contracting
 1. Click the "Publish Your Collection" button
 
 ## Adding tools to the OCP Resources
+
+Resources we want to highlight are added to the [OCP Resources](https://www.open-contracting.org/data-standard/tools/) page.
 
 1. Request a login for [open-contracting.org](https://www.open-contracting.org/) from Georg Neumann, OCP Communications Manager
 1. [Login](https://www.open-contracting.org/wp-admin/)
