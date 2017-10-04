@@ -6,6 +6,7 @@
    :glob:
 
    repository
+   spellcheck
    build
    translation
    deployment
