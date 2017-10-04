@@ -1,16 +1,14 @@
 # Standard repository
 
-The repository for the Open Contracting Data Standard is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting/standard).
+## Branches and tags
 
 The standard uses [semantic versioning](http://semver.org/), with versions following the _MAJOR.MINOR.PATCH_ name convention.
-
-## Branch naming
 
 Each deployed (live) minor version of the standard's documentation is built from a branch named after the version, like `1.0`. These live branches should be [protected](https://help.github.com/articles/about-protected-branches/).
 
 For each live branch, there is a branch with a _'-dev'_ suffix serving as a working copy. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch.
 
-Worked example of branch structure:
+Sample branch structure:
 
 * **1.0**: contains the latest deployed patch release of OCDS 1.0 (e.g. 1.0.2)
 * **1.1**: contains the latest deployed patch release of OCDS 1.1 (e.g. 1.1.0)
@@ -19,7 +17,7 @@ Worked example of branch structure:
 
 The published documentation has versions on different `MAJOR.MINOR` [branches](https://github.com/open-contracting/standard/branches/all) (e.g. [http://standard.open-contracting.org/1.0/en/](http://standard.open-contracting.org/1.0/en/)), whereas the published schema files have versions on different `MAJOR__MINOR__PATCH` tagged [releases](https://github.com/open-contracting/standard/releases) (e.g. [http://standard.open-contracting.org/schema/1__0__1/release-schema.json](http://standard.open-contracting.org/schema/1__0__1/release-schema.json). This use of branches and tags allows us to update the documentation between versions, while ensuring the schema files aren't changed between versions.
 
-[standard.open-contracting.org](standard.open-contracting.org) redirects to (`http://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent numbered branch. This makes it possible to link to the latest version of the documentation without specifying the version number.
+[standard.open-contracting.org](http://standard.open-contracting.org/) redirects to (`http://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent numbered branch. This makes it possible to link to the latest version of the documentation without specifying the version number.
 
 ## Repository structure
 

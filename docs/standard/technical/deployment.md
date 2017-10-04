@@ -105,7 +105,7 @@ Travis copies the built docs to the dev server, you can check they look okay the
 
 ## 8. Copy the files to the live server
 
-(See the [servers](../servers) page for more info on how our servers are set up.)
+(See the [servers](../../servers) page for more info on how our servers are set up.)
 
 Each deploy has its own unique folder on the live server (including the date and a sequence number). The bare version number is then symlinked. This makes it easy to roll back the live docs.
 

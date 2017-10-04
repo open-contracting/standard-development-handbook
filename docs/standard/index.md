@@ -29,10 +29,7 @@ This section describes the processes for maintaining these assets.
    documentation
    guidance
    extensions
-   translation
-   repository
-   build
-   deployment
+   technical
    *
 ```
 

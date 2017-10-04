@@ -35,10 +35,16 @@ To push untranslated text to Transifex, run:
 tx push -s
 ```
 
-To pull translated text from Transifex, run:
+To pull all translated text from Transifex, run:
 
 ```shell
-tx pull -a -f
+tx pull -f -a
+```
+
+To pull one translation from Transifex, run:
+
+```shell
+tx pull -f -l fr
 ```
 
 Then, [build the documentation](build) again.
@@ -56,4 +62,19 @@ The [theme needs to be translated separately](https://github.com/open-contractin
 ```eval_rst
   .. todo::
     Provide steps to carry out for testing translations.
+```
+
+## Review translated codelists
+
+Translated codelists are temporarily stored in `standard/schema/translated_codelists` during the [build](build) process. To translated a codelist to one language, run:
+
+```shell
+cd standard
+CODELIST_LANG=es_MX python schema/utils/translate_codelists.py
+```
+
+To combine the CSV files for review, run:
+
+```shell
+for i in *.csv; do printf "\n\n$i,,,\n\n"; cat $i; done > ../all_codelists.csv
 ```

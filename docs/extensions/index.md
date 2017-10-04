@@ -31,7 +31,7 @@ Once an extension is created, it should be added to the [extension_registry](htt
 
 The [*core* extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) are versioned using [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) and made available as [releases on GitHub](https://help.github.com/categories/releases/) (which depend on tags).
 
-This is particularly important for new versions of the standard, as each version's documentation should point to specific versions of its extensions. For more information, see [freezing extensions](../standard/deployment#freeze-extensions).
+This is particularly important for new versions of the standard, as each version's documentation should point to specific versions of its extensions. For more information, see [freezing extensions](../standard/technical/deployment#freeze-extensions).
 
 [Community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), on the other hand, are externally maintained and not associated to each version of the standard.
 
