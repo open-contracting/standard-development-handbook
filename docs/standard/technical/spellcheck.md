@@ -15,7 +15,7 @@ This command will skip dot files, Docson files, and css, html, js, png, po, py, 
 `aspell` will flag many field names and proper nouns as errors. `aspell` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace `~/.aspell.en.pws` this the following:
 
 ```
-personal_ws-1.1 en 655 
+personal_ws-1.1 en 655
 foreignBidsFromEU
 evaluationCriteria
 Extractives
