@@ -1,16 +1,14 @@
 # Standard repository
 
-The repository for the Open Contracting Data Standard is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting/standard).
+## Branches and tags
 
 The standard uses [semantic versioning](http://semver.org/), with versions following the _MAJOR.MINOR.PATCH_ name convention.
-
-## Branch naming
 
 Each deployed (live) minor version of the standard's documentation is built from a branch named after the version, like `1.0`. These live branches should be [protected](https://help.github.com/articles/about-protected-branches/).
 
 For each live branch, there is a branch with a _'-dev'_ suffix serving as a working copy. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch.
 
-Worked example of branch structure:
+Sample branch structure:
 
 * **1.0**: contains the latest deployed patch release of OCDS 1.0 (e.g. 1.0.2)
 * **1.1**: contains the latest deployed patch release of OCDS 1.1 (e.g. 1.1.0)
