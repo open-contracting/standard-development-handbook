@@ -17,6 +17,7 @@ The [OGP Toolbox](https://ogptoolbox.org/) has a collection of [Open Contracting
 
 "Reusable tools, applications and processes that consume OCDS data" (from OCP's objectives) are added to the OGP Toolbox.
 
+1. [Login](https://crm.open-contracting.org/projects/ocds/wiki/Logins#OGP-Toolbox)
 1. Create a [new tool](https://ogptoolbox.org/en/tools/new) in the toolbox
 1. Fill in at least the Name, Description, Logo and Website fields
 1. Copy the tool's link
