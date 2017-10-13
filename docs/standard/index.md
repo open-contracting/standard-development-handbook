@@ -29,7 +29,7 @@ This section describes the processes for maintaining these assets.
    documentation
    guidance
    extensions
-   technical
+   technical/index
    *
 ```
 
