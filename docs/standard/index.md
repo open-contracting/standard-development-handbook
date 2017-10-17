@@ -28,8 +28,9 @@ This section describes the processes for maintaining these assets.
    schema
    documentation
    guidance
+   translation
    extensions
-   technical
+   technical/index
    *
 ```
 
