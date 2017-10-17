@@ -1,10 +1,10 @@
 # Translation
 
-To support wide adoption, the Open Contracting Data Standard schema, codelists and documentation can be translated from their canonical English language version. 
+To support wide adoption, the Open Contracting Data Standard schema, codelists and documentation can be translated from their canonical English language version.
 
-Translations are maintained using Transifex. 
+Translations are maintained using Transifex.
 
-This page describes the processes for translators. 
+This page describes the processes for translators.
 
 The steps required to include translations in a documentation build are described in the [technical processes section](technical/index).
 
@@ -28,21 +28,21 @@ A number of other community translations exist in various levels of completion.
 
 ## Translators and reviewers
 
-*Details of the process for selecting translators and reviewers and managing permissions will be put here*
+Details of the process for selecting translators and reviewers and managing permissions will be put here
 
 ## Using Transifex
 
 ### HowTo
 
-*ToDo - add a guidance here on how to use Transifex*
+ToDo - add a guidance here on how to use Transifex
 
 ### Translation glossary
 
-A translation glossary is available at https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/ (Change the language on the end of the URL to view the glossary in different languages). 
+A translation glossary is [available here](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (Change the language on the end of the URL to view the glossary in different languages).
 
 This can also be accessed from within the translation editor
 
-The glossary contains key technical terms in open contracting that must be translated carefully. 
+The glossary contains key technical terms in open contracting that must be translated carefully.
 
 In our translation process, we encourage translators to:
 
@@ -52,10 +52,9 @@ In our translation process, we encourage translators to:
 
 ### What not to translate
 
-Some of the text from codelists originates from other projects, so should probably be translated by the original projects, not OCDS. 
+Some of the text from codelists originates from other projects, so should probably be translated by the original projects, not OCDS.
 
-These are marked with the ‘should_be_translated_upstream’ tag. This gives them a little tag icon next to them. 
-
+These are marked with the ‘should_be_translated_upstream’ tag. This gives them a little tag icon next to them.
 
 ## Translation workflow
 
