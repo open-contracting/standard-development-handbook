@@ -1,4 +1,4 @@
-# Coding
+# Coding practices
 
 ```eval_rst
 .. toctree::
