@@ -1,25 +1,21 @@
 # Translation
 
-To support wide adoption, the Open Contracting Data Standard schema, codelists and documentation can be translated from their canonical English language version.
+To support wide adoption, the Open Contracting Data Standard schema, codelists and documentation can be translated from their canonical English language version. Translations are maintained using Transifex.
 
-Translations are maintained using Transifex.
-
-This page describes the processes for translators.
-
-The steps required to include translations in a documentation build are described in the [technical processes section](technical/index).
+This page describes the processes for translators. The steps required to include translations in a documentation build are described in the [technical processes section](technical/index).
 
 ## Translation projects
 
-There are a number ofOCDS related projects on transifex:
+There are a number of OCDS related projects on Transifex:
 
 * [Standard 1.0](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-0/dashboard/)
-* [Standard 1.1](transifex.com/OpenDataServices/open-contracting-standard-1-1/)
+* [Standard 1.1](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/dashboard/)
 * [Standard Theme](https://www.transifex.com/OpenDataServices/open-contracting-standard-theme/dashboard/) - containing the documentation theme
 * [CoVE](https://www.transifex.com/OpenDataServices/cove/dashboard/) - containing the text for the the validator
 
 ## Languages
 
-We currently actively maintain translations into:
+We currently actively maintain translations to:
 
 * Spanish
 * French
@@ -28,35 +24,42 @@ A number of other community translations exist in various levels of completion.
 
 ## Translators and reviewers
 
-Details of the process for selecting translators and reviewers and managing permissions will be put here
+```eval_rst
+  .. todo::
+    Describe the process for selecting translators and reviewers and managing permissions.
+```
 
 ## Using Transifex
 
-### HowTo
+### How-to
 
-ToDo - add a guidance here on how to use Transifex
+```eval_rst
+  .. todo::
+    Add guidance on how to use Transifex.
+```
 
 ### Translation glossary
 
-A translation glossary is [available here](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (Change the language on the end of the URL to view the glossary in different languages).
-
-This can also be accessed from within the translation editor
+A translation glossary is [available](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (change the language code at the end of the URL to view the glossary in different languages). It can also be accessed from within the translation editor.
 
 The glossary contains key technical terms in open contracting that must be translated carefully.
 
 In our translation process, we encourage translators to:
 
-* First populate the glossary with suggested translations for these terms;
-* Validate these translations with your nominated reviewer;
-* Then commence on further translation;
+1. Populate the glossary with suggested translations of its terms
+1. Validate the translations with the nominated reviewer
+1. Translate the rest of the documentation
 
 ### What not to translate
 
-Some of the text from codelists originates from other projects, so should probably be translated by the original projects, not OCDS.
-
-These are marked with the ‘should_be_translated_upstream’ tag. This gives them a little tag icon next to them.
+Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as `should_be_translated_upstream` and indicated by a small tag icon.
 
 ## Translation workflow
+
+```eval_rst
+  .. todo::
+    Describe the workflow.
+```
 
 ## See also
 
