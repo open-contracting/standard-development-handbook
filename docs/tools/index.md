@@ -11,6 +11,18 @@
 
 For tools relating to extensions, see [extensions tools](../extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions#creating-extensions).
 
+## OCDS extension support
+
+If changes are made to the behavior of extensions in OCDS, the following tools may need to be updated:
+
+* [CoVE](https://github.com/OpenDataServices/cove)
+* [flatten-tool](https://github.com/opendataservices/flatten-tool/)
+* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
+* [ocds-faker](https://github.com/open-contracting/ocds-faker)
+* [ocds-show](https://github.com/open-contracting/ocds-show)
+* [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp)
+* [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate)
+
 ## Adding tools to the OGP Toolbox
 
 The [OGP Toolbox](https://ogptoolbox.org/) has a collection of [Open Contracting Tools](https://ogptoolbox.org/en/collections/10).
