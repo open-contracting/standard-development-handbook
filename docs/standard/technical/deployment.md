@@ -161,7 +161,6 @@ If a new language is supported, edit `http://standard.open-contracting.org/robot
 
 ## 9. Copy the schema into place
 
-
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
@@ -184,7 +183,6 @@ If the build should also appear at [/latest/](http://standard.open-contracting.o
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
 ## 11. Update the Apache config
-
 
 ```eval_rst
   .. note::
