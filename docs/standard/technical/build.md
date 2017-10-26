@@ -2,10 +2,10 @@
 
 ## Get started
 
-Create a virtual environment, for example:
+Create a virtual environment using Python 3, for example:
 
 ```shell
-virtualenv .ve
+virtualenv --python=/usr/bin/python3 .ve
 source .ve/bin/activate
 pip install -r requirements.txt
 ```
@@ -42,7 +42,7 @@ Finally, view the documentation, by running a local web server:
 
 ```shell
 cd build
-python -m SimpleHTTPServer
+python -m http.server
 ```
 
 ## Change the theme
