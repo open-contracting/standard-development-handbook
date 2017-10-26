@@ -1,13 +1,13 @@
 # Tools and resources
 
-* The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove) to convert between spreadsheet and JSON representations of OCDS data, and to validate against the standard. 
-* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator) generates a flattened representation of an OCDS schema. 
-* [ocds-faker](https://github.com/open-contracting/ocds-faker) is a command-line tool to generate clearly fake data for OCDS release packages, for testing. 
-* [ocds-merge](https://github.com/open-contracting/ocds-merge) is a Python library that provides functions to merge a list of OCDS releases into a `compiledRelease` or a `versionedRelease`, for creating an OCDS record. 
-* [ocds-show](https://github.com/open-contracting/ocds-show) is a JavaScript application to visualize OCDS releases and records, to allow easier comprehension of OCDS data. 
+* The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove) to convert between spreadsheet and JSON representations of OCDS data, and to validate against the standard.
+* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator) generates a flattened representation of an OCDS schema.
+* [ocds-faker](https://github.com/open-contracting/ocds-faker) is a command-line tool to generate clearly fake data for OCDS release packages, for testing.
+* [ocds-merge](https://github.com/open-contracting/ocds-merge) is a Python library that provides functions to merge a list of OCDS releases into a `compiledRelease` or a `versionedRelease`, for creating an OCDS record.
+* [ocds-show](https://github.com/open-contracting/ocds-show) is a JavaScript application to visualize OCDS releases and records, to allow easier comprehension of OCDS data.
 * [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp) is an instance of OCDS Show configured for the [PPP profile](http://standard.open-contracting.org/profiles/ppp/latest/en/) of OCDS.
 * [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate) is a Python script to convert OCDS data into tabular form, for importing into a relational database.
-* [sample-data](https://github.com/open-contracting/sample-data) contains a selection of sample data that can help demonstrate what OCDS data looks like. 
+* [sample-data](https://github.com/open-contracting/sample-data) contains a selection of sample data that can help demonstrate what OCDS data looks like.
 
 For tools relating to extensions, see [extensions tools](../extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions#creating-extensions).
 
