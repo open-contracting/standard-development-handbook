@@ -2,7 +2,7 @@
 
 ## Get started
 
-Create a virtual environment using python 3, for example:
+Create a virtual environment using Python 3, for example:
 
 ```shell
 virtualenv --python=/usr/bin/python3 .ve
