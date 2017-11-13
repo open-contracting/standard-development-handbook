@@ -84,8 +84,8 @@ The _versioned-release-validation-schema.json_ file exists for validation of ver
 
 To run this script:
 
-1. Update `standard/schema/make_validation_schema.py` to refer to the correct version number (line 94).
-1. Run `make_validation_schema.py`
+1. Update `standard/schema/utils/make_validation_schema.py` to refer to the correct version number (line 94).
+1. Run `standard/schema/utils/make_validation_schema.py`
 1. commit the updated _versioned-release-validation-schema.json_ file to the repository.
 
 ## 4. Push and pull updated translations
