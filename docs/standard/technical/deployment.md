@@ -55,14 +55,14 @@ cd standard/docs/en/extensions
 
 Edit `standard/docs/en/conf.py` and set `extension_registry_git_ref` to e.g. `v1.1.1`.
 
-## 2. Check schema IDs
+## 2. Check schema IDs and refs
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Check that the `id` property at the top of each JSON schema file have been updated to reflect the current *major__minor__patch* version number.
+Check that the `id` property at the top of each JSON schema file, and any `$ref` properties, have been updated to reflect the current *major__minor__patch* version number.
 
 For example:
 
@@ -72,6 +72,22 @@ For example:
   "$schema": "http://json-schema.org/draft-04/schema#"
 }
 ```
+
+```json
+{
+  "$ref": "http://standard.open-contracting.org/schema/1__1__1/release-schema.json"
+}
+```
+
+## 2.5. Set up a dev copy of the OCDS Validator
+
+```eval_rst
+  .. note::
+    You can skip this step if you are not releasing a new major, minor or patch version.
+```
+
+Set up a dev instance of Cove using the new schema, and run tests against it.
+
 
 ## 3. Make the validation schema
 
@@ -202,8 +218,7 @@ For a new live version, you will need to edit:
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-* Set up a development instance of CoVE using the new schema, and run tests against it
-* Update the live CoVE deployment to use the new schema
+Update the live CoVE deployment to use the new schema.
 
 ## FAQ
 

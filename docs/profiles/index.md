@@ -52,6 +52,24 @@ To update the base schema and codelists that the profile is built on:
 
 A Spanish translation of the profile is maintained using Transifex.
 
+## Copying translations from the standard to a profile
+
+There is generally quite an overlap between a profile, and the standard docs. The most obvious example is all the text from the unextended schema.
+
+We can copy translations using `pretranslate` from the `translate-toolkit`:
+
+```
+git clone https://github.com/open-contracting/standard.git
+git clone https://github.com/open-contracting/public-private-partnerships.git
+cd standard
+# Merge all the standard translations into a single file
+msgcat standard/docs/locale/es/LC_MESSAGES/{*.po,*/*.po} > ALL_ES.po
+cd ../public-private-partnerships
+# Run the steps in https://github.com/open-contracting/public-private-partnerships/blob/master/README-Docs.md#translation-guide under “Extracting strings that need translating:”
+cd locale/es/LC_MESSAGES/
+for f in *.po */*.po; do pretranslate --tm ../../../../standard/ALL_ES.po -t $f ../../../build_locale/${f}t $f; done
+```
+
 ## Travis
 
 Each branch of the [public-private-partnerships](https://github.com/open-contracting/public-private-partnerships) repo gets automatically built to:
@@ -65,7 +83,7 @@ Each branch of the [public-private-partnerships](https://github.com/open-contrac
 Set some variables:
 
 ```bash
-VER=1.0            # (for example)
+VER=master         # (for example)
 DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3
                    # (see ${VER}/en/index.html)
 SEQ=1              # To deploy again on the same day, increment to 2 etc
