@@ -65,7 +65,7 @@ Each branch of the [public-private-partnerships](https://github.com/open-contrac
 Set some variables:
 
 ```bash
-VER=1.0            # (for example)
+VER=master         # (for example)
 DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3
                    # (see ${VER}/en/index.html)
 SEQ=1              # To deploy again on the same day, increment to 2 etc
