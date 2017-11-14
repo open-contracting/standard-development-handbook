@@ -79,6 +79,16 @@ For example:
 }
 ```
 
+## 2.5. Set up a dev copy of the OCDS Validator
+
+```eval_rst
+  .. note::
+    You can skip this step if you are not releasing a new major, minor or patch version.
+```
+
+Set up a dev instance of Cove using the new schema, and run tests against it.
+
+
 ## 3. Make the validation schema
 
 ```eval_rst
@@ -208,8 +218,7 @@ For a new live version, you will need to edit:
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-* Set up a development instance of CoVE using the new schema, and run tests against it
-* Update the live CoVE deployment to use the new schema
+Update the live CoVE deployment to use the new schema.
 
 ## FAQ
 
