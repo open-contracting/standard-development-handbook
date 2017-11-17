@@ -1,6 +1,6 @@
 # Servers
 
-The [standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) are hosted by Open Data Services on VPS's provided by Bytemark. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
+[standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) are hosted by Open Data Services on VPS's provided by Bytemark. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
 
 DNS and proxies:
 
