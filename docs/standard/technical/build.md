@@ -27,7 +27,7 @@ Within the virtual environment, build the documentation into `build/`:
 
 If you changed `release-schema.json`, update `versioned-release-validation-schema.json` (the tests check that this is done):
 
-```
+```shells
 cd standard/schema/utils
 ./make_validation_schema.py
 ```

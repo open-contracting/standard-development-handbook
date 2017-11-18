@@ -222,10 +222,10 @@ Update the live CoVE deployment to use the new schema.
 
 ## FAQ
 
-### How can I find out what the standard looked like at 1.0
+### How can I find out what the standard looked like at 1.0?
 
 To find the latest (patch) version of a minor release, look at the contents of the branch named with that version.
 
-### How can I find out what the standard looked like at 1.1.0
+### How can I find out what the standard looked like at 1.1.0?
 
 TBC. (Is the answer to look for a tagged release?)
