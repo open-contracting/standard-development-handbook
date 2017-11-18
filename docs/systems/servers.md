@@ -1,6 +1,6 @@
 # Servers
 
-The [standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) are hosted by Open Data Services on VPS's provided by Bytemark. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
+[standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) are hosted by Open Data Services on VPS's provided by Bytemark. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
 
 Deployments are carried out using Salt, with config stored in the [opendataservices-deploy GitHub repo](https://github.com/OpenDataServices/opendataservices-deploy).
 
@@ -17,5 +17,9 @@ Hosting the validator:
 
 * `cove-live-ocds`: hosts the [production version]((http://standard.open-contracting.org/validator/)) of the validator.
 * `cove-dev`: hosts a [development version](http://dev.cove.opendataservices.coop/validator/) of the validator.
+
+Hosting the extension registry:
+
+* `live2`: hosts the [production version of the extension registry](http://standard.open-contracting.org/extension_registry/master/), which is deployed any time a branch of [extension_registry](https://github.com/open-contracting/extension_registry) builds successfully on Travis, as described in its [.travis.yml file](https://github.com/open-contracting/extension_registry/blob/master/.travis.yml).
 
 `cove-dev` also hosts subdomains.

@@ -1,5 +1,7 @@
 # Translation
 
+This page documents only the steps required to include translations in a documentation build. See the [full translation process](../translation).
+
 ## Configuring Transifex
 
 The first time you use Transifex, run (replacing `USERNAME` and `PASSWORD`):
@@ -23,11 +25,6 @@ When a new major/minor version of the documentation text is ready:
 The last step must also be run whenever documentation pages are renamed, added or removed.
 
 ## Translating text
-
-```eval_rst
-  .. todo::
-    Document the process of creating and managing translations. :issue:`64`
-```
 
 To push untranslated text to Transifex, run:
 
