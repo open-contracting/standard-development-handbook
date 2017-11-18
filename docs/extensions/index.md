@@ -15,7 +15,7 @@ The mechanism for extending a core JSON Schema file, like `release-schema.json`,
 
 When creating a [*core* extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions), the GitHub repository should have issues disabled (see [reporting issues on extensions](#reporting-issues-on-extensions) below). Its `README.md` file should include the following text:
 
-```
+```markdown
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.

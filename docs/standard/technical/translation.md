@@ -48,7 +48,7 @@ Then, [build the documentation](build) again.
 
 If text is translated locally by editing `.po` files, the translations can be pushed to Transifex. Not that this will overwrite any new translations made on Transifex since the last time they were pulled:
 
-```
+```shell
 tx push -t --skip
 ```
 

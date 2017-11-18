@@ -4,7 +4,7 @@
 
 If you have `aspell` installed, run:
 
-```
+```shell
 find . -type f -not -path '*/\.*' -not -path '*/_static/*' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.html' -not -name '*.js' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.scss' -not -name '*.sh' -not -name '*.svg' -not -name '*.txt' -exec aspell -H check '{}' ';'
 ```
 
@@ -14,7 +14,7 @@ This command will skip dot files, Docson files, and css, html, js, png, po, py, 
 
 `aspell` will flag many field names and proper nouns as errors. `aspell` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace `~/.aspell.en.pws` this the following:
 
-```
+```text
 personal_ws-1.1 en 655
 foreignBidsFromEU
 evaluationCriteria
