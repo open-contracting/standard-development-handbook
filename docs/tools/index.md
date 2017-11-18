@@ -11,6 +11,47 @@
 
 For tools relating to extensions, see [extensions tools](../extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions#creating-extensions).
 
+## Priority tech support
+
+Priority is assessed based on the impact of the project becoming unavailable and the degree of usage :issue:`76`, which can be assessed based on [Python package downloads](http://www.pypi-stats.com/author/?q=30327), [GitHub traffic](https://github.com/open-contracting/standard-development-handbook/issues/76#issuecomment-334540063) and user feedback.
+
+### Critical
+
+* `standard`: core documentation
+* `OpenDataServices/cove`: critical step in implementation journey
+
+### High
+
+* Profiles
+* Core extensions
+* `ocds-merge`: reference implementation for merging releases
+* `extension_registry`: integrates with `standard`
+* `standard_theme`: dependency of `standard`
+* `ocds_sphinx_directives`: dependency of `standard`
+* `OpenDataServices/sphinxcontrib-jsonschema`: dependency of `standard`
+
+### Medium
+
+* Community extensions
+* `sample-data`: key resource, frequently visited
+* `standard_extension_template`: key resource
+* `standard-maintenance-scripts`: internal, quality assurance
+* `standard-development-handbook`: internal, key documentation
+* `mel-reporting-support`: internal, key tool
+
+### Low
+
+* `api-specification`: draft
+* `extension_creator`
+* `mapping-sheet-generator`
+* `json-schema-random`
+* `ocds-faker`
+* `ocds-show`
+* `ocds-show-ppp`
+* `ocds-tabulate`
+* `standard-legacy-staticsites`: for older versions of documentation
+* `open-contracting.github.io`: redirects to `standard`
+
 ## OCDS extension support
 
 If changes are made to the behavior of extensions in OCDS, the following tools may need to be updated:
