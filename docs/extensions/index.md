@@ -52,5 +52,4 @@ If the issue is with extensions as a whole (e.g. there is something wrong in the
 
 * [standard_extension_template](https://github.com/open-contracting/standard_extension_template), as described above
 * [extension_creator](https://github.com/open-contracting/extension_creator) is a web interface for modifying any of OCDS' schema files and either generating the corresponding patch file or the complete corresponding extension.
-* [extension_tester](https://github.com/open-contracting/extension_tester) provides a simple way to test your extensions on your local machine.
 * [extension_registry](https://github.com/open-contracting/extension_registry), as described above
