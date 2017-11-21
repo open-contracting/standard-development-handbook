@@ -45,7 +45,7 @@ Translators, proofreaders and reviewers have excellent writing skills (spelling 
 
 A translation glossary is [available](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (change the language code at the end of the URL to view the glossary in different languages). It can also be accessed from within the translation editor.
 
-The glossary contains key technical terms in open contracting that must be translated carefully.
+The glossary contains key terms that must be used consistently.
 
 In our translation process, we encourage translators to:
 
@@ -59,10 +59,7 @@ Some titles and descriptions of codes are copied from external sources and shoul
 
 ## Translation workflow
 
-```eval_rst
-  .. todo::
-    Describe the workflow.
-```
+
 
 ## See also
 
