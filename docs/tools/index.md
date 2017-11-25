@@ -37,7 +37,7 @@ Priority is assessed based on the impact of the project becoming unavailable and
 * `standard_extension_template`: key resource
 * `standard-maintenance-scripts`: internal, quality assurance
 * `standard-development-handbook`: internal, key documentation
-* `mel-reporting-support`: internal, key tool
+* `ocdskit`: internal, key tool
 
 ### Low
 
