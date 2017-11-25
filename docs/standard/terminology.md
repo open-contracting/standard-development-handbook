@@ -4,7 +4,6 @@ In order to use key terms consistently across the standard documentation and OCP
 
 ![Terminology process overview](https://www.lucidchart.com/invitations/accept/2eee45ed-5e62-4636-9a44-24b4414f273f)
 
-## 1. Proposition and validation
 ## Tools overview
 
 ### Google spreadsheet
@@ -57,11 +56,13 @@ They are a native speaker of the target language.
 
 The proofreader may be a language owner, but not necessarily.
 
+## Process
 
+### 1. Proposal, review, inclusion
 
 When new content is added to the documentation and new concepts are introduced in the standard, new terms may need to be translated.
 
-**Reminder:** a term is a word or group of words that must be used and translated consistently to ensure a good understanding and usage of the content. Synonyms of terms must consequently be banned. Expressions that are not terms are called *generic* expressions.
+**Reminder:** a term is a word or group of words that must be used and translated consistently to ensure a good understanding and usage of the content. Synonyms of terms should consequently be avoided. Expressions that are not terms are called *generic* expressions.
 
 | #   | Step name   | Description                                                                                                                 | Tool               |
 | --- | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------ |
@@ -70,7 +71,7 @@ When new content is added to the documentation and new concepts are introduced i
 | 3   | Inclusion   | The new terms are added in the working document, checking for duplicates.                                                   | Google spreadsheet |
 
 
-## 2. Definition
+### 2. Definition
 
 When new terms are added to the working document, subject matter experts (SME) in the source language are notified, and write a definition for each term. The definitions must be bound to the context of the source documents, and not general.
 
@@ -80,11 +81,11 @@ If the definition is copied from an existing publication, please add the URL or 
 
 | #   | Step name  | Description                                                                           | Tool               |
 | --- | ---------- | ------------------------------------------------------------------------------------- | ------------------ |
-| 1   | Definition | The source language SME writes a definition for each term, or copies an existing one. | Google spreadsheet |
+| 4   | Definition | The source language SME writes a definition for each term, or copies an existing one. | Google spreadsheet |
 
 
 
-## 3. Translation
+### 3. Translation
 
 When the definition of the new terms are ready, subject matter experts (SME) in the other languages are notified. They only translate terms to their native language.
 
@@ -95,9 +96,9 @@ The SME pays attention to the definition given for the term, as it may narrow do
 
 | #   | Step name   | Description                                                                           | Tool               |
 | --- | ----------- | ------------------------------------------------------------------------------------- | ------------------ |
-| 1   | Translation | The SME translates the terms to the target language and adds comments when necessary. | Google spreadsheet |
+| 5   | Translation | The SME translates the terms to the target language and adds comments when necessary. | Google spreadsheet |
 
-## 4. Proofreading and editing
+### 4. Proofreading and editing
 
 When the SME is done translating the new terms (or trying to), the proofreader enforces a list of rules to maintain the readability of the terms and the associated comments.
 
@@ -107,7 +108,7 @@ When the SME is done translating the new terms (or trying to), the proofreader e
 | 7   | Comments     | The proofreader makes sure the comments are spelled correctly and written as full sentences in sentence case                  | Google spreadsheet |
 
 
-## 5. Publication
+### 5. Publication
 
 Once the translations are proofread and edited, *someone* downloads the working document as a CSV file and replaces the previous file in the GitHub repository.
 
@@ -117,6 +118,7 @@ Steps 1 and 2 of this stage can be scripted.
 
 | #   | Step name                 | Description                                                                      | Tool               |
 | --- | ------------------------- | -------------------------------------------------------------------------------- | ------------------ |
-| 1   | CSV download              | File > Download as... > Comma-separated values                                   | Google spreadsheet |
-| 2   | Github commit             | The CSV file replaces the previous one for the selected language and is commited | Git                |
-| 3   | Transifex glossary update | The CSV file is uploaded to Transifex glossary, deleting the previous entries    | Transifex          |
+| 8   | CSV download              | File > Download as... > Comma-separated values                                   | Google spreadsheet |
+| 9   | GitHub commit             | The CSV file replaces the previous one for the selected language and is commited | Git                |
+| 10  | Transifex glossary update | The CSV file is uploaded to Transifex glossary, deleting the previous entries    | Transifex          |
+
