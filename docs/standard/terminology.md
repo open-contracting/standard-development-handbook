@@ -2,7 +2,7 @@
 
 In order to use key terms consistently across the standard documentation and OCP communication in general, terminology is managed according to a light-weight process that ensures quality.
 
-![Terminology process overview](https://www.lucidchart.com/invitations/accept/2eee45ed-5e62-4636-9a44-24b4414f273f)
+![Terminology process overview](https://www.lucidchart.com/publicSegments/view/888e3ab4-65bd-497e-b0fa-f2e91515672e/image.png)
 
 ## Tools overview
 
