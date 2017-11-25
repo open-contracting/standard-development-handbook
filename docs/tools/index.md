@@ -59,6 +59,7 @@ If changes are made to the behavior of extensions in OCDS, the following tools m
 * [CoVE](https://github.com/OpenDataServices/cove)
 * [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
 * [ocds-faker](https://github.com/open-contracting/ocds-faker)
+* [ocds-merge](https://github.com/open-contracting/ocds-merge)
 * [ocds-show](https://github.com/open-contracting/ocds-show)
 * [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp)
 * [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate)
