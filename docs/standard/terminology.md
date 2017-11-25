@@ -122,3 +122,12 @@ Steps 1 and 2 of this stage can be scripted.
 | 9   | GitHub commit             | The CSV file replaces the previous one for the selected language and is commited | Git                |
 | 10  | Transifex glossary update | The CSV file is uploaded to Transifex glossary, deleting the previous entries    | Transifex          |
 
+### 6. Management tasks
+
+Certain tasks are not directly related to the production of the glossary, but are necessary for good coordination:
+
+- The author informs the terminologist that a new batch of terms is ready for review.
+- *Someone* informs the translators that new terms should be translated.
+- The language owners manage the permissions for each sheet to enable the translators to translate.
+- The language owners inform *someone* that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository.
+- *Someone* informs *someone* that batch of terms has been pushed to GitHub, ready to be published to Transifex.
