@@ -5,6 +5,59 @@ In order to use key terms consistently across the standard documentation and OCP
 ![Terminology process overview](https://www.lucidchart.com/invitations/accept/2eee45ed-5e62-4636-9a44-24b4414f273f)
 
 ## 1. Proposition and validation
+## Tools overview
+
+### Google spreadsheet
+
+The Google spreadsheet is divided in sheets.
+
+The first sheet is the English sheet. It holds the source terms, their class, their definition, and any other field necessary to caracterize the source terms and help the translators. Only the people who validate the new terms and those who work on the definitions can edit this sheet.
+
+All subsequent sheets are dedicated to the translations. One sheet is created for each language variant (fr_FR, es_ES, es_UY, etc.). The first columns of these sheets are imported from the English sheets, with all the fields. New terms added in the English sheet are automatically visible in the translation sheets. For each translation sheet, only the translators and the proofreaders can edit the sheet.
+
+All the sheets are publicly readable.
+
+### GitHub
+
+GitHub is used as the source of truth for OCP terminology. The terms, definitions and translations that are pushed to the repository have been previously spellchecked.
+
+The benefit of using Git is that it neatly tracks the changes made to the files and it incorporates a convenvient issue tracker to track the progression of certain tasks.
+
+## Roles overview
+
+### Author
+
+The author writes English content for the OCP.
+
+They inform the terminologist when they have written chunks of content about new concepts.
+
+### Terminologist
+
+The terminologist recognizes what is a term and what isn't. They may also be an author.
+
+### Subject matter expert
+
+The subject matter expert (SME) is an expert in the domain of application of the terms.
+
+If they work on the definitions, they are fluent in English.
+
+If they translate the terms, they are fluent in the target language. They understand written English and are able to find terms in their language that equivalent to the source English terms.
+
+### Language owner
+
+The language owner oversees the translations of one or more variations of a language. They are the reference contacts for the subject matter experts (SMEs) who translate the terms.
+
+They are fluent practioners of the language they oversee.
+
+### Proofreader
+
+The proofreader ensures that the translated terms and their comments are well written and understandable.
+
+They are a native speaker of the target language.
+
+The proofreader may be a language owner, but not necessarily.
+
+
 
 When new content is added to the documentation and new concepts are introduced in the standard, new terms may need to be translated.
 
