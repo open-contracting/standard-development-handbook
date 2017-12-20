@@ -8,13 +8,35 @@ In order to use key terms consistently across the standard documentation and OCP
 
 ### Google spreadsheet
 
-The Google spreadsheet is divided in sheets.
+The Google spreadsheet is divided in sheets. Each term is identified by an ID to enable the reconciliation of the terms across languages and enable the management of homographs (different terms that have the same spelling).
 
-The first sheet is the English sheet. It holds the source terms, their class, their definition, and any other field necessary to caracterize the source terms and help the translators. Only the people who validate the new terms and those who work on the definitions can edit this sheet.
+All the sheets are publicly readable and can be commented by anyone.
 
-All subsequent sheets are dedicated to the translations. One sheet is created for each language variant (fr_FR, es_ES, es_UY, etc.). The first columns of these sheets are imported from the English sheets, with all the fields. New terms added in the English sheet are automatically visible in the translation sheets. For each translation sheet, only the translators and the proofreaders can edit the sheet.
+#### Source
 
-All the sheets are publicly readable.
+The Source sheet is edited by the terminologist and the SMEs and proofreaders in the source language. It has the following columns:
+
+- **ID**: the ID of a term never changes. When a new term is added, it takes the next available ID number.
+- **Term**: the term, in its canonical form (lower case, singular, infinitive)
+- **Definition**: the definition of the term **within the scope of OCDS documentation**. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
+- **Comment**: any remark the terminologist may want to add to help translating this term
+
+#### Languages (es, fr, etc.)
+
+The sheet of a language is edited by the SMEs and the proofreaders. It has the following columns:
+
+- **ID**: the ID of the term. It enables the synchronization with the Source sheet and connects all the translations of the term.
+- **Term**, **Definition**, **Comment**: the content of these fields is automatically imported from the Source sheet. Once one of these values is modified in the Source sheet, it can take up to a minute for the values to be updated in all the sheets.
+- **Translation**: the equivalent of the source term in the target language, in its canonical form (lower case, singular, infinitive). Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage. If so, please highlight this difference in the definition and optionnally in the comment field.
+- **Definition**: the definition of the term in the target language. This is not necessarily a translation of the source definition. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
+- **Comment**: any remark the SME may want to add to explain the choice or the definition of the term in the target language.
+
+#### Language variants (es_MX, es_UY, etc.)
+
+The sheet of a language variant is edited by the SMEs and the proofreaders. It has the following columns:
+
+TODO
+
 
 ### GitHub
 
