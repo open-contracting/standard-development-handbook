@@ -12,4 +12,4 @@ Assets that are no longer supported should be archived.
 1. Run the [`fix:archive_repos REPOS=repo1,repo2`](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration) task on the repository.
 1. Move the archive to the `open-contracting-archive` organization.
 1. [Archive](https://help.github.com/articles/about-archiving-repositories/) the repository through its settings.
-1. Run the [`repos:badges`](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration) task.
+1. Run the [`local:badges`](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration) task.
