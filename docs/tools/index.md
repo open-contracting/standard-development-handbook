@@ -54,12 +54,12 @@ Priority is assessed based on the impact of the project becoming unavailable and
 
 ## OCDS extension support
 
-If changes are made to the behavior of extensions in OCDS, the following tools may need to be updated:
+If changes are made to the behavior of extensions in OCDS, the following tools may need to be updated, in addition to the [extensions tools](../extensions#tools):
 
 * [CoVE](https://github.com/OpenDataServices/cove)
-* [flatten-tool](https://github.com/opendataservices/flatten-tool/)
 * [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
 * [ocds-faker](https://github.com/open-contracting/ocds-faker)
+* [ocds-merge](https://github.com/open-contracting/ocds-merge)
 * [ocds-show](https://github.com/open-contracting/ocds-show)
 * [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp)
 * [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate)

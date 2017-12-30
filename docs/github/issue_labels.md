@@ -14,5 +14,4 @@ Issues are given labels to indicate their relation to:
 * **Focus - Schema**: changes to the JSON Schema (new fields, renamed fields, constraints, etc.)
 * **Focus - Serialization**: data and schema formats other than JSON and JSON Schema
 * **Focus - Tool**: new or existing tools (for validation, etc.)
-* **Focus - Usecase**: a specific reported use case for which the best resolution (schema change, documentation change, no change, etc.) hasn't yet been determined
 * **Focus - Validation**: tools for validation; changes to validations in the schema
