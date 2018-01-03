@@ -11,7 +11,7 @@ The staff of the following organizations may have administrative roles:
 * [standard-discuss](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss)
 * [dev-discuss](https://groups.google.com/a/open-contracting.org/forum/#!forum/dev-discuss)
 
-There should be at most two members with the [Owner](https://support.google.com/a/answer/167094?hl=en) role from OCP. There should be at most two members with the Manager role from each organization.
+There should be at most two members with the [Owner](https://support.google.com/a/answer/167094?hl=en) role from OCP. There should be at most two members with the Manager role from each other organization.
 
 ## ReadTheDocs
 
@@ -23,7 +23,4 @@ There should be at most two [users](https://crm.open-contracting.org/users) with
 
 ## Transifex
 
-```eval_rst
-  .. todo::
-    Describe policy for Administrator role, with link to users page.
-```
+Transifex is used by ODS for multiple clients. There should be at most two members with the [Project Maintainer and Team Manager](https://docs.transifex.com/teams/understanding-user-roles) roles from OCP.
