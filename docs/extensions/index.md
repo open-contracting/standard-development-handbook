@@ -2,9 +2,7 @@
 
 An OCDS release or record package may declare one or more extensions. Extensions can add to the schema, add new codelists, or add entries to existing codelists. 
 
-* **Core extensions** are maintained as part of the standard governance process.
-* A directory of **community extensions** is maintained to allow users to discover common properties and data models they may wish to use for additional data;
-* Publishers may declare their own **local extensions** to suppress validation warnings about additional fields or codelist values in their data, and to document additional fields in their data. 
+See the [standard documentation](http://standard.open-contracting.org/latest/en/extensions/) for definitions of core, community and local extensions.
 
 In addition, a collection of extensions may be packaged together as an **OCDS profile**. When used as part of a profile, extensions may additionally: remove scheme elements and codelist entries. 
 

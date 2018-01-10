@@ -28,6 +28,12 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 
 ## Schema style guide
 
+
+* We use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for property names. e.g. `awardCriteriaDetails`.
+* We use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for objects directly nested within the `definitions` section. e.g. `Award`.
+* We put the qualifier *before* the concept. e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
+* We use singular for properties pointing to an object or literal value.
+* We use plural for properties pointing to an array of values. 
 * Property and object names should not include the name of the parent object, e.g. `title` not `tenderTitle`, `description` not `awardDescription`, etc.
 * Date fields should use the `"format": "date-time"` key to enforce use of ISO8601
 * The `period` object should be used in place of `year` or `month` fields
