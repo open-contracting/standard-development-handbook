@@ -44,12 +44,7 @@ Any non-required property pointing to a literal, array of literals, or single ob
 
 Allowing properties to be `null` is important to the [merging process](http://standard.open-contracting.org/latest/en/schema/merging/), in which `null` is used to [remove a value from the compiledRelease](http://standard.open-contracting.org/latest/en/schema/reference/#emptying-fields-and-values).
 
-(To be confirmed:) Any non-required property pointing to an array of objects should not allow `null` as a value, as array entries should be explicitly tagged for removal following the pattern outlined in [Standard#232](https://github.com/open-contracting/standard/issues/232) 
-
-```eval_rst
-  .. todo::
-    Confirm the guidance on null above. :issue:`75`
-```
+Any non-required property pointing to an array of objects should not allow `null` as a value, as array entries should be explicitly tagged for removal following the pattern outlined in [Standard#232](https://github.com/open-contracting/standard/issues/232).
 
 ## Detail fields
 
