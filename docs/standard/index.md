@@ -26,6 +26,7 @@ This section describes the processes for maintaining these assets.
    :glob:
 
    schema
+   conventions
    documentation
    guidance
    translation

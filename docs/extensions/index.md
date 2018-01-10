@@ -1,5 +1,13 @@
 # Extensions
 
+An OCDS release or record package may declare one or more extensions. Extensions can add to the schema, add new codelists, or add entries to existing codelists. 
+
+See the [standard documentation](http://standard.open-contracting.org/latest/en/extensions/) for definitions of core, community and local extensions.
+
+In addition, a collection of extensions may be packaged together as an **OCDS profile**. When used as part of a profile, extensions may additionally: remove scheme elements and codelist entries. 
+
+The structure of an extension is documented via the [standard extension template](https://github.com/open-contracting/standard_extension_template/blob/master/README.md).
+
 ## When to create a *core* extension
 
 * An extension can be authored to limit 'scope creep' of the core standard, especially in cases where we lack implementation experience with the proposed changes. The extension may serve as a way to externalize the risk of permanent changes to the core standard.
