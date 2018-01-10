@@ -15,7 +15,7 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 
 * When referring to a **field** or **codelist**, use the camelCase version of the field/codelist name, and enclose it in backticks so it is displayed in a montotype font as follows: `camelCase`
 * When referring to a **building block**, use the capitalized CamelCase version of the building block name, and enclose it in backticks so it is displayed in a montotype font as follows: `CamelCase`
-* When referring to a **code** from a codelist, enclose the value in single quotes. E.g. "We have added a 'direct' code to the `method` codelist"
+* When referring to a **code** from a codelist, enclose the value in single quotes, e.g. "We have added a 'direct' code to the `method` codelist"
 * When pluralizing a **field** or **building block**, treat the field/building block name as a proper noun, and add a `'s` instead of an `s` to the end, or treat it as a mass noun and add nothing to the end
 
 ## Word choice
@@ -29,9 +29,9 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 ## Schema style guide
 
 
-* We use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for property names. e.g. `awardCriteriaDetails`.
-* We use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for objects directly nested within the `definitions` section. e.g. `Award`.
-* We put the qualifier *before* the concept. e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
+* We use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for property names, e.g. `awardCriteriaDetails`.
+* We use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for objects directly nested within the `definitions` section, e.g. `Award`.
+* We put the qualifier *before* the concept, e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
 * We use singular for properties pointing to an object or literal value.
 * We use plural for properties pointing to an array of values. 
 * Property and object names should not include the name of the parent object, e.g. `title` not `tenderTitle`, `description` not `awardDescription`, etc.

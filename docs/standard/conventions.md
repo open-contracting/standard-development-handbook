@@ -27,32 +27,28 @@ Objects that are not contained within an array MAY include an `id` property in o
 
 ## Types and null
 
-Any non-required property pointing to a literal, array of literals, or single object should support a type of `null`. e.g.:
+Any non-required property pointing to a literal, array of literals, or single object should support a type of `null`, e.g.:
 
 ```json
 { 
   "status": {
-        "title": "Contract status",
-        "type": [
-            "string",
-            "null"
-          ]
-        }
+    "title": "Contract status",
+    "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
 }
 ```
 
 Allowing properties to be `null` is important to the [merging process](http://standard.open-contracting.org/latest/en/schema/merging/), in which `null` is used to [remove a value from the compiledRelease](http://standard.open-contracting.org/latest/en/schema/reference/#emptying-fields-and-values).
 
-(To be confirmed:) Any non-required property pointing to an array of objects should not allow `null` as a value, as array entries should be explicitly tagged for removal following the pattern outlined in [Standard#232](https://github.com/open-contracting/standard/issues/232) 
-
-```eval_rst
-  .. todo::
-    Confirm the guidance on null above. :issue:`75`
-```
+Any non-required property pointing to an array of objects should not allow `null` as a value, as array entries should be explicitly tagged for removal following the pattern outlined in [Standard#232](https://github.com/open-contracting/standard/issues/232).
 
 ## Detail fields
 
-We have adopted a common pattern in OCDS of pairing a codelist, with a `Details` field which can be used for either:
+We have adopted a common pattern in OCDS of pairing a codelist, with a `xDetails` field which can be used for either:
 
 * Free text details on the codelist value
 * A more detailed set of classifications from a publisher's systems
@@ -61,7 +57,7 @@ For example, a country may have five procurement procedures: A, B, C, D and E.
 
 The `procurementMethod` field uses a closed codelist ('open','selective','limited','direct') to which these five procedures should be mapped. The `procurementMethodDetails` field then exists, into which they can input their original, unmapped classifications: A, B, C, D or E. 
 
-Use of `Details` fields can help increase acceptance of a closed codelist.
+Use of `xDetails` fields can help increase acceptance of a closed codelist.
 
 ## Additional array
 
