@@ -86,3 +86,17 @@ Resources we want to highlight are added to the [OCP Resources](https://www.open
 1. Paste a link to the resource into the "link" section, making sure the resource has appropriate sharing settings and is tagged as "#public"
 1. Click "preview" to check the information you have entered
 1. Click "Save as draft" and ask Georg to review and publish the draft resource
+
+If the link is to a Google Drive file or folder, use a Bit.ly link to track clicks:
+
+1. Login to [bitly.com](https://bitly.com) with the @OpenContracting Twitter account
+1. Click "Create BitLink"
+1. Paste the link to the Google Drive file or folder. Omit `?usp=sharing`, `#heading=…`, `/u/0`, `/a/open-contracting.org`, etc. The URL should look like one of:
+  * `https://docs.google.com/document/d/{id}/edit`
+  * `https://docs.google.com/spreadsheets/d/{id}/copy`
+  * `https://docs.google.com/spreadsheets/d/{id}/edit#gid={gid}`
+  * `https://drive.google.com/drive/folders/{id}`
+  * `https://drive.google.com/file/d/{id}/view`
+  * `https://drive.google.com/open?id={id}`
+1. Edit the short URL. Start with the file or folder's name, omit conjunctions and hashtags, replace spaces with hyphens, and, if appropriate, prefix "OCDS-" and suffix the OCDS version (e.g. `-v11`) and language code (e.g. `-fr`). For example, "Releases and Records Exercise (OCDS 1.1) #public" becomes "OCDS-Releases-Records-Exercise-v11".
+1. Click "Save"
