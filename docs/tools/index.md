@@ -99,4 +99,5 @@ If the link is to a Google Drive file or folder, use a Bit.ly link to track clic
   * `https://drive.google.com/file/d/{id}/view`
   * `https://drive.google.com/open?id={id}`
 1. Edit the short URL. Start with the file or folder's name, omit conjunctions and hashtags, replace spaces with hyphens, and, if appropriate, prefix "OCDS-" and suffix the OCDS version (e.g. `-v11`) and language code (e.g. `-fr`). For example, "Releases and Records Exercise (OCDS 1.1) #public" becomes "OCDS-Releases-Records-Exercise-v11".
+1. Add the "OCDS" tag
 1. Click "Save"
