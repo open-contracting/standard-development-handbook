@@ -81,9 +81,16 @@ Resources we want to highlight are added to the [OCP Resources](https://www.open
 1. [Login](https://www.open-contracting.org/wp-admin/)
 1. Select "Resources" from the sidebar
 1. Click "Add resource"
-1. Enter a title, short description and long description for your resource
-1. Select appropriate values from the dropdown boxes for audience, author, organization, issue, etc.
-1. Paste a link to the resource into the "link" section, making sure the resource has appropriate sharing settings and is tagged as "#public"
+1. Enter a title, short description and long description
+1. Select values for:
+  * Audience
+  * Author
+  * Organisation ("Open Contracting Partnership")
+  * Issue (blank)
+  * Resource Type (one of "Data tool", "Guide", "Training Material")
+  * Country and Region ("International", or "Latin America and the Caribbean" for Spanish resources)
+  * Open Contracting ("Data standard" and, if a "Data tool", "Implementation")
+1. Enter a URL for "Link". If it a Google Drive file or folder, make sure its name is tagged as "#public" and that it's shared as "Anyone with the link can view". See the caveats about the format of Google Drive URLs in the bitly.com instructions below.
 1. Click "preview" to check the information you have entered
 1. Click "Save as draft" and ask Georg to review and publish the draft resource
 
