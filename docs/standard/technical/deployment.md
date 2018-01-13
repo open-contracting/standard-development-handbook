@@ -228,4 +228,4 @@ To find the latest (patch) version of a minor release, look at the contents of t
 
 ### How can I find out what the standard looked like at 1.1.0?
 
-TBC. (Is the answer to look for a tagged release?)
+To find a patch release, look at the contents of the tree tagged with that version.
