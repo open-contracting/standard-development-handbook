@@ -133,7 +133,7 @@ Create a tagged release named e.g. `1__1__0`
 Step 5 will trigger a build on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
-[http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/)
+[http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/) or [http://standard.open-contracting.org/1.1/en/](http://standard.open-contracting.org/1.1/en/).
 
 ## 8. Copy the files to the live server
 
