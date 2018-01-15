@@ -133,7 +133,7 @@ Create a tagged release named e.g. `1__1__0`
 Step 5 will trigger a build on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
-[http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/)
+[http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/) or [http://standard.open-contracting.org/1.1/en/](http://standard.open-contracting.org/1.1/en/).
 
 ## 8. Copy the files to the live server
 
@@ -228,4 +228,4 @@ To find the latest (patch) version of a minor release, look at the contents of t
 
 ### How can I find out what the standard looked like at 1.1.0?
 
-TBC. (Is the answer to look for a tagged release?)
+To find a patch release, look at the contents of the tree tagged with that version.
