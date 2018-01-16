@@ -87,8 +87,8 @@ When new content is added to the documentation and new concepts are introduced i
 
 | #   | Step name   | Description                                                                                                                 | Tool               |
 | --- | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| 1   | Proposition | The author of new or updated text prepares a list of expressions (words or groups of words) that they consider to be terms. | GitHub issue       |
-| 2   | Validation  | A terminologist validates that the proposed expressions are actually terms.                                                 | GitHub issue       |
+| 1   | Proposal    | The author of new or updated text prepares a list of expressions (words or groups of words) that they consider to be terms. | GitHub issue       |
+| 2   | Review      | A terminologist validates that the proposed expressions are actually terms.                                                 | GitHub issue       |
 | 3   | Inclusion   | The new terms are added in the working document, checking for duplicates.                                                   | Google spreadsheet |
 
 ### 2. Definition
