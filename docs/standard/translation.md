@@ -24,6 +24,11 @@ A number of other community translations exist in various levels of completion.
 
 ## Translators, proofreaders and reviewers
 
+```eval_rst
+  .. todo::
+    Describe the process for selecting translators and reviewers and managing permissions.
+```
+
 Translators, proofreaders and reviewers have excellent writing skills (spelling and grammar) and intervene only when the target language is their native language.
 
 **Translators** write the source content in one of the target languages. They must be familiar with the topics (public contracting and data) and apply the guidelines (this document) and terminology (in Transifex) provided by the Open Contracting Partnership.
