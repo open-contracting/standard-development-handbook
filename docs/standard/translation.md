@@ -22,12 +22,20 @@ We currently actively maintain translations to:
 
 A number of other community translations exist in various levels of completion.
 
-## Translators and reviewers
+## Translators, proofreaders and reviewers
 
 ```eval_rst
   .. todo::
     Describe the process for selecting translators and reviewers and managing permissions.
 ```
+
+Translators, proofreaders and reviewers have excellent writing skills (spelling and grammar) and intervene only when the target language is their native language.
+
+**Translators** write the source content in one of the target languages. They must be familiar with the topics (public contracting and data) and apply the guidelines (this document) and terminology (in Transifex) provided by the Open Contracting Partnership.
+
+**Proofreaders** proofread the translation and focus on the quality of the writing: spelling, grammar, punctuation. They normally don't need to look at the source content.
+
+**Reviewers** review the translation to ensure it is functional. A functional translation enables the reader to access the same information and perform the same tasks as the source document would. Reviewers are specialists of the domains at hand (public contracting and data) and focus on the clarity of the phrasing and the good usage of the terminology.
 
 ## Using Transifex
 
@@ -42,7 +50,7 @@ A number of other community translations exist in various levels of completion.
 
 A translation glossary is [available](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (change the language code at the end of the URL to view the glossary in different languages). It can also be accessed from within the translation editor.
 
-The glossary contains key technical terms in open contracting that must be translated carefully.
+The glossary contains key terms that must be used consistently.
 
 In our translation process, we encourage translators to:
 

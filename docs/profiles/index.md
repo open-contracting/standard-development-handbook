@@ -58,7 +58,7 @@ There is generally quite an overlap between a profile, and the standard docs. Th
 
 We can copy translations using `pretranslate` from the `translate-toolkit`:
 
-```
+```bash
 git clone https://github.com/open-contracting/standard.git
 git clone https://github.com/open-contracting/public-private-partnerships.git
 cd standard

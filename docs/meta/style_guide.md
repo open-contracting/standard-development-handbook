@@ -28,7 +28,6 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 
 ## Schema style guide
 
-
 * We use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for property names, e.g. `awardCriteriaDetails`.
 * We use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for objects directly nested within the `definitions` section, e.g. `Award`.
 * We put the qualifier *before* the concept, e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
