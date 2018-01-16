@@ -28,7 +28,7 @@ The compiled schema and codelists are located in the [`schema`](https://github.c
 
 To include a new or updated extension in the profile build:
 
-1. Create a new release in GitHub for the version of the extension to be included in the profile build (see [worked example](../standard/technical/deployment#pinning-extensions-worked-example)).
+1. Create a new release in GitHub for the version of the extension to be included in the profile build (see [worked example](../standard/technical/deployment#pin-extensions)).
 1. In the [ppp branch](https://github.com/open-contracting/extension_registry/tree/ppp) of the extension registry, if the extension is new, add an entry for it or otherwise update its `extension.json`, so that the `url` key points to the release created in step 1.
 1. If the extension is new, update the `extensions_to_merge` list in [`apply-extensions.py`](https://github.com/open-contracting/public-private-partnerships/blob/master/schema/apply-extensions.py) to include the slug for the extension (specified in the entry in the extension registry).
 1. Run [`apply-extensions.py`](https://github.com/open-contracting/public-private-partnerships/blob/master/schema/apply-extensions.py).
@@ -58,7 +58,7 @@ There is generally quite an overlap between a profile, and the standard docs. Th
 
 We can copy translations using `pretranslate` from the `translate-toolkit`:
 
-```
+```bash
 git clone https://github.com/open-contracting/standard.git
 git clone https://github.com/open-contracting/public-private-partnerships.git
 cd standard

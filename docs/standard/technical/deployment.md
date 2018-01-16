@@ -2,13 +2,15 @@
 
 This section describes the steps involved in deploying an updated version of the standard to become the live version.
 
-This process is used for major, minor and patch upgrades.
+This process is used for major, minor and patch versions, as well as non-normative versions.
 
-For changes to documentation only (no schema changes), start from step 4.
+For changes to documentation only (no schema changes), start from [Translate and release](#translate-and-release).
 
-For changes to the theme only, start from step 7.
+For changes to the theme only, start from [Build](#build).
 
-## 1. Pin extensions
+## Schemas and extensions
+
+### 1. Pin extensions
 
 ```eval_rst
   .. note::
@@ -17,24 +19,18 @@ For changes to the theme only, start from step 7.
 
 Each release of the standard should pin to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned. The steps are:
 
-1. Review open pull requests and changes since last release of core extensions
-1. Create new releases of core extensions
-1. Create a new release of the extension registry to point to the new releases of extensions
-1. Pull extensions' Markdown files into the standard
-1. Set the documentation build process to use the new extension registry tag
-
-### Review open pull requests and changes since last release of core extensions
+#### Review open pull requests and recent changes
 
 For each *core* extension:
 
-1. Open the extension's [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
-1. Review [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls) and discuss whether to merge any
-1. Open the extension's [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from the extension's homepage)
-1. Click to view the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading). If there are no new commits, skip the rest of this step.
-1. Check the changes against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
-1. Before publishing the release, discuss any substantive changes, i.e. not simple typo or documentation updates, which aren't included in the changelog
+1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
+1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
+1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
+1. Click to view the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading). If there are new commits:
+  1. Check the changes against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
+  1. Before publishing the release, discuss any substantive changes, i.e. not simple typo or documentation updates, that aren't included in the changelog
 
-### Create new releases of core extensions
+#### Create new releases of core extensions
 
 For each *core* extension:
 
@@ -43,7 +39,11 @@ For each *core* extension:
 1. In the *Release title* field, enter a title, e.g. "Fixed version for OCDS 1.1.1"
 1. Enter a brief summary of changes, e.g. "Typo fixes", and click *Publish release*
 
-### Pull extensions' Markdown files into the standard
+Then, create a new release of the extension registry to point to the new releases of core extensions.
+
+#### Integrate extensions into the standard
+
+Pull extensions' Markdown files into the standard:
 
 ```bash
 cd standard/docs/en/extensions
@@ -51,11 +51,9 @@ cd standard/docs/en/extensions
 ./get-readmes.py
 ```
 
-### Set the documentation build process to use the new extension registry tag
+Set the documentation build process to use the new extension registry tag, by editing `standard/docs/en/conf.py` and setting `extension_registry_git_ref` to e.g. `v1.1.1`.
 
-Edit `standard/docs/en/conf.py` and set `extension_registry_git_ref` to e.g. `v1.1.1`.
-
-## 2. Check schema IDs and refs
+### 2. Check schema IDs and refs
 
 ```eval_rst
   .. note::
@@ -79,32 +77,37 @@ For example:
 }
 ```
 
-## 2.5. Set up a dev copy of the OCDS Validator
+### 3. Perform periodic updates, if appropriate
+
+#### Update currency codelist
+
+ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306). Before each release, and at least once a year, run `standard/schema/utils/fetch_currency_codelist.py`.
+
+### 4. Set up a development copy of the OCDS Validator
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Set up a dev instance of Cove using the new schema, and run tests against it.
+Set up a development instance of Cove using the new schema, and run tests against it.
 
-
-## 3. Make the validation schema
+### 5. Make the validation schema
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository.
+The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. To run this script:
 
-To run this script:
-
-1. Update `standard/schema/utils/make_validation_schema.py` to refer to the correct version number (line 94).
+1. Update `standard/schema/utils/make_validation_schema.py` to refer to the correct version number (line 99).
 1. Run `standard/schema/utils/make_validation_schema.py`
 1. commit the updated _versioned-release-validation-schema.json_ file to the repository.
 
-## 4. Push and pull updated translations
+## Merge and release
+
+### 1. Push and pull updated translations
 
 1. Run `tx push -s` to push updated source files to Transifex.
 1. Run `tx pull -a -f` to pull updated translation files to the repository.
@@ -115,11 +118,11 @@ To run this script:
     How can we test translation and be sure all strings had valid translations?
 ```
 
-## 5. Merge the dev branch
+### 2. Merge the development branch
 
 The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch.
 
-## 6. Create a tagged release
+### 3. Create a tagged release
 
 ```eval_rst
   .. note::
@@ -128,14 +131,16 @@ The dev working branch should be merged into the relevant live branch, e.g. merg
 
 Create a tagged release named e.g. `1__1__0`
 
-## 7. Build on Travis
+## Build and deploy
 
-Step 5 will trigger a build on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
+## 1. Build on Travis
+
+[Merge the development branch](#merge-the-development-branch) will trigger a [build](../build) on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
 [http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/) or [http://standard.open-contracting.org/1.1/en/](http://standard.open-contracting.org/1.1/en/).
 
-## 8. Copy the files to the live server
+## 2. Copy the files to the live server
 
 (See the [servers](../../servers) page for more info on how our servers are set up.)
 
@@ -175,7 +180,7 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
 
 If a new language is supported, edit `http://standard.open-contracting.org/robots.txt`
 
-## 9. Copy the schema into place
+## 3. Copy the schema into place
 
 ```eval_rst
   .. note::
@@ -192,13 +197,13 @@ cp -r /home/ocds-docs/web/1.1/en/*.json /home/ocds-docs/web/schema/1__1__1/
 
 The JSON files are then visible at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
 
-## 10. Update the "latest" branch
+## 4. Update the "latest" branch
 
-If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), then update the `latest` branch on GitHub to point to the same commit. Wait for the Travis build, then repeat step 8 with `VER=latest`.
+If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), then update the `latest` branch on GitHub to point to the same commit. Wait for the Travis build, then repeat [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
 
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
-## 11. Update the Apache config
+## 5. Update the Apache config
 
 ```eval_rst
   .. note::
@@ -211,7 +216,7 @@ For a new live version, you will need to edit:
 * [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
 * [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
-## 12. Update the OCDS validator
+## 6. Update the OCDS validator
 
 ```eval_rst
   .. note::
