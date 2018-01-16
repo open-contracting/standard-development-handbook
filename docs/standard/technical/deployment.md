@@ -88,7 +88,6 @@ For example:
 
 Set up a dev instance of Cove using the new schema, and run tests against it.
 
-
 ## 3. Make the validation schema
 
 ```eval_rst
