@@ -45,7 +45,7 @@ This is particularly important for new versions of the standard, as each version
 
 ```eval_rst
   .. note::
-    The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the _same_ standard release cycle) and 'externally' (with reference to _different_ standard versions) is likely to change in the future. See [this issue](https://github.com/open-contracting/extension_registry/issues/47) for more.
+    The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the *same* standard release cycle) and 'externally' (with reference to *different* standard versions) is likely to change in the future. See `this issue <https://github.com/open-contracting/extension_registry/issues/47>`_ for more.
 ```
 
 ## Reporting issues on extensions
