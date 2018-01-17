@@ -27,8 +27,8 @@ For each *core* extension:
 1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
 1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
 1. Click to view the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading). If there are new commits:
-  1. Check the changes against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
-  1. Before publishing the release, discuss any substantive changes, i.e. not simple typo or documentation updates, that aren't included in the changelog
+    1. Check the changes against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
+    1. Before publishing the release, discuss any substantive changes, i.e. not simple typo or documentation updates, that aren't included in the changelog
 
 #### Create new releases of core extensions
 
