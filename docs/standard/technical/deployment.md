@@ -26,17 +26,17 @@ For each *core* extension:
 1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
 1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
 1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
-1. Click to view the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading). If there are new commits:
+1. View the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading). If there are any:
     1. Check the changes against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
-    1. Before publishing the release, discuss any substantive changes, i.e. not simple typo or documentation updates, that aren't included in the changelog
+    1. Discuss substantive changes, i.e. not simple typo or documentation updates, that aren't included in the changelog
 
 #### Create new releases of core extensions
 
 For each *core* extension:
 
 1. From the list of releases, click *Draft a new release*
-1. In the *Tag version* field, enter the version of OCDS being deployed in *vmajor.minor.patch* format, e.g. `v1.1.1`
-1. In the *Release title* field, enter a title, e.g. "Fixed version for OCDS 1.1.1"
+1. In *Tag version*, enter the version of OCDS being deployed in *vmajor.minor.patch* format, e.g. `v1.1.1`
+1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
 1. Enter a brief summary of changes, e.g. "Typo fixes", and click *Publish release*
 
 Then, create a new release of the extension registry to point to the new releases of core extensions.
