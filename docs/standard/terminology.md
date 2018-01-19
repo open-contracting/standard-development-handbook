@@ -27,7 +27,7 @@ The sheet of a language is edited by the SMEs and the proofreaders. It has the f
 
 - **ID**: the ID of the term. It enables the synchronization with the Source sheet and connects all the translations of the term.
 - **Term**, **Definition**, **Comment**: the content of these fields is automatically imported from the Source sheet. Once one of these values is modified in the Source sheet, it can take up to a minute for the values to be updated in all the sheets.
-- **Translation**: the equivalent of the source term in the target language, in its canonical form (lower case, singular, infinitive). Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage. If so, please highlight this difference in the definition and optionnally in the comment field.
+- **Translation**: the equivalent of the source term in the target language, in its canonical form (lower case, singular, infinitive). Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage. If so, please highlight this difference in the definition and optionally in the comment field.
 - **Definition**: the definition of the term in the target language. This is not necessarily a translation of the source definition. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
 - **Comment**: any remark the SME may want to add to explain the choice or the definition of the term in the target language.
 
@@ -45,7 +45,7 @@ The sheet of a language variant is edited by the SMEs and the proofreaders. It h
 
 GitHub is used as the source of truth for OCP terminology. The terms, definitions and translations that are pushed to the repository have been previously spellchecked.
 
-The benefit of using Git is that it neatly tracks the changes made to the files and it incorporates a convenvient issue tracker to track the progression of certain tasks.
+The benefit of using Git is that it neatly tracks the changes made to the files and it incorporates a convenient issue tracker to track the progression of certain tasks.
 
 ### Transifex
 
@@ -95,12 +95,15 @@ When new content is added to the documentation and new concepts are introduced i
 
 **Reminder:** a term is a word or group of words that must be used and translated consistently to ensure a good understanding and usage of the content. Synonyms of terms should consequently be avoided. Expressions that are not terms are called *generic* expressions.
 
-| #   | Step name   | Description                                                                                                                 | Tool               |
-| --- | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| 1   | Proposition | The author of new or updated text prepares a list of expressions (words or groups of words) that they consider to be terms. | GitHub issue       |
-| 2   | Validation  | A terminologist validates that the proposed expressions are actually terms.                                                 | GitHub issue       |
-| 3   | Inclusion   | The new terms are added in the working document, checking for duplicates.                                                   | Google spreadsheet |
-
+```eval_rst
+=== =========== =========================================================================================================================== ==================
+#   Step name   Description                                                                                                                 Tool
+=== =========== =========================================================================================================================== ==================
+1   Proposal    The author of new or updated text prepares a list of expressions (words or groups of words) that they consider to be terms. GitHub issue
+2   Review      A terminologist validates that the proposed expressions are actually terms.                                                 GitHub issue
+3   Inclusion   The new terms are added in the working document, checking for duplicates.                                                   Google spreadsheet
+=== =========== =========================================================================================================================== ==================
+```
 
 ### 2. Definition
 
@@ -110,11 +113,13 @@ Using other terms of the glossary in the definitions is a good practice and help
 
 If the definition is copied from an existing publication, please add the URL or reference at the end of the definition.
 
-| #   | Step name  | Description                                                                           | Tool               |
-| --- | ---------- | ------------------------------------------------------------------------------------- | ------------------ |
-| 4   | Definition | The source language SME writes a definition for each term, or copies an existing one. | Google spreadsheet |
-
-
+```eval_rst
+=== ========== ===================================================================================== ==================
+#   Step name  Description                                                                           Tool
+=== ========== ===================================================================================== ==================
+4   Definition The source language SME writes a definition for each term, or copies an existing one. Google spreadsheet
+=== ========== ===================================================================================== ==================
+```
 
 ### 3. Translation
 
@@ -124,20 +129,26 @@ The SME may add a comment in the `comment_xx-XX` column to explain the choice of
 
 The SME pays attention to the definition given for the term, as it may narrow down the meaning and lead to a translation that is more specific than the usual translation of the source term.
 
-
-| #   | Step name   | Description                                                                           | Tool               |
-| --- | ----------- | ------------------------------------------------------------------------------------- | ------------------ |
-| 5   | Translation | The SME translates the terms to the target language and adds comments when necessary. | Google spreadsheet |
+```eval_rst
+=== =========== ===================================================================================== ==================
+#   Step name   Description                                                                           Tool
+=== =========== ===================================================================================== ==================
+5   Translation The SME translates the terms to the target language and adds comments when necessary. Google spreadsheet
+=== =========== ===================================================================================== ==================
+```
 
 ### 4. Proofreading and editing
 
 When the SME is done translating the new terms (or trying to), the proofreader enforces a list of rules to maintain the readability of the terms and the associated comments.
 
-| #   | Step name    | Description                                                                                                               | Tool               |
-| --- | ------------ | ------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| 6   | Translations | The proofreader checks the translations are spelled correctly and written in lower case (proper nouns and acronyms excepted). | Google spreadsheet |
-| 7   | Comments     | The proofreader makes sure the comments are spelled correctly and written as full sentences in sentence case                  | Google spreadsheet |
-
+```eval_rst
+=== ============ ============================================================================================================================= ==================
+#   Step name    Description                                                                                                                   Tool
+=== ============ ============================================================================================================================= ==================
+6   Translations The proofreader checks the translations are spelled correctly and written in lower case (proper nouns and acronyms excepted). Google spreadsheet
+7   Comments     The proofreader makes sure the comments are spelled correctly and written as full sentences in sentence case                  Google spreadsheet
+=== ============ ============================================================================================================================= ==================
+```
 
 ### 5. Publication
 
@@ -147,11 +158,15 @@ Then, they upload the same CSV to Transifex.
 
 Steps 1 and 2 of this stage can be scripted.
 
-| #   | Step name                 | Description                                                                      | Tool               |
-| --- | ------------------------- | -------------------------------------------------------------------------------- | ------------------ |
-| 8   | CSV download              | File > Download as... > Comma-separated values                                   | Google spreadsheet |
-| 9   | GitHub commit             | The CSV file replaces the previous one for the selected language and is commited | Git                |
-| 10  | Transifex glossary update | The CSV file is uploaded to Transifex glossary, deleting the previous entries    | Transifex          |
+```eval_rst
+=== ========================= ================================================================================= ==================
+#   Step name                 Description                                                                       Tool
+=== ========================= ================================================================================= ==================
+8   CSV download              File > Download as... > Comma-separated values                                    Google spreadsheet
+9   GitHub commit             The CSV file replaces the previous one for the selected language and is committed Git
+10  Transifex glossary update The CSV file is uploaded to Transifex glossary, deleting the previous entries     Transifex
+=== ========================= ================================================================================= ==================
+```
 
 ### 6. Management tasks
 

@@ -1,12 +1,10 @@
 # Tools and resources
 
 * The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove) to convert between spreadsheet and JSON representations of OCDS data, and to validate against the standard.
-* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator) generates a flattened representation of an OCDS schema.
 * [ocds-faker](https://github.com/open-contracting/ocds-faker) is a command-line tool to generate clearly fake data for OCDS release packages, for testing.
 * [ocds-merge](https://github.com/open-contracting/ocds-merge) is a Python library that provides functions to merge a list of OCDS releases into a `compiledRelease` or a `versionedRelease`, for creating an OCDS record.
 * [ocds-show](https://github.com/open-contracting/ocds-show) is a JavaScript application to visualize OCDS releases and records, to allow easier comprehension of OCDS data.
 * [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp) is an instance of OCDS Show configured for the [PPP profile](http://standard.open-contracting.org/profiles/ppp/latest/en/) of OCDS.
-* [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate) is a Python script to convert OCDS data into tabular form, for importing into a relational database.
 * [sample-data](https://github.com/open-contracting/sample-data) contains a selection of sample data that can help demonstrate what OCDS data looks like.
 
 For tools relating to extensions, see [extensions tools](../extensions#tools). For guidance on using the [standard extension template](https://github.com/open-contracting/standard_extension_template) in particular, see [creating extensions](../extensions#creating-extensions).
@@ -37,32 +35,29 @@ Priority is assessed based on the impact of the project becoming unavailable and
 * `standard_extension_template`: key resource
 * `standard-maintenance-scripts`: internal, quality assurance
 * `standard-development-handbook`: internal, key documentation
-* `mel-reporting-support`: internal, key tool
+* `ocdskit`: internal, key tool
 
 ### Low
 
 * `api-specification`: draft
 * `extension_creator`
-* `mapping-sheet-generator`
 * `json-schema-random`
 * `ocds-faker`
 * `ocds-show`
 * `ocds-show-ppp`
-* `ocds-tabulate`
 * `standard-legacy-staticsites`: for older versions of documentation
 * `open-contracting.github.io`: redirects to `standard`
 
 ## OCDS extension support
 
-If changes are made to the behavior of extensions in OCDS, the following tools may need to be updated:
+If changes are made to the behavior of extensions in OCDS, the following tools may need to be updated, in addition to the [extensions tools](../extensions#tools):
 
 * [CoVE](https://github.com/OpenDataServices/cove)
-* [flatten-tool](https://github.com/opendataservices/flatten-tool/)
-* [mapping-sheet-generator](https://github.com/open-contracting/mapping-sheet-generator)
+* [ocdskit](https://github.com/open-contracting/ocdskit) `mapping-sheet` and `tabulate` commands
 * [ocds-faker](https://github.com/open-contracting/ocds-faker)
+* [ocds-merge](https://github.com/open-contracting/ocds-merge)
 * [ocds-show](https://github.com/open-contracting/ocds-show)
 * [ocds-show-ppp](https://github.com/open-contracting/ocds-show-ppp)
-* [ocds-tabulate](https://github.com/open-contracting/ocds-tabulate)
 
 ## Adding tools to the OGP Toolbox
 
@@ -86,8 +81,30 @@ Resources we want to highlight are added to the [OCP Resources](https://www.open
 1. [Login](https://www.open-contracting.org/wp-admin/)
 1. Select "Resources" from the sidebar
 1. Click "Add resource"
-1. Enter a title, short description and long description for your resource
-1. Select appropriate values from the dropdown boxes for audience, author, organization, issue, etc.
-1. Paste a link to the resource into the "link" section, making sure the resource has appropriate sharing settings and is tagged as "#public"
+1. Enter a title, short description and long description
+1. Select values for:
+  * Audience
+  * Author
+  * Organisation ("Open Contracting Partnership")
+  * Issue (blank)
+  * Resource Type (one of "Data tool", "Guide", "Training Material")
+  * Country and Region ("International", or "Latin America and the Caribbean" for Spanish resources)
+  * Open Contracting ("Data standard" and, if a "Data tool", "Implementation")
+1. Enter a URL for "Link". If it a Google Drive file or folder, make sure its name is tagged as "#public" and that it's shared as "Anyone with the link can view". See the caveats about the format of Google Drive URLs in the bitly.com instructions below.
 1. Click "preview" to check the information you have entered
 1. Click "Save as draft" and ask Georg to review and publish the draft resource
+
+If the link is to a Google Drive file or folder, use a Bit.ly link to track clicks:
+
+1. Login to [bitly.com](https://bitly.com) with the @OpenContracting Twitter account
+1. Click "Create BitLink"
+1. Paste the link to the Google Drive file or folder. Omit `?ts=…`, `?usp=sharing`, `#heading=…`, `/u/0`, `/a/open-contracting.org`, etc. The URL should look like one of:
+  * `https://docs.google.com/document/d/{id}/edit`
+  * `https://docs.google.com/spreadsheets/d/{id}/copy`
+  * `https://docs.google.com/spreadsheets/d/{id}/edit#gid={gid}`
+  * `https://drive.google.com/drive/folders/{id}`
+  * `https://drive.google.com/file/d/{id}/view`
+  * `https://drive.google.com/open?id={id}`
+1. Edit the short URL. Start with the file or folder's name, omit conjunctions and hashtags, replace spaces with hyphens, and, if appropriate, prefix "OCDS-" and suffix the OCDS version (e.g. `-v11`) and language code (e.g. `-fr`). For example, "Releases and Records Exercise (OCDS 1.1) #public" becomes "OCDS-Releases-Records-Exercise-v11".
+1. Add the "OCDS" tag
+1. Click "Save"
