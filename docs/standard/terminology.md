@@ -71,9 +71,9 @@ If they work on the definitions, they are fluent in English.
 
 If they translate the terms, they are fluent in the target language. They understand written English and are able to find terms in their language that equivalent to the source English terms.
 
-### Overseer
+### Coordinator
 
-The overseer oversees the translation of the terms of base languages and language variants. They are the reference contacts for the subject matter experts (SMEs) who translate the terms and the proofreaders.
+The coordinator oversees the translation of the terms of base languages and language variants. They are the reference contact for the subject matter experts (SMEs) who translate the terms and for the proofreaders.
 
 ### Proofreader
 
@@ -81,7 +81,7 @@ The proofreader ensures that the translated terms and their comments are well wr
 
 They are a native speaker of the target language.
 
-The proofreader may be an overseer, but not necessarily.
+The proofreader may be a coordinator, but not necessarily.
 
 ### Publisher
 
@@ -158,10 +158,10 @@ Steps 1 and 2 of this stage can be scripted.
 Certain tasks are not directly related to the production of the glossary, but are necessary for good coordination:
 
 - The authors inform the terminologists that a new batch of terms is ready for review.
-- The terminologists inform the overseers that new terms should be translated.
-- The overseers inform the SMEs that new terms need to be translated.
-- The overseers inform the proofreaders that the translated terms to be proofread.
-- The overseers manage the permissions for each sheet and give the SMEs and proofreaders the rights to edit the relevant sheets.
-- The overseers inform the publishers that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository and Transifex.
+- The terminologists inform the coordinators that new terms should be translated.
+- The coordinators inform the SMEs that new terms need to be translated.
+- The coordinators inform the proofreaders that the translated terms to be proofread.
+- The coordinators manage the permissions for each sheet and give the SMEs and proofreaders the rights to edit the relevant sheets.
+- The coordinators inform the publishers that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository and Transifex.
 
 At all stages, every person involved uses ranges or list of term IDs to clearly express what terms need to be processed.
