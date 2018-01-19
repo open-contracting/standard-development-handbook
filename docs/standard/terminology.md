@@ -18,10 +18,10 @@ The Source sheet is edited by the terminologist and the SMEs and proofreaders in
 
 - **ID**: the ID of a term never changes. When a new term is added, it takes the next available ID number.
 - **Term**: the term, in its canonical form (lower case, singular, infinitive)
-- **Definition**: the definition of the term **within the scope of OCDS documentation**. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
-- **Comment**: any remark the terminologist may want to add to help translating this term
+- **Definition**: the definition of the term **within the scope of OCDS documentation**. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition. The definition cell is a good place to give concise examples.
+- **Comment**: any remark the terminologist may want to add to help translating this term or a URL to information about the term.
 
-#### Languages (es, fr, etc.)
+#### Base languages (es, fr, etc.)
 
 The sheet of a language is edited by the SMEs and the proofreaders. It has the following columns:
 
@@ -154,9 +154,11 @@ Steps 1 and 2 of this stage can be scripted.
 
 Certain tasks are not directly related to the production of the glossary, but are necessary for good coordination:
 
-- The author informs the terminologist that a new batch of terms is ready for review.
+- The authors inform the terminologists that a new batch of terms is ready for review.
 - The terminologists inform the overseers that new terms should be translated.
 - The overseers inform the SMEs that new terms need to be translated.
 - The overseers inform the proofreaders that the translated terms to be proofread.
 - The overseers manage the permissions for each sheet and give the SMEs and proofreaders the rights to edit the relevant sheets.
 - The overseers inform the publishers that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository and Transifex.
+
+At all stages, every person involved uses ranges or list of term IDs to clearly express what terms need to be processed.
