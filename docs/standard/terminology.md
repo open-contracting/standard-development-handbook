@@ -41,12 +41,15 @@ The sheet of a language variant is edited by the SMEs and the proofreaders. It h
     - **yes => term** if the term in the language variant differs from the one in the base language
     - **empty** if either the base language or the language variant doesn't have a term yet
 
-
 ### GitHub
 
 GitHub is used as the source of truth for OCP terminology. The terms, definitions and translations that are pushed to the repository have been previously spellchecked.
 
 The benefit of using Git is that it neatly tracks the changes made to the files and it incorporates a convenvient issue tracker to track the progression of certain tasks.
+
+### Transifex
+
+[Transifex](https://www.transifex.com/OpenDataServices/public/) is the tool currently used by the Open Contracting Partnership to manage the translation of their content. One of its features is a glossary that enables translators to access the translated terms when translating.
 
 ## Roles overview
 
