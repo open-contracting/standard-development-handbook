@@ -80,6 +80,10 @@ They are a native speaker of the target language.
 
 The proofreader may be an overseer, but not necessarily.
 
+### Publisher
+
+The publisher gathers the data from the spreadsheet and makes sure it gets published.
+
 ## Process
 
 ### 1. Proposal, review, inclusion
@@ -134,7 +138,7 @@ When the SME is done translating the new terms (or trying to), the proofreader e
 
 ### 5. Publication
 
-Once the translations are proofread and edited, *someone* downloads the working document as a CSV file and replaces the previous file in the GitHub repository.
+Once the translations are proofread and edited, the publisher downloads the working document as a CSV file and replaces the previous file in the GitHub repository.
 
 Then, they upload the same CSV to Transifex.
 
