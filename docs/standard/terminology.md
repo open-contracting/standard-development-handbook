@@ -31,11 +31,15 @@ The sheet of a language is edited by the SMEs and the proofreaders. It has the f
 - **Definition**: the definition of the term in the target language. This is not necessarily a translation of the source definition. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
 - **Comment**: any remark the SME may want to add to explain the choice or the definition of the term in the target language.
 
-#### Language variants (es_MX, es_UY, etc.)
+#### Language variants (es-MX, es-GT, fr-BE, etc.)
 
 The sheet of a language variant is edited by the SMEs and the proofreaders. It has the following columns:
 
-TODO
+- Same as languages
+- **Varies from language?**: this cell is automated and it can have the following values:
+    - **no** if the term in the language variant and the base language are the same
+    - **yes => term** if the term in the language variant differs from the one in the base language
+    - **empty** if either the base language or the language variant doesn't have a term yet
 
 
 ### GitHub
