@@ -60,9 +60,7 @@ Set the documentation build process to use the new extension registry tag, by ed
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Check that the `id` property at the top of each JSON schema file, and any `$ref` properties, have been updated to reflect the current *major__minor__patch* version number.
-
-For example:
+Update the `release` variable in `conf.py`. Update the `id` property at the top of each JSON schema file, and any `$ref` properties, to match the current *major__minor__patch* version number. For example:
 
 ```json
 {
@@ -109,6 +107,9 @@ The _versioned-release-validation-schema.json_ file exists for validation of ver
 
 ### 1. Push and pull updated translations
 
+1. Check that all strings are translated for supported languages. For OCDS 1.1, use the following links, then sort by "Untranslated (Descending)". For any resources with untranslated strings, with the exception of strings sourced from `currency.csv`, contact a translator (see the CRM contacts tagged "translator") with links to the resources to translate.
+    1. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr)
+    1. [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
 1. Run `tx push -s` to push updated source files to Transifex.
 1. Run `tx pull -a -f` to pull updated translation files to the repository.
 1. Commit the updated translation files to the repository.
