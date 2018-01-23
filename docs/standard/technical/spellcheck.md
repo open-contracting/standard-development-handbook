@@ -5,10 +5,10 @@
 If you have `aspell` installed, run:
 
 ```shell
-find . -type f -not -path '*/\.*' -not -path '*/_static/*' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.html' -not -name '*.js' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.scss' -not -name '*.sh' -not -name '*.svg' -not -name '*.txt' -exec aspell -H check '{}' ';'
+find . -type f -not -path '*/\.*' -not -path '*/_static/*' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.html' -not -name '*.js' -not -name '*.mo' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.scss' -not -name '*.sh' -not -name '*.svg' -not -name '*.txt' -exec aspell -H check '{}' ';'
 ```
 
-This command will skip dot files, Docson files, and css, html, js, png, po, py, sh, svg and txt files.
+This command will skip dot files, Docson files, and css, html, js, mo, png, po, py, sh, svg and txt files.
 
 ## Configuration
 
