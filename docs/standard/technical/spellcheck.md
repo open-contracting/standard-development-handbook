@@ -15,7 +15,7 @@ This command will skip dot files, Docson files, and css, html, js, png, po, py, 
 `aspell` will flag many field names and proper nouns as errors. `aspell` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace `~/.aspell.en.pws` this the following:
 
 ```text
-personal_ws-1.1 en 655
+personal_ws-1.1 en 672 
 foreignBidsFromEU
 evaluationCriteria
 Extractives
@@ -46,7 +46,7 @@ financeSummary
 streetAddress
 relatedTenderer
 awardPeriod
-organizationReference
+OrganizationReference
 DGRMSG
 SMEs
 procurements
@@ -67,6 +67,8 @@ participationFee
 Habibullah
 compiledReleases
 BSI
+terminologist
+nonfinancial
 ocid
 awardStatus
 datePublished
@@ -81,6 +83,7 @@ AwardUnversioned
 timeline
 paidBy
 dateMet
+geometryType
 modality
 idRef
 Oxfordshire
@@ -109,6 +112,7 @@ pageEnd
 technicalSpecifications
 developmentComplete
 codelists
+guaranteeReports
 debtEquityRatioDetails
 GBP
 privateParty
@@ -120,6 +124,7 @@ czf
 subsidyRatioDetails
 procurementMethodRationale
 Carlier
+ExchangeRate
 estimatedDemand
 majeure
 costOnly
@@ -139,6 +144,7 @@ multipleOf
 minValue
 countryName
 awardCriteriaDetails
+packageMetadata
 shortlistUpdate
 valueForMoneyAnalysis
 helpdesk
@@ -185,6 +191,7 @@ linkable
 consortiaMember
 PerformanceFailure
 maxValue
+performanceReport
 releaseTag
 Montiel
 estimatedValue
@@ -231,6 +238,7 @@ Bista
 KPI
 amendsReleaseID
 CKAN
+OrganizationReference's
 BidsStatistic
 mergeStrategy
 UNCEFACT
@@ -275,6 +283,7 @@ OCP
 enquiryPeriodStart
 programme
 penaltyContracted
+requestForQualification
 ImplementationUnversioned
 SimpleHTTPServer
 AnyCounty
@@ -335,7 +344,7 @@ procurementPlan
 participationFees
 startDate
 RDF
-PNG
+png
 Domínguez
 neighboring
 contactPoint
@@ -373,6 +382,7 @@ ocdsVersion
 html
 funder
 patternProperties
+chargePaidBy
 winningBid
 implementers
 lotDetails
@@ -384,6 +394,7 @@ projectAdditionality
 extensiontable
 nocrossref
 Público
+landTransfer
 genindex
 mergeOptions
 yyyy
@@ -420,6 +431,7 @@ OrganizationReferenceUnversioned
 constructionStarted
 RequirementUnversioned
 preQualificationStatus
+locationGazetteers
 anonymize
 contractStatus
 TransactionUnversioned
@@ -566,6 +578,7 @@ smeBids
 procuringEntity
 financeAvailability
 xargs
+financialStatement
 StringNullUriVersioned
 qualificationPeriod
 foundational
@@ -600,6 +613,7 @@ documentationUrl
 electronicAuction
 expectedValue
 py
+defaultEvents
 Eurostat
 projectPlan
 contractTermination
@@ -617,8 +631,10 @@ riskCategory
 electronicBids
 Lenczner
 bankability
+exchangeRates
 extendsContractID
 planningUpdate
+RequirementResponse
 financialProgressReport
 subContract
 participationFeeType
@@ -670,5 +686,5 @@ priceOnly
 qualifiedBidder
 Barnet
 seniorDebt
-png
+exchangeRateSource
 ```

@@ -23,6 +23,7 @@ Each release of the standard should pin to specific versions of each [core exten
 
 For each *core* extension:
 
+1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), ensure it [passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests), ensure it matches the description in [Creating extensions](../../../extensions) regarding licenses, issues, `README.md`, etc.
 1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
 1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
 1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
