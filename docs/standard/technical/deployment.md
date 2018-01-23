@@ -23,7 +23,10 @@ Each release of the standard should pin to specific versions of each [core exten
 
 For each *core* extension:
 
-1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), ensure it [passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests), ensure it matches the description in [Creating extensions](../../../extensions) regarding licenses, issues, `README.md`, etc.
+1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), and ensure it:
+    1. [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests)
+    1. Matches the description in [Creating extensions](../../../extensions) regarding license, issues and `README.md`
+    1. [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
 1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
 1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
 1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
@@ -47,9 +50,8 @@ Then, create a new release of the extension registry to point to the new release
 Pull extensions' Markdown files into the standard:
 
 ```bash
-cd standard/docs/en/extensions
-# edit get-readmes.py and set GIT_REF to e.g. `v1.1.1`
-./get-readmes.py
+# edit standard/docs/en/extensions/get-readmes.py and set GIT_REF to e.g. `v1.1.1`
+python standard/docs/en/extensions/get-readmes.py
 ```
 
 Set the documentation build process to use the new extension registry tag, by editing `standard/docs/en/conf.py` and setting `extension_registry_git_ref` to e.g. `v1.1.1`.
