@@ -50,9 +50,8 @@ Then, create a new release of the extension registry to point to the new release
 Pull extensions' Markdown files into the standard:
 
 ```bash
-cd standard/docs/en/extensions
-# edit get-readmes.py and set GIT_REF to e.g. `v1.1.1`
-python get-readmes.py
+# edit standard/docs/en/extensions/get-readmes.py and set GIT_REF to e.g. `v1.1.1`
+python standard/docs/en/extensions/get-readmes.py
 ```
 
 Set the documentation build process to use the new extension registry tag, by editing `standard/docs/en/conf.py` and setting `extension_registry_git_ref` to e.g. `v1.1.1`.
