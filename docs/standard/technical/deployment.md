@@ -23,7 +23,7 @@ Each release of the standard should pin to specific versions of each [core exten
 
 For each *core* extension:
 
-1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), ensure it [passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests), ensure it matches the description in [Creating extensions](../../../extensions) regarding licenses, issues, `README.md`, etc.
+1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), ensure it [passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests), ensure it matches the description in [Creating extensions](../../../extensions) regarding licenses, issues, `README.md`, etc.
 1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
 1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
 1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
@@ -140,7 +140,7 @@ Create a tagged release named e.g. `1__1__0`
 [Merge the development branch](#merge-the-development-branch) will trigger a [build](../build) on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
-[http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/](http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/) or [http://standard.open-contracting.org/1.1/en/](http://standard.open-contracting.org/1.1/en/).
+<http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/> or <http://standard.open-contracting.org/1.1/en/>.
 
 ## 2. Copy the files to the live server
 
@@ -197,7 +197,7 @@ mkdir /home/ocds-docs/web/schema/1__1__1/
 cp -r /home/ocds-docs/web/1.1/en/*.json /home/ocds-docs/web/schema/1__1__1/
 ```
 
-The JSON files are then visible at [http://standard.open-contracting.org/schema/1__1__1/](http://standard.open-contracting.org/schema/1__1__1/).
+The JSON files are then visible at <http://standard.open-contracting.org/schema/1__1__1/>.
 
 ## 4. Update the "latest" branch
 

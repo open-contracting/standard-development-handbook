@@ -35,4 +35,4 @@ cd _build/dirhtml
 python -m http.server
 ```
 
-Then go to [http://localhost:8000/](http://localhost:8000/) in a browser.
+Then go to <http://localhost:8000/> in a browser.
