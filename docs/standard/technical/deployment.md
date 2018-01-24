@@ -110,10 +110,10 @@ The _versioned-release-validation-schema.json_ file exists for validation of ver
 
 ### 1. Push and pull updated translations
 
+1. Run `tx push -s` to push updated source files to Transifex.
 1. Check that all strings are translated for supported languages. For OCDS 1.1, use the following links, then sort by "Untranslated (Descending)". For any resources with untranslated strings, with the exception of strings sourced from `currency.csv`, contact a translator (see the CRM contacts tagged "translator") with links to the resources to translate.
     1. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr)
     1. [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
-1. Run `tx push -s` to push updated source files to Transifex.
 1. Run `tx pull -a -f` to pull updated translation files to the repository.
 1. Commit the updated translation files to the repository.
 
@@ -137,14 +137,14 @@ Create a tagged release named e.g. `1__1__0`
 
 ## Build and deploy
 
-## 1. Build on Travis
+### 1. Build on Travis
 
 [Merge the development branch](#merge-the-development-branch) will trigger a [build](../build) on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
 
 Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
 <http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/> or <http://standard.open-contracting.org/1.1/en/>.
 
-## 2. Copy the files to the live server
+### 2. Copy the files to the live server
 
 (See the [servers](../../servers) page for more info on how our servers are set up.)
 
@@ -184,7 +184,7 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
 
 If a new language is supported, edit `http://standard.open-contracting.org/robots.txt`
 
-## 3. Copy the schema into place
+### 3. Copy the schema into place
 
 ```eval_rst
   .. note::
@@ -201,13 +201,13 @@ cp -r /home/ocds-docs/web/1.1/en/*.json /home/ocds-docs/web/schema/1__1__1/
 
 The JSON files are then visible at <http://standard.open-contracting.org/schema/1__1__1/>.
 
-## 4. Update the "latest" branch
+### 4. Update the "latest" branch
 
 If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), then update the `latest` branch on GitHub to point to the same commit. Wait for the Travis build, then repeat [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
 
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
-## 5. Update the Apache config
+### 5. Update the Apache config
 
 ```eval_rst
   .. note::
@@ -220,7 +220,7 @@ For a new live version, you will need to edit:
 * [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
 * [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
-## 6. Update the OCDS validator
+### 6. Update the OCDS validator
 
 ```eval_rst
   .. note::
