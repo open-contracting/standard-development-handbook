@@ -19,38 +19,37 @@ For changes to the theme only, start from [Build](#build).
 
 Each release of the standard should pin to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned. The steps are:
 
-#### Review open pull requests and recent changes
+#### Review pull requests and recent changes
 
 For each *core* extension:
 
 1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), and ensure it:
-    1. [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests)
-    1. Matches the description in [Creating extensions](../../../extensions) regarding license, issues and `README.md`
-    1. [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
+    * [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests)
+    * Matches the description in [Creating extensions](../../../extensions) regarding license, issues and `README.md`
+    * [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
 1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
 1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
 1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
-1. View the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading). If there are any:
-    1. Check the changes against the [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) for the version of OCDS being deployed
-    1. Discuss substantive changes, i.e. not simple typo or documentation updates, that aren't included in the changelog
+1. View the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading) and discuss any substantive changes, i.e. not simple typo or documentation updates
 
 #### Create new releases of core extensions
 
 For each *core* extension:
 
 1. From the list of releases, click *Draft a new release*
-1. In *Tag version*, enter the version of OCDS being deployed in *vmajor.minor.patch* format, e.g. `v1.1.1`
+1. In *Tag version*, enter the OCDS version in *vmajor.minor.patch* format, e.g. `v1.1.1`
 1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
-1. Enter a brief summary of changes, e.g. "Typo fixes", and click *Publish release*
+1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
 Then, create a new release of the extension registry to point to the new releases of core extensions.
 
 #### Integrate extensions into the standard
 
-Pull extensions' Markdown files into the standard:
+Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with the changes to core extensions.
+
+Edit `standard/docs/en/extensions/get-readmes.py` and set `GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
 
 ```bash
-# edit standard/docs/en/extensions/get-readmes.py and set GIT_REF to e.g. `v1.1.1`
 python standard/docs/en/extensions/get-readmes.py
 ```
 
