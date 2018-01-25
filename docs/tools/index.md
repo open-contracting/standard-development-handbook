@@ -83,13 +83,13 @@ Resources we want to highlight are added to the [OCP Resources](https://www.open
 1. Click "Add resource"
 1. Enter a title, short description and long description
 1. Select values for:
-  * Audience
-  * Author
-  * Organisation ("Open Contracting Partnership")
-  * Issue (blank)
-  * Resource Type (one of "Data tool", "Guide", "Training Material")
-  * Country and Region ("International", or "Latin America and the Caribbean" for Spanish resources)
-  * Open Contracting ("Data standard" and, if a "Data tool", "Implementation")
+    * Audience
+    * Author
+    * Organisation ("Open Contracting Partnership")
+    * Issue (blank)
+    * Resource Type (one of "Data tool", "Guide", "Training Material")
+    * Country and Region ("International", or "Latin America and the Caribbean" for Spanish resources)
+    * Open Contracting ("Data standard" and, if a "Data tool", "Implementation")
 1. Enter a URL for "Link". If it a Google Drive file or folder, make sure its name is tagged as "#public" and that it's shared as "Anyone with the link can view". See the caveats about the format of Google Drive URLs in the bitly.com instructions below.
 1. Click "preview" to check the information you have entered
 1. Click "Save as draft" and ask Georg to review and publish the draft resource
@@ -99,12 +99,12 @@ If the link is to a Google Drive file or folder, use a Bit.ly link to track clic
 1. Login to [bitly.com](https://bitly.com) with the @OpenContracting Twitter account
 1. Click "Create BitLink"
 1. Paste the link to the Google Drive file or folder. Omit `?ts=…`, `?usp=sharing`, `#heading=…`, `/u/0`, `/a/open-contracting.org`, etc. The URL should look like one of:
-  * `https://docs.google.com/document/d/{id}/edit`
-  * `https://docs.google.com/spreadsheets/d/{id}/copy`
-  * `https://docs.google.com/spreadsheets/d/{id}/edit#gid={gid}`
-  * `https://drive.google.com/drive/folders/{id}`
-  * `https://drive.google.com/file/d/{id}/view`
-  * `https://drive.google.com/open?id={id}`
+    * `https://docs.google.com/document/d/{id}/edit`
+    * `https://docs.google.com/spreadsheets/d/{id}/copy`
+    * `https://docs.google.com/spreadsheets/d/{id}/edit#gid={gid}`
+    * `https://drive.google.com/drive/folders/{id}`
+    * `https://drive.google.com/file/d/{id}/view`
+    * `https://drive.google.com/open?id={id}`
 1. Edit the short URL. Start with the file or folder's name, omit conjunctions and hashtags, replace spaces with hyphens, and, if appropriate, prefix "OCDS-" and suffix the OCDS version (e.g. `-v11`) and language code (e.g. `-fr`). For example, "Releases and Records Exercise (OCDS 1.1) #public" becomes "OCDS-Releases-Records-Exercise-v11".
 1. Add the "OCDS" tag
 1. Click "Save"
