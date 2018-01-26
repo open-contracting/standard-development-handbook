@@ -63,7 +63,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'OCDS Standard Development Handbook'
+project = 'OCDS Development Handbook'
 copyright = '2016-2017, Open Contracting Partnership'
 author = 'OCDS Technical Team'
 
@@ -156,7 +156,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'OCDS Standard Handbook'
+# html_title = 'OCDS Development Handbook'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -324,7 +324,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinx', 'OCDS Standard Development Handbook',
+    (master_doc, 'sphinx', 'OCDS Development Handbook',
      [author], 1)
 ]
 
@@ -339,7 +339,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'sphinx', 'OCDS Standard Development Handbook',
+    (master_doc, 'sphinx', 'OCDS Development Handbook',
      author, 'sphinx', 'How to build and maintain the Open Contracting Data Standard.',
      'Miscellaneous'),
 ]
