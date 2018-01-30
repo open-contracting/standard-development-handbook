@@ -44,7 +44,7 @@ Then, for each *core* extension, review the commits since the last release:
 1. Decide whether to merge its open pull requests
 1. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
 
-Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) to get links to pull requests and comparison URLs:
+Instead of navigating the website, run this Rake task to get links to pull requests and comparison URLs:
 
 ```bash
 bundle exec rake release:review_extensions
@@ -59,7 +59,7 @@ For each *core* extension:
 1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
 1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
-Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts), which will use the extension's changelog as the release message and e.g. "Fixed version for OCDS 1.1.1" as the release title:
+Instead of navigating the website, run this Rake task, which will use the extension's changelog as the release message and e.g. "Fixed version for OCDS 1.1.1" as the release title:
 
 ```bash
 bundle exec rake release:release_extensions REF=v1.1.1
@@ -86,7 +86,9 @@ Set the documentation build process to use the new extension registry tag, by ed
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update the `release` variable in `conf.py`. Update the `id` property at the top of each JSON schema file, and any `$ref` properties, to match the current *major__minor__patch* version number. For example:
+Update the `release` variable in `conf.py`.
+
+Update the `id` property at the top of each JSON schema file, and any `$ref` properties, to match the current *major__minor__patch* version number. For example:
 
 ```json
 {
@@ -105,7 +107,7 @@ Update the `release` variable in `conf.py`. Update the `id` property at the top 
 
 #### Update currency codelist
 
-ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306). Before each release, and at least once a year, run `standard/schema/utils/fetch_currency_codelist.py`.
+ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306). Before each release, and at least once a year, run `python standard/schema/utils/fetch_currency_codelist.py`.
 
 ### 4. Set up a development copy of the OCDS Validator
 
@@ -123,11 +125,10 @@ Set up a development instance of Cove using the new schema, and run tests agains
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-The _versioned-release-validation-schema.json_ file exists for validation of versioned releases. It is currently programatically generated from the latest version of the schema and committed to the repository. To run this script:
+The _versioned-release-validation-schema.json_ file exists for validation of versioned releases.
 
 1. Update `standard/schema/utils/make_validation_schema.py` to refer to the correct version number (line 99).
-1. Run `standard/schema/utils/make_validation_schema.py`
-1. commit the updated _versioned-release-validation-schema.json_ file to the repository.
+1. Run `python standard/schema/utils/make_validation_schema.py`
 
 ## Merge and release
 
