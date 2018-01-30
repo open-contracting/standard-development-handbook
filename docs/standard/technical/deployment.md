@@ -55,6 +55,10 @@ For each *core* extension:
 1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
 1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
+Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts), which will use the extension's changelog as the release message and e.g. "Fixed version for OCDS 1.1.1" as the release title:
+
+* `bundle exec rake release:release_extensions REF=ref` with e.g. `v1.1.1` instead of `ref`
+
 Then, create a new release of the extension registry to point to the new releases of core extensions.
 
 #### Integrate extensions into the standard
