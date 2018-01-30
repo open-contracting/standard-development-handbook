@@ -29,11 +29,13 @@ For each *core* extension, [spell check](http://ocds-standard-development-handbo
 
 The following Rake tasks from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) will report or correct issues with licenses, issues, `README.md`, wikis, branches, and topics:
 
-* `bundle exec rake repos:licenses`
-* `bundle exec rake repos:readmes`
-* `bundle exec rake fix:lint_repos`
-* `bundle exec rake fix:protect_branches`
-* `bundle exec rake fix:set_topics`
+```bash
+bundle exec rake repos:licenses
+bundle exec rake repos:readmes
+bundle exec rake fix:lint_repos
+bundle exec rake fix:protect_branches
+bundle exec rake fix:set_topics
+```
 
 Then, for each *core* extension, review the commits since the last release:
 
@@ -44,7 +46,9 @@ Then, for each *core* extension, review the commits since the last release:
 
 Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) to get links to pull requests and comparison URLs:
 
-* `bundle exec rake release:review_extensions`
+```bash
+bundle exec rake release:review_extensions
+```
 
 #### Create new releases of core extensions
 
@@ -57,7 +61,9 @@ For each *core* extension:
 
 Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts), which will use the extension's changelog as the release message and e.g. "Fixed version for OCDS 1.1.1" as the release title:
 
-* `bundle exec rake release:release_extensions REF=ref` with e.g. `v1.1.1` instead of `ref`
+```bash
+bundle exec rake release:release_extensions REF=v1.1.1
+```
 
 Then, create a new release of the extension registry to point to the new releases of core extensions.
 
@@ -65,7 +71,7 @@ Then, create a new release of the extension registry to point to the new release
 
 Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
-Edit `standard/docs/en/extensions/get-readmes.py` and set `GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
+Edit `standard/docs/en/extensions/get-readmes.py` and set `EXTENSION_GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
 
 ```bash
 python standard/docs/en/extensions/get-readmes.py

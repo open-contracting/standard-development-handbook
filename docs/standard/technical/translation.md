@@ -16,11 +16,11 @@ When a new major/minor version of the documentation text is ready:
 * [Create a Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-x.y`
 * Empty the `.tx/config` file:
 
-    cat /dev/null > .tx/config
+        cat /dev/null > .tx/config
 
 * Update the `.tx/config` file (replacing the Transifex project name):
 
-    sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-x.y --pot-dir build/locale --locale-dir standard/docs/locale
+        sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-x.y --pot-dir build/locale --locale-dir standard/docs/locale
 
 The last step must also be run whenever documentation pages are renamed, added or removed.
 
