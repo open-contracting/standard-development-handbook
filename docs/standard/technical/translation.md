@@ -53,7 +53,7 @@ If text is translated locally by editing `.po` files, the translations can be pu
 tx push -f -t -l es,fr --no-interactive
 ```
 
-**This will overwrite any new translations made on Transifex since the last time they were pulled.** To avoid losing translations made on Transifex, pull translations before applying your changes and re-building the documentation. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
+**This will overwrite any new translations made on Transifex since the last time they were pulled.** To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 
 The [theme needs to be translated separately](https://github.com/open-contracting/standard_theme#translations).
 
