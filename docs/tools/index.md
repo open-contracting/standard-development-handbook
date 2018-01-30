@@ -79,8 +79,7 @@ Resources we want to highlight are added to the [OCP Resources](https://www.open
 
 1. Request a login for [open-contracting.org](https://www.open-contracting.org/) from Georg Neumann, OCP Communications Manager
 1. [Login](https://www.open-contracting.org/wp-admin/)
-1. Select "Resources" from the sidebar
-1. Click "Add resource"
+1. Click "Resources" > "Add resource" from the sidebar
 1. Enter a title, short description and long description
 1. Select values for:
     * Audience

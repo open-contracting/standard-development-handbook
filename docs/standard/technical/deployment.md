@@ -21,16 +21,30 @@ Each release of the standard should pin to specific versions of each [core exten
 
 #### Review pull requests and recent changes
 
-For each *core* extension:
+For each *core* extension, [spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), and ensure it:
 
-1. [Spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), and ensure it:
-    * [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts#tests)
-    * Matches the description in [Creating extensions](../../../extensions) regarding license, issues and `README.md`
-    * [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
-1. Open its [homepage](https://github.com/open-contracting/ocds_lots_extension) on GitHub
-1. Decide whether to merge its [open pull requests](https://github.com/open-contracting/ocds_lots_extension/pulls)
-1. Open its [releases](https://github.com/open-contracting/ocds_lots_extension/releases) (under the repository title and description from its homepage)
-1. View the [commits since the last release](https://github.com/open-contracting/ocds_lots_extension/compare/v1.1...master) (under the release's heading) and discuss any substantive changes, i.e. not simple typo or documentation updates
+* [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
+* Matches the description in [Creating extensions](../../../extensions#creating-extensions) regarding license, issues and `README.md`
+* [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
+
+The following Rake tasks from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) will report or correct issues with licenses, issues, `README.md`, wikis, branches, and topics:
+
+* `bundle exec rake repos:licenses`
+* `bundle exec rake repos:readmes`
+* `bundle exec rake fix:lint_repos`
+* `bundle exec rake fix:protect_branches`
+* `bundle exec rake fix:set_topics`
+
+Then, for each *core* extension, review the commits since the last release:
+
+1. Open its homepage on GitHub
+1. Open its releases (under the repository title and description from its homepage)
+1. Decide whether to merge its open pull requests
+1. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
+
+Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) to get links to pull requests and comparison URLs:
+
+* `bundle exec rake release:review_extensions`
 
 #### Create new releases of core extensions
 
@@ -41,11 +55,15 @@ For each *core* extension:
 1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
 1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
+Instead of navigating the website, run the following Rake task from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts), which will use the extension's changelog as the release message and e.g. "Fixed version for OCDS 1.1.1" as the release title:
+
+* `bundle exec rake release:release_extensions REF=ref` with e.g. `v1.1.1` instead of `ref`
+
 Then, create a new release of the extension registry to point to the new releases of core extensions.
 
 #### Integrate extensions into the standard
 
-Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with the changes to core extensions.
+Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
 Edit `standard/docs/en/extensions/get-readmes.py` and set `GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
 
