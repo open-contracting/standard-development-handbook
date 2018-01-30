@@ -71,10 +71,10 @@ Then, create a new release of the extension registry to point to the new release
 
 Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
-Edit `standard/docs/en/extensions/get-readmes.py` and set `EXTENSION_GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
+Edit `standard/docs/en/extensions/fetch_updated_extension_docs.py` and set `EXTENSION_GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
 
 ```bash
-python standard/docs/en/extensions/get-readmes.py
+python standard/docs/en/extensions/fetch_updated_extension_docs.py
 ```
 
 Set the documentation build process to use the new extension registry tag, by editing `standard/docs/en/conf.py` and setting `extension_registry_git_ref` to e.g. `v1.1.1`.
