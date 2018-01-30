@@ -10,10 +10,11 @@ The first time you use Transifex, run (replacing `USERNAME` and `PASSWORD`):
 sphinx-intl create-transifexrc --transifex-username USERNAME --transifex-password PASSWORD
 ```
 
-When a new major/minor version of the documentation text is ready:
+For major and minor versions, [create a new Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-1-1`.
 
-* [Build the documentation](build)
-* [Create a Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-1-1`
+For major, minor and patch versions:
+
+* [Build the documentation](build). It is normal to see "inconsistent term references in translated message" warnings.
 * Empty the `.tx/config` file:
 
         tx init
@@ -32,25 +33,27 @@ To push untranslated text to Transifex, run:
 tx push -s
 ```
 
-To pull all translated text from Transifex, run:
+To forcefully pull all translated text from Transifex, run:
 
 ```shell
 tx pull -f -a
 ```
 
-To pull one translation from Transifex, run:
+To forcefully pull specific translations from Transifex, run:
 
 ```shell
-tx pull -f -l fr
+tx pull -f -l es,fr
 ```
 
 Then, [build the documentation](build) again.
 
-If text is translated locally by editing `.po` files, the translations can be pushed to Transifex. Note that this will overwrite any new translations made on Transifex since the last time they were pulled:
+If text is translated locally by editing `.po` files, the translations can be pushed to Transifex. After pushing, check that the translation progress on Transifex is minimally affected:
 
 ```shell
-tx push -t --skip
+tx push -f -t --no-interactive
 ```
+
+This will overwrite any new translations made on Transifex since the last time they were pulled. To avoid losing translations made on Transifex, pull translations before applying your changes and re-building the documentation. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 
 The [theme needs to be translated separately](https://github.com/open-contracting/standard_theme#translations).
 
