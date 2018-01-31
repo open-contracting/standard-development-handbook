@@ -46,6 +46,17 @@ Translators, proofreaders and reviewers have excellent writing skills (spelling 
     Add guidance on how to use Transifex.
 ```
 
+### Untranslated words
+
+The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
+
+1. Open the translation project
+1. Scroll to the list of languages and click "Translate" for a language
+1. Click "All resources" at the bottom of the screen
+1. Click "# untranslated" at the top of the screen
+1. Check the box at the right of the search bar
+1. See the number of words at the right of the screen
+
 ### Translation glossary
 
 A translation glossary is [available](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (change the language code at the end of the URL to view the glossary in different languages). It can also be accessed from within the translation editor.
