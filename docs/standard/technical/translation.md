@@ -48,9 +48,10 @@ tx pull -f -l es,fr
 
 Then, [build the documentation](build) again.
 
-If text is translated locally by editing `.po` files, the translations can be pushed to Transifex. After pushing, check that the translation progress on Transifex is minimally affected:
+If text is translated locally by editing `.po` files, the translations can be pushed to Transifex, **after building the documentation**. After pushing, check that the translation progress on Transifex is minimally affected:
 
 ```shell
+tx push -s
 tx push -f -t -l es,fr --no-interactive
 ```
 

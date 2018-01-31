@@ -85,7 +85,7 @@ Before each release, and at least once a year, run `python standard/schema/utils
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. If the new extension registry branch you created doesn't correspond to `release` (i.e. `v1.1.1`), update `extension_registry_git_ref` as well.
+Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. If the new extension registry branch you created doesn't correspond to `release` (i.e. `v1.1.1`), update `extension_registry_git_ref`.
 
 Update the `"id"` at the top of each JSON Schema file, and any `"$ref"` using these IDs, to match the *major__minor__patch* version number:
 
