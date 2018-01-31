@@ -10,20 +10,21 @@ The first time you use Transifex, run (replacing `USERNAME` and `PASSWORD`):
 sphinx-intl create-transifexrc --transifex-username USERNAME --transifex-password PASSWORD
 ```
 
-For major and minor versions, [create a new Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-1-1`.
+For major and minor versions:
 
-For major, minor and patch versions:
-
-* [Build the documentation](build). It is normal to see "inconsistent term references in translated message" warnings.
+* [Create a new Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-1-1`
 * Empty the `.tx/config` file:
 
         tx init
 
+For major, minor and patch versions:
+
+* [Build the documentation](build). It is normal to see "inconsistent term references in translated message" warnings.
 * Update the `.tx/config` file (replacing the Transifex project name):
 
         sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-1 --pot-dir build/locale --locale-dir standard/docs/locale
 
-The last step must also be run whenever documentation pages are renamed, added or removed.
+Whenever documentation pages are renamed, added or removed, you must build the documentation and update the `.tx/config` file.
 
 ## Translating text
 
