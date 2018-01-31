@@ -10,14 +10,7 @@ For changes to the theme only, start from [Build](#build).
 
 ## Schemas and extensions
 
-### 1. Pin extensions
-
-```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
-```
-
-Each release of the standard should pin to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned. The steps are:
+### 1. Review extensions
 
 #### Review pull requests and recent changes
 
@@ -52,6 +45,13 @@ bundle exec rake release:review_extensions
 
 #### Create new releases of core extensions
 
+```eval_rst
+  .. note::
+    You can skip this step if you are not releasing a new major, minor or patch version.
+```
+
+Each release of the standard should pin to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned.
+
 For each *core* extension:
 
 1. From the list of releases, click *Draft a new release*
@@ -65,70 +65,58 @@ Instead of navigating the website, run this Rake task, which will use the extens
 bundle exec rake release:release_extensions REF=v1.1.1
 ```
 
-Then, create a new release of the extension registry to point to the new releases of core extensions.
+Then, create a new branch of the extension registry to point to the new releases of core extensions.
 
-#### Integrate extensions into the standard
-
-Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
-
-Edit `standard/docs/en/extensions/fetch_updated_extension_docs.py` and set `EXTENSION_GIT_REF` to e.g. `v1.1.1`, then pull extensions' Markdown files into the standard:
-
-```bash
-python standard/docs/en/extensions/fetch_updated_extension_docs.py
-```
-
-Set the documentation build process to use the new extension registry tag, by editing `standard/docs/en/conf.py` and setting `extension_registry_git_ref` to e.g. `v1.1.1`.
-
-### 2. Check schema IDs and refs
-
-```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
-```
-
-Update the `release` variable in `conf.py`.
-
-Update the `id` property at the top of each JSON schema file, and any `$ref` properties, to match the current *major__minor__patch* version number. For example:
-
-```json
-{
-  "id": "http://standard.open-contracting.org/schema/1__1__1/record-package-schema.json",
-  "$schema": "http://json-schema.org/draft-04/schema#"
-}
-```
-
-```json
-{
-  "$ref": "http://standard.open-contracting.org/schema/1__1__1/release-schema.json"
-}
-```
-
-### 3. Perform periodic updates, if appropriate
+### 2. Perform periodic updates, if appropriate
 
 #### Update currency codelist
 
-ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306). Before each release, and at least once a year, run `python standard/schema/utils/fetch_currency_codelist.py`.
+```eval_rst
+  .. note::
+    You can skip this step if you are not releasing a new major, minor or patch version.
+```
 
-### 4. Set up a development copy of the OCDS Validator
+Before each release, and at least once a year, run `python standard/schema/utils/fetch_currency_codelist.py`. ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306).
+
+### 3. Update version numbers, validation schema and changelog
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Set up a development instance of Cove using the new schema, and run tests against it.
+Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. If the new extension registry branch you created doesn't correspond to `release` (i.e. `v1.1.1`), update `extension_registry_git_ref` as well.
 
-### 5. Make the validation schema
+Update the `"id"` at the top of each JSON Schema file, and any `"$ref"` using these IDs, to match the *major__minor__patch* version number:
+
+```bash
+python standard/schema/utils/update_schema_ids.py
+```
+
+Update `versioned-release-validation-schema.json` to match `release-schema.json`:
+
+```shell
+python standard/schema/utils/make_validation_schema.py
+```
+
+Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
+
+### 4. Integrate extensions
+
+Pull some files from extensions into the standard:
+
+```bash
+python standard/schema/utils/fetch_core_extensions.py
+```
+
+### 5. Set up a development instance of CoVE (OCDS Validator)
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-The _versioned-release-validation-schema.json_ file exists for validation of versioned releases.
-
-1. Update `standard/schema/utils/make_validation_schema.py` to refer to the correct version number (line 99).
-1. Run `python standard/schema/utils/make_validation_schema.py`
+Set up a development instance of CoVE using the new schema, and run tests against it.
 
 ## Merge and release
 
@@ -239,7 +227,7 @@ For a new live version, you will need to edit:
 * [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
 * [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
-### 6. Update the OCDS validator
+### 6. Update the live CoVE deployment (OCDS Validator)
 
 ```eval_rst
   .. note::
