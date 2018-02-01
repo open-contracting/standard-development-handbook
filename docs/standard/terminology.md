@@ -8,7 +8,7 @@ In order to use key terms consistently across the standard documentation and OCP
 
 ### Google spreadsheet
 
-The Google spreadsheet is divided in sheets. Each term is identified by an ID to enable the reconciliation of the terms across languages and enable the management of homographs (different terms that have the same spelling).
+[The Google spreadsheet](https://docs.google.com/spreadsheets/d/1PvlA2WWtP9KJpnkhuYGx5ExHmHwwvaA54VX62piF86k/edit) is divided in sheets. Each term is identified by an ID to enable the reconciliation of the terms across languages and enable the management of homographs (different terms that have the same spelling).
 
 All the sheets are publicly readable and can be commented by anyone.
 
@@ -18,10 +18,10 @@ The Source sheet is edited by the terminologist and the SMEs and proofreaders in
 
 - **ID**: the ID of a term never changes. When a new term is added, it takes the next available ID number.
 - **Term**: the term, in its canonical form (lower case, singular, infinitive)
-- **Definition**: the definition of the term **within the scope of OCDS documentation**. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
-- **Comment**: any remark the terminologist may want to add to help translating this term
+- **Definition**: the definition of the term **within the scope of OCDS documentation**. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition. The definition cell is a good place to give concise examples.
+- **Comment**: any remark the terminologist may want to add to help translating this term or a URL to information about the term.
 
-#### Languages (es, fr, etc.)
+#### Base languages (es, fr, etc.)
 
 The sheet of a language is edited by the SMEs and the proofreaders. It has the following columns:
 
@@ -31,17 +31,25 @@ The sheet of a language is edited by the SMEs and the proofreaders. It has the f
 - **Definition**: the definition of the term in the target language. This is not necessarily a translation of the source definition. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
 - **Comment**: any remark the SME may want to add to explain the choice or the definition of the term in the target language.
 
-#### Language variants (es_MX, es_UY, etc.)
+#### Language variants (es-MX, es-GT, fr-BE, etc.)
 
 The sheet of a language variant is edited by the SMEs and the proofreaders. It has the following columns:
 
-TODO
+- Same as languages
+- **Varies from language?**: this cell is automated and it can have the following values:
+    - **no** if the term in the language variant and the base language are the same
+    - **yes => term** if the term in the language variant differs from the one in the base language
+    - **empty** if either the base language or the language variant doesn't have a term yet
 
 ### GitHub
 
 GitHub is used as the source of truth for OCP terminology. The terms, definitions and translations that are pushed to the repository have been previously spellchecked.
 
 The benefit of using Git is that it neatly tracks the changes made to the files and it incorporates a convenient issue tracker to track the progression of certain tasks.
+
+### Transifex
+
+[Transifex](https://www.transifex.com/OpenDataServices/public/) is the tool currently used by the Open Contracting Partnership to manage the translation of their content. One of its features is a glossary that enables translators to access the translated terms when translating.
 
 ## Roles overview
 
@@ -63,11 +71,9 @@ If they work on the definitions, they are fluent in English.
 
 If they translate the terms, they are fluent in the target language. They understand written English and are able to find terms in their language that equivalent to the source English terms.
 
-### Language owner
+### Coordinator
 
-The language owner oversees the translations of one or more variations of a language. They are the reference contacts for the subject matter experts (SMEs) who translate the terms.
-
-They are fluent practitioners of the language they oversee.
+The coordinator oversees the translation of the terms of base languages and language variants. They are the reference contact for the subject matter experts (SMEs) who translate the terms and for the proofreaders.
 
 ### Proofreader
 
@@ -75,7 +81,11 @@ The proofreader ensures that the translated terms and their comments are well wr
 
 They are a native speaker of the target language.
 
-The proofreader may be a language owner, but not necessarily.
+The proofreader may be a coordinator, but not necessarily.
+
+### Publisher
+
+The publisher gathers the data from the spreadsheet and makes sure it gets published.
 
 ## Process
 
@@ -142,7 +152,7 @@ When the SME is done translating the new terms (or trying to), the proofreader e
 
 ### 5. Publication
 
-Once the translations are proofread and edited, *someone* downloads the working document as a CSV file and replaces the previous file in the GitHub repository.
+Once the translations are proofread and edited, the publisher downloads the working document as a CSV file and replaces the previous file in the GitHub repository.
 
 Then, they upload the same CSV to Transifex.
 
@@ -162,8 +172,11 @@ Steps 1 and 2 of this stage can be scripted.
 
 Certain tasks are not directly related to the production of the glossary, but are necessary for good coordination:
 
-- The author informs the terminologist that a new batch of terms is ready for review.
-- *Someone* informs the translators that new terms should be translated.
-- The language owners manage the permissions for each sheet to enable the translators to translate.
-- The language owners inform *someone* that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository.
-- *Someone* informs *someone* that batch of terms has been pushed to GitHub, ready to be published to Transifex.
+- The authors inform the terminologists that a new batch of terms is ready for review.
+- The terminologists inform the coordinators that new terms should be translated.
+- The coordinators inform the SMEs that new terms need to be translated.
+- The coordinators inform the proofreaders that the translated terms to be proofread.
+- The coordinators manage the permissions for each sheet and give the SMEs and proofreaders the rights to edit the relevant sheets.
+- The coordinators inform the publishers that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository and Transifex.
+
+At all stages, every person involved uses ranges or list of term IDs to clearly express what terms need to be processed.
