@@ -13,6 +13,26 @@ There are a number of OCDS related projects on Transifex:
 * [Standard Theme](https://www.transifex.com/OpenDataServices/open-contracting-standard-theme/dashboard/) - containing the documentation theme
 * [CoVE](https://www.transifex.com/OpenDataServices/cove/dashboard/) - containing the text for the the validator
 
+### Standard 1.0/1.1
+
+As you can see at [[1]](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/language/es/) there are multiple resources, these are:
+
+['schema'](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/schema/76882756)
+
+This takes the [4 JSON schema files](https://github.com/open-contracting/standard/tree/1.1-dev/standard/schema) and is used to generate the tables on the [schema reference page](http://standard.open-contracting.org/1.1-dev/es/schema/reference/) and the schema viewer for [release](http://standard.open-contracting.org/1.1-dev/es/schema/release/), [release packages](http://standard.open-contracting.org/1.1-dev/es/schema/release_package/), [records](http://standard.open-contracting.org/1.1-dev/es/schema/records_reference/) and [record packages](http://standard.open-contracting.org/1.1-dev/es/schema/record_package/), as well as the linked JSON Schema files.
+
+['codelists'](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/codelists/76986036)
+
+This takes the [codelist CSVs](https://github.com/open-contracting/standard/tree/1.1-dev/standard/schema/codelists) and outputs [codelist tables](http://standard.open-contracting.org/1.1-dev/es/schema/codelists/).
+
+#### Standard Documentation
+
+All the rest of the resources are one resource per markdown documentation file.
+
+The originals are in [the docs/en folder ](https://github.com/open-contracting/standard/tree/1.1-dev/standard/docs/en)and provide the main content text at  <http://standard.open-contracting.org/1.1-dev/es/>
+
+For example, [getting_started--publication_patterns](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/getting_started--publication_patterns/72743815) has a source of <https://github.com/open-contracting/standard/blob/1.1-dev/standard/docs/en/getting_started/publication_patterns.md> and is output at <http://standard.open-contracting.org/1.1-dev/es/getting_started/publication_patterns/>
+
 ## Languages
 
 We currently actively maintain translations to:
