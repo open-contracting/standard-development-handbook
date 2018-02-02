@@ -4,6 +4,36 @@
 
 The [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) repository is used to enforce coding and formatting styles for Python, Markdown and JSON.
 
+## CSV
+
+Use LF (`\n`) as the line terminator. Example:
+
+```python
+with open(path) as f:
+    reader = csv.DictReader(f)
+    fieldnames = reader.fieldnames
+    rows = [row for row in reader]
+
+with open(path, 'w') as f:
+    writer = csv.DictWriter(f, fieldnames, lineterminator='\n')
+    writer.writeheader()
+    writer.writerows(rows)
+```
+
+## JSON
+
+Indent with 2 spaces and preserve order of object pairs. Example:
+
+```python
+from collections import OrderedDict
+
+with open(path) as f:
+    data = json.load(f, object_pairs_hook=OrderedDict)
+
+with open(path, 'w') as f:
+    json.dump(data, f, indent=2, separators=(',', ': '))
+```
+
 ## Linting
 
 [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) performs [linting](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/tests/script.sh) of Python files. The linting of Markdown files is disabled. To perform periodic Markdown linting, you must:
