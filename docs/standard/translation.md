@@ -1,8 +1,6 @@
 # Translation
 
-Translators use Transifex to translate the Open Contracting Data Standard schema, codelists and documentation from the source language, English, to other languages.
-
-This page describes processes for translators. The technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation are described under [technical processes](technical/index).
+This page describes processes for translators. The technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation are described under [translation technical processes](technical/translation).
 
 ## Languages
 
@@ -29,6 +27,8 @@ Translators, proofreaders and reviewers have excellent writing skills (spelling 
 **Reviewers** review the translation to ensure it is functional. A functional translation enables the reader to access the same information and perform the same tasks as the source document would. Reviewers are specialists of the domains at hand (public contracting and data) and focus on the clarity of the phrasing and the good usage of the terminology.
 
 ## Using Transifex
+
+Translators use Transifex to translate the Open Contracting Data Standard schema, codelists and documentation from the source language, English, to other languages.
 
 ### Projects and resources
 

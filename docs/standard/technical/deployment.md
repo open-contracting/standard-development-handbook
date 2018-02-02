@@ -99,6 +99,12 @@ Update `versioned-release-validation-schema.json` to match `release-schema.json`
 python standard/schema/utils/make_validation_schema.py
 ```
 
+Update `meta-schema.json` to match `meta-schema-patch.json`:
+
+```shell
+python standard/schema/utils/make_metaschema.py
+```
+
 Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
 ### 4. Integrate extensions
@@ -122,8 +128,8 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 ### 1. Push and pull updated translations
 
-1. Run `tx push -s` to push updated source files to Transifex.
-1. Check that all strings are translated for supported languages. For OCDS 1.1, use the following links, then sort by "Untranslated (Descending)". For any resources with untranslated strings, with the exception of strings sourced from `currency.csv`, contact a translator (see the CRM contacts tagged "translator") with links to the resources to translate.
+1. Run `tx push -s` to push source files to Transifex.
+1. Check that all strings are translated in supported translations. For OCDS 1.1, use the following links, then sort by "Untranslated (Descending)". For any resources with untranslated strings, contact a translator (see the CRM contacts tagged "translator") with links to the resources to translate.
     1. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr)
     1. [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
 1. Run `tx pull -f -l es,fr` to pull updated translation files to the repository.
