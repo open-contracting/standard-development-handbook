@@ -44,6 +44,12 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 
 Handbook contributors should follow this style guide.
 
+### Links
+
+When linking to a GiHub resource, use `HEAD` instead of a specific branch, tag or commit.
+
+When linking to the standard's documentation, use the `latest` build instead of a specific version.
+
 ### Structure
 
 Unless a page is short, it should start with a description of its contents.

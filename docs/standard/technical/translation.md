@@ -19,7 +19,7 @@ For major and minor versions:
 
 For major, minor and patch versions:
 
-* [Build the documentation](build). It is normal to see "inconsistent term references in translated message" warnings.
+* [Build the documentation](build). It is normal to see "inconsistent term references in translated message" warnings. :issue:`139`
 * Update the `.tx/config` file (replacing the Transifex project name):
 
         sphinx-intl update-txconfig-resources --transifex-project-name open-contracting-standard-1-1 --pot-dir build/locale --locale-dir standard/docs/locale
