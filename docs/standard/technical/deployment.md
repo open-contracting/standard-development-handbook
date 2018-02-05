@@ -6,7 +6,7 @@ This process is used for major, minor and patch versions, as well as non-normati
 
 For changes to documentation only (no schema changes), start from [Translate and release](#translate-and-release).
 
-For changes to the theme only, start from [Build](#build).
+For changes to the theme only, start from [Build and deploy](#build-and-deploy).
 
 ## Schemas and extensions
 
