@@ -69,7 +69,7 @@ For the [`schema`](https://www.transifex.com/OpenDataServices/open-contracting-s
 
 ```eval_rst
   .. todo::
-    Add guidance on how to use Transifex.
+    Add guidance on how to use Transifex. CRM issue #3034.
 ```
 
 From the translation interface, type `?` to see a list of shortcuts.
@@ -103,11 +103,28 @@ Some titles and descriptions of codes are copied from external sources and shoul
 
 ## Translation workflow
 
+1. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or  `.po` files.
 1. The Coordinator recruits people into the [roles](#translators-proofreaders-and-reviewers) of translator, proofreader and reviewer and gives access to the Transifex project.
 1. The Coordinator sends translators the links to the Transifex project and to this documentation page.
 1. When a Translator completes the translation of all untranslated strings in a resource, they contact the Proofreader with a link to the resource.
 1. When a Proofreader completes the proofreading of all unreviewed strings in a resource, they contact the Reviewer with a link to the resource.
 1. Once a Reviewer has reviewed all unreviewed strings for all resources, they contact the Coordinator.
+
+The **Release Manager** is the person responsible for the deployment of the new release of OCDS. The role of **Coordinator** is comparable to that in the [terminology process](termonology#coordinator).
+
+### Major and minor changes
+
+A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn't change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.
+
+Transifex can't tell the difference, and the English author can't indicate which changes are major or minor before pushing to Transifex. Translators therefore don't know whether a string:
+
+* is a new string that was never translated
+* corresponds to a string that was translated, but now requires re-translation
+* corresponds to a string that was translated, and only requires small edits
+
+In Transifex, the "Suggestions" tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but it is a time-consuming task.
+
+The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
 
 ## See also
 
