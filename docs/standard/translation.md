@@ -1,6 +1,6 @@
 # Translation
 
-This page describes processes for translators. The technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation are described under [translation technical processes](technical/translation).
+This page describes processes for translators. The technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation are described under the [translation technical processes](technical/translation).
 
 ## Languages
 
@@ -12,11 +12,6 @@ The two supported translations are:
 Community translations exist to various levels of completion.
 
 ## Translators, proofreaders and reviewers
-
-```eval_rst
-  .. todo::
-    Describe the process for selecting translators and reviewers and managing permissions.
-```
 
 Translators, proofreaders and reviewers have excellent writing skills (spelling and grammar) and intervene only when the target language is their native language.
 
@@ -74,16 +69,9 @@ For the [`schema`](https://www.transifex.com/OpenDataServices/open-contracting-s
 
 From the translation interface, type `?` to see a list of shortcuts.
 
-### Untranslated words
+### What not to translate
 
-The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
-
-1. Open the translation project
-1. Scroll to the list of languages and click "Translate" for a language
-1. Click "All resources" at the bottom of the screen
-1. Click "# untranslated" at the top of the screen
-1. Check the box at the right of the search bar
-1. See the number of words at the right of the screen
+Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as `should_be_translated_upstream` and indicated by a small tag icon.
 
 ### Translation glossary
 
@@ -97,9 +85,20 @@ In our translation process, we encourage translators to:
 1. Validate the translations with the nominated reviewer
 1. Translate the rest of the documentation
 
-### What not to translate
+### Counting untranslated words
 
-Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as `should_be_translated_upstream` and indicated by a small tag icon.
+The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
+
+1. Open the translation project
+1. Scroll to the list of languages and click "Translate" for a language
+1. Click "All resources" at the bottom of the screen
+1. Click "# untranslated" at the top of the screen
+1. Check the box at the right of the search bar
+1. See the number of words at the right of the screen
+
+### Controlling access permissions
+
+Read Transifex's documentation on [inviting collaborators](https://docs.transifex.com/teams/inviting-collaborators/) and [understanding user roles](https://docs.transifex.com/teams/understanding-user-roles). For more documentation, see [Getting Started as a Localization Manager](https://docs.transifex.com/getting-started/getting-started-as-a-manager).
 
 ## Translation workflow
 
@@ -125,6 +124,8 @@ Transifex can't tell the difference, and the English author can't indicate which
 In Transifex, the "Suggestions" tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but this is a time-consuming task.
 
 The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
+
+Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then push the translations to Transifex. See the important caveats under the [translation technical processes](#push-and-pull-translations-from-transifex).
 
 ## See also
 
