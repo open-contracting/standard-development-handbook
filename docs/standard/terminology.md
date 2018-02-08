@@ -4,6 +4,8 @@ In order to use key terms consistently across the standard documentation and OCP
 
 ![Terminology process overview](https://www.lucidchart.com/publicSegments/view/888e3ab4-65bd-497e-b0fa-f2e91515672e/image.png)
 
+<!-- https://www.lucidchart.com/documents/edit/3d906148-5ed8-41a4-b48d-8d3ec3aed1d4 -->
+
 ## Tools overview
 
 ### Google spreadsheet
@@ -172,11 +174,11 @@ Steps 1 and 2 of this stage can be scripted.
 
 Certain tasks are not directly related to the production of the glossary, but are necessary for good coordination:
 
-- The authors inform the terminologists that a new batch of terms is ready for review.
-- The terminologists inform the coordinators that new terms should be translated.
-- The coordinators inform the SMEs that new terms need to be translated.
-- The coordinators inform the proofreaders that the translated terms to be proofread.
-- The coordinators manage the permissions for each sheet and give the SMEs and proofreaders the rights to edit the relevant sheets.
-- The coordinators inform the publishers that a certain batch of terms is translated, proofread and edited, ready to be pushed to the GitHub repository and Transifex.
+- Authors propose candidate terms to Terminologists to review and include.
+- Terminologists inform Coordinators of new terms to be translated.
+- Coordinators inform SMEs of new terms to translate.
+- Coordinators inform Proofreaders of translated terms to proofread.
+- Coordinators manage the permissions of each sheet and give SMEs and Proofreaders the right to edit any relevant sheets.
+- Coordinators inform Publishers that terms are translated and proofread, ready to be pushed to the GitHub repository and Transifex.
 
 At all stages, every person involved uses ranges or list of term IDs to clearly express what terms need to be processed.
