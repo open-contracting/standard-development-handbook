@@ -127,6 +127,17 @@ The English author should therefore go through the untranslated strings, identif
 
 Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then push the translations to Transifex. See the important caveats under the [translation technical processes](#push-and-pull-translations-from-transifex).
 
+```eval_rst
+  .. note::
+    ``sphinx-intl update -d standard/docs/locale -p build/locale`` can be run to update ``.po`` files based on ``.pot`` files. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
+
+    - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
+    - different headers
+    - ``:0`` after filenames
+
+    Thus, running ``sphinx-intl update`` results in a large diff. It's possible that pushing then pulling the ``.po`` files to and from Transifex could achieve a smaller diff.
+```
+
 ## See also
 
 * Blog post: [Localising OCDS: translations, terminology and extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)
