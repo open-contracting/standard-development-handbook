@@ -120,9 +120,9 @@ Transifex can't tell the difference, and the English author can't indicate which
 
 * is a new string that was never translated
 * corresponds to a string that was translated, but now requires re-translation
-* corresponds to a string that was translated, and only requires small edits
+* corresponds to a string that was translated, and only requires edits to e.g. URLs or formatting
 
-In Transifex, the "Suggestions" tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but it is a time-consuming task.
+In Transifex, the "Suggestions" tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but this is a time-consuming task.
 
 The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
 
