@@ -1,6 +1,6 @@
 # Translation
 
-This page describes processes for translators. The technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation are described under [translation technical processes](technical/translation).
+This page describes processes for translators. The technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation are described under the [translation technical processes](technical/translation).
 
 ## Languages
 
@@ -12,11 +12,6 @@ The two supported translations are:
 Community translations exist to various levels of completion.
 
 ## Translators, proofreaders and reviewers
-
-```eval_rst
-  .. todo::
-    Describe the process for selecting translators and reviewers and managing permissions.
-```
 
 Translators, proofreaders and reviewers have excellent writing skills (spelling and grammar) and intervene only when the target language is their native language.
 
@@ -69,21 +64,14 @@ For the [`schema`](https://www.transifex.com/OpenDataServices/open-contracting-s
 
 ```eval_rst
   .. todo::
-    Add guidance on how to use Transifex.
+    Add guidance on how to use Transifex. CRM issue #3034.
 ```
 
 From the translation interface, type `?` to see a list of shortcuts.
 
-### Untranslated words
+### What not to translate
 
-The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
-
-1. Open the translation project
-1. Scroll to the list of languages and click "Translate" for a language
-1. Click "All resources" at the bottom of the screen
-1. Click "# untranslated" at the top of the screen
-1. Check the box at the right of the search bar
-1. See the number of words at the right of the screen
+Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as `should_be_translated_upstream` and indicated by a small tag icon.
 
 ### Translation glossary
 
@@ -97,17 +85,58 @@ In our translation process, we encourage translators to:
 1. Validate the translations with the nominated reviewer
 1. Translate the rest of the documentation
 
-### What not to translate
+### Counting untranslated words
 
-Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as `should_be_translated_upstream` and indicated by a small tag icon.
+The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
+
+1. Open the translation project
+1. Scroll to the list of languages and click "Translate" for a language
+1. Click "All resources" at the bottom of the screen
+1. Click "# untranslated" at the top of the screen
+1. Check the box at the right of the search bar
+1. See the number of words at the right of the screen
+
+### Controlling access permissions
+
+Read Transifex's documentation on [inviting collaborators](https://docs.transifex.com/teams/inviting-collaborators/) and [understanding user roles](https://docs.transifex.com/teams/understanding-user-roles). For more documentation, see [Getting Started as a Localization Manager](https://docs.transifex.com/getting-started/getting-started-as-a-manager).
 
 ## Translation workflow
 
+1. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or  `.po` files.
 1. The Coordinator recruits people into the [roles](#translators-proofreaders-and-reviewers) of translator, proofreader and reviewer and gives access to the Transifex project.
 1. The Coordinator sends translators the links to the Transifex project and to this documentation page.
 1. When a Translator completes the translation of all untranslated strings in a resource, they contact the Proofreader with a link to the resource.
 1. When a Proofreader completes the proofreading of all unreviewed strings in a resource, they contact the Reviewer with a link to the resource.
 1. Once a Reviewer has reviewed all unreviewed strings for all resources, they contact the Coordinator.
+
+The **Release Manager** is the person responsible for the deployment of the new release of OCDS. The role of **Coordinator** is comparable to that in the [terminology process](termonology#coordinator).
+
+### Major and minor changes
+
+A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn't change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.
+
+Transifex can't tell the difference, and the English author can't indicate which changes are major or minor before pushing to Transifex. Translators therefore don't know whether a string:
+
+* is a new string that was never translated
+* corresponds to a string that was translated, but now requires re-translation
+* corresponds to a string that was translated, and only requires edits to e.g. URLs or formatting
+
+In Transifex, the "Suggestions" tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but this is a time-consuming task.
+
+The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
+
+Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then push the translations to Transifex. See the important caveats under the [translation technical processes](#push-and-pull-translations-from-transifex).
+
+```eval_rst
+  .. note::
+    ``sphinx-intl update -d standard/docs/locale -p build/locale`` can be run to update ``.po`` files based on ``.pot`` files. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
+
+    - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
+    - different headers
+    - ``:0`` after filenames
+
+    Thus, running ``sphinx-intl update`` results in a large diff. It's possible that pushing then pulling the ``.po`` files to and from Transifex could achieve a smaller diff.
+```
 
 ## See also
 
