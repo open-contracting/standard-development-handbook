@@ -6,7 +6,7 @@ This process is used for major, minor and patch versions, as well as non-normati
 
 For changes to documentation only (no schema changes), start from [Translate and release](#translate-and-release).
 
-For changes to the theme only, start from [Build](#build).
+For changes to the theme only, start from [Build and deploy](#build-and-deploy).
 
 ## Schemas and extensions
 
@@ -129,9 +129,10 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 ### 1. Push and pull updated translations
 
 1. Run `tx push -s` to push source files to Transifex.
-1. Check that all strings are translated in supported translations. For OCDS 1.1, use the following links, then sort by "Untranslated (Descending)". For any resources with untranslated strings, contact a translator (see the CRM contacts tagged "translator") with links to the resources to translate.
-    1. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr)
-    1. [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
+1. Check that all strings are translated and reviewed in supported translations, e.g. for OCDS 1.1:
+    1. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/)
+    1. [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
+1. For any resources with untranslated or unreviewed strings, follow the [../translation#translation-workflow](translation process).
 1. Run `tx pull -f -l es,fr` to pull updated translation files to the repository.
 1. Commit the updated translation files to the repository.
 

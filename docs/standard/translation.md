@@ -26,6 +26,8 @@ Translators, proofreaders and reviewers have excellent writing skills (spelling 
 
 **Reviewers** review the translation to ensure it is functional. A functional translation enables the reader to access the same information and perform the same tasks as the source document would. Reviewers are specialists of the domains at hand (public contracting and data) and focus on the clarity of the phrasing and the good usage of the terminology.
 
+Candidates for these roles are stored in a spreadsheet named "Roles in OCP translation and terminology processes" and in the CRM as contacts tagged "translator".
+
 ## Using Transifex
 
 Translators use Transifex to translate the Open Contracting Data Standard schema, codelists and documentation from the source language, English, to other languages.
@@ -101,10 +103,11 @@ Some titles and descriptions of codes are copied from external sources and shoul
 
 ## Translation workflow
 
-```eval_rst
-  .. todo::
-    Describe the workflow.
-```
+1. The Coordinator recruits people into the [roles](#translators-proofreaders-and-reviewers) of translator, proofreader and reviewer and gives access to the Transifex project.
+1. The Coordinator sends translators the links to the Transifex project and to this documentation page.
+1. When a Translator completes the translation of all untranslated strings in a resource, they contact the Proofreader with a link to the resource.
+1. When a Proofreader completes the proofreading of all unreviewed strings in a resource, they contact the Reviewer with a link to the resource.
+1. Once a Reviewer has reviewed all unreviewed strings for all resources, they contact the Coordinator.
 
 ## See also
 

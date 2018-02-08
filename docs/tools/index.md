@@ -99,6 +99,7 @@ If the link is to a Google Drive file or folder, use a Bit.ly link to track clic
 1. Click "Create BitLink"
 1. Paste the link to the Google Drive file or folder. Omit `?ts=…`, `?usp=sharing`, `#heading=…`, `/u/0`, `/a/open-contracting.org`, etc. The URL should look like one of:
     * `https://docs.google.com/document/d/{id}/edit`
+    * `https://docs.google.com/presentation/d/{id}/edit`
     * `https://docs.google.com/spreadsheets/d/{id}/copy`
     * `https://docs.google.com/spreadsheets/d/{id}/edit#gid={gid}`
     * `https://drive.google.com/drive/folders/{id}`
