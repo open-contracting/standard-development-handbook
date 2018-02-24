@@ -34,6 +34,11 @@ Candidates for these roles are stored in a spreadsheet named "Roles in OCP trans
 
 The **Release Manager** is the person responsible for the deployment of the new release of OCDS. The role of **Coordinator** is comparable to that in the [terminology process](terminology#coordinator).
 
+```eval_rst
+  .. note::
+    Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
+```
+
 ### Major and minor changes
 
 A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn't change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.

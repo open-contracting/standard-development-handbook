@@ -12,13 +12,13 @@ In our translation process, we encourage translators to:
 1. Validate the translations with the nominated reviewer
 1. Translate the rest of the documentation
 
-## Tasks
+## Non-translation tasks
 
-### Controlling access permissions
+### Control access permissions
 
 Read Transifex's documentation on [inviting collaborators](https://docs.transifex.com/teams/inviting-collaborators/) and [understanding user roles](https://docs.transifex.com/teams/understanding-user-roles). For more documentation, see [Getting Started as a Localization Manager](https://docs.transifex.com/getting-started/getting-started-as-a-manager).
 
-### Counting untranslated words
+### Count untranslated words
 
 The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
 
@@ -29,15 +29,26 @@ The dashboard of a translation project reports the number of *strings* to transl
 1. Check the box at the right of the search bar
 1. See the number of words at the right of the screen
 
-### How-to
+## Translation tasks
 
-```eval_rst
-  .. todo::
-    Add guidance on how to use Transifex. CRM issue #3034.
-```
+Translating can be tedious. In general, having more people translating and fewer people reviewing is an efficient way to translate. Beyond that, using shortcuts will make work faster. To see a list of shortcuts, type `?` from the translation interface. We cover a few common shortcuts here.
 
-From the translation interface, type `?` to see a list of shortcuts.
+### Save current translation and select next string (`TAB`)
 
-### What not to translate
+You'll use this a lot!
 
-Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as `should_be_translated_upstream` and indicated by a small tag icon.
+### Machine translate (`CTRL + h`)
+
+Use this carefully, as the strings to translate are specialized. Machine translation works best for short strings that typically require fewer corrections.
+
+### Use the highest voted suggestion (`CTRL + u`)
+
+Transifex will try to match new source strings with previously translated strings in order to suggest translations. If there is a high percentage match, you may be able to use the suggestion with minimal or no changes.
+
+### Copy the source string (`CTRL + g`)
+
+There are some strings, in particular very technical terms and names, that aren't translated and for which you can copy the source string.
+
+### Check previous translations
+
+Click the History tab when viewing a string to see its previous translations, when they were edited and by whom. This may inform your current translation, or indicate whom to ask about previous translations.
