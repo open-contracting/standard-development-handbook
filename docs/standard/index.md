@@ -29,7 +29,7 @@ This section describes the processes for maintaining these assets.
    conventions
    documentation
    guidance
-   translation
+   translation/index
    extensions
    technical/index
    *

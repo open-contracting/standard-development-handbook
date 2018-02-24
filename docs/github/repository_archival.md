@@ -3,7 +3,7 @@
 Assets that are no longer supported should be archived.
 
 1. Agree whether to archive the repository. The archived repositories presently include:
-    * Superseded repositories (e.g. [json-merge-patch](OpenDataServices/json-merge-patch) supersedes [jsonmerge](https://github.com/open-contracting-archive/jsonmerge))
+    * Superseded repositories (e.g. [json-merge-patch](https://github.com/OpenDataServices/json-merge-patch) supersedes [jsonmerge](https://github.com/open-contracting-archive/jsonmerge))
     * Abandoned extensions (e.g. [ocds-equityTransferCaps-extension](https://github.com/open-contracting-archive/ocds-equityTransferCaps-extension))
     * Merged changes to the core standard, expressed as extension repositories (`ocds_upgrade_###`)
     * Exploratory repositories from pre-1.0 and pre-2015

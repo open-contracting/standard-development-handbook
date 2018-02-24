@@ -1,6 +1,6 @@
 # Translation technical processes
 
-This page documents only the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation. See the [full translation process](../translation).
+This page documents only the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation. See the [full translation process](translation).
 
 You should only perform the tasks on this page once the source files are frozen. The documentation should be ready to deploy except for translations, i.e. you completed the [Schemas and extensions](deployment#schemas-and-extensions) part of the deployment process.
 
