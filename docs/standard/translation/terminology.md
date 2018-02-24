@@ -6,7 +6,7 @@ In order to use key terms consistently across the standard documentation and OCP
 
 <!-- https://www.lucidchart.com/documents/edit/3d906148-5ed8-41a4-b48d-8d3ec3aed1d4 -->
 
-## Tools overview
+## Tools
 
 ### Google spreadsheet
 
@@ -53,7 +53,7 @@ The benefit of using Git is that it neatly tracks the changes made to the files 
 
 [Transifex](https://www.transifex.com/OpenDataServices/public/) is the tool currently used by the Open Contracting Partnership to manage the translation of their content. One of its features is a glossary that enables translators to access the translated terms when translating.
 
-## Roles overview
+## Roles
 
 ### Author
 

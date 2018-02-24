@@ -130,7 +130,7 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 1. Run `tx push -s` to push source files to Transifex.
 1. Check all strings are translated and reviewed in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
-1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation#translation-workflow).
+1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/translation#translation-workflow).
 1. Run `tx pull -f -l es,fr` to pull updated translation files to the repository.
 1. Commit the updated translation files to the repository.
 

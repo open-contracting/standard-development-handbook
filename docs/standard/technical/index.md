@@ -8,7 +8,6 @@
    repository
    spellcheck
    build
-   translation
    deployment
    *
 ```
