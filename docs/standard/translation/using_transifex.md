@@ -52,3 +52,10 @@ There are some strings, in particular very technical terms and names, that aren'
 ### Check previous translations
 
 Click the History tab when viewing a string to see its previous translations, when they were edited and by whom. This may inform your current translation, or indicate whom to ask about previous translations.
+
+### View translations with warnings
+
+1. From the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es), click "All resources"
+1. Focus on the search box (`CTRL + s`)
+1. Select "Warnings" from the list of filters
+1. Select "yes" from the list of values
