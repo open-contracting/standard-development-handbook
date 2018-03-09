@@ -20,6 +20,8 @@ The Open Contracting Data Standard consists of:
 
 This section describes the processes for maintaining these assets.
 
+Documentation is written in Markdown syntax with [recommonmark](https://recommonmark.readthedocs.org/en/latest/) building on [Commonmark](http://commonmark.org/).
+
 ```eval_rst
 .. toctree::
    :maxdepth: 2
@@ -27,7 +29,6 @@ This section describes the processes for maintaining these assets.
 
    schema
    conventions
-   documentation
    guidance
    translation/index
    extensions
