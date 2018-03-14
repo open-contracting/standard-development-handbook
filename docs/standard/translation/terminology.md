@@ -54,7 +54,7 @@ The benefit of using Git is that it neatly tracks the changes made to the files 
 
 ### Transifex
 
-[Transifex](https://www.transifex.com/OpenDataServices/public/) is the tool currently used by the Open Contracting Partnership to manage the translation of their content. One of its features is a glossary that enables translators to access the translated terms when translating.
+[Transifex](https://www.transifex.com/OpenDataServices/public/) is the tool currently used by the Open Contracting Partnership to manage the translation of their content. One of its features is a [glossary](using_transifex#translation-glossary) that enables translators to access the translated terms when translating.
 
 ## Roles
 
