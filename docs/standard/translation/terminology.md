@@ -20,25 +20,28 @@ The Source sheet is edited by the terminologist and the SMEs and proofreaders in
 
 - **ID**: the ID of a term never changes. When a new term is added, it takes the next available ID number.
 - **Term**: the term, in its canonical form (lower case, singular, infinitive)
+- **POS**: the part of speech (Noun, Verb, Adjective)
+- **Domain**: the subject matter domain (procurement, technical)
 - **Definition**: the definition of the term **within the scope of OCDS documentation**. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition. The definition cell is a good place to give concise examples.
-- **Comment**: any remark the terminologist may want to add to help translating this term or a URL to information about the term.
+- **Note**: any remark the terminologist may want to add to help translating this term or a URL to information about the term.
 
 #### Base languages (es, fr, etc.)
 
 The sheet of a language is edited by the SMEs and the proofreaders. It has the following columns:
 
-- **ID**: the ID of the term. It enables the synchronization with the Source sheet and connects all the translations of the term.
-- **Term**, **Definition**, **Comment**: the content of these fields is automatically imported from the Source sheet. Once one of these values is modified in the Source sheet, it can take up to a minute for the values to be updated in all the sheets.
-- **Translation**: the equivalent of the source term in the target language, in its canonical form (lower case, singular, infinitive). Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage. If so, please highlight this difference in the definition and optionally in the comment field.
-- **Definition**: the definition of the term in the target language. This is not necessarily a translation of the source definition. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
-- **Comment**: any remark the SME may want to add to explain the choice or the definition of the term in the target language.
+- Same as source
+- **xx**: the equivalent of the source term in the target language, in its canonical form (lower case, singular, infinitive). Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage. If so, please highlight this difference in the definition and optionally in the comment field.
+- **Definition_xx**: the definition of the term in the target language. This is not necessarily a translation of the source definition. To improve the usability and efficiency of the glossary, please try to use other terms of the glossary in the definition.
+- **Note_xx**: any remark the SME may want to add to explain the choice or the definition of the term in the target language.
 
 #### Language variants (es-MX, es-GT, fr-BE, etc.)
 
 The sheet of a language variant is edited by the SMEs and the proofreaders. It has the following columns:
 
-- Same as languages
-- **Varies from language?**: this cell is automated and it can have the following values:
+- Same as base language, renaming **xx** to **Translation_xx** and removing **Note** and **Note_xx**
+- **xx_XX**: the equivalent of the source term in the target locale, in its canonical form (lower case, singular, infinitive).
+- **Note_xx_XX**: any remark the SME may want to add to explain the choice of the term in the target locale.
+- **Varies from xx?**: this cell is automated and it can have the following values:
     - **no** if the term in the language variant and the base language are the same
     - **yes => term** if the term in the language variant differs from the one in the base language
     - **empty** if either the base language or the language variant doesn't have a term yet
