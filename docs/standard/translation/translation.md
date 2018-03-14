@@ -25,6 +25,8 @@ Candidates for these roles are stored in a spreadsheet named "Roles in OCP trans
 
 ## Translation workflow
 
+For the specific steps that each role follows in Transifex, see the [steps for each role](using_transifex#steps-for-each-role).
+
 1. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or  `.po` files.
 1. The Coordinator recruits people into the [roles](#translators-proofreaders-and-reviewers) of translator, proofreader and reviewer and [gives access to the Transifex project](using_transifex#controlling-access-permissions).
 1. The Coordinator sends translators the links to the Transifex project and to this documentation page.
