@@ -13,3 +13,5 @@ Google Analytics is used on:
 Piwik is used on:
 
 * CoVE: [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/)
+
+CoVE also has [public statistics](http://standard.open-contracting.org/validator/stats/).
