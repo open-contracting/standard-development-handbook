@@ -13,7 +13,6 @@ pip install -r requirements.txt
 ## Run tests
 
 ```shell
-pip install -r requirements.txt
 py.test
 ```
 
