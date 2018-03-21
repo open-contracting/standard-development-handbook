@@ -1,6 +1,6 @@
 # Profiles
 
-New profiles can be created using [profile_template](https://github.com/open-contracting/profile_template).
+New profiles can be created using [this template](https://github.com/open-contracting/standard_profile_template).
 
 ### Branches
 
