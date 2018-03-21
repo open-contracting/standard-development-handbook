@@ -17,7 +17,7 @@ For major and minor versions:
 * [Create a new Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-1-1`
 * Empty the `.tx/config` file:
 
-        tx init
+        tx init --no-interactive
 
 For major, minor and patch versions:
 
