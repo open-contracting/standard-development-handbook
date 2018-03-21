@@ -68,6 +68,8 @@ The [OGP Toolbox](https://ogptoolbox.org/) has a collection of [Open Contracting
 1. [Login](https://crm.open-contracting.org/projects/ocds/wiki/Logins#OGP-Toolbox)
 1. Create a [new tool](https://ogptoolbox.org/en/tools/new) in the toolbox
 1. Fill in at least the Name, Description, Logo and Website fields
+1. Click "Publish tool"
+1. Set the tool's "License" ("BSD 3-Clause License", "MIT License", "GNU Affero General Public License v3.0")
 1. Copy the tool's link
 1. Edit the [Open Contracting Tools](https://ogptoolbox.org/en/collections/10/edit) collection
 1. Scroll to the bottom of the page and paste the tool's link into the "Add a tool" field
