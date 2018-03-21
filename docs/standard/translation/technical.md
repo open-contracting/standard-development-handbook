@@ -17,7 +17,7 @@ For major and minor versions:
 * [Create a new Transifex project](https://www.transifex.com/OpenDataServices/) named e.g. `open-contracting-standard-1-1`
 * Empty the `.tx/config` file:
 
-        tx init
+        sphinx-intl create-txconfig
 
 For major, minor and patch versions:
 
@@ -79,12 +79,7 @@ Pull requests are built and accessible at `http://standard.open-contracting.org/
 
 ## Review translated codelists
 
-Translated codelists are temporarily stored in `standard/schema/translated_codelists` and `standard/docs/en/extensions` during the build process. To translated a codelist to one language:
-
-```shell
-python standard/schema/utils/translate_codelists.py standard/schema standard/docs/locale es
-python standard/schema/utils/translate_codelists.py standard/docs/en/extensions standard/docs/locale es
-```
+Translated codelists are stored in language directories under `build/codelists` during the build process.
 
 To stack a list of CSV files for review, you can do:
 
