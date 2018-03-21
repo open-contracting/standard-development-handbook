@@ -36,7 +36,7 @@ For the [`schema`](https://www.transifex.com/OpenDataServices/open-contracting-s
   .. note::
     The strings are extracted from CSV and JSON files using the custom Babel extraction methods `codelists_extract <https://github.com/open-contracting/standard/blob/HEAD/standard/schema/utils/codelists_extract.py>`_ and `jsonschema_extract <https://github.com/open-contracting/standard/blob/HEAD/standard/schema/utils/jsonschema_extract.py>`_.
 
-    The CSV and JSON files are then translated by the Python scripts `translate_codelists.py <https://github.com/open-contracting/standard/blob/HEAD/standard/schema/utils/translate_codelists.py>`_ and `translate_schema.py <https://github.com/open-contracting/standard/blob/HEAD/standard/schema/utils/translate_schema.py>`_.
+    The CSV and JSON files are then translated by the Python methods ``translate_codelists`` and ``translate_schema`` from `sphinxcontrib-opendataservices <https://github.com/OpenDataServices/sphinxcontrib-opendataservices>`_.
 
     The Sphinx directives used to render the translated codelist and JSON Schema files are ``jsonschema`` and ``csv-table-no-translate``.
 ```
