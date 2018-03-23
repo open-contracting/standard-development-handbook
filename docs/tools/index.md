@@ -25,8 +25,9 @@ Priority is assessed based on the impact of the project becoming unavailable and
 * `ocds-merge`: reference implementation for merging releases
 * `extension_registry`: integrates with `standard`
 * `standard_theme`: dependency of `standard`
-* `ocds_sphinx_directives`: dependency of `standard`
+* `sphinxcontrib-opencontracting`: dependency of `standard`
 * `OpenDataServices/sphinxcontrib-jsonschema`: dependency of `standard`
+* `OpenDataServices/sphinxcontrib-opendataservices`: dependency of `standard`
 
 ### Medium
 

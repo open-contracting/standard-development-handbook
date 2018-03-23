@@ -15,7 +15,7 @@ Hosting the documentation:
 
 Hosting the validator:
 
-* `cove-live-ocds`: hosts the [production version]((http://standard.open-contracting.org/validator/)) of the validator.
+* `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/validator/) of the validator.
 * `cove-dev`: hosts a [development version](http://dev.cove.opendataservices.coop/validator/) of the validator.
 
 Hosting the extension registry:
