@@ -16,41 +16,40 @@ For major and minor versions:
 
 * [Create a Transifex project](https://www.transifex.com/OpenDataServices/), named e.g. `open-contracting-standard-1-1`
 * Update `TRANSIFEX_PROJECT` in `include/config.mk`
-* Empty the `.tx/config` file:
 
-        rm -f .tx/config
-        sphinx-intl create-txconfig
+## Push translations to Transifex
 
-For major, minor and patch versions:
+1. Extract the source (POT) files, with `make extract`
+1. Empty the `.tx/config` file, with `make clean_txconfig`
+1. Update the `.tx/config` file, with `make update_txconfig`
 
-* [Build the documentation](build). There should be no warnings, except "inconsistent term references in translated message" warnings. :issue:`139`
-* Update the `.tx/config` file with `make update_txconfig`
+Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must run all steps (`make extract clean_txconfig update_txconfig`). Whenever they are changed, you must run step 1. If only documentation pages are changed, you may run `make extract_markdown`. If only codelist CSV files: `make extract_codelists`. If only JSON Schema files: `make extract_schema`.
 
-Whenever documentation pages are renamed, added or removed, you must build the documentation and update the `.tx/config` file.
+To push source files, run `make push` or `tx push -s`
 
-## Push and pull translations from Transifex
-
-To **push** source files to Transifex, run `make push` or `tx push -s`
-
-To **push** specific resources among source files to Transifex (replace the Transifex project name):
+To push specific resources among source files (replace the Transifex project name):
 
 ```shell
 tx push -s -r open-contracting-standard-1-1.codelists open-contracting-standard-1-1.schema
 ```
 
-To forcefully **pull** *supported* translations from Transifex, run `make pull` or `tx pull -f -l es,fr`
+If text is translated locally by editing `.po` or `.pot` files, the translations can be pushed to Transifex, **after building the documentation**. **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run `make force_push_all` or `tx push -s -t -f -l es,fr --no-interactive`
 
-To forcefully **pull** *all* translations from Transifex:
+After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
+
+## Pull translations from Transifex
+
+To forcefully pull *supported* translations, run `make pull` or `tx pull -f -l es,fr`
+
+To forcefully pull *specific* translations, run e.g. `make pull.es` or `tx pull -f -l es`
+
+To forcefully pull *all* translations:
 
 ```shell
 tx pull -f -a
 ```
 
-Then, [build the documentation](build) again with the new translations.
-
-If text is translated locally by editing `.po` or `.pot` files, the translations can be pushed to Transifex, **after building the documentation**. **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run `make force_push_all` or `tx push -s -t -f -l es,fr --no-interactive`
-
-After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
+Then, build the documentation again with the new translations.
 
 ## Test translations
 
