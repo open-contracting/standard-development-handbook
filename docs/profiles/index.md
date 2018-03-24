@@ -83,6 +83,14 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
 
 [This profile](http://standard.open-contracting.org/profiles/ppp/latest/en/) is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting/public-private-partnerships).
 
+### Update OCDS Show for PPPs
+
+The profile contains a copy of OCDS Show for PPPs. To update it:
+
+```shell
+make update_ocds_show
+```
+
 ### Combine extensions' schema and codelists
 
 The PPP profile patches the core OCDS schema and codelists with extensions, including itself. The list of extensions is in `schema/apply-extensions.py`. The combined patches and codelists are located in the [`schema`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema) and [`compiledCodelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/compiledCodelists) directories and are calculated by running:
