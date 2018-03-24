@@ -76,7 +76,11 @@ Then, create a new branch of the extension registry to point to the new releases
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Before each release, and at least once a year, run `python standard/schema/utils/fetch_currency_codelist.py`. ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306).
+Before each release, and at least once a year (because ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306)), run:
+
+```shell
+python standard/schema/utils/fetch_currency_codelist.py
+```
 
 ### 3. Update version numbers, validation schema and changelog
 
@@ -128,10 +132,10 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 ### 1. Push and pull updated translations
 
-1. Run `tx push -s` to push source files to Transifex.
-1. Check all strings are translated and reviewed in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
+1. [Push source files to Transifex](../translation/technical#push-translations-to-transifex).
+1. Check all strings are [translated](../translation/using_transifex#translator) and reviewed](../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/translation#translation-workflow).
-1. Run `tx pull -f -l es,fr` to pull updated translation files to the repository.
+1. [Pull supported translations from Transifex](../translation/technical#pull-translations-from-transifex).
 1. Commit the updated translation files to the repository.
 
 ### 2. Merge the development branch
