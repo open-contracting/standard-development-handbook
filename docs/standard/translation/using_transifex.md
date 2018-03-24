@@ -16,7 +16,7 @@ These steps expand on steps in the [translation workflow](translation#translatio
 1. Repeat from Step 4
 1. Notify the Proofreader when strings have been translated
 
-It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can take the name of a resource, e.g. `schema--changelog`, remove `--index` if present, replace `--` with `/`, and put it in the pattern `http://standard.open-contracting.org/latest/en/{{name}}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>.
+It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can take the name of a resource, e.g. `schema--changelog`, remove `--index` if present, replace `--` with `/`, and put it in the pattern `http://standard.open-contracting.org/latest/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>.
 
 See the sections below for the [translation glossary](#translation-glossary) and [translation tasks](#translation-tasks) for tips on using Transifex.
 

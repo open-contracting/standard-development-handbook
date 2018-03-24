@@ -32,6 +32,7 @@ with open(path) as f:
 
 with open(path, 'w') as f:
     json.dump(data, f, indent=2, separators=(',', ': '))
+    f.write('\n')
 ```
 
 ## Linting
@@ -47,7 +48,7 @@ with open(path, 'w') as f:
 
 1. You should now be able to run `bin/mdl --help`. Run `pwd` to get the path to your current working directory.
 1. Change into a directory containing local copies of GitHub repositories.
-1. Run (replacing `path/to` twice with the output of `pwd` above):
+1. Run (replace `path/to` twice with the output of `pwd` above):
 
         for i in *; if [ -d $i ]; cd $i; echo $i; path/to/bin/mdl --git-recurse --style path/to/mdlrc.rb .; cd ..; end; end
 

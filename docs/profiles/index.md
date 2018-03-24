@@ -1,38 +1,38 @@
 # Profiles
 
+Profiles are, in many ways, similar to the [standard](../standard) itself, including [building](../standard/technical/build) and [translating](../standard/translation) the documentation. Differences are noted on this page.
+
 New profiles can be created using [this template](https://github.com/open-contracting/standard_profile_template).
 
 ### Branches
 
-The stable version of a profile is on the `live` branch, and the development version is on the `master` branch.
+The development version of a profile is on the `master` branch, and the live version is on the `live` branch.
 
 ## Translation
 
-Translations of profiles are maintained using Transifex.
+Translations of profiles are maintained using Transifex, same as the [standard's translations](../standard/translation).
 
 ### Copying translations from the standard to a profile
 
 There is often overlap between a profile and the standard, e.g. all the text from the unextended schema.
 
-We can copy translations using `pretranslate` from `translate-toolkit` (replace `profile`):
+We can copy translations using `pretranslate` from `translate-toolkit` (replace `PROFILE`):
 
 ```bash
 git clone https://github.com/open-contracting/standard.git
-git clone https://github.com/open-contracting/profile.git
+git clone https://github.com/open-contracting/PROFILE.git
 
 # Merge all the standard's translations for one language into a single file.
-msgcat standard/standard/docs/locale/es/LC_MESSAGES/{*.po,*/*.po} > profile/es.po
+msgcat standard/standard/docs/locale/es/LC_MESSAGES/{*.po,*/*.po} > PROFILE/es.po
 
-cd profile
+cd PROFILE
 
 # Extract POT files from JSON, CSV and Markdown files.
 make extract
 
-cd locale/es/LC_MESSAGES
-
 # Copy the translations.
-for f in *.po */*.po; do
-  pretranslate --tm ../../../es.po -t $f ../../../build/locale/${f}t $f;
+for f in locale/es/LC_MESSAGES/{*.po,*/*.po}; do
+  pretranslate --tm es.po -t $f build/locale/${f}t $f;
 done
 ```
 
@@ -40,13 +40,13 @@ done
 
 Each branch of a profile's repository is automatically built to:
 
-`http://standard.open-contracting.org/profiles/<root>/<branch>/en/`
+`http://standard.open-contracting.org/profiles/{root}/{branch}/en/`
 
 ## Copying live deploy into place
 
 See the [servers](../systems/servers) page for more info on how our servers are set up.
 
-Set some variables (change `PROFILE`):
+Set some variables (change the value of `PROFILE`):
 
 ```bash
 VER=master         # (for example)
@@ -83,31 +83,28 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
 
 [This profile](http://standard.open-contracting.org/profiles/ppp/latest/en/) is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting/public-private-partnerships).
 
-### Building the documentation
+### Combine extensions' schema and codelists
 
-The steps are similar to [those for the standard](../standard/technical/build). Differences are:
+The PPP profile patches the core OCDS schema and codelists with extensions, including itself. The list of extensions is in `schema/apply-extensions.py`. The combined patches and codelists are located in the [`schema`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema) and [`compiledCodelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/compiledCodelists) directories and are calculated by running:
 
-* Build the documentation in `docs/_build/dirhtml` with: `cd docs; make -e SPHINXOPTS="-D language='en'" dirhtml`
-* The profile has no tests
+```shell
+make clean_dist
+python schema/apply-extensions.py
+```
 
-### Translation
+#### Update the base schema and codelist files
 
-The steps are similar to [those for the standard](../standard/translation/technical). Differences are:
+```
+make update_base_files
+```
 
-* Update the `.tx/config` file with: `sphinx-intl update-txconfig-resources --transifex-project-name ocds-for-ppps --pot-dir build/locale --locale-dir locale`
-* When running `pybabel extract`, prefix the schema and codelists `.pot` files with `ppp-`
+Then combine extensions' schema and codelists with the new base files.
 
-### Schema and codelists
+If the new base files introduce and remove codelists, update [`codelists.md`](https://github.com/open-contracting/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
 
-The PPP profile is built by patching the core OCDS schema and codelists with various extensions by running `apply-extensions.py`.
+#### Pull in a new or updated extension
 
-The list of extensions with which to patch the core standard is defined in the `extensions_to_merge` list in `apply-extensions.py`.
-
-The compiled schema and codelists are located in the [`schema`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema) and [`compiledCodelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/compiledCodelists) directories respectively.
-
-#### Pulling in a new or updated extension
-
-To include a new or updated extension in a profile build:
+To include a new or updated extension in a build:
 
 1. Create a new release in GitHub for the version of the extension to be included in the profile build (see [worked example](../standard/technical/deployment#pin-extensions)).
 1. In the [ppp branch](https://github.com/open-contracting/extension_registry/tree/ppp) of the extension registry, if the extension is new, add an entry for it or otherwise update its `extension.json`, so that the `url` key points to the release created in step 1.
@@ -119,12 +116,3 @@ To include a new or updated extension in a profile build:
   .. note::
     Currently, `apply-extensions.py` will only work with extensions hosted under the open-contracting GitHub organization.
 ```
-
-#### Updating the base schema and codelist
-
-To update the base schema and codelists that a profile is built on:
-
-1. Replace the contents of the [`base-codelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema/base-codelists) directory with the new base codelists.
-1. Replace [`base-release-schema.json`](https://github.com/open-contracting/public-private-partnerships/blob/master/schema/base-release-schema.json) with the new base schema.
-1. Run [`apply-extensions.py`](https://github.com/open-contracting/public-private-partnerships/blob/master/schema/apply-extensions.py).
-1. If the updated base schema and codelists introduce and remove codelists, update [`codelists.md`](https://github.com/open-contracting/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.

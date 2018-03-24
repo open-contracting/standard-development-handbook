@@ -59,7 +59,7 @@ Alternately, the English author can replicate the minor changes to the source st
 
 ```eval_rst
   .. note::
-    ``sphinx-intl update -d standard/docs/locale -p build/locale`` updates ``.po`` files based on ``.pot`` files. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
+    ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` updates ``.po`` files based on ``.pot`` files. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
 
     - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
     - different headers
