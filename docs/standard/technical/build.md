@@ -22,7 +22,10 @@ pip install -r requirements.txt
 
 The standard repository has tests. Profiles may not.
 
+The standard's tests must be run after building the documentation:
+
 ```shell
+make
 py.test
 ```
 

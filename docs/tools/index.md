@@ -24,6 +24,7 @@ Priority is assessed based on the impact of the project becoming unavailable and
 * Core extensions
 * `ocds-merge`: reference implementation for merging releases
 * `extension_registry`: integrates with `standard`
+* `documentation-support`: dependency of `standard`
 * `standard_theme`: dependency of `standard`
 * `sphinxcontrib-opencontracting`: dependency of `standard`
 * `OpenDataServices/sphinxcontrib-jsonschema`: dependency of `standard`
@@ -46,6 +47,7 @@ Priority is assessed based on the impact of the project becoming unavailable and
 * `ocds-faker`
 * `ocds-show`
 * `ocds-show-ppp`
+* `ocds_profile_template`: internal template
 * `standard-legacy-staticsites`: for older versions of documentation
 * `open-contracting.github.io`: redirects to `standard`
 
