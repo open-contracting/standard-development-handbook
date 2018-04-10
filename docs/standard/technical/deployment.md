@@ -133,7 +133,7 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 ### 1. Push and pull updated translations
 
 1. [Push source files to Transifex](../translation/technical#push-translations-to-transifex).
-1. Check all strings are [translated](../translation/using_transifex#translator) and reviewed](../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
+1. Check all strings are [translated](../translation/using_transifex#translator) and [reviewed](../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/translation#translation-workflow).
 1. [Pull supported translations from Transifex](../translation/technical#pull-translations-from-transifex).
 1. Commit the updated translation files to the repository.
@@ -149,7 +149,7 @@ The dev working branch should be merged into the relevant live branch, e.g. merg
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Create a tagged release named e.g. `1__1__0`
+Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and push the tag with `git push --tags`
 
 ## Build and deploy
 
