@@ -84,7 +84,14 @@ Click the History tab when viewing a string to see its previous translations, wh
 
 1. From the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es), click "All resources"
 1. Focus on the search box (`CTRL + s`)
-1. Select "Warnings" from the list of filters
+1. Select "warning" from the list of filters
+1. Select "yes" from the list of values
+
+### View translations with issues
+
+1. From the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es), click "All resources"
+1. Focus on the search box (`CTRL + s`)
+1. Select "issue" from the list of filters
 1. Select "yes" from the list of values
 
 ## Non-translation tasks
