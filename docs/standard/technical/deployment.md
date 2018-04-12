@@ -59,10 +59,16 @@ For each *core* extension:
 1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
 1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
-Instead of navigating the website, run this Rake task, which will use the extension's changelog as the release message and e.g. "Fixed version for OCDS 1.1.1" as the release title:
+Instead of navigating the website, run this Rake task, which will use the extension's changelog as the release message and "Fixed version for OCDS X.X.X" as the release title:
 
 ```bash
 bundle exec rake release:release_extensions REF=v1.1.1
+```
+
+If you make a mistake, you can undo the release with:
+
+```bash
+bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
 Then, create a new branch of the extension registry to point to the new releases of core extensions.
@@ -133,14 +139,18 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 ### 1. Push and pull updated translations
 
 1. [Push source files to Transifex](../translation/technical#push-translations-to-transifex).
-1. Check all strings are [translated](../translation/using_transifex#translator) and reviewed](../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
+1. Check all strings are [translated](../translation/using_transifex#translator) and [reviewed](../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/translation#translation-workflow).
+1. Check the [warnings](../translation/using_transifex#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
 1. [Pull supported translations from Transifex](../translation/technical#pull-translations-from-transifex).
-1. Commit the updated translation files to the repository.
+1. Check the [issues](../translation/using_transifex#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
+1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../translation/technical#push-translations-from-transifex).
+1. Create a pull request for the updated translation files.
+1. [Test the translations on the build of the pull request](../translation/technical#test-translations).
 
-### 2. Merge the development branch
+### 2. Merge the development branch onto the live branch
 
-The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch into the dev branch for a major or minor version, and then merging onwards into the live branch.
+The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch (`1.1.1-dev`) into the minor (`1.1-dev`) dev branch, and then merging onwards into the live branch (`1.1`).
 
 ### 3. Create a tagged release
 
@@ -149,7 +159,7 @@ The dev working branch should be merged into the relevant live branch, e.g. merg
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Create a tagged release named e.g. `1__1__0`
+Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and push the tag with `git push --tags`
 
 ## Build and deploy
 

@@ -55,7 +55,7 @@ Then, build the documentation again with the new translations.
 
 Pull requests are built and accessible at `http://standard.open-contracting.org/BRANCH/`. Translations of Markdown pages using Sphinx directives should be checked in particular:
 
-* `http://standard.open-contracting.org/BRANCH/en/getting_started/` uses `jsoninclude`
+* `http://standard.open-contracting.org/BRANCH/es/getting_started/` uses `jsoninclude`
 * `http://standard.open-contracting.org/BRANCH/es/schema/reference/` uses `jsonschema`
 * `http://standard.open-contracting.org/BRANCH/es/schema/release/` has a Docson widget
 * `http://standard.open-contracting.org/BRANCH/es/schema/codelists/` uses `csv-table-no-translate`
