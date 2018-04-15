@@ -10,7 +10,7 @@ In order to use key terms consistently across the standard documentation and OCP
 
 ### Google spreadsheet
 
-[The Google spreadsheet](https://docs.google.com/spreadsheets/d/1PvlA2WWtP9KJpnkhuYGx5ExHmHwwvaA54VX62piF86k/edit) is divided in sheets. Each term is identified by an ID to enable the reconciliation of the terms across languages and enable the management of homographs (different terms that have the same spelling).
+[The Google spreadsheet](https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0) is divided in sheets. Each term is identified by an ID to enable the reconciliation of the terms across languages and enable the management of homographs (different terms that have the same spelling).
 
 All the sheets are publicly readable and can be commented by anyone.
 
