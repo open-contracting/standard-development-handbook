@@ -44,7 +44,9 @@ Each branch of a profile's repository is automatically built to:
 
 ### Configuration
 
-From the profile's Travis page:
+First, get a version of the `ocds-docs` user's private key without newlines or spaces: `cat id_rsa | tr '\n' '#' | tr ' ' '_'`
+
+Then, from the profile's Travis page:
 
 1. Click "More options" and "Settings"
 1. Under "Environment Variables":
@@ -53,7 +55,7 @@ From the profile's Travis page:
   1. Set "Display value in build log" to "ON"
   1. Click "Add"
   1. Enter "PRIVATE_KEY" in the first input
-  1. Enter the private key for the `ocds-docs` user in the second input
+  1. Enter the private key in the second input
   1. Click "Add"
 
 ## ReadTheDocs
