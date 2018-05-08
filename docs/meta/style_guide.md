@@ -36,9 +36,9 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 * Property and object names should not include the name of the parent object, e.g. `title` not `tenderTitle`, `description` not `awardDescription`, etc.
 * Date fields should use the `"format": "date-time"` key to enforce use of ISO8601
 * The `period` object should be used in place of `year` or `month` fields
-* Where a property is an object, the object should be defined in the `definitions` section of the JSON Schema and referenced with `$ref`, rather than nesting properties of properties
-* The `identifier` object should be used when referencing identifiers from external sources, e.g. `{"id": "12345678", "scheme": "IBAN"}` rather than `"ibanID": "12345678"`
-* For codelists, consider whether a supporting free-text `codelistDetails` field is required
+* Where a property is an object, the object should be defined in the `definitions` section of the JSON Schema and referenced with `$ref`, rather than nesting properties of properties.
+* The `identifier` object should be used when referencing identifiers from external sources, e.g. `{"id": "12345678", "scheme": "IBAN"}` rather than `"ibanID": "12345678"`.
+* For codelists, consider whether a supporting free-text `codelistDetails` field is required.
 
 ## Normative content
 
@@ -47,32 +47,22 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
     The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
 ```
 
-* Normative statements should be constructed using the keywords defined in [RFC2119](https://tools.ietf.org/html/rfc2119)
-
-* Normative keywords should be capitalised where used, per [RFC8174](https://tools.ietf.org/html/rfc8174)
-
-* Non-normative statements should not use the keywords defined in RFC2119, see this [Internet-Draft](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04) for appropriate synonyms
-
-* Normative statements should not use constructions such as "should always", "should only" or "where possible ... must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always"
-
+* Normative statements should be constructed using the keywords defined in [RFC2119](https://tools.ietf.org/html/rfc2119).
+* Normative keywords should be capitalised where used, per [RFC8174](https://tools.ietf.org/html/rfc8174).
+* Non-normative statements should not use the keywords defined in RFC2119, see this [Internet-Draft](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04) for appropriate synonyms.
+* Normative statements should not use constructions such as "should always", "should only" or "where possible ... must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
 * Normative statements must be consistent with the OCDS schema, e.g. `ocid` is a required field in the schema so:
-
- * "the `ocid` field MUST be provided" is consistent
- * "the `ocid` field SHOULD be provided" is inconsistent
-
-* When referring to extensions it is not necessary to explicitly state that they are optional
+  * "the `ocid` field MUST be provided" is consistent.
+  * "the `ocid` field SHOULD be provided" is inconsistent.
+* When referring to extensions it is not necessary to explicitly state that they are optional.
 
 ### Schema and codelist descriptions
 
-* Descriptions should be treated as definitions and written in a neutral voice, rather than addressing a particular audience, e.g. for `tender/submissionMethod`
-
- * "One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted" uses a neutral voice.
- * "Specify the method(s) by which bids can be submitted" addresses publishers rather than data users
- 
-* Where it is necessary to provide publisher or user specific information in a description this should be provided in a separate sentence after the primary definition
-
-* Descriptions should balance the needs of expert users, for whom the description serves to assure that use of the field or code is appropriate, and non-expert users, for whom the description of the code serves to help them understand how the field or code is used and whether it is likely to contain the information they are looking for
-
+* Descriptions should be treated as definitions and written in a neutral voice, rather than addressing a particular audience, e.g. for `tender/submissionMethod`.
+  * "One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted" uses a neutral voice.
+  * "Specify the method(s) by which bids can be submitted" addresses publishers rather than users. 
+* Where it is necessary to provide publisher or user-specific information in a description this should be provided in a separate sentence after the primary definition.
+* Descriptions should balance the needs of expert users, for whom the description serves to assure that use of the field or code is appropriate, and non-expert users, for whom the description of the code serves to help them understand how the field or code is used and whether it is likely to contain the information they are looking for.
 * For fields or codes whose names and titles use complex or specialist language, consider providing an example to aid non-expert users, e.g.
 
 ```eval_rst
@@ -83,27 +73,23 @@ guaranteeReports  Fiscal commitments and contingent liabilities reports Reports 
 ================= ===================================================== ===========
 ```
 
-* Descriptions should not link to definitions provided on external websites
+* Descriptions should not link to definitions provided on external websites.
+* Descriptions should be concise and avoid using exhaustive lists.
+* Schema descriptions should not explicitly state whether a field is required or optional.
+* Descriptions for similar properties or codes should be consistent with each other.
+* Descriptions should not simply restate the title or name of a property or code.
 
-* Descriptions should be concise and avoid using exhaustive lists or robust legal definitions
+### Description templates
 
-* Schema descriptions should not explicitly state whether a field is required or optional
-
-* Descriptions for similar properties or codes should be consistent with each other
-
-* Descriptions should not simply restate the title or name of a property or code
-
-### Model descriptions
-
-The following model descriptions should be used for common types of field in the schema. Additional information specific to a particular field may be provided in a separate sentence after the primary definition for the field.
+The following description templates should be used for common fields in the schema. Additional information, specific to a particular field, may be provided in a separate sentence after the primary definition for the field.
 
 #### Codelists
 
-For string properties:
+For single values:
 
-> A value from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in <codelistDetails_name>
+> A value from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
 
-For array properties:
+For multiple values:
 
 > One or more values from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
 
@@ -131,11 +117,11 @@ For the `title` property of an object:
 
 For the `description` property of an object:
 
-> A short and easy to read summary of this <object_name>. Structured information should be provided in <related_fields>. Descriptions should not exceed 250 words.
+> A short and easy-to-read summary of this <object_name>. Structured information should be provided in <related_fields>. Descriptions should not exceed 250 words.
 
 **Example:**
 
-> A short and easy to read summary of this tender. Structured information should be provided in the items array. Descriptions should not exceed 250 words.
+> A short and easy-to-read summary of this tender. Structured information should be provided in the items array. Descriptions should not exceed 250 words.
 
 #### Documents
 
@@ -148,7 +134,6 @@ For the `documents` property of an object:
 For the `milestones` property of an object:
 
 > A list of important dates or events associated with this <object_name>.
-
 
 ## Handbook style guide
 
