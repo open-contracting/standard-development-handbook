@@ -40,6 +40,116 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 * The `identifier` object should be used when referencing identifiers from external sources, e.g. `{"id": "12345678", "scheme": "IBAN"}` rather than `"ibanID": "12345678"`
 * For codelists, consider whether a supporting free-text `codelistDetails` field is required
 
+## Normative content
+
+```eval_rst
+  .. note::
+    The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
+```
+
+* Normative statements should be constructed using the keywords defined in [RFC2119](https://tools.ietf.org/html/rfc2119)
+
+* Normative keywords should be capitalised where used, per [RFC8174](https://tools.ietf.org/html/rfc8174)
+
+* Non-normative statements should not use the keywords defined in RFC2119, see this [Internet-Draft](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04) for appropriate synonyms
+
+* Normative statements should not use constructions such as "should always", "should only" or "where possible ... must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always"
+
+* Normative statements must be consistent with the OCDS schema, e.g. `ocid` is a required field in the schema so:
+
+ * "the `ocid` field MUST be provided" is consistent
+ * "the `ocid` field SHOULD be provided" is inconsistent
+
+* When referring to extensions it is not necessary to explicitly state that they are optional
+
+### Schema and codelist descriptions
+
+* Descriptions should be treated as definitions and written in a neutral voice, rather than addressing a particular audience, e.g. for `tender/submissionMethod`
+
+ * "One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted" uses a neutral voice.
+ * "Specify the method(s) by which bids can be submitted" addresses publishers rather than data users
+ 
+* Where it is necessary to provide publisher or user specific information in a description this should be provided in a separate sentence after the primary definition
+
+* Descriptions should balance the needs of expert users, for whom the description serves to assure that use of the field or code is appropriate, and non-expert users, for whom the description of the code serves to help them understand how the field or code is used and whether it is likely to contain the information they are looking for
+
+* For fields or codes whose names and titles use complex or specialist language, consider providing an example to aid non-expert users, e.g.
+
+```eval_rst
+================= ===================================================== ===========
+code              title                                                 Description
+================= ===================================================== ===========
+guaranteeReports  Fiscal commitments and contingent liabilities reports Reports detailing the fiscal commitments of the public authority to the PPP, for example known payments that must be made if the PPP proceeds or payment commitments whose occurrence, timing and magnitude depend on some uncertain future event, outside the control of the public authority.
+================= ===================================================== ===========
+```
+
+* Descriptions should not link to definitions provided on external websites
+
+* Descriptions should be concise and avoid using exhaustive lists or robust legal definitions
+
+* Schema descriptions should not explicitly state whether a field is required or optional
+
+* Descriptions for similar properties or codes should be consistent with each other
+
+* Descriptions should not simply restate the title or name of a property or code
+
+### Model descriptions
+
+The following model descriptions should be used for common types of field in the schema. Additional information specific to a particular field may be provided in a separate sentence after the primary definition for the field.
+
+#### Codelists
+
+For string properties:
+
+> A value from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in <codelistDetails_name>
+
+For array properties:
+
+> One or more values from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
+
+**Example:**
+
+> One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted. Further information may be provided in the submissionMethodDetails field.
+
+#### Identifiers
+
+For the `id` property of items in arrays:
+
+> A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
+
+**Example:**
+
+> A locally unique identifier for this document. Used to track changes to this document and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
+
+#### Title
+
+For the `title` property of an object:
+
+> A title for this <object_name>. Titles will often be displayed in consuming application to help users find the <object_name> they are looking for.
+
+#### Descriptions
+
+For the `description` property of an object:
+
+> A short and easy to read summary of this <object_name>. Structured information should be provided in <related_fields>. Descriptions should not exceed 250 words.
+
+**Example:**
+
+> A short and easy to read summary of this tender. Structured information should be provided in the items array. Descriptions should not exceed 250 words.
+
+#### Documents
+
+For the `documents` property of an object:
+
+> All documents and attachments related to this <object_name>, including any official notices.
+
+#### Milestones
+
+For the `milestones` property of an object:
+
+> A list of important dates or events associated with this <object_name>.
+
+
 ## Handbook style guide
 
 Handbook contributors should follow this style guide.
