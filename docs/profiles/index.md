@@ -1,5 +1,16 @@
 # Profiles
 
+Profiles are adaptations of OCDS to suit the disclosure requirements and user needs of a particular sector, type of contracting process and/or legal framework.
+
+Profiles typically bring together a number of extensions to meet these requirements and, in some rare cases, can also make fundamental changes to the core OCDS schema which would not be permitted in a core or community extension.
+
+Profiles are built to their own documentation micro-sites which may include:
+
+* The full profile schema
+* A mapping between the disclosure requirements and/or legal framework and the schema
+* Worked examples
+* Introductory material and implementation guidance
+
 Profiles are, in many ways, similar to the [standard](../standard) itself, including [building](../standard/technical/build) and [translating](../standard/translation) the documentation. Differences are noted on this page.
 
 New profiles can be created using [this template](https://github.com/open-contracting/standard_profile_template).
