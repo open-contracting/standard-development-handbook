@@ -87,11 +87,11 @@ The following description templates should be used for common fields in the sche
 
 For single values:
 
-> A value from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
+    A value from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
 
 For multiple values:
 
-> One or more values from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
+    One or more values from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
 
 **Example:**
 
@@ -101,7 +101,7 @@ For multiple values:
 
 For the `id` property of items in arrays:
 
-> A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
+    A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
 
 **Example:**
 
@@ -111,13 +111,13 @@ For the `id` property of items in arrays:
 
 For the `title` property of an object:
 
-> A title for this <object_name>.
+    A title for this <object_name>.
 
 #### Descriptions
 
 For the `description` property of an object:
 
-> A description of this <object_name>. Structured information should be provided in <related_fields>.
+    A description of this <object_name>. Structured information should be provided in <related_fields>.
 
 **Example:**
 
@@ -127,13 +127,13 @@ For the `description` property of an object:
 
 For the `documents` property of an object:
 
-> All documents and attachments related to this <object_name>, including any official notices.
+    All documents and attachments related to this <object_name>, including any official notices.
 
 #### Milestones
 
 For the `milestones` property of an object:
 
-> A list of important dates or events associated with this <object_name>.
+    A list of important dates or events associated with this <object_name>.
 
 ## Handbook style guide
 
