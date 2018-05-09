@@ -111,17 +111,17 @@ For the `id` property of items in arrays:
 
 For the `title` property of an object:
 
-> A title for this <object_name>. Titles will often be displayed in consuming application to help users find the <object_name> they are looking for.
+> A title for this <object_name>.
 
 #### Descriptions
 
 For the `description` property of an object:
 
-> A short and easy-to-read summary of this <object_name>. Structured information should be provided in <related_fields>. Descriptions should not exceed 250 words.
+> A description of this <object_name>. Structured information should be provided in <related_fields>.
 
 **Example:**
 
-> A short and easy-to-read summary of this tender. Structured information should be provided in the items array. Descriptions should not exceed 250 words.
+> A description of this tender. Structured information should be provided in the items array.
 
 #### Documents
 
