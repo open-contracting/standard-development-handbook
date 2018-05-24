@@ -35,6 +35,58 @@ with open(path, 'w') as f:
     f.write('\n')
 ```
 
+## Python packages
+
+* Use `install_requires` and `extras_require` in `setup.py` instead of `requirements.txt`
+* Sort requirements alphabetically
+
+If the package isn't distributed on PyPi, use this template `setup.py`, adding arguments like `entry_points`, `extras_require` and `namespace_packages` as needed:
+
+```python
+from setuptools import setup, find_packages
+
+setup(
+    name='NAME',
+    version='0.0.0',
+    packages=find_packages(),
+    install_requires=[
+        'REQUIREMENT',
+    ],
+)
+```
+
+If the package is distributed on PyPi, use this template `setup.py`:
+
+```python
+from setuptools import setup, find_packages
+
+with open('README.rst') as f:
+    long_description = f.read()
+
+setup(
+    name='NAME',
+    version='0.0.0',
+    author='Open Contracting Partnership',
+    author_email='data@open-contracting.org',
+    url='https://github.com/open-contracting/REPOSITORY',
+    description='DESCRIPTION',
+    license='BSD',
+    packages=find_packages(),
+    long_description=long_description,
+    install_requires=[
+        'REQUIREMENT',
+    ],
+    classifiers=[
+        'License :: OSI Approved :: BSD License',
+        'Programming Language :: Python :: 3.6',
+    ],
+)
+```
+
+To change a readme from Markdown to reStructuredText, install `pandoc` and run:
+
+    pandoc --from=markdown --to=rst --output=README.rst README.md
+
 ## Linting
 
 [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) performs [linting](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/tests/script.sh) of Python files. The linting of Markdown files is disabled. To perform periodic Markdown linting, you must:
