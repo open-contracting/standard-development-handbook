@@ -79,7 +79,7 @@ guaranteeReports  Fiscal commitments and contingent liabilities reports Reports 
 * Descriptions should not explicitly state whether a field is required or optional.
 * Descriptions should not simply restate the title or name of a property or code.
 
-### Description templates
+### Example descriptions
 
 Descriptions for similar properties or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
 
