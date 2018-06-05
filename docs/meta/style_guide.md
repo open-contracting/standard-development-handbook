@@ -32,7 +32,7 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 * We use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for objects directly nested within the `definitions` section, e.g. `Award`.
 * We put the qualifier *before* the concept, e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
 * We use singular for properties pointing to an object or literal value.
-* We use plural for properties pointing to an array of values. 
+* We use plural for properties pointing to an array of values.
 * Property and object names should not include the name of the parent object, e.g. `title` not `tenderTitle`, `description` not `awardDescription`, etc.
 * Date fields should use the `"format": "date-time"` key to enforce use of ISO8601
 * The `period` object should be used in place of `year` or `month` fields
@@ -58,11 +58,12 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 
 ### Schema and codelist descriptions
 
-* Descriptions should be treated as definitions and written in a neutral voice, rather than addressing a particular audience, e.g. for `tender/submissionMethod`.
+* The first sentence of a description should be descriptive of the contents of the field and written in a neutral voice, rather than addressing a particular audience, e.g. for `tender/submissionMethod`.
   * "One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted" uses a neutral voice.
-  * "Specify the method(s) by which bids can be submitted" addresses publishers rather than users. 
-* Where it is necessary to provide publisher or user-specific information in a description this should be provided in a separate sentence after the primary definition.
+  * "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
 * Descriptions should balance the needs of expert users, for whom the description serves to assure that use of the field or code is appropriate, and non-expert users, for whom the description of the code serves to help them understand how the field or code is used and whether it is likely to contain the information they are looking for.
+* Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively.
+* Guidance sentences should be grounded in clear user needs and implementation experience of common pitfalls or errors.
 * For fields or codes whose names and titles use complex or specialist language, consider providing an example to aid non-expert users, e.g.
 
 ```eval_rst
@@ -75,13 +76,14 @@ guaranteeReports  Fiscal commitments and contingent liabilities reports Reports 
 
 * Descriptions should not link to definitions provided on external websites.
 * Descriptions should be concise and avoid using exhaustive lists.
-* Schema descriptions should not explicitly state whether a field is required or optional.
-* Descriptions for similar properties or codes should be consistent with each other.
+* Descriptions should not explicitly state whether a field is required or optional.
 * Descriptions should not simply restate the title or name of a property or code.
 
-### Description templates
+### Example descriptions
 
-The following description templates should be used for common fields in the schema. Additional information, specific to a particular field, may be provided in a separate sentence after the primary definition for the field.
+Descriptions for similar properties or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
+
+The following examples can be used to inform descriptions for common types of fields in the schema. Additional information, specific to a particular field, should be provided in a separate sentence after the primary description of the field.
 
 #### Codelists
 
@@ -107,7 +109,7 @@ For the `id` property of items in arrays:
 
 > A locally unique identifier for this document. Used to track changes to this document and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
 
-#### Title
+#### Titles
 
 For the `title` property of an object:
 
@@ -119,9 +121,11 @@ For the `description` property of an object:
 
     A description of this <object_name>. Structured information should be provided in <related_fields>.
 
-**Example:**
+**Examples:**
 
-> A description of this tender. Structured information should be provided in the items array.
+> A description of this tender. Structured information should be provided in the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.
+
+> A description of this document. Descriptions should not exceed 250 words. In the event the document is not accessible online, the description field may be used to describe arrangements for obtaining a copy of the document.
 
 #### Documents
 
