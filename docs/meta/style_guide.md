@@ -62,7 +62,7 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
   * "One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted" uses a neutral voice.
   * "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
 * Descriptions should balance the needs of expert users, for whom the description serves to assure that use of the field or code is appropriate, and non-expert users, for whom the description of the code serves to help them understand how the field or code is used and whether it is likely to contain the information they are looking for.
-* Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively
+* Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively.
 * Guidance sentences should be grounded in clear user needs and implementation experience of common pitfalls or errors.
 * For fields or codes whose names and titles use complex or specialist language, consider providing an example to aid non-expert users, e.g.
 
@@ -83,7 +83,7 @@ guaranteeReports  Fiscal commitments and contingent liabilities reports Reports 
 
 Descriptions for similar properties or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
 
-The following examples can be used to inform descriptions for common types of field in the schema. Additional information, specific to a particular field, should be provided in a separate sentence after the primary description of the field.
+The following examples can be used to inform descriptions for common types of fields in the schema. Additional information, specific to a particular field, should be provided in a separate sentence after the primary description of the field.
 
 #### Codelists
 
