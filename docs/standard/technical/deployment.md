@@ -71,7 +71,7 @@ If you make a mistake, you can undo the release with:
 bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
-Then, create a new branch of the extension registry to point to the new releases of core extensions.
+Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry).
 
 ### 2. Perform periodic updates, if appropriate
 
@@ -95,7 +95,7 @@ python standard/schema/utils/fetch_currency_codelist.py
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. If the new extension registry branch you created doesn't correspond to `release` (i.e. `v1.1.1`), update `extension_registry_git_ref`.
+Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`.
 
 Update the `"id"` at the top of each JSON Schema file, and any `"$ref"` using these IDs, to match the *major__minor__patch* version number:
 
