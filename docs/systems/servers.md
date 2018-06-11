@@ -18,10 +18,6 @@ Hosting the validator:
 * `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/validator/) of the validator.
 * `cove-dev`: hosts a [development version](http://dev.cove.opendataservices.coop/validator/) of the validator.
 
-Hosting the extension registry:
-
-* `live2`: hosts the [production version of the extension registry](http://standard.open-contracting.org/extension_registry/master/), which is deployed any time a branch of [extension_registry](https://github.com/open-contracting/extension_registry) builds successfully on Travis, as described in its [.travis.yml file](https://github.com/open-contracting/extension_registry/blob/master/.travis.yml).
-
 Hosting the CRM:
 
 * `crm.open-contracting.org`: hosts the Redmine CRM, on a Linode VPS, managed by Dogsbody Technology. Contact [support@dogsbodytechnology.com](mailto:support@dogsbodytechnology.com).

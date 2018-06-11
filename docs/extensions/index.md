@@ -33,7 +33,7 @@ When creating a [community extension](http://standard.open-contracting.org/lates
 
 ## Publishing extensions
 
-Once an extension is created, it should be added to the [extension_registry](https://github.com/open-contracting/extension_registry) – an inventory of extensions that is included in the [standard's documentation](http://standard.open-contracting.org/latest/en/extensions/). To add an extension to the registry, create a pull request following the documentation in its [readme](https://github.com/open-contracting/extension_registry#readme).
+Once an extension is created, it should be added to the extension registry - an inventory of extensions that is included in the [standard's documentation](http://standard.open-contracting.org/latest/en/extensions/) - [as described in its readme](https://github.com/open-contracting/extension_registry).
 
 ### Publishing new versions of extensions
 
@@ -42,11 +42,6 @@ The [*core* extensions](http://standard.open-contracting.org/latest/en/extension
 This is particularly important for new versions of the standard, as each version's documentation should point to specific versions of its extensions. For more information, see [pinning extensions](../standard/technical/deployment#pin-extensions).
 
 [Community extensions](http://standard.open-contracting.org/latest/en/extensions/#community-extensions), on the other hand, are externally maintained and not associated to each version of the standard.
-
-```eval_rst
-  .. note::
-    The mechanism for versioning extensions both 'internally' (addressing changes within the extension during the *same* standard release cycle) and 'externally' (with reference to *different* standard versions) is likely to change in the future. See `this issue <https://github.com/open-contracting/extension_registry/issues/47>`_ for more.
-```
 
 ## Reporting issues on extensions
 
