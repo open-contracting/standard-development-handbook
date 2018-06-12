@@ -50,7 +50,7 @@ bundle exec rake release:review_extensions
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Each release of the standard should pin to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). Community extensions are not pinned.
+[Core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) are versioned with the standard; for example, for OCDS version 1.1.3, core extensions have releases `v1.1.3`. Core extensions have no releases that do not correspond with an OCDS version. If a core extension has not changed between patch versions of OCDS, we might not create a new release.
 
 For each *core* extension:
 
@@ -71,7 +71,11 @@ If you make a mistake, you can undo the release with:
 bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
-Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry).
+Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry). To quickly generate the content of `extension_versions.csv` with the new releases of core extensions, run:
+
+```bash
+bundle exec rake registry_extension_versions
+```
 
 ### 2. Perform periodic updates, if appropriate
 
