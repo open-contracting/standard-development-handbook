@@ -50,7 +50,7 @@ bundle exec rake release:review_extensions
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-[Core extensions](http://standard.open-contracting.org/latest/en/extensions/#core-extensions) are versioned with the standard; for example, for OCDS version 1.1.3, core extensions have releases `v1.1.3`. Core extensions have no releases that do not correspond with an OCDS version. If a core extension has not changed between patch versions of OCDS, we might not create a new release.
+The governance process will establish whether to create a new release of a core extension for this OCDS version. Each release of the standard should refer to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions).
 
 For each *core* extension:
 
