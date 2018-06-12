@@ -142,15 +142,15 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 ### 1. Push and pull updated translations
 
-1. [Push source files to Transifex](../translation/technical#push-translations-to-transifex).
-1. Check all strings are [translated](../translation/using_transifex#translator) and [reviewed](../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
-1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/translation#translation-workflow).
-1. Check the [warnings](../translation/using_transifex#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
-1. [Pull supported translations from Transifex](../translation/technical#pull-translations-from-transifex).
-1. Check the [issues](../translation/using_transifex#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
-1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../translation/technical#push-translations-from-transifex).
+1. [Push source files to Transifex](../../translation/technical#push-translations-to-transifex).
+1. Check all strings are [translated](../../translation/using_transifex#translator) and [reviewed](../../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
+1. For any resources with untranslated or unreviewed strings, follow the [translation process](../../translation/translation#translation-workflow).
+1. Check the [warnings](../../translation/using_transifex#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
+1. [Pull supported translations from Transifex](../../translation/technical#pull-translations-from-transifex).
+1. Check the [issues](../../translation/using_transifex#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
+1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../../translation/technical#push-translations-from-transifex).
 1. Create a pull request for the updated translation files.
-1. [Test the translations on the build of the pull request](../translation/technical#test-translations).
+1. [Test the translations on the build of the pull request](../../translation/technical#test-translations).
 
 ### 2. Merge the development branch onto the live branch
 
