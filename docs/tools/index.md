@@ -1,6 +1,8 @@
 # Tools and resources
 
 * The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove) to convert between spreadsheet and JSON representations of OCDS data, and to validate against the standard.
+* [OCDS Data](https://github.com/open-contracting/ocdsdata) is a tool for downloading and analyzing OCDS data.
+* [OCDS Kit](https://pypi.org/project/ocdskit/) is a suite of command-line tools for working with OCDS data.
 * [ocds-faker](https://github.com/open-contracting/ocds-faker) is a command-line tool to generate clearly fake data for OCDS release packages, for testing.
 * [ocds-merge](https://github.com/open-contracting/ocds-merge) is a Python library that provides functions to merge a list of OCDS releases into a `compiledRelease` or a `versionedRelease`, for creating an OCDS record.
 * [ocds-show](https://github.com/open-contracting/ocds-show) is a JavaScript application to visualize OCDS releases and records, to allow easier comprehension of OCDS data.
@@ -25,19 +27,22 @@ Priority is assessed based on the impact of the project becoming unavailable and
 * `ocds-merge`: reference implementation for merging releases
 * `extension_registry`: integrates with `standard`
 * `documentation-support`: dependency of `standard`
-* `standard_theme`: dependency of `standard`
 * `sphinxcontrib-opencontracting`: dependency of `standard`
+* `standard_theme`: dependency of `standard`
 * `OpenDataServices/sphinxcontrib-jsonschema`: dependency of `standard`
 * `OpenDataServices/sphinxcontrib-opendataservices`: dependency of `standard`
+* `extension_registry.py`: common dependency
 
 ### Medium
 
 * Community extensions
 * `sample-data`: key resource, frequently visited
 * `standard_extension_template`: key resource
+* `glossary`: potential future key resource
+* `ocdsdata`: key tool
+* `ocdskit`: key tool
 * `standard-maintenance-scripts`: internal, quality assurance
 * `standard-development-handbook`: internal, key documentation
-* `ocdskit`: internal, key tool
 
 ### Low
 
