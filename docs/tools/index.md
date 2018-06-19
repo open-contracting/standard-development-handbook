@@ -69,19 +69,9 @@ If changes are made to the behavior of extensions in OCDS, the following tools m
 
 ## Adding tools to the OGP Toolbox
 
-The [OGP Toolbox](https://ogptoolbox.org/) has a collection of [Open Contracting Tools](https://ogptoolbox.org/en/collections/10).
+From December 2016 - June 2018 we maintained a list of Open Contracting tools in the OGP Toolbox [Open Contracting Tools collection](https://ogptoolbox.org/en/collections/10). 
 
-"Reusable tools, applications and processes that consume OCDS data" (from OCP's objectives) are added to the OGP Toolbox.
-
-1. [Login](https://crm.open-contracting.org/projects/ocds/wiki/Logins#OGP-Toolbox)
-1. Create a [new tool](https://ogptoolbox.org/en/tools/new) in the toolbox
-1. Fill in at least the Name, Description, Logo and Website fields
-1. Click "Publish tool"
-1. Set the tool's "License" ("BSD 3-Clause License", "MIT License", "GNU Affero General Public License v3.0")
-1. Copy the tool's link
-1. Edit the [Open Contracting Tools](https://ogptoolbox.org/en/collections/10/edit) collection
-1. Scroll to the bottom of the page and paste the tool's link into the "Add a tool" field
-1. Click the "Publish Your Collection" button
+From June 2018, we maintain a tool directory using AirTable, and helpdesk team members should consult the "Internal Process: Learning log and tools directory" document for details. 
 
 ## Adding tools to the OCP Resources
 
