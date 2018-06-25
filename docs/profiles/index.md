@@ -144,7 +144,12 @@ make update_ocds_show
 
 ### Combine extensions' schema and codelists
 
-The PPP profile patches the core OCDS schema and codelists with extensions, including itself. The list of extensions is in `schema/apply-extensions.py`. The combined patches and codelists are located in the [`schema`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema) and [`compiledCodelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/compiledCodelists) directories and are calculated by running:
+The PPP profile consists of a number of different extensions, including the PPP extension itself. The list of extensions is in `docs/conf.py`. The profile:
+
+* Patches the core OCDS schema and codelists with these extensions to create an OCDS for PPPs schema and codelists
+* Combines these extensions into a single consolidated extension.
+
+The patched schema and consolidated extension are located in the [`schema`](https://github.com/open-contracting/public-private-partnerships/tree/master/schema) directory and the patched codelists are located in the [`compiledCodelists`](https://github.com/open-contracting/public-private-partnerships/tree/master/compiledCodelists) directory. To generate or update these files, run:
 
 ```shell
 make clean_dist
