@@ -34,9 +34,11 @@ For the [`schema`](https://www.transifex.com/OpenDataServices/open-contracting-s
 
 ```eval_rst
   .. note::
-    The strings are extracted from CSV and JSON files using the custom Babel `extraction methods <https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/__init__.py>`_ ``codelists_extract`` and ``jsonschema_extract``.
+    ``.babel_codelists`` identifies CSV files and ``.babel_schema`` identifies JSON files from which to extract strings to translate.
 
-    The CSV and JSON files are then translated by the `Python methods <https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/__init__.py>`_ ``translate_codelists`` and ``translate_schema``.
+    The strings are extracted from these files using the custom Babel `extraction methods <https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/babel_extractors.py>`_ ``codelists_extract`` and ``jsonschema_extract``.
+
+    The CSV and JSON files are then translated by the `Python methods <https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/translation.py>`_ ``translate_codelists`` and ``translate_schema``.
 
     The Sphinx directives used to render the translated codelist and JSON Schema files are ``jsonschema`` and ``csv-table-no-translate``.
 ```

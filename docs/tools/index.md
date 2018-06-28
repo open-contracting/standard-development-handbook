@@ -1,5 +1,7 @@
 # Tools and resources
 
+## Overview
+
 * The [OCDS validator](http://standard.open-contracting.org/validator/) is a deployment of [CoVE (GitHub)](https://github.com/OpenDataServices/cove) to convert between spreadsheet and JSON representations of OCDS data, and to validate against the standard.
 * [OCDS Data](https://github.com/open-contracting/ocdsdata) is a tool for downloading and analyzing OCDS data.
 * [OCDS Kit](https://pypi.org/project/ocdskit/) is a suite of command-line tools for working with OCDS data.
@@ -13,7 +15,7 @@ For tools relating to extensions, see [extensions tools](../extensions#tools). F
 
 ## Priority tech support
 
-Priority is assessed based on the impact of the project becoming unavailable and the degree of usage :issue:`76`, which can be assessed based on [Python package downloads](http://www.pypi-stats.com/author/?q=30327), [GitHub traffic](https://github.com/open-contracting/standard-development-handbook/issues/76#issuecomment-334540063) and user feedback.
+Priority is assessed based on the impact of the project becoming unavailable and the degree of usage, which can be assessed based on [Python package downloads](http://www.pypi-stats.com/author/?q=30327), [GitHub traffic](https://github.com/open-contracting/standard-development-handbook/issues/76#issuecomment-334540063) and user feedback.
 
 ### Critical
 

@@ -17,11 +17,4 @@ The standard's documentation contains a [deprecation policy](http://standard.ope
 
 ## Our extensions to JSON Schema
 
-We use a number of additional JSON Schema properties:
-
-* `codelist`
-* `openCodelist`
-* `deprecated`
-* and a set of merge strategies properties.
-
-These are documented [in the Open Standards for Data handbook](http://os4d.opendataservices.coop/development/schema/#extended-json-schema) and are available via a [meta-schema-patch](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/metaschema). 
+We use a number of additional JSON Schema properties: `codelist`, `openCodelist`, `deprecated` and a set of merge strategies properties. These are documented in the [Open Standards for Data](http://os4d.opendataservices.coop/development/schema/#extended-json-schema) handbook and are available via a [metaschema patch](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/metaschema). 
