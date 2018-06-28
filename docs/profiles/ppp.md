@@ -14,6 +14,8 @@ make update_ocds_show
 
 ### Change extensions or version of OCDS
 
+See the generic profile [build documentation](../technical/build).
+
 If extensions or OCDS introduce or remove codelists, update [`codelists.md`](https://github.com/open-contracting/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
 
 ## Translation
