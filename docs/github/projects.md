@@ -1,6 +1,6 @@
 # Projects
 
-The [`open-contracting` organization](https://github.com/orgs/open-contracting/projects) and the [`ocds-show` repository](https://github.com/open-contracting/ocds-show/projects) have [GitHub Projects](https://help.github.com/articles/about-project-boards/), which are used to organize [sprints](https://en.wikipedia.org/wiki/Sprint_(software_development)) in a [Kanban](https://en.wikipedia.org/wiki/Kanban) system.
+The [`open-contracting` organization](https://github.com/orgs/open-contracting/projects) has [GitHub Projects](https://help.github.com/articles/about-project-boards/), which are used to organize [sprints](https://en.wikipedia.org/wiki/Sprint_(software_development)) in a [Kanban](https://en.wikipedia.org/wiki/Kanban) system.
 
 We also have an [agile board](https://crm.open-contracting.org/projects/tech/agile/board) in the CRM. Its uses and features are somewhat distinct (e.g. time tracking) and complementary (e.g. long-term project management) to what GitHub offers.
 
