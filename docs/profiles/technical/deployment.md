@@ -2,7 +2,7 @@
 
 ## Copying live deploy into place
 
-See the [servers](../../systems/servers) page for more info on how our servers are set up.
+See the [servers](../../../systems/servers) page for more info on how our servers are set up.
 
 Set some variables (change the value of `PROFILE`):
 
