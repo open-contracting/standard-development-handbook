@@ -13,7 +13,7 @@ For tools relating to extensions, see [extensions tools](../extensions#tools). F
 
 ## Priority tech support
 
-Priority is assessed based on the impact of the project becoming unavailable and the degree of usage :issue:`76`, which can be assessed based on [Python package downloads](http://www.pypi-stats.com/author/?q=30327), [GitHub traffic](https://github.com/open-contracting/standard-development-handbook/issues/76#issuecomment-334540063) and user feedback.
+Priority is assessed based on the impact of the project becoming unavailable and the degree of usage, which can be assessed based on [Python package downloads](http://www.pypi-stats.com/author/?q=30327), [GitHub traffic](https://github.com/open-contracting/standard-development-handbook/issues/76#issuecomment-334540063) and user feedback.
 
 ### Critical
 
