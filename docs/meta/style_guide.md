@@ -28,6 +28,8 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 
 ## Schema style guide
 
+See [schema conventions](../../standard/conventions) for more guidance on structuring schema.
+
 ### Field names
 
 * We use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for field names, e.g. `awardCriteriaDetails`.
@@ -45,14 +47,6 @@ Use American English (e.g. 'organization' rather than 'organisation') unless we 
 ### Validations
 
 * Date fields should use the `"format": "date-time"` key to enforce use of ISO8601.
-
-### Structure
-
-* Where a field is an object, the object should be defined in the `definitions` section of the JSON Schema and referenced with `$ref`, rather than nesting fields of fields.
-
-### Companion fields
-
-* For codelists, consider whether a supporting free-text `codelistDetails` field is required.
 
 ## Normative content style guide
 
