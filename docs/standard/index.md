@@ -31,7 +31,6 @@ Documentation is written in Markdown syntax with [recommonmark](https://recommon
    conventions
    guidance
    translation/index
-   extensions
    technical/index
    *
 ```
