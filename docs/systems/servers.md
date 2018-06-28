@@ -2,7 +2,7 @@
 
 [standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) are hosted by Open Data Services on Bytemark VPS's. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
 
-Deployments are carried out using Salt, with config stored in the [opendataservices-deploy GitHub repo](https://github.com/OpenDataServices/opendataservices-deploy).
+Deployments are carried out using Salt, with configuration in [opendataservices-deploy](https://github.com/OpenDataServices/opendataservices-deploy).
 
 DNS and proxies:
 
