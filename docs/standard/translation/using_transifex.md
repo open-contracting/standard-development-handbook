@@ -20,6 +20,11 @@ It helps to see where the strings appear in context in the [OCDS documentation](
 
 See the sections below for the [translation glossary](#translation-glossary) and [translation tasks](#translation-tasks) for tips on using Transifex.
 
+```eval_rst
+  .. note::
+    Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
+```
+
 ### Proofreader
 
 1. Go to the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)

@@ -36,12 +36,7 @@ For the specific steps that each role follows in Transifex, see the [steps for e
 
 The **Release Manager** is the person responsible for the deployment of the new release of OCDS. The role of **Coordinator** is comparable to that in the [terminology process](terminology#coordinator).
 
-```eval_rst
-  .. note::
-    Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
-```
-
-### Major and minor changes
+### Handling minor changes
 
 A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn't change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.
 
@@ -55,17 +50,17 @@ In Transifex, the "Suggestions" tab displays similar source strings and their tr
 
 The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
 
-Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then push the translations to Transifex. See the important caveats under the [translation technical processes](technical#push-and-pull-translations-from-transifex).
+Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then force-push the translations to Transifex. See the important caveats under the [translation technical processes](technical#push-and-pull-translations-from-transifex).
 
 ```eval_rst
   .. note::
-    ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` updates ``.po`` files based on ``.pot`` files. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
+    Instead of using suggestions in Transifex, ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` can update ``.po`` files locally and fuzzy match similar strings. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
 
     - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
     - different headers
     - ``:0`` after filenames
 
-    Thus, running ``sphinx-intl update`` results in a large diff. It's possible that pushing then pulling the ``.po`` files to and from Transifex could achieve a smaller diff.
+    Thus, running ``sphinx-intl update`` results in a large diff. It's possible that, after running ``sphinx-intl update`` to fuzzy match, force-pushing then pulling the ``.po`` files to and from Transifex could achieve a smaller diff.
 ```
 
 ## See also
