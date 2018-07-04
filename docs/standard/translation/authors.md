@@ -4,7 +4,7 @@ This page describes the responsibilities of authors of content to be translated.
 
 ## Proposing new terms for the glossary
 
-See the [../terminology](terminology) page.
+See the [terminology](../terminology#proposal-review-inclusion) page.
 
 ## Handling minor changes
 

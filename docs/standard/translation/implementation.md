@@ -24,7 +24,7 @@ First, strings to translate are extracted from files with `make extract`.
 
 1. [`setup.py` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/setup.py#L7-L11) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) to the module and function implementing the extraction, in the entry point group `babel.extractors`.
 
-1. The functions [`extract_codelist` and `extract_schema` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/ocdsdocumentationsupport/babel_extractors.py) implement the extraction.
+1. The functions [`extract_codelist` and `extract_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocdsdocumentationsupport/babel_extractors.py) implement the extraction.
 
 ### Markdown files
 
@@ -46,7 +46,7 @@ After pushing strings to translate as POT files to Transifex, [translating the s
 
 1. [`sphinx-build`](http://www.sphinx-doc.org/en/master/man/sphinx-build.html) runs `setup` in `conf.py`, which reads the `language` override (`-D language="es"`).
 
-1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L139) calls the functions [`translate_codelists` and `translate_schema` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/translation.py) to translate codelist CSV files and JSON Schema files from one directory into another directory.
+1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L139) calls the functions [`translate_codelists` and `translate_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/translation.py) to translate codelist CSV files and JSON Schema files from one directory into another directory.
 
 1. The translated files are used by Sphinx directives like `csv-table-no-translate` and `jsonschema` in Markdown files.
 

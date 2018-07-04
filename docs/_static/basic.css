@@ -1,3 +1,8 @@
 .wy-table-responsive table td {
     white-space: normal !important;
 }
+.rst-content a tt.literal,
+.rst-content a tt.literal,
+.rst-content a code.literal {
+  color: #2980B9;
+}
