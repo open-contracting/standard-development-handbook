@@ -18,10 +18,10 @@ The [glossary in Transifex](https://www.transifex.com/OpenDataServices/open-cont
 
 It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](../understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can:
 
-* Take the name of a resource, e.g. `schema--changelog`
-* Remove `--index` if present
-* Replace `--` with `/`
-* Put it in the pattern `http://standard.open-contracting.org/{version}/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>
+1. Take the name of a resource, e.g. `schema--changelog`
+1. Remove `--index` if present
+1. Replace `--` with `/`
+1. Put it in the pattern `http://standard.open-contracting.org/{version}/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>
 
 ```eval_rst
   .. note::

@@ -31,5 +31,5 @@ For the [`codelists`](https://www.transifex.com/OpenDataServices/open-contractin
 For the [`schema`](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/schema/76882756) resource, the strings to be translated are extracted from the JSON files in [`standard/schema`](https://github.com/open-contracting/standard/tree/HEAD/standard/schema). They provide the content for:
 
 * JSON Schema tables on the [release reference](http://standard.open-contracting.org/latest/es/schema/reference/) and [records reference](http://standard.open-contracting.org/latest/es/schema/records_reference/) pages
-* schema viewers on the [release schema](http://standard.open-contracting.org/latest/es/schema/release/), [release package schema](http://standard.open-contracting.org/latest/es/schema/release_package/) and [record package schema](http://standard.open-contracting.org/latest/es/schema/record_package/) pages
+* schema viewers on the [release](http://standard.open-contracting.org/latest/es/schema/release/), [release package](http://standard.open-contracting.org/latest/es/schema/release_package/) and [record package](http://standard.open-contracting.org/latest/es/schema/record_package/) schema pages
 * translated JSON Schema files distributed with the documentation
