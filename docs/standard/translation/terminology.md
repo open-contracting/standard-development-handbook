@@ -8,13 +8,11 @@ A *term* is a word or group of words that need to be used and translated consist
 
 <!-- https://www.lucidchart.com/documents/edit/3d906148-5ed8-41a4-b48d-8d3ec3aed1d4 -->
 
-## Tools
-
-### Google spreadsheet
+## Working document
 
 This [Google spreadsheet](https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0) is used as the working document for the glossary. The workbook is divided into sheets (described below), all of which are publicly readable and commentable. A coordinator gives permission to terminologists, SMEs and proofreaders to edit specific sheets and ranges. In each sheet, each term is identified by an ID to enable the reconciliation of terms across languages and enable the management of homographs (different terms that have the same spelling).
 
-#### Source
+### Source
 
 The *Source* sheet is edited by the terminologist, and SMEs and proofreaders in the source language of English. It has the following columns:
 
@@ -25,7 +23,7 @@ The *Source* sheet is edited by the terminologist, and SMEs and proofreaders in 
 - **Definition**: the definition of the term *within the scope of OCDS documentation*. If the definition is copied from an existing publication, add the URL or reference at the end of the definition. The definition is a good place to give concise examples. Try to use other glossary terms in the definition, to help contextualize terms and improve the usability and efficiency of the glossary.
 - **Note**: any remark the terminologist may want to add to help translating this term, or a URL to information about the term.
 
-#### Base languages (es, fr, etc.)
+### Base languages (es, fr, etc.)
 
 The sheet of a language is edited by SMEs and proofreaders. It has the following columns:
 
@@ -34,7 +32,7 @@ The sheet of a language is edited by SMEs and proofreaders. It has the following
 - **Definition_xx**: the definition of the term in the target language. This is not necessarily a strict translation of the source definition. Try to use other glossary terms in the definition, to help contextualize terms and improve the usability and efficiency of the glossary.
 - **Note_xx**: any remark, written in the target language, that the SME may want to add to explain the selection or definition of the term.
 
-#### Language variants (es-MX, es-GT, fr-BE, etc.)
+### Language variants (es-MX, es-GT, fr-BE, etc.)
 
 The sheet of a language variant is edited by SMEs and proofreaders. It has the following columns:
 
@@ -45,14 +43,6 @@ The sheet of a language variant is edited by SMEs and proofreaders. It has the f
     - *no* if the term in the language variant and the base language are the same
     - *yes => term* if the term in the language variant differs from the one in the base language
     - *empty* if either the base language or the language variant doesn't have a term yet
-
-### GitHub
-
-The [`glossary` repository](https://github.com/open-contracting/glossary) serves as the source of truth for terminology, and is used to track the changes to the files and the progression of tasks using its issue tracker.
-
-### Transifex
-
-[Transifex](https://www.transifex.com/OpenDataServices/public/) is given a copy of the glossary, so that translators can access terms and translations while translating.
 
 ## Process
 
@@ -120,7 +110,7 @@ Once the new terms are translated, defined and annotated, the coordinator notifi
 
 ### 4. Publication
 
-Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to GitHub and Transifex.
+Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to Transifex, so that translators can access the glossary while translating, and to the [`glossary` repository](https://github.com/open-contracting/glossary), which serves as the single source of truth for the glossary, and which is used by the coordinator for notifications.
 
 ```eval_rst
 === ========================= ================================================================================== ==================
