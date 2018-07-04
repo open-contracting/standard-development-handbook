@@ -2,7 +2,7 @@
 
 ## Steps for each role
 
-These steps expand on steps in the [translation workflow](translation#translation-workflow).
+These steps expand on steps in the [translation workflow](../translation#translation-workflow).
 
 ### Translator
 
@@ -16,9 +16,11 @@ These steps expand on steps in the [translation workflow](translation#translatio
 1. Repeat from Step 4
 1. Notify the Proofreader when strings have been translated
 
-It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can take the name of a resource, e.g. `schema--changelog`, remove `--index` if present, replace `--` with `/`, and put it in the pattern `http://standard.open-contracting.org/latest/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>.
+Our [glossary](../terminology) contains key terms that must be used consistently. It is [available in Transifex](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (change the language code at the end of the URL to view it in different languages). It is also available within the translation editor.
 
-See the sections below for the [translation glossary](#translation-glossary) and [translation tasks](#translation-tasks) for tips on using Transifex.
+It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](../understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can take the name of a resource, e.g. `schema--changelog`, remove `--index` if present, replace `--` with `/`, and put it in the pattern `http://standard.open-contracting.org/{version}/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>.
+
+See [Translation tasks](#translation-tasks) below for Transifex tips.
 
 ```eval_rst
   .. note::
@@ -48,18 +50,6 @@ See the sections below for the [translation glossary](#translation-glossary) and
 1. Click "Review"
 1. Repeat from Step 4
 1. Notify the Coordinator when strings have been reviewed
-
-## Translation glossary
-
-A translation glossary is [available](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) (change the language code at the end of the URL to view the glossary in different languages). It can also be accessed from within the translation editor.
-
-The glossary contains key terms that must be used consistently.
-
-In our translation process, we encourage translators to:
-
-1. Populate the glossary with suggested translations of its terms
-1. Validate the translations with the nominated reviewer
-1. Translate the rest of the documentation
 
 ## Translation tasks
 

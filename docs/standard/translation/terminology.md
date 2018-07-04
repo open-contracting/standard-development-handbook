@@ -52,7 +52,7 @@ The [`glossary` repository](https://github.com/open-contracting/glossary) serves
 
 ### Transifex
 
-[Transifex](https://www.transifex.com/OpenDataServices/public/) is given a [copy of the glossary](using_transifex#translation-glossary), so that translators can access terms and translations while translating.
+[Transifex](https://www.transifex.com/OpenDataServices/public/) is given a copy of the glossary, so that translators can access terms and translations while translating.
 
 ## Process
 
