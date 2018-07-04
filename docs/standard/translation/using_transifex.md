@@ -16,14 +16,19 @@
 
 The [glossary in Transifex](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) contains key terms that must be used consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
 
-It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](../understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can take the name of a resource, e.g. `schema--changelog`, remove `--index` if present, replace `--` with `/`, and put it in the pattern `http://standard.open-contracting.org/{version}/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>.
+It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](../understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can:
 
-See [Translation tasks](#translation-tasks) below for Transifex tips.
+* Take the name of a resource, e.g. `schema--changelog`
+* Remove `--index` if present
+* Replace `--` with `/`
+* Put it in the pattern `http://standard.open-contracting.org/{version}/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>
 
 ```eval_rst
   .. note::
-    Some titles and descriptions of codes are copied from external sources and should be translated by those sources, not OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
+    Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
 ```
+
+See [Translation tasks](#translation-tasks) below for Transifex tips.
 
 ### Proofreader
 

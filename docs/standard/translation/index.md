@@ -5,9 +5,8 @@ The two [supported translations](https://docs.google.com/document/d/1GLwWTpgDDkK
 This section describes:
 
 * [How we maintain a glossary of terms](terminology)
-* [The roles involved in translation processes](roles)
-  * [The responsibilities of authors of content](authors)
-* [The translation workflow](workflow)
+* [The responsibilities of authors of content](authors)
+* [The translation workflow and roles involved](workflow)
   * [How to navigate the projects and resources in Transifex](understanding_transifex)
   * [How to use Transifex as a translator, proofreader or reviewer](using_transifex)
   * [How to push and pull translations from Transifex, and how to build translated schema, codelists and documentation](technical)
@@ -21,7 +20,6 @@ This section describes:
 
    terminology
    authors
-   roles
    workflow
    understanding_transifex
    using_transifex

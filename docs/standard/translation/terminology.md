@@ -10,13 +10,13 @@ A *term* is a word or group of words that need to be used and translated consist
 
 ## Working document
 
-This [Google spreadsheet](https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0) is used as the working document for the glossary. The workbook is divided into sheets (described below), all of which are publicly readable and commentable. A coordinator gives permission to terminologists, SMEs and proofreaders to edit specific sheets and ranges. In each sheet, each term is identified by an ID to enable the reconciliation of terms across languages and enable the management of homographs (different terms that have the same spelling).
+This [Google spreadsheet](https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0) is used as the working document for the glossary. The workbook is divided into sheets (described below), all of which are publicly readable and commentable. A coordinator gives permission to terminologists, SMEs and proofreaders to edit specific sheets and ranges.
 
 ### Source
 
 The *Source* sheet is edited by the terminologist, and SMEs and proofreaders in the source language of English. It has the following columns:
 
-- **ID**: the ID of a term never changes, which makes it easy to refer to a term unambiguously. When a new term is added, it takes the next available ID number.
+- **ID**: the ID of a term never changes, which makes it easy to refer to terms unambiguously, especially homographs (different terms that have the same spelling). When a new term is added, it takes the next available ID number.
 - **Term**: the term, in its canonical form: lower case, singular, and infinitive, with the exception of proper nouns and acronyms.
 - **POS**: the part of speech (e.g. Noun, Verb, Adjective).
 - **Domain**: the subject matter domain (e.g. procurement, technical).
@@ -28,7 +28,7 @@ The *Source* sheet is edited by the terminologist, and SMEs and proofreaders in 
 The sheet of a language is edited by SMEs and proofreaders. It has the following columns:
 
 - Same as source
-- **xx**: the equivalent of the source term in the target language, in its canonical form. Closely read the source definition, as it may narrow the meaning and lead to a more specific translation that the usual translation of the source term. Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage. If so, highlight this difference in **Definition_xx** or **Note_xx**, as appropriate.
+- **xx**: the equivalent of the source term in the target language, in its canonical form. Closely read the source definition, as it may narrow the meaning and lead to a more specific translation that the usual translation of the source term. Like two synonyms in the same language, the translation of a term may have a slightly different meaning or usage; if so, highlight this difference in **Definition_xx** or **Note_xx**, as appropriate.
 - **Definition_xx**: the definition of the term in the target language. This is not necessarily a strict translation of the source definition. Try to use other glossary terms in the definition, to help contextualize terms and improve the usability and efficiency of the glossary.
 - **Note_xx**: any remark, written in the target language, that the SME may want to add to explain the selection or definition of the term.
 
@@ -38,7 +38,7 @@ The sheet of a language variant is edited by SMEs and proofreaders. It has the f
 
 - Same as base language, renaming **xx** to **Translation_xx** and removing **Note** and **Note_xx**
 - **xx_XX**: the equivalent of the source term in the target locale, in its canonical form.
-- **Note_xx_XX**: any remark the SME may want to add to explain the choice of term in the target locale.
+- **Note_xx_XX**: any remark, written in the target locale, that the SME may want to add to explain the selection of the term.
 - **Varies from xx?**: automated, and one of:
     - *no* if the term in the language variant and the base language are the same
     - *yes => term* if the term in the language variant differs from the one in the base language
@@ -74,43 +74,33 @@ Once the new terms are added to the working document, the coordinator notifies s
 === ========== ====================================================================================================== ==================
 ```
 
-Once the new terms are defined and annotated, the coordinator notifies proofreaders who are fluent in the source language, to proofread and edit that content.
+Once the source terms are defined and annotated, the coordinator notifies proofreaders who are fluent in the source language, to proofread and edit that content.
 
 ```eval_rst
-=== =========== =========================================================================================================================================== ==================
-#   Step name   Description                                                                                                                                 Tool
-=== =========== =========================================================================================================================================== ==================
-6   Terms       The proofreader checks the new terms are spelled correctly and written in canonical form.                                                   Google spreadsheet
-7   Definitions The proofreader checks the new definitions and notes are understandable, spelled correctly, and written as full sentences in sentence case. Google spreadsheet
-=== =========== =========================================================================================================================================== ==================
+=== =========== =========================================================================================================================================================================================================== ==================
+#   Step name   Description                                                                                                                                                                                                 Tool
+=== =========== =========================================================================================================================================================================================================== ==================
+5   Proofread   The proofreader spell-checks new content, checks that new terms are written in canonical form, and checks that new definitions and notes are understandable and written as full sentences in sentence case. Google spreadsheet
+=== =========== =========================================================================================================================================================================================================== ==================
 ```
 
 ### 3. Translation and proofreading
 
-Once the new terms, definitions and notes are proofread, the coordinator notifies subject matter experts (SME) who are fluent in the target languages.
+Once the source terms, definitions and notes are proofread, the coordinator notifies subject matter experts (SME) who are fluent in the target languages.
 
 ```eval_rst
 === =========== ================================================================================= ==================
 #   Step name   Description                                                                       Tool
 === =========== ================================================================================= ==================
-5   Translation The SME translates the terms to the target language, adding notes when necessary. Google spreadsheet
+6   Translation The SME translates the terms to the target language, adding notes when necessary. Google spreadsheet
 === =========== ================================================================================= ==================
 ```
 
-Once the new terms are translated, defined and annotated, the coordinator notifies proofreaders who are fluent in the target languages, to proofread and edit that content.
-
-```eval_rst
-=== =========== ================================================================================================================================================== ==================
-#   Step name   Description                                                                                                                                        Tool
-=== =========== ================================================================================================================================================== ==================
-6   Terms       The proofreader checks the translated terms are spelled correctly and written in canonical form.                                                   Google spreadsheet
-7   Definitions The proofreader checks the translated definitions and notes are understandable, spelled correctly, and written as full sentences in sentence case. Google spreadsheet
-=== =========== ================================================================================================================================================== ==================
-```
+Once the source terms are translated, defined and annotated, the coordinator notifies proofreaders who are fluent in the target languages, to proofread and edit that content, as above.
 
 ### 4. Publication
 
-Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to Transifex, so that translators can access the glossary while translating, and to the [`glossary` repository](https://github.com/open-contracting/glossary), which serves as the single source of truth for the glossary, and which is used by the coordinator for notifications.
+Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to Transifex – so that translators can access the glossary while translating – and to the [`glossary` repository](https://github.com/open-contracting/glossary) – which serves as the single source of truth for the glossary, and which is used by the coordinator for notifications.
 
 ```eval_rst
 === ========================= ================================================================================== ==================
