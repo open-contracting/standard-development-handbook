@@ -7,6 +7,4 @@
 1. When a Proofreader completes the proofreading of at least half the unreviewed strings, they contact the Reviewer with a link to the resource.
 1. Once a Reviewer has reviewed all unreviewed strings for all resources, they contact the Coordinator.
 
-The **Release Manager** is the person responsible for the deployment of the new release of OCDS. The role of **Coordinator** is comparable to that in the [terminology process](../terminology#coordinator).
-
-For the specific steps that each role follows in Transifex, see the [steps for each role](../using_transifex#steps-for-each-role).
+For the specific steps that each role follows in Transifex, see [Using Transifex](../using_transifex).
