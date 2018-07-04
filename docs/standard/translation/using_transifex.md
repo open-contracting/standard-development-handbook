@@ -1,8 +1,6 @@
 # Using Transifex
 
-## Steps for each role
-
-These steps expand on steps in the [translation workflow](../workflow).
+## Steps for translators, proofreaders and reviewers
 
 ### Translator
 

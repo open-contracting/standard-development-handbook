@@ -1,4 +1,4 @@
-# Translators, proofreaders and reviewers
+# Roles
 
 Translators, proofreaders and reviewers have excellent writing skills (spelling and grammar) and intervene only when the target language is their native language.
 
@@ -7,3 +7,7 @@ Translators, proofreaders and reviewers have excellent writing skills (spelling 
 **Proofreaders** proofread the translation and focus on the quality of the writing: spelling, grammar, punctuation. They normally don't need to look at the source content.
 
 **Reviewers** review the translation to ensure it is functional. A functional translation enables the reader to access the same information and perform the same tasks as the source document would. Reviewers are specialists of the domains at hand (public contracting and data) and focus on the clarity of the phrasing and the good usage of the terminology.
+
+The **Release Manager** is responsible for the [deployment](../../technical/deployment) of the new release of OCDS.
+
+The **Coordinator** ensures good communication between the different roles.
