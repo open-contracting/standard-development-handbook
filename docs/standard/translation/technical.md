@@ -65,9 +65,7 @@ Pull requests are built and accessible at `http://standard.open-contracting.org/
 
 ## Review translated codelists
 
-Translated codelists are stored in language directories under `build/codelists` during the build process.
-
-To stack a list of CSV files for review, you can do:
+Translated codelists are stored in language directories under `build/codelists` during the build process. To stack a list of CSV files for review, you can do:
 
 ```bash
 for i in *.csv; do printf "\n\n$i,,,\n\n"; cat $i; done > ../all_codelists.csv
