@@ -10,6 +10,7 @@ The sub-pages describe:
   * [How to navigate the projects and resources in Transifex](understanding_transifex)
   * [How to use Transifex as a translator, proofreader or reviewer](using_transifex)
   * [How to push and pull translations from Transifex, and how to build translated schema, codelists and documentation](technical)
+* [How translation is implementated at a technical level](implementation)
 
 ## Languages
 
@@ -34,6 +35,7 @@ Community translations exist to various levels of completion.
    understanding_transifex
    using_transifex
    technical
+   implementation
    *
 ```
 
