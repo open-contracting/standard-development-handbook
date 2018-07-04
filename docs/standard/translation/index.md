@@ -29,7 +29,7 @@ Community translations exist to various levels of completion.
 
    terminology
    authors
-   translation
+   translators
    workflow
    understanding_transifex
    using_transifex
