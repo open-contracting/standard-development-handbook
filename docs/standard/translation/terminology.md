@@ -48,7 +48,7 @@ The sheet of a language variant is edited by SMEs and proofreaders. It has the f
 
 ### GitHub
 
-The [`glossary` repository](https://github.com/open-contracting/glossary) serves as the source of truth for terminology, and is used to track the changes to the files and the progression of tasks using its issue tracker. Content should be spellchecked before being committed.
+The [`glossary` repository](https://github.com/open-contracting/glossary) serves as the source of truth for terminology, and is used to track the changes to the files and the progression of tasks using its issue tracker.
 
 ### Transifex
 
