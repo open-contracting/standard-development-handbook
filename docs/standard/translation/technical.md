@@ -1,8 +1,8 @@
-# Translation technical processes
+# Technical processes for translation
 
-This page documents only the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation. See the [full translation process](translation).
+This page documents the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation.
 
-You should only perform the tasks on this page once the source files are frozen; the documentation should be ready to deploy except for translations, i.e. you completed the [Schemas and extensions](../technical/deployment#schemas-and-extensions) part of the deployment process.
+You should only perform the tasks on this page once the source files are frozen; the documentation should be ready to deploy except for translations, i.e. you completed the [Schemas and extensions](../../technical/deployment#schemas-and-extensions) part of the deployment process.
 
 ## Configure Transifex
 
@@ -17,7 +17,7 @@ For major and minor versions:
 * [Create a Transifex project](https://www.transifex.com/OpenDataServices/), named e.g. `open-contracting-standard-1-1`
 * Update `TRANSIFEX_PROJECT` in `include/config.mk`
 
-## Push translations to Transifex
+## Push strings to translate to Transifex
 
 1. Extract the source (POT) files, with `make extract`
 1. Empty the `.tx/config` file, with `make clean_txconfig`

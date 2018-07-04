@@ -1,6 +1,6 @@
 # Building the documentation
 
-See the standard's [build documentation](../../../standard/technical/build).
+See the standard's page for [Building the documentation](../../../standard/technical/build).
 
 ## Change version of OCDS
 
