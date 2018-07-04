@@ -12,13 +12,13 @@ A *term* is a word or group of words that need to be used and translated consist
 
 ### Google spreadsheet
 
-This [Google spreadsheet](https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0) is used as the working document for the glossary. The workbook is divided into sheets (described below), all of which are publicly readable and commentable. In each sheet, each term is identified by an ID to enable the reconciliation of terms across languages and enable the management of homographs (different terms that have the same spelling).
+This [Google spreadsheet](https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0) is used as the working document for the glossary. The workbook is divided into sheets (described below), all of which are publicly readable and commentable. A coordinator gives permission to terminologists, SMEs and proofreaders to edit specific sheets and ranges. In each sheet, each term is identified by an ID to enable the reconciliation of terms across languages and enable the management of homographs (different terms that have the same spelling).
 
 #### Source
 
 The *Source* sheet is edited by the terminologist, and SMEs and proofreaders in the source language of English. It has the following columns:
 
-- **ID**: the ID of a term never changes. When a new term is added, it takes the next available ID number.
+- **ID**: the ID of a term never changes, which makes it easy to refer to a term unambiguously. When a new term is added, it takes the next available ID number.
 - **Term**: the term, in its canonical form: lower case, singular, and infinitive, with the exception of proper nouns and acronyms.
 - **POS**: the part of speech (e.g. Noun, Verb, Adjective).
 - **Domain**: the subject matter domain (e.g. procurement, technical).
@@ -55,15 +55,6 @@ The [`glossary` repository](https://github.com/open-contracting/glossary) serves
 [Transifex](https://www.transifex.com/OpenDataServices/public/) is given a copy of the glossary, so that translators can access terms and translations while translating.
 
 ## Process
-
-### Coordinator
-
-The coordinator oversees the translation of terms into base languages and language variants. They are the contact point for subject matter experts (SMEs) who translate terms, and for proofreaders.
-
-- Coordinators manage the permissions of each sheet and give SMEs and Proofreaders the right to edit any relevant sheets.
-- Coordinators inform Publishers that terms are translated and proofread, ready to be pushed to the GitHub repository and Transifex.
-
-At all stages, every person involved uses ranges or list of term IDs to clearly express what terms need to be processed.
 
 ### 1. Proposal, review, inclusion
 
@@ -129,7 +120,7 @@ Once the new terms are translated, defined and annotated, the coordinator notifi
 
 ### 4. Publication
 
-Once the translated terms, definitions and notes are proofread, the publisher downloads the working document as a CSV file and replaces the previous file in the GitHub repository. Then, they upload the same CSV to Transifex.
+Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to GitHub and Transifex.
 
 ```eval_rst
 === ========================= ================================================================================== ==================
