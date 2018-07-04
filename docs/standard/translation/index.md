@@ -21,10 +21,9 @@ The two [supported translations](https://docs.google.com/document/d/1GLwWTpgDDkK
 
 Community translations exist to various levels of completion.
 
-## Contents
-
 ```eval_rst
 .. toctree::
+   :caption: Contents
    :maxdepth: 2
    :glob:
 
