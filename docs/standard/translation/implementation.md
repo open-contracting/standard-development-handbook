@@ -22,7 +22,7 @@ First, strings to translate are extracted from files with `make extract`.
 
 1. The [Babel mapping configuration files](http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `.babel_codelists` and `.babel_schema`, map Babel message extraction method names – `codelist_text` and `jsonschema_text` – to the codelist CSV files and JSON Schema source files from which to extract strings to translate.
 
-1. [`setup.py` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/setup.py#L7-L11) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) to the module and function implementing the extraction, in the entry point group `babel.extractors`.
+1. [`setup.py` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/setup.py#L7-L11) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) – `codelist_text` and `jsonschema_text` – to the module and function implementing the extraction, in the entry point group `babel.extractors`.
 
 1. The functions [`extract_codelist` and `extract_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocdsdocumentationsupport/babel_extractors.py) implement the extraction.
 
