@@ -2,7 +2,7 @@
 
 This page documents the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation.
 
-You should only perform these tasks once the source files are frozen: the documentation should be ready to deploy except for translations, i.e. you completed [Schemas and extensions](../../technical/deployment#schemas-and-extensions) in the deployment process.
+You should only perform these tasks once the source files are frozen, after having completed [Schemas and extensions](../../technical/deployment#schemas-and-extensions) in the deployment process.
 
 ## Configure Transifex
 
@@ -25,7 +25,7 @@ For major and minor versions:
 
 Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must run all steps (`make extract clean_txconfig update_txconfig`).
 
-Whenever these files are changed, you must run step 1. If only documentation pages are changed, you may run `make extract_markdown`. If only codelist CSV files: `make extract_codelists`. If only JSON Schema files: `make extract_schema`.
+Whenever these files are changed, you must run step 1. If only documentation pages are changed, you may run `make extract_markdown`. If only codelist files: `make extract_codelists`. If only schema files: `make extract_schema`.
 
 To push source files, run `make push` or `tx push -s`
 
