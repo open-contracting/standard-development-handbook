@@ -6,40 +6,64 @@ You should only perform these tasks once the source files are frozen, after havi
 
 ## Configure Transifex
 
-The first time you use Transifex, run (replace `USERNAME` and `PASSWORD`):
+### Credentials
+
+The first time you use Transifex, create a [`~/.transifexrc` file](https://docs.transifex.com/client/client-configuration#~/-transifexrc) (replace `USERNAME` and `PASSWORD`):
 
 ```shell
 sphinx-intl create-transifexrc --transifex-username USERNAME --transifex-password PASSWORD
 ```
 
-For major and minor versions:
+### Projects
+
+For new major and minor versions:
 
 * [Create a Transifex project](https://www.transifex.com/OpenDataServices/), named e.g. `open-contracting-standard-1-1`
-* Update `TRANSIFEX_PROJECT` in `include/config.mk`
+* Update `TRANSIFEX_PROJECT` in `include/config.mk` with the name of the Transifex project
+
+## Extract strings to translate into POT files
+
+Whenever documentation pages, codelist CSV files or JSON Schema files are changed, you must extract strings to translate from these files into POT files:
+
+```shell
+make extract
+```
+
+If only documentation pages are changed, you may run:
+
+```shell
+make extract_markdown
+```
+
+If only codelist files:
+
+```shell
+make extract_codelists
+```
+
+If only schema files:
+
+```shell
+make extract_schema
+```
+
+## Map POT files to Transifex resources
+
+Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must create the POT files as above, empty the [`.tx/config` file](https://docs.transifex.com/client/client-configuration#-tx/config) (`make clean_txconfig`) and update the `.tx/config` file (`make update_txconfig`). In short, run:
+
+```shell
+make extract clean_txconfig update_txconfig
+```
 
 ## Push strings to translate to Transifex
 
-1. Extract the source (POT) files, with `make extract`
-1. Empty the `.tx/config` file, with `make clean_txconfig`
-1. Update the `.tx/config` file, with `make update_txconfig`
+To push POT files, run `make push` or `tx push -s`
 
-Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must run all steps (`make extract clean_txconfig update_txconfig`).
-
-Whenever these files are changed, you must run step 1. If only documentation pages are changed, you may run `make extract_markdown`. If only codelist files: `make extract_codelists`. If only schema files: `make extract_schema`.
-
-To push source files, run `make push` or `tx push -s`
-
-To push specific resources among source files (replace the Transifex project name):
+To push specific resources (replace the Transifex project name), run e.g.:
 
 ```shell
 tx push -s -r open-contracting-standard-1-1.codelists open-contracting-standard-1-1.schema
 ```
-
-## Push translations to Transifex
-
-If text is translated locally by editing `.po` or `.pot` files, the translations can be pushed to Transifex, *after building the documentation*. **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run `make force_push_all` or `tx push -s -t -f -l es,fr --no-interactive`
-
-After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 
 ## Pull translations from Transifex
 
@@ -47,25 +71,27 @@ To forcefully pull *supported* translations, run `make pull` or `tx pull -f -l e
 
 To forcefully pull *specific* translations, run e.g. `make pull.es` or `tx pull -f -l es`
 
-To forcefully pull *all* translations:
+To forcefully pull *all* translations, run `tx pull -f -a`
 
-```shell
-tx pull -f -a
-```
+Then, build the documentation with the new translations.
 
-Then, build the documentation again with the new translations.
+## Push translations to Transifex
+
+If text is translated locally by editing PO or POT files, the translations can be pushed to Transifex, [*after building the documentation*](../../technical/build). **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run `make force_push_all` or `tx push -s -t -f -l es,fr --no-interactive`
+
+After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 
 ## Test translations
 
 Pull requests are built and accessible at `http://standard.open-contracting.org/BRANCH/`. Translations of Markdown pages using Sphinx directives should be checked in particular:
 
-* `http://standard.open-contracting.org/BRANCH/es/getting_started/` uses `jsoninclude`
-* `http://standard.open-contracting.org/BRANCH/es/schema/reference/` uses `jsonschema`
-* `http://standard.open-contracting.org/BRANCH/es/schema/release/` has a Docson widget
-* `http://standard.open-contracting.org/BRANCH/es/schema/codelists/` uses `csv-table-no-translate`
-* `http://standard.open-contracting.org/BRANCH/es/extensions/` uses `extensionselectortable`
-* `http://standard.open-contracting.org/BRANCH/es/extensions/bids/` uses `extensiontable`
-* `http://standard.open-contracting.org/BRANCH/es/extensions/party_details/` uses `extensionlist`
+* `es/getting_started/` uses `jsoninclude`
+* `es/schema/reference/` uses `jsonschema`
+* `es/schema/release/` has a Docson widget
+* `es/schema/codelists/` uses `csv-table-no-translate`
+* `es/extensions/` uses `extensionselectortable`
+* `es/extensions/bids/` uses `extensiontable`
+* `es/extensions/party_details/` uses `extensionlist`
 
 ## Review translated codelists
 
