@@ -2,7 +2,7 @@
 
 ## Branches
 
-The development version of a profile is on the `master` branch, and the live version is on the `live` branch.
+The development version of a profile is on the `master` branch.
 
 ## Structure
 
