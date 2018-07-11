@@ -98,6 +98,8 @@ Click the History tab when viewing a string to see its previous translations, wh
 
 Read Transifex's documentation on [inviting collaborators](https://docs.transifex.com/teams/inviting-collaborators/) and [understanding user roles](https://docs.transifex.com/teams/understanding-user-roles). For more documentation, see [Getting Started as a Localization Manager](https://docs.transifex.com/getting-started/getting-started-as-a-manager).
 
+Approving a team join request assigns the role of "Translator" to the collaborator. Manually assign the role of "Reviewer" if appropriate.
+
 ### Count untranslated words
 
 The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
