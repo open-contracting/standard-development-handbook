@@ -1,6 +1,6 @@
 # Deployment
 
-A profile's deployment is simpler than the standard's [deployment](../../standard/technical/deployment). If a profile is unversioned, some of the below may be irrelevant.
+A profile's deployment is simpler than the standard's [deployment](../../../standard/technical/deployment). If a profile is unversioned, some of the below may be irrelevant.
 
 ## Schemas and extensions
 
@@ -8,11 +8,11 @@ A profile's deployment is simpler than the standard's [deployment](../../standar
 
 #### Review pull requests and recent changes
 
-Follow the [standard's instructions](../../standard/technical/deployment#review-pull-requests-and-recent-changes), substituting the profile's extensions for core extensions.
+Follow the [standard's instructions](../../../standard/technical/deployment#review-pull-requests-and-recent-changes), substituting the profile's extensions for core extensions.
 
 #### Create new releases of core extensions
 
-The governance process will establish whether to create a new release of any core extensions within the profile. If appropriate, follow the [standard's instructions](../../standard/technical/deployment#create-new-releases-of-core-extensions).
+The governance process will establish whether to create a new release of any core extensions within the profile. If appropriate, follow the [standard's instructions](../../../standard/technical/deployment#create-new-releases-of-core-extensions).
 
 ### 2. Perform periodic updates, if appropriate
 
@@ -30,17 +30,17 @@ Update the profile's changelog (if any) with a summary of the changes to the pro
 
 ## Merge and release
 
-Follow the [standard's instructions](../../standard/technical/deployment#merge-and-release).
+Follow the [standard's instructions](../../../standard/technical/deployment#merge-and-release).
 
 ## Build and deploy
 
 ### 1. Build on Travis
 
-Follow the [standard's instructions](../../standard/technical/deployment#build-on-travis).
+Follow the [standard's instructions](../../../standard/technical/deployment#build-on-travis).
 
 ### 2. Copy the files to the live server
 
-Follow the [standard's instructions](../../standard/technical/deployment#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/profiles/${PROFILE}/` where `PROFILE` is e.g. `ppp`.
+Follow the [standard's instructions](../../../standard/technical/deployment#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/profiles/${PROFILE}/` where `PROFILE` is e.g. `ppp`.
 
 ### 3. Copy the schema into place
 
@@ -51,7 +51,7 @@ Follow the [standard's instructions](../../standard/technical/deployment#copy-th
 
 ### 4. Update the "latest" branch
 
-Follow the [standard's instructions](../../standard/technical/deployment#update-the-latest-branch).
+Follow the [standard's instructions](../../../standard/technical/deployment#update-the-latest-branch).
 
 
 ### 5. Update the deployment repository
