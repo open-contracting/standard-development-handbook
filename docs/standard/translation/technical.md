@@ -57,7 +57,11 @@ make extract clean_txconfig update_txconfig
 
 ## Push strings to translate to Transifex
 
-To push POT files, run `make push` or `tx push -s`
+To push POT files, run `tx push -s`. To both extract strings and push resources, run:
+
+```shell
+make push
+```
 
 To push specific resources (replace the Transifex project name), run e.g.:
 

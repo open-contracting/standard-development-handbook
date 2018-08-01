@@ -99,7 +99,7 @@ python standard/schema/utils/fetch_currency_codelist.py
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`.
+Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. Update `version` if appropriate.
 
 Update the `"id"` at the top of each JSON Schema file, and any `"$ref"` using these IDs, to match the *major__minor__patch* version number:
 
@@ -142,13 +142,13 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 ### 1. Push and pull updated translations
 
-1. [Push source files to Transifex](../../translation/technical#push-translations-to-transifex).
-1. Check all strings are [translated](../../translation/using_transifex#translator) and [reviewed](../../translation/using_transifex#reviewer) in supported translations, e.g. for OCDS 1.1: [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/), [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/)
+1. [Push strings to translate to Transifex](../../translation/technical#push-strings-to-translate-to-transifex).
+1. Check all strings are [translated](../../translation/using_transifex#translator) and [reviewed](../../translation/using_transifex#reviewer) in supported translations, e.g. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../../translation/workflow).
 1. Check the [warnings](../../translation/using_transifex#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
 1. [Pull supported translations from Transifex](../../translation/technical#pull-translations-from-transifex).
 1. Check the [issues](../../translation/using_transifex#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
-1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../../translation/technical#push-translations-from-transifex).
+1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../../translation/technical#push-translations-to-transifex).
 1. Create a pull request for the updated translation files.
 1. [Test the translations on the build of the pull request](../../translation/technical#test-translations).
 
@@ -169,47 +169,43 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 
 ### 1. Build on Travis
 
-[Merge the development branch](#merge-the-development-branch) will trigger a [build](../build) on Travis. For changes to the theme, hit rebuild on the previous build for the relevant live branch.
+[Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](../build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
 
-Travis copies the built docs to the dev server, you can check they look okay there. e.g. for 1.1:
-<http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/> is the dev server deploy for <http://standard.open-contracting.org/1.1/en/>.
+Travis copies the built documentation to the development server. You can preview the documentation, e.g. for OCDS 1.1,
+<http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/> is the development deploy for <http://standard.open-contracting.org/1.1/en/>.
 
 ### 2. Copy the files to the live server
 
-(See the [servers](../../servers) page for more info on how our servers are set up.)
+(See the [servers](../../servers) page for more information on how our servers are set up.)
 
-Each deploy has its own unique folder on the live server (including the date and a sequence number). The bare version number is then symlinked. This makes it easy to roll back the live docs.
+Each deploy has its own unique folder on the live server (including the date and a sequence number). The bare version number is then symlinked. This makes it easy to roll back deploys.
 
 Set some variables:
 
 ```bash
 VER=1.1            # (for example)
-DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3
-                   # (see ${VER}/en/index.html)
-SEQ=1              # To deploy again on the same day, increment to 2 etc
+DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3 (see ${VER}/en/index.html)
+SEQ=1              # To deploy again on the same day, increment to 2, etc.
+BASEDIR=/home/ocds-docs/web/
 ```
 
 Copy from dev server to your local box:
 
 ```bash
-scp -r \
-  root@dev3.default.opendataservices.uk0.bigv.io:/home/ocds-docs/web/${VER} \
-  ${VER}-${DATE}-${SEQ}
+scp -r root@dev3.default.opendataservices.uk0.bigv.io:${BASEDIR}${VER} ${VER}-${DATE}-${SEQ}
 ```
 
 Copy from your local box to the live server:
 
 ```bash
-scp -r \
-  ${VER}-${DATE}-${SEQ} \
-  root@live2.default.opendataservices.uk0.bigv.io:/home/ocds-docs/web/
+scp -r ${VER}-${DATE}-${SEQ} root@live2.default.opendataservices.uk0.bigv.io:${BASEDIR}
 ```
 
 Symlink the version number:
 
 ```bash
 ssh root@live2.default.opendataservices.uk0.bigv.io \
-  "rm /home/ocds-docs/web/${VER}; ln -sf ${VER}-${DATE}-${SEQ} /home/ocds-docs/web/${VER}"
+  "rm ${BASEDIR}${VER}; ln -sf ${VER}-${DATE}-${SEQ} ${BASEDIR}${VER}"
 ```
 
 If a new language is supported, edit `http://standard.open-contracting.org/robots.txt`
@@ -233,22 +229,20 @@ The JSON files are then visible at <http://standard.open-contracting.org/schema/
 
 ### 4. Update the "latest" branch
 
-If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), then update the `latest` branch on GitHub to point to the same commit. Wait for the Travis build, then repeat [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
+If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), update the `latest` branch on GitHub to point to the same commit, then repeat [Build on Travis](#build-on-travis) and [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
 
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 
-### 5. Update the Apache config
+### 5. Update the deployment repository
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-For a new live version, you will need to edit:
-
-* [live_versions in the Apache config](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
-* [version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
-* [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
+* [For major, minor or patch versions, edit the version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
+* [For major and minor versions, edit `live_versions` in the Apache configuration file](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
+* For major and minor versions, edit the [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
 ### 6. Update the live CoVE deployment (OCDS Validator)
 

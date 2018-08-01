@@ -20,7 +20,7 @@ First, strings to translate are extracted from files with `make extract`.
 
 1. [`pybabel extract`](http://babel.pocoo.org/en/latest/cmdline.html#extract) extracts messages from source files and generates a POT file. The `-F` (`--mapping-file`) option sets the path to the Babel mapping configuration file, `.babel_codelists` or `.babel_schema`.
 
-1. The [Babel mapping configuration files](http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `.babel_codelists` and `.babel_schema`, map Babel message extraction method names – `codelist_text` and `jsonschema_text` – to the codelist CSV files and JSON Schema source files from which to extract strings to translate.
+1. The [Babel mapping configuration files](http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `.babel_codelists` and `.babel_schema`, map Babel message extraction method names – `codelist_text` and `jsonschema_text` – to the codelist CSV and JSON Schema source files from which to extract strings to translate.
 
 1. [`setup.py` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/setup.py#L7-L11) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) – `codelist_text` and `jsonschema_text` – to the module and function implementing the extraction, in the entry point group `babel.extractors`.
 
@@ -40,13 +40,20 @@ After pushing strings to translate as POT files to Transifex, [translating the s
 
 ### Codelist CSV files and JSON Schema files
 
-1. [`make`](https://github.com/open-contracting/standard_profile_template/blob/master/include/common.mk#L122-L123) builds the `build.*` Make targets, among others. These run, for example:
+1. [`make`](https://github.com/open-contracting/standard_profile_template/blob/master/include/common.mk#L122-L123) builds the `compile` Make target. This compiles to MO files the PO files for codelist CSV files and JSON Schema files.
+
+        pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
+        pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
+
+1. `make` then builds `build.*` Make targets, among others. These run, for example:
 
         sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/es -D language="es"
 
+1. [`sphinx-build`](http://www.sphinx-doc.org/en/master/man/sphinx-build.html), when `language` is set, compiles to MO files the PO files for Markdown files, which can also be done by running `sphinx-intl build -d $(LOCALE_DIR)`.
+
 1. [`sphinx-build`](http://www.sphinx-doc.org/en/master/man/sphinx-build.html) runs `setup` in `conf.py`, which reads the `language` override (`-D language="es"`).
 
-1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L139) calls the functions [`translate_codelists` and `translate_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/translation.py) to translate codelist CSV files and JSON Schema files from one directory into another directory.
+1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L139) calls the functions [`translate_codelists` and `translate_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/translation.py) to translate codelist CSV files and JSON Schema files from one directory into another directory, using MO files.
 
 1. The translated files are used by Sphinx directives like `csv-table-no-translate` and `jsonschema` in Markdown files.
 
