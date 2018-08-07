@@ -46,7 +46,7 @@ Follow the [standard's instructions](../../../standard/technical/deployment#copy
 
 ```eval_rst
   .. todo::
-    `See GitHub issue <https://github.com/open-contracting/public-private-partnerships/issues/159>`_.
+    Update this section once the steps are determined. `See GitHub issue <https://github.com/open-contracting/public-private-partnerships/issues/172>`_.
 ```
 
 ### 4. Update the "latest" branch
@@ -67,5 +67,5 @@ Follow the [standard's instructions](../../../standard/technical/deployment#upda
 ```
 
 * For major, minor or patch versions, edit the profile's version switcher e.g. for [OCDS for PPPs](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options-profiles-ppp.html)
-* For major and minor versions, edit `live_versions` in the Apache configuration file, e.g. for [OCDS for PPPs]](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L17)
+* For major and minor versions, edit `live_versions` in the Apache configuration file, e.g. for [OCDS for PPPs](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L17)
 * For major and minor versions, edit the `dev` (e.g. [OCDS for PPPs](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev_profiles_ppp.html)) and `old` banners
