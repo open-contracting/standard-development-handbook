@@ -41,6 +41,8 @@ The *core* extensions are versioned using [Git tags](https://git-scm.com/book/en
 
 This is particularly important for new versions of the standard, as each version's documentation should point to specific versions of its extensions. See [creating new releases of core extensions](../standard/technical/deployment#create-new-releases-of-core-extensions).
 
+A new release of *core* extension can only be made as part of the OCDS governance process. Draft work on a new core extension should be presented with an `-alpha` suffix. When you have confidence (as a result of engagement with the community, and testing) that the approach taken by an update to a core extension is likely to receive approval in a future governance process, a `-beta` suffix may be added to indicate to early-adopters that they can consider use of this instead of the version pinned in the most recent version of the standard. 
+
 Community extensions, on the other hand, are externally maintained and not associated to each version of the standard.
 
 ## Reporting issues on extensions

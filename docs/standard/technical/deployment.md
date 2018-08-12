@@ -50,32 +50,19 @@ bundle exec rake release:review_extensions
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-The governance process will establish whether to create a new release of a core extension for this OCDS version. Each release of the standard should refer to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions).
+The governance process will establish whether to create a new release of a core extension for this OCDS version. Each release of the standard should refer to a specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions).
 
-For each *core* extension:
+Between versions of the standard, `-alpha` and `-beta` releases of a core extension may be made. A full release of a core extension should only be made as part of the governance process for a standard upgrade. 
 
-1. From the list of releases, click *Draft a new release*
-1. In *Tag version*, enter the OCDS version in *vmajor.minor.patch* format, e.g. `v1.1.1`
-1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
-1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
+##### Worked example
 
-Instead of navigating the website, run this Rake task, which will use the extension's changelog as the release message and "Fixed version for OCDS X.X.X" as the release title:
+If the latest version of OCDS is 1.1, and it references version 1.1 of the bids and enquiries extension, and proposals are made for changes to the bids extension.
 
-```bash
-bundle exec rake release:release_extensions REF=v1.1.1
-```
+* A version `1.2-alpha` of the bids extension may be created;
+* If there is consensus that the changes should be considered as a core extension against OCDS 1.2, then a `1.2-beta` release of the bids extension may be made;
+* Bids `1.2-beta` should be considered as part of the OCDS 1.2 governance process, and if approved, bids `1.2` released alongside OCDS `1.2`. 
 
-If you make a mistake, you can undo the release with:
-
-```bash
-bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
-```
-
-Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry). To quickly generate the content of `extension_versions.csv` with the new releases of core extensions, run:
-
-```bash
-bundle exec rake registry_extension_versions
-```
+By contrast, if no changes are required to the enquiries extension, then OCDS 1.2 would reference enquiries version `1.1`. 
 
 ### 2. Perform periodic updates, if appropriate
 
