@@ -43,26 +43,25 @@ Instead of navigating the website, run this Rake task to get links to pull reque
 bundle exec rake release:review_extensions
 ```
 
-#### Create new releases of core extensions
+#### Create new versions of core extensions
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-The governance process will establish whether to create a new release of a core extension for this OCDS version. Each release of the standard should refer to specific versions of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions).
+Each OCDS version refers to a specific version of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). The [governance process](http://standard.open-contracting.org/latest/en/support/governance/#versions) will establish whether to create a new version of a core extension for this OCDS version.
 
-For each *core* extension:
+For each *core* extension for which to create a new version:
 
 1. From the list of releases, click *Draft a new release*
-1. In *Tag version*, enter the OCDS version in *vmajor.minor.patch* format, e.g. `v1.1.1`
-1. In *Release title*, enter a title, e.g. "Fixed version for OCDS 1.1.1"
+1. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. `v1.1.1`
 1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
-Instead of navigating the website, run this Rake task, which will use the extension's changelog as the release message and "Fixed version for OCDS X.X.X" as the release title:
+Instead of navigating the website, use this Rake task, which will use the extension's changelog as the release message:
 
 ```bash
-bundle exec rake release:release_extensions REF=v1.1.1
+bundle exec rake release:release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
 If you make a mistake, you can undo the release with:
