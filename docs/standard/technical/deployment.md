@@ -14,7 +14,7 @@ For changes to the theme only, start from [Build and deploy](#build-and-deploy).
 
 #### Review pull requests and recent changes
 
-For each *core* extension, [spell check](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/technical/spellcheck/), [run Markdownlint](http://ocds-standard-development-handbook.readthedocs.io/en/latest/coding/#linting), and ensure it:
+For each *core* extension, [spell check](../spellcheck), [run Markdownlint](../../../coding#linting), and ensure it:
 
 * [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
 * Matches the description in [Creating extensions](../../../extensions#creating-extensions) regarding license, issues and `README.md`
