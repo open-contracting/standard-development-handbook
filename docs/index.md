@@ -1,4 +1,4 @@
-# OCDS: Standard Development Handbook
+# OCDS Development Handbook
 
 This handbook is for the standard developers. It documents:
 
