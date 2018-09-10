@@ -42,11 +42,29 @@ Follow the [standard's instructions](../../../standard/technical/deployment#buil
 
 Follow the [standard's instructions](../../../standard/technical/deployment#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/profiles/${PROFILE}/` where `PROFILE` is e.g. `ppp`.
 
-### 3. Copy the schema into place
+### 3. Copy the schema, extension and extension zip file into place.
 
-```eval_rst
-  .. todo::
-    Update this section once the steps are determined. `See GitHub issue <https://github.com/open-contracting/public-private-partnerships/issues/172>`_.
+On the server set the PROFILE, VER, RELEASE environment variables to suit your needs e.g.
+
+```
+PROFILE=ppp # profile name
+VER=1.0 # version of profile that has already been copied to the server 
+RELEASE=1__0__0__beta # the full release name
+```
+
+Then run the following commands:
+
+```
+# copy the extension
+cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/*.json /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
+cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/codelists /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
+
+# make zip version
+cd /home/ocds-docs/web/profiles/${PROFILE}/extension/
+zip -r ${RELEASE}.zip ${RELEASE}
+
+# copy the compiled/patched schema
+cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/_static/patched/* /home/ocds-docs/web/profiles/${PROFILE}/schema/${RELEASE}/
 ```
 
 ### 4. Update the "latest" branch
