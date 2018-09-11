@@ -42,9 +42,9 @@ Follow the [standard's instructions](../../../standard/technical/deployment#buil
 
 Follow the [standard's instructions](../../../standard/technical/deployment#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/profiles/${PROFILE}/` where `PROFILE` is e.g. `ppp`.
 
-### 3. Copy the schema, extension and extension zip file into place.
+### 3. Copy the schema, extension and extension ZIP file into place
 
-On the server set the PROFILE, VER, RELEASE environment variables to suit your needs e.g.
+On the server, set the `PROFILE`, `VER`, and `RELEASE` environment variables as appropriate, e.g.:
 
 ```
 PROFILE=ppp # profile name
@@ -52,25 +52,24 @@ VER=1.0 # version of profile that has already been copied to the server
 RELEASE=1__0__0__beta # the full release name
 ```
 
-Then run the following commands:
+Then, run:
 
 ```
-# copy the extension
+# Copy the extension.
 cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/*.json /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
 cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/codelists /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
 
-# make zip version
+# Create the ZIP file.
 cd /home/ocds-docs/web/profiles/${PROFILE}/extension/
 zip -r ${RELEASE}.zip ${RELEASE}
 
-# copy the compiled/patched schema
+# Copy the patched schema.
 cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/_static/patched/* /home/ocds-docs/web/profiles/${PROFILE}/schema/${RELEASE}/
 ```
 
 ### 4. Update the "latest" branch
 
 Follow the [standard's instructions](../../../standard/technical/deployment#update-the-latest-branch).
-
 
 ### 5. Update the deployment repository
 
