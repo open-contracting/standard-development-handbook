@@ -64,3 +64,5 @@ After pushing strings to translate as POT files to Transifex, [translating the s
         sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/es -D language="es"
 
 See the [Sphinx documentation](http://www.sphinx-doc.org/en/master/intl.html#sphinx-internationalization-details).
+
+Please correct all warnings, ignoring `WARNING: inconsistent term references in translated message`.
