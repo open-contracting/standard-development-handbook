@@ -22,7 +22,11 @@ The governance process will establish whether to create a new release of any cor
 
 In `docs/conf.py`, update `release` to e.g. `1.0.0` and update `version` if appropriate.
 
-Find and replace all occurrences of the underscored version e.g. `1__0__0__beta`.
+Update the *major__minor__patch* version number:
+
+```bash
+find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' \{\} \;
+```
 
 Update the profile's changelog (if any) with a summary of the changes to the profile's extensions.
 
