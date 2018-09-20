@@ -98,12 +98,12 @@ python standard/schema/utils/fetch_currency_codelist.py
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. Update `version` if appropriate.
+In `standard/docs/en/conf.py`, update `release` to e.g. `1.1.1` and update `version` if appropriate.
 
-Update the `"id"` at the top of each JSON Schema file, and any `"$ref"` using these IDs, to match the *major__minor__patch* version number:
+Update the *major__minor__patch* version number:
 
 ```bash
-python standard/schema/utils/update_schema_ids.py
+find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__1__3/1__1__4/g' \{\} \;
 ```
 
 Update `versioned-release-validation-schema.json` to match `release-schema.json`:

@@ -20,7 +20,13 @@ The governance process will establish whether to create a new release of any cor
 
 ### 3. Update version numbers, validation schema and changelog
 
-Update `release` in `docs/conf.py` to e.g. `1.0.0`. Update `version` if appropriate.
+In `docs/conf.py`, update `release` to e.g. `1.0.0` and update `version` if appropriate.
+
+Update the *major__minor__patch* version number:
+
+```bash
+find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' \{\} \;
+```
 
 Update the profile's changelog (if any) with a summary of the changes to the profile's extensions.
 
