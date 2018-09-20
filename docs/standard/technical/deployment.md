@@ -98,7 +98,7 @@ python standard/schema/utils/fetch_currency_codelist.py
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update `release` in `standard/docs/en/conf.py` to e.g. `1.1.1`. Update `version` if appropriate.
+In `standard/docs/en/conf.py`, update `release` to e.g. `1.1.1` and update `version` if appropriate.
 
 Update the `"id"` at the top of each JSON Schema file, and any `"$ref"` using these IDs, to match the *major__minor__patch* version number:
 
