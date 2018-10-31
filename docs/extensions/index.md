@@ -31,10 +31,3 @@ Between OCDS versions, changes can be made to the ['live' version](https://githu
 To report issues on community extensions, refer to each extension's documentation.
 
 If the issue is with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), report it on the [`standard` repository](https://github.com/open-contracting/standard) and add the `Focus - Extensions` label.
-
-## Tools
-
-* [standard_extension_template](https://github.com/open-contracting/standard_extension_template), as described above
-* [extension_creator](https://github.com/open-contracting/extension_creator) is a web interface for modifying any of OCDS' schema files and either generating the corresponding patch file or the complete corresponding extension.
-* [extension_registry](https://github.com/open-contracting/extension_registry), as described above
-* [extension_registry.py](https://github.com/open-contracting/extension_registry.py) is a Python library to Ease access to information from the extension registry.

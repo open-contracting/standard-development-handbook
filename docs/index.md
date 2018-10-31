@@ -25,7 +25,6 @@ For documentation on the Open Contracting Data Standard itself see <http://stand
    profiles/index
    systems/index
    github/index
-   tools/index
    coding/index
    *
 
