@@ -15,16 +15,16 @@ First, strings to translate are extracted from files with `make extract`.
 
 1. [`make extract`](https://github.com/open-contracting/standard_profile_template/blob/master/include/common.mk#L52-L53) builds the `extract_codelists` and `extract_schema` Make targets, among others. These run:
 
-        pybabel extract -F .babel_codelists . -o $(POT_DIR)/$(DOMAIN_PREFIX)codelists.pot
-        pybabel extract -F .babel_schema . -o $(POT_DIR)/$(DOMAIN_PREFIX)schema.pot
+        pybabel extract -F babel_ocds_codelist.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)codelists.pot
+        pybabel extract -F babel_ocds_schema.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)schema.pot
 
-1. [`pybabel extract`](http://babel.pocoo.org/en/latest/cmdline.html#extract) extracts messages from source files and generates a POT file. The `-F` (`--mapping-file`) option sets the path to the Babel mapping configuration file, `.babel_codelists` or `.babel_schema`.
+1. [`pybabel extract`](http://babel.pocoo.org/en/latest/cmdline.html#extract) extracts messages from source files and generates a POT file. The `-F` (`--mapping-file`) option sets the path to the Babel mapping configuration file, `babel_ocds_codelist.cfg` or `babel_ocds_schema.cfg`.
 
-1. The [Babel mapping configuration files](http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `.babel_codelists` and `.babel_schema`, map Babel message extraction method names – `codelist_text` and `jsonschema_text` – to the codelist CSV and JSON Schema source files from which to extract strings to translate.
+1. The [Babel mapping configuration files](http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `babel_ocds_codelist.cfg` and `babel_ocds_schema.cfg`, map Babel message extraction method names – `ocds_codelist` and `ocds_schema` – to the codelist CSV and JSON Schema source files from which to extract strings to translate.
 
-1. [`setup.py` in `documentation-support`](https://github.com/open-contracting/documentation-support/blob/master/setup.py#L7-L11) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) – `codelist_text` and `jsonschema_text` – to the module and function implementing the extraction, in the entry point group `babel.extractors`.
+1. [`setup.py` in `ocds-babel`](https://github.com/open-contracting/ocds-babel/blob/master/setup.py) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) – `ocds_codelist` and `ocds_schema` – to the module and function implementing the extraction, in the entry point group `babel.extractors`.
 
-1. The functions [`extract_codelist` and `extract_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocdsdocumentationsupport/babel_extractors.py) implement the extraction.
+1. The functions [`extract_codelist` and `extract_schema`](https://github.com/open-contracting/ocds-babel/blob/master/ocds_babel/extract.py) implement the extraction.
 
 ### Markdown files
 
@@ -53,7 +53,7 @@ After pushing strings to translate as POT files to Transifex, [translating the s
 
 1. [`sphinx-build`](http://www.sphinx-doc.org/en/master/man/sphinx-build.html) runs `setup` in `conf.py`, which reads the `language` override (`-D language="es"`).
 
-1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L139) calls the functions [`translate_codelists` and `translate_schema`](https://github.com/open-contracting/documentation-support/blob/master/ocds_documentation_support/translation.py) to translate codelist CSV files and JSON Schema files from one directory into another directory, using MO files.
+1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L137) calls the [`translate` method](https://github.com/open-contracting/ocds-babel/blob/master/ocds_babel/translate.py) to translate codelist CSV files and JSON Schema files from one directory into another directory, using MO files.
 
 1. The translated files are used by Sphinx directives like `csv-table-no-translate` and `jsonschema` in Markdown files.
 
