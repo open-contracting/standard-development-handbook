@@ -32,7 +32,7 @@ with open(path) as f:
     data = json.load(f, object_pairs_hook=OrderedDict)
 
 with open(path, 'w') as f:
-    json.dump(data, f, indent=2, separators=(',', ': '))
+    json.dump(data, f, ensure_ascii=False, indent=2, separators=(',', ': '))
     f.write('\n')
 ```
 
