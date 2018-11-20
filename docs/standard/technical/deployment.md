@@ -109,7 +109,7 @@ find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's
 Update `versioned-release-validation-schema.json` to match `release-schema.json`:
 
 ```shell
-python standard/schema/utils/make_validation_schema.py
+python standard/schema/utils/make_versioned_release_schema.py
 ```
 
 Update `meta-schema.json` to match `meta-schema-patch.json`:

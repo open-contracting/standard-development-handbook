@@ -58,7 +58,7 @@ make clean
 If you changed `release-schema.json`, update `versioned-release-validation-schema.json` (the tests check that this is done):
 
 ```shells
-python standard/schema/utils/make_validation_schema.py
+python standard/schema/utils/make_versioned_release_schema.py
 ```
 
 Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation whenever changes are made, if you are running macOS and have `fswatch` from Homebrew:
