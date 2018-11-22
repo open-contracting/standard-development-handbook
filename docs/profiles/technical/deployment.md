@@ -18,7 +18,7 @@ The governance process will establish whether to create a new release of any cor
 
 *Nothing to do.*
 
-### 3. Update version numbers, validation schema and changelog
+### 3. Update version numbers, versioned release schema and changelog
 
 In `docs/conf.py`, update `release` to e.g. `1.0.0` and update `version` if appropriate.
 

@@ -1,6 +1,6 @@
 # Servers
 
-[standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/validator/](http://standard.open-contracting.org/validator/) are hosted by Open Data Services on Bytemark VPS's. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
+[standard.open-contracting.org](http://standard.open-contracting.org) and [standard.open-contracting.org/review/](http://standard.open-contracting.org/review/) are hosted by Open Data Services on Bytemark VPS's. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
 
 Deployments are carried out using Salt, with configuration in [opendataservices-deploy](https://github.com/OpenDataServices/opendataservices-deploy).
 
@@ -15,8 +15,8 @@ Hosting the documentation:
 
 Hosting the validator:
 
-* `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/validator/) of the validator.
-* `cove-dev`: hosts a [development version](http://dev.cove.opendataservices.coop/validator/) of the validator.
+* `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/review/) of the validator.
+* `cove-dev`: hosts a [development version](http://dev.cove.opendataservices.coop/review/) of the validator.
 
 Hosting the CRM:
 

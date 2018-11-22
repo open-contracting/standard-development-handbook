@@ -91,7 +91,7 @@ Before each release, and at least once a year (because ISO4217 is updated [at le
 python standard/schema/utils/fetch_currency_codelist.py
 ```
 
-### 3. Update version numbers, validation schema and changelog
+### 3. Update version numbers, versioned release schema and changelog
 
 ```eval_rst
   .. note::
