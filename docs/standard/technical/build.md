@@ -9,6 +9,12 @@ sudo apt-get install python3-venv
 python3 -m venv .ve
 source .ve/bin/activate
 ```
+Initialize and update submodules:
+
+```shell
+git submodule init
+git submodule update
+```
 
 Run all commands on this page within this virtual environment.
 
