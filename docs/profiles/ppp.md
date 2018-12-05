@@ -1,6 +1,6 @@
 # Public Private Partnerships
 
-[This profile](http://standard.open-contracting.org/profiles/ppp/latest/en/) is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting/public-private-partnerships). It is [deployed](http://standard.open-contracting.org/profiles/ppp/) with the standard documentation. It was previously deployed to <http://ocds-for-ppps.readthedocs.io/>, which uses meta refresh to redirect to the current deployment.
+[This profile](http://standard.open-contracting.org/profiles/ppp/latest/en/) is developed and maintained by the Open Contracting Partnership on [GitHub](https://github.com/open-contracting-extensions/public-private-partnerships). It is [deployed](http://standard.open-contracting.org/profiles/ppp/) with the standard documentation. It was previously deployed to <http://ocds-for-ppps.readthedocs.io/>, which uses meta refresh to redirect to the current deployment.
 
 ## Development tasks
 
@@ -16,7 +16,7 @@ make update_ocds_show
 
 See the generic profile [build documentation](../technical/build).
 
-If extensions or OCDS introduce or remove codelists, update [`codelists.md`](https://github.com/open-contracting/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
+If extensions or OCDS introduce or remove codelists, update [`codelists.md`](https://github.com/open-contracting-extensions/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
 
 ## Translation
 

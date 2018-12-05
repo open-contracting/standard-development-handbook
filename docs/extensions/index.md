@@ -8,7 +8,7 @@ An OCDS release or record package can declare one or more extensions. Extensions
 
 To create the extension, [use the extension template](https://github.com/open-contracting/standard_extension_template/blob/master/README.md), which also documents the structure of extensions.
 
-If you're creating a *core* extension, use the [Apache License 2.0](https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/master/LICENSE), disable issues on the GitHub repository (see [reporting issues on extensions](#reporting-issues-on-extensions) below) and include the following text in its `README.md` file:
+If you're creating a *core* extension, use the [Apache License 2.0](https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE), disable issues on the GitHub repository (see [reporting issues on extensions](#reporting-issues-on-extensions) below) and include the following text in its `README.md` file:
 
 ```markdown
 ## Issues
