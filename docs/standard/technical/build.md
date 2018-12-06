@@ -2,7 +2,12 @@
 
 ## Get started
 
-Create a virtual environment using Python 3 with `pyenv virtualenv docs` or:
+```eval_rst
+  .. note::
+    Building the documentation requires Python 3.6.
+```
+
+Create a virtual environment using Python 3.6 with `pyenv virtualenv docs` or:
 
 ```shell
 sudo apt-get install python3-venv
