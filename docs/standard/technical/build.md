@@ -4,7 +4,7 @@
 
 ```eval_rst
   .. note::
-    The documentation build requires Python 3.6 
+    Building the documentation requires Python 3.6.
 ```
 
 Create a virtual environment using Python 3.6 with `pyenv virtualenv docs` or:
