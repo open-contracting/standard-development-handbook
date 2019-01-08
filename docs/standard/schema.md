@@ -10,11 +10,6 @@ These schema files are processed during the [documentation build](../technical/b
 
 The standard's documentation contains a [deprecation policy](http://standard.open-contracting.org/latest/en/schema/deprecation/) and a description of its approach to [semantic versioning](http://standard.open-contracting.org/latest/en/support/governance/#versions).
 
-```eval_rst
-  .. todo::
-    We need to further develop the conformance statement to capture all forward and backwards compatibility scenarios.
-```
-
 ## Our extensions to JSON Schema
 
 We use a number of additional JSON Schema properties: `codelist`, `openCodelist`, `deprecated` and a set of merge strategies properties. These are documented in the [Open Standards for Data](http://os4d.opendataservices.coop/development/schema/#extended-json-schema) handbook and are available via a [metaschema patch](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/metaschema). 
