@@ -9,5 +9,4 @@
    spellcheck
    build
    deployment
-   *
 ```

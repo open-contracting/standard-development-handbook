@@ -25,7 +25,6 @@ This section describes:
    using_transifex
    technical
    implementation
-   *
 ```
 
 See also: [Localising OCDS: translations, terminology and extensions](https://www.open-contracting.org/2016/07/26/localising-ocds-translations-terminology-extensions/)

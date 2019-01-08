@@ -24,8 +24,6 @@ Documentation is written in Markdown syntax with [recommonmark](https://recommon
 
    schema
    conventions
-   guidance
    translation/index
    technical/index
-   *
 ```

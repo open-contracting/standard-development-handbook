@@ -10,7 +10,7 @@ To create the extension, [use the extension template](https://github.com/open-co
 
 If you're creating a *core* extension, use the [Apache License 2.0](https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE), disable issues on the GitHub repository (see [reporting issues on extensions](#reporting-issues-on-extensions) below) and include the following text in its `README.md` file:
 
-```markdown
+```
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.

@@ -68,7 +68,7 @@ make clean
 
 If you changed `release-schema.json`, update `versioned-release-validation-schema.json` (the tests check that this is done):
 
-```shells
+```shell
 python standard/schema/utils/make_versioned_release_schema.py
 ```
 

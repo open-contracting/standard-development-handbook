@@ -26,6 +26,5 @@ For documentation on the Open Contracting Data Standard itself see <http://stand
    systems/index
    github/index
    coding/index
-   *
 
 ```

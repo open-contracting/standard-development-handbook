@@ -9,5 +9,4 @@
    build
    deployment
    integrations
-   *
 ```

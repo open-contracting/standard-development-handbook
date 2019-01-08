@@ -104,12 +104,3 @@ To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 1. Run (replace `path/to` twice with the output of `pwd` above):
 
         for i in *; if [ -d $i ]; cd $i; echo $i; path/to/bin/mdl --git-recurse --style path/to/mdlrc.rb .; cd ..; end; end
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-   :glob:
-
-   *
-
-```

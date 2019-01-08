@@ -30,10 +30,9 @@ Any non-required field pointing to a literal, an array of literals, or an object
   "status": {
     "title": "Contract status",
     "type": [
-        "string",
-        "null"
-      ]
-    }
+      "string",
+      "null"
+    ]
   }
 }
 ```
