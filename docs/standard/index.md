@@ -1,10 +1,5 @@
 # Standard
 
-```eval_rst
-  .. todo::
-    Identify clearly which sections of the documentation are normative and which are non-normative. :issue:`25`
-```
-
 The Open Contracting Data Standard consists of:
 
 * **A technical specification** made up of:
@@ -18,7 +13,7 @@ The Open Contracting Data Standard consists of:
 * **Guidance on publication levels** describing recommended fields and approaches to data publication
 * **An extensions mechanism** for declaring additional fields not covered by the core standard
 
-This section describes the processes for maintaining these assets.
+This section describes the processes for maintaining these assets. See the [Normative and non-normative policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit) for details on which sections of the documentation are normative or non-normative.
 
 Documentation is written in Markdown syntax with [recommonmark](https://recommonmark.readthedocs.org/en/latest/) building on [Commonmark](http://commonmark.org/).
 
