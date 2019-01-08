@@ -12,9 +12,10 @@ This section describes:
   * [How to push and pull translations from Transifex, and how to build translated schema, codelists and documentation](technical)
 * [How translation is implementated at a technical level](implementation)
 
+Contents:
+
 ```eval_rst
 .. toctree::
-   :caption: Contents
    :maxdepth: 2
    :glob:
 
