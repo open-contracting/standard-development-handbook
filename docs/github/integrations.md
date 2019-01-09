@@ -10,10 +10,6 @@ Used to measure test coverage.
 
 Used to build the handbook. See [the readme](https://github.com/open-contracting/standard-development-handbook/blob/master/README.md).
 
-## Requires.io
-
-Emails code@opendataservices.coop when a requirement has a security vulnerability, as configured on the [requires.io hooks page](https://requires.io/github/open-contracting/hooks/). The web interface can be used to see out-of-date requirements.
-
 ## Travis CI
 
 Used to run tests, and to build the documentation of the core standard and its profiles.
