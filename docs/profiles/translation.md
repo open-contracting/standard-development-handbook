@@ -1,6 +1,6 @@
 # Translation
 
-See the standard's page for [Translation](../../standard/translation).
+See the standard's page for [Translation](../../../standard/translation).
 
 ## Copying translations from the standard to a profile
 
@@ -28,7 +28,7 @@ done
 
 ## Technical implementation of translation
 
-See the standard's page for [Technical implementation of translation](../../standard/translation/implementation).
+See the standard's page for [Technical implementation of translation](../../../standard/translation/implementation).
 
 * `babel_ocds_codelist.cfg` indicates the codelist CSV files in the consolidated extension and the patched OCDS (`schema/*/codelists/*.csv`) from which to extract strings to translate.
 * `babel_ocds_schema.cfg` indicates the JSON Schema files in the consolidated extension and the patched OCDS (`schema/*/*-schema.json`) from which to extract strings to translate.
