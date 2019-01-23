@@ -9,7 +9,6 @@ The staff of the following organizations may have administrative roles:
 ## Google Groups
 
 * [standard-discuss](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss)
-* [dev-discuss](https://groups.google.com/a/open-contracting.org/forum/#!forum/dev-discuss)
 
 There should be at most two members with the [Owner](https://support.google.com/a/answer/167094?hl=en) role from OCP. There should be at most two members with the Manager role from each other organization.
 
