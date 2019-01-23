@@ -1,6 +1,6 @@
 # OCDS Development Handbook
 
-This handbook is for the standard developers. It documents:
+This handbook is for developers of the standard and its tools. It documents:
 
 * The processes for developing and maintaining the Open Contracting Data Standard
 * The software and tools that support the standard

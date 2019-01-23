@@ -6,7 +6,7 @@ Repositories should have only a default branch (usually `master`) and pull reque
 
 The default branch should be [protected](https://help.github.com/articles/about-protected-branches/) as described under [repository configuration](repository_configuration).
 
-It isn't possible to commit directly to protected branches. The overhead of opening a pull request for even minor changes like small typos is acceptable so far, considering pull request reviews are not required, and considering opening a pull request ensures that the build is never accidentally broken, as all pull requests are tested on Travis before merging.
+It isn't possible to commit directly to protected branches, unless you are an administrator. The overhead of opening a pull request for even minor changes like small typos is acceptable so far, considering pull request reviews are not required in most repositories, and considering opening a pull request ensures that the build is never accidentally broken, as all pull requests are tested on Travis before merging.
 
 The [`standard` repository](https://github.com/open-contracting/standard), starting with version 1.0, has an `X.X` branch for the production version of the documentation, and an `X.X-dev` branch for the development version of the documentation. It also has a `latest` branch, which must be kept up-to-date with the most recent `X.X` branch.
 

@@ -6,4 +6,4 @@ The following [GitHub Topics](https://help.github.com/articles/about-topics/) ar
 * [ocds-core-extension](https://github.com/topics/ocds-core-extension)
 * [ocds-community-extension](https://github.com/topics/ocds-community-extension)
 
-These topics appear under an extension's description on its homepage.
+These topics appear under an extension's description on its repository page.

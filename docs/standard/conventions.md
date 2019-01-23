@@ -12,18 +12,20 @@ The top level of the schema is split between `properties` and `definitions`. The
 
 ## ID fields
 
-Any object that is contained within an array MUST have an `id` field. 
+Any object that is contained within an array SHOULD have an `id` field.
 
 This is because:
 
 * `id` values play a [special role in the flatten-tool](http://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers) used to round-trip between JSON and tabular representations of OCDS.
 * `id` values are used to determine [how lists of objects are merged](http://standard.open-contracting.org/latest/en/schema/merging/#identifier-merge) when creating a compiledRelease.
 
-Objects that are not contained within an array MAY include an `id` field in order to support cross-referencing, or whether the `id` relates to an identifier of the object in the real world. 
+Otherwise, the array will be merged as a whole.
+
+Objects that are not contained within an array MAY include an `id` field to support cross-referencing, or to disclose the object's real-world identifier.
 
 ## Types and null
 
-Any non-required field pointing to a literal, an array of literals, or an object should support a type of `null`, e.g.:
+Any non-required field pointing to a literal or an array of literals should support a type of `null`, e.g.:
 
 ```json
 { 

@@ -9,7 +9,6 @@
 * Protect this branch
   * Require status checks to pass before merging
     * continuous-integration/travis-ci (if available)
-  * Include administrators
 
 We don't enable the following behaviors for the provided reasons:
 

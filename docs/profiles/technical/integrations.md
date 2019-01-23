@@ -1,6 +1,6 @@
 # Integrations
 
-## Travis
+## Travis CI
 
 Each branch of a profile's repository is automatically built to:
 

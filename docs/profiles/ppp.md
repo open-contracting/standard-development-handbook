@@ -24,6 +24,5 @@ See the generic profile [translation documentation](../translation).
 
 For reference:
 
-* The translations of the consolidated extension's codelists are used by `bids.md`.
 * The translations of the patched OCDS's codelists are used by `codelists.md` and `documents.md`.
 * The translation of the patched OCDS's release schema is used by `framework.md`, `documents.md` and `schema.md`

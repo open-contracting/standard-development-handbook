@@ -12,6 +12,7 @@ Hosting the documentation:
 
 * `live2`: hosts the production version of the documentation of the core standard (e.g. [latest](http://standard.open-contracting.org/latest/), [1.0](http://standard.open-contracting.org/1.0/) and [1.1](http://standard.open-contracting.org/1.1/)) and its profiles (e.g. [Public Private Partnerships](http://standard.open-contracting.org/profiles/ppp/latest/en/)).
 * `dev3`: hosts the development versions of the documentation for the core standard and its profiles. Travis has SFTP access to push developments builds to this server.
+* GitHub Pages hosts the [Extension Explorer](https://extensions.open-contracting.org/).
 
 Hosting the validator:
 

@@ -10,7 +10,7 @@ Used to build the handbook. See [the readme](https://github.com/open-contracting
 
 ## Travis CI
 
-Used to run tests, and to build the documentation of the core standard and its profiles.[View all badges](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#readme).
+Used to run tests, and to build the documentation. [View all badges](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#readme).
 
 ### Travis cron jobs
 
