@@ -128,7 +128,7 @@ Pull some files from extensions into the standard:
 python standard/schema/utils/fetch_core_extensions.py
 ```
 
-### 5. Set up a development instance of CoVE (OCDS Validator)
+### 5. Set up a development instance of CoVE (OCDS Data Review Tool)
 
 ```eval_rst
   .. note::
@@ -243,7 +243,7 @@ Doing a build is necessary because some URLs are updated with the branch name (e
 * [For major and minor versions, edit `live_versions` in the Apache configuration file](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
 * For major and minor versions, edit the [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
-### 6. Update the live CoVE deployment (OCDS Validator)
+### 6. Update the live CoVE deployment (OCDS Data Review Tool)
 
 ```eval_rst
   .. note::
