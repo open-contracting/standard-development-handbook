@@ -4,9 +4,11 @@ This section describes the steps involved in deploying an updated version of the
 
 This process is used for major, minor and patch versions, as well as non-normative versions.
 
-For changes to documentation only (no schema changes), start from [Translate and release](#translate-and-release).
+For changes to the documentation only (no schema changes), start from [Merge and release](#merge-and-release).
 
 For changes to the theme only, start from [Build and deploy](#build-and-deploy).
+
+To add a community translation, [follow these instructions](../../translation/technical#add-a-community-translation).
 
 ## Schemas and extensions
 
