@@ -104,3 +104,18 @@ Translated codelists are stored in language directories under `build/codelists` 
 ```bash
 for i in *.csv; do printf "\n\n$i,,,\n\n"; cat $i; done > ../all_codelists.csv
 ```
+
+## Add a community translation
+
+Once all strings are translated and reviewed in Transifex, and all warnings or issues on Transifex are resolved:
+
+1. Checkout the live branch, e.g. `git checkout 1.1`
+1. Checkout a new branch, e.g. `git checkout -b 1.1-italian`
+1. Add the locale code to `TRANSLATIONS` in `include/config.mk`
+1. Pull the locale's translations, e.g. `tx pull -f -l it`
+1. Update the `language_options` block in `standard/docs/en/_templates/layout.html`
+1. Create a pull request for the community translation
+1. [Test the translations on the build of the pull request](#test-translations)
+1. Check the `localization-note` appears on the homepage
+1. Merge the new branch onto the live branch
+1. [Build and deploy](../../technical/deployment#build-and-deploy), remembering to update `robots.txt`
