@@ -1,6 +1,6 @@
 # Technical implementation of translation
 
-This page documents the code involved in translating files. It is only necessary to read this page if you are editing or debugging these technical processes. Otherwise, the steps have been simplified and abstracted into the two commands `make extract` and `make`, covered under [Technical processes for translation](../technical) and [Building the documentation](../../technical/build).
+This page documents the code involved in translating files. It is only necessary to read this page if you are editing or debugging these technical processes. Otherwise, the steps have been simplified and abstracted into the two commands `make extract` and `make`, covered under [Technical processes for translation](technical) and [Building the documentation](../technical/build).
 
 ```eval_rst
   .. note::
@@ -36,7 +36,7 @@ See the [Sphinx documentation](http://www.sphinx-doc.org/en/master/intl.html#sph
 
 ## Translate source files
 
-After pushing strings to translate as POT files to Transifex, [translating the strings](../workflow), and pulling translations as PO files from Transifex, source files are translated with `make`.
+After pushing strings to translate as POT files to Transifex, [translating the strings](workflow), and pulling translations as PO files from Transifex, source files are translated with `make`.
 
 ### Codelist CSV files and JSON Schema files
 

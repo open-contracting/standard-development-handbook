@@ -1,6 +1,6 @@
 # Extensions
 
-An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as [profiles](../profiles).
+An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as [profiles](../profiles/index).
 
 ## Creating an extension
 

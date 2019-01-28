@@ -12,7 +12,7 @@ Profiles are built to their own documentation micro-sites which may include:
 * Introductory material
 * Implementation guidance
 
-Profiles are, in many ways, similar to the [standard](../standard) itself. Differences are noted on these pages.
+Profiles are, in many ways, similar to the [standard](../standard/index) itself. Differences are noted on these pages.
 
 New profiles can be created using [this template](https://github.com/open-contracting/standard_profile_template).
 

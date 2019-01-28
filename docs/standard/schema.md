@@ -4,7 +4,7 @@
 
 The source for `release-schema.json` and other schema files is in the [`standard` repository](https://github.com/open-contracting/standard) in the [standard/standard/schema directory](https://github.com/open-contracting/standard/tree/HEAD/standard/schema).
 
-These schema files are processed during the [documentation build](../technical/build) and [deployment process](../technical/deployment) to replace `{lang}` and `{version}` tokens.
+These schema files are processed during the [documentation build](technical/build) and [deployment process](technical/deployment) to replace `{lang}` and `{version}` tokens.
 
 ## Forward and backwards compatibility
 

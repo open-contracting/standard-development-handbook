@@ -1,6 +1,6 @@
 # Translation
 
-See the standard's page for [Translation](../../../standard/translation).
+See the standard's page for [Translation](../../../standard/translation/index).
 
 ## Copying translations from the standard to a profile
 

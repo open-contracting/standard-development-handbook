@@ -16,7 +16,7 @@ To add a community translation, [follow these instructions](../../translation/te
 
 #### Review pull requests and recent changes
 
-For each *core* extension, [spell check](../spellcheck), [run Markdownlint](../../../coding#linting), and ensure it:
+For each *core* extension, [spell check](spellcheck), [run Markdownlint](../../../coding#linting), and ensure it:
 
 * [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
 * Matches the description in [Creating extensions](../../../extensions#creating-extensions) regarding license, issues and `README.md`
@@ -145,7 +145,7 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 1. [Push strings to translate to Transifex](../../translation/technical#push-strings-to-translate-to-transifex).
 1. Check all strings are [translated](../../translation/using_transifex#translator) and [reviewed](../../translation/using_transifex#reviewer) in supported translations, e.g. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
-1. For any resources with untranslated or unreviewed strings, follow the [translation process](../../translation/workflow).
+1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/workflow).
 1. Check the [warnings](../../translation/using_transifex#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
 1. [Pull supported translations from Transifex](../../translation/technical#pull-translations-from-transifex).
 1. Check the [issues](../../translation/using_transifex#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
@@ -170,14 +170,14 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 
 ### 1. Build on Travis
 
-[Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](../build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
+[Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
 
 Travis copies the built documentation to the development server. You can preview the documentation, e.g. for OCDS 1.1,
 <http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/> is the development deploy for <http://standard.open-contracting.org/1.1/en/>.
 
 ### 2. Copy the files to the live server
 
-(See the [servers](../../servers) page for more information on how our servers are set up.)
+(See the [servers](../../systems/servers) page for more information on how our servers are set up.)
 
 Each deploy has its own unique folder on the live server (including the date and a sequence number). The bare version number is then symlinked. This makes it easy to roll back deploys.
 
