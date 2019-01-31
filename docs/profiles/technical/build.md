@@ -14,7 +14,7 @@ Extensions must be in the [extension registry](https://github.com/open-contracti
 
 ## Build the profile
 
-See the [repository documentation](../repository) for information on what files are built by `build-profile.py`.
+See the [repository documentation](repository) for information on what files are built by `build-profile.py`.
 
 ```shell
 make clean_dist

@@ -1,6 +1,6 @@
 # Extensions
 
-An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as [profiles](../profiles).
+An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as [profiles](../profiles/index).
 
 ## Creating an extension
 
@@ -8,7 +8,7 @@ An OCDS release or record package can declare one or more extensions. Extensions
 
 To create the extension, [use the extension template](https://github.com/open-contracting/standard_extension_template/blob/master/README.md), which also documents the structure of extensions.
 
-If you're creating a *core* extension, use the [Apache License 2.0](https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE), disable issues on the GitHub repository (see [reporting issues on extensions](#reporting-issues-on-extensions) below) and include the following text in its `README.md` file:
+If you're creating an extension in an OCP repository, use the [Apache License 2.0](https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE), disable issues on the GitHub repository (see [reporting issues on extensions](#reporting-issues-on-extensions) below) and include the following text in its `README.md` file:
 
 ```
 ## Issues
@@ -26,7 +26,7 @@ Between OCDS versions, changes can be made to the ['live' version](https://githu
 
 ## Reporting issues on extensions
 
-[Issues](https://help.github.com/articles/about-issues/) on *core* extensions should be reported to the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions). Collecting issues in one place gives each more visibility and therefore a higher likelihood of being closed. It also helps to identify related issues across different extensions. When creating an issue, indicate the extension in the issue's title, e.g. *extension name: issue title*.
+[Issues](https://help.github.com/articles/about-issues/) on extensions in OCP repositories should be reported to the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions). Collecting issues in one place gives each more visibility and therefore a higher likelihood of being closed. It also helps to identify related issues across different extensions. When creating an issue, indicate the extension in the issue's title, e.g. *extension name: issue title*.
 
 To report issues on community extensions, refer to each extension's documentation.
 

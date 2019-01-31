@@ -14,10 +14,10 @@ Hosting the documentation:
 * `dev3.default.opendataservices.uk0.bigv.io`: hosts the development versions of the documentation for the core standard and its profiles. Travis has SFTP access to push developments builds to this server. It is shared with other standards.
 * GitHub Pages hosts the [Extension Explorer](https://extensions.open-contracting.org/).
 
-Hosting the validator:
+Hosting the Data Review Tool:
 
-* `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/review/) of the validator.
-* `dev.cove.opendataservices.coop`: hosts a [development version](http://dev.cove.opendataservices.coop/review/) of the validator. It is shared with other standards.
+* `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/review/).
+* `dev.cove.opendataservices.coop`: hosts a [development version](http://dev.cove.opendataservices.coop/review/). It is shared with other standards.
 
 Hosting the CRM:
 

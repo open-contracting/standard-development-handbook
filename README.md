@@ -9,7 +9,7 @@ This repository is based on OpenDataServices' [sphinx-base](https://github.com/O
 Create and activate a virtual environment, then install requirements:
 
 ```shell
-pip install commonmark==0.5.4 recommonmark==0.4.0 'sphinx<1.8' 'sphinx-rtd-theme<0.5'
+pip install -r requirements.txt
 ```
 
 And build the documentation:

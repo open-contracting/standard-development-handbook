@@ -81,7 +81,7 @@ Then, build the documentation with the new translations.
 
 ## Push translations to Transifex
 
-If text is translated locally by editing PO or POT files, the translations can be pushed to Transifex, [*after building the documentation*](../../technical/build). **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run `make force_push_all` or `tx push -s -t -f -l es,fr --no-interactive`
+If text is translated locally by editing PO or POT files, the translations can be pushed to Transifex, [*after building the documentation*](../technical/build). **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run `make force_push_all` or `tx push -s -t -f -l es,fr --no-interactive`
 
 After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 
@@ -104,3 +104,18 @@ Translated codelists are stored in language directories under `build/codelists` 
 ```bash
 for i in *.csv; do printf "\n\n$i,,,\n\n"; cat $i; done > ../all_codelists.csv
 ```
+
+## Add a community translation
+
+Once all strings are translated and reviewed in Transifex, and all warnings or issues on Transifex are resolved:
+
+1. Checkout the live branch, e.g. `git checkout 1.1`
+1. Checkout a new branch, e.g. `git checkout -b 1.1-italian`
+1. Add the locale code to `TRANSLATIONS` in `include/config.mk`
+1. Pull the locale's translations, e.g. `tx pull -f -l it`
+1. Update the `language_options` block in `standard/docs/en/_templates/layout.html`
+1. Create a pull request for the community translation
+1. [Test the translations on the build of the pull request](#test-translations)
+1. Check the `localization-note` appears on the homepage
+1. Merge the new branch onto the live branch
+1. [Build and deploy](../../technical/deployment#build-and-deploy), remembering to update `robots.txt`

@@ -41,4 +41,4 @@ The following files are created by running a build and are not version controlle
 * `.ve/`: Python virtualenv, containing all dependencies
 * `build/`: contains the built copy of the documentation website
 
-To understand `babel_ocds_codelist.cfg` and `babel_ocds_schema.cfg`, see [Understanding Transifex](../../translation/understanding_transifex).
+To understand `babel_ocds_codelist.cfg` and `babel_ocds_schema.cfg`, see [Understanding Transifex](../translation/understanding_transifex).
