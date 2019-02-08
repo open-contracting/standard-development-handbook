@@ -4,7 +4,7 @@ See the standard's page for [Building the documentation](../../../standard/techn
 
 ## Change version of OCDS
 
-Change `standard_version` in `conf.py` to the desired version of OCDS, then [rebuild the profile](#build-the-profile).
+Change `standard_tag` and `standard_version` in `conf.py` to the desired version of OCDS, then [rebuild the profile](#build-the-profile).
 
 ## Change extensions
 
