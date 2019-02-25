@@ -75,7 +75,7 @@ bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry). To quickly generate the content of `extension_versions.csv` with the new releases of core extensions, run:
 
 ```bash
-bundle exec rake registry_extension_versions
+bundle exec rake registry:extension_versions
 ```
 
 ### 2. Perform periodic updates, if appropriate
