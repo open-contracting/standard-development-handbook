@@ -14,6 +14,26 @@ Deployments are carried out using Salt, with configuration in [opendataservices-
 * `dev3.default.opendataservices.uk0.bigv.io`: hosts the development versions of the documentation for the core standard and its profiles. Travis has SFTP access to push developments builds to this server. It is shared with other standards.
 * GitHub Pages hosts the [Extension Explorer](https://extensions.open-contracting.org/).
 
+The documentation servers use Apache to serve mostly static files, 
+some redirects and some proxy passes to dynamic systems such as the [Data Review Tool](http://standard.open-contracting.org/review/).
+
+The Apache config files are deployed by Salt and the sources can be seen at 
+
+* [Live](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf)
+* [Dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-dev.conf)
+
+### Version and Language Switcher
+
+The Version and Language switcher are both powered by Apache redirects. This way, the webpage simply has a select box and a form. 
+The user goes to a `switcher` URL, and an Apache redirect redirects the user to the desired page.
+
+To do this, it has to know what branches there are, and you can see salt variables that list the branches in the config files:
+
+* `live_versions`
+* `infrastructure_live_versions`
+
+Search for `switcher` in the Apache conf files to see the config for this.
+
 ## Data Review Tool
 
 * `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/review/).
