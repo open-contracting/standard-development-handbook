@@ -392,7 +392,6 @@ config
 Martínez
 optionToCombine
 projectAdditionality
-extensiontable
 nocrossref
 Público
 landTransfer
@@ -521,7 +520,6 @@ usr
 txt
 financeAdditionality
 riskPremiumDetails
-extensionselectortable
 minProperties
 PPPs
 searchable
