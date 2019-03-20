@@ -5,17 +5,17 @@
 If you have `aspell` installed, run:
 
 ```shell
-find . -type f -not -path '*/\.*' -not -path '*/_static/*' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.html' -not -name '*.js' -not -name '*.mo' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.pyc' -not -name '*.scss' -not -name '*.sh' -not -name '*.svg' -not -name '*.txt' -exec aspell -H check '{}' ';'
+find . -type f -not -path '*/\.*' -not -path '*/_static/*' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.html' -not -name '*.js' -not -name '*.mo' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.pyc' -not -name '*.scss' -not -name '*.sh' -not -name '*.svg' -not -name '*.txt' -exec aspell -x -H check '{}' ';'
 ```
 
 This command will skip dot files, Docson files, translated codelists, and css, html, js, mo, png, po, py, pyc, sh, svg and txt files.
 
 ## Configuration
 
-`aspell` will flag many field names and proper nouns as errors. `aspell` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace `~/.aspell.en.pws` this the following:
+`aspell` will flag many field names and proper nouns as errors. `aspell` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace `~/.aspell.en.pws` with the following:
 
 ```text
-personal_ws-1.1 en 672 
+personal_ws-1.1 en 696 
 foreignBidsFromEU
 evaluationCriteria
 Extractives
@@ -51,6 +51,7 @@ DGRMSG
 SMEs
 procurements
 disaggregated
+foreignBidsFromNonEU
 maxProperties
 additionalProperties
 Marchessault
@@ -100,7 +101,9 @@ deliveryLocation
 Serghi
 conflictOfInterest
 camelCase
+totalSpend
 IATI
+FDP
 Onerhime
 qualifiedBidders
 relatedBid
@@ -111,11 +114,14 @@ boolean
 pageEnd
 technicalSpecifications
 developmentComplete
+codelist's
 codelists
 guaranteeReports
+endDateDetails
 debtEquityRatioDetails
 GBP
 privateParty
+underspend
 versioned
 Robichaud
 Kaplan
@@ -163,10 +169,11 @@ pageStart
 relatedProcess
 Dewhurst
 awardTwo
-README
+readme
 relatedRequirementID
 schemas
 sourceEntity
+behavior
 shareCapital
 physicalProcessReport
 landAvailability
@@ -207,6 +214,7 @@ Secretaría
 awardNotice
 enquiryPeriodEnd
 Edafe
+RESTful
 tariffIllustration
 PeriodUnversioned
 GeoJSON
@@ -245,6 +253,7 @@ UNCEFACT
 Greentree
 availabilityAndQuality
 assetAndLiabilityAssessment
+unflattening
 renegotiations
 organizationRole
 releaseID
@@ -269,14 +278,17 @@ submissionDocuments
 totalValue
 Enaholo
 initiationType
+memberOf
 backend
 Muqbel
 REITs
 pppModeRationale
 subtype
 Kami
+fiscalBreakdownFieldMapping
 Neontribe
 otherGovernmentSupport
+financialProgress
 codelist
 preProcurement
 OCP
@@ -346,15 +358,19 @@ participationFees
 startDate
 RDF
 png
+codebase
 Domínguez
+coveredBy
 neighboring
 contactPoint
 NONINFRINGEMENT
 arrayMergeById
+finalValue
 budgetBreakdown
 ShareholderUnversioned
 Heydon
 licensable
+procurementMethodModalities
 qualificationAmendment
 Hercher
 additionalClassifications
@@ -519,6 +535,7 @@ Inkscape
 usr
 txt
 financeAdditionality
+FDP's
 riskPremiumDetails
 minProperties
 PPPs
@@ -543,6 +560,7 @@ allOf
 interoperability
 penaltyImposed
 otherWitness
+unflatten
 ClassificationUnversioned
 SDGs
 Marcela
@@ -568,6 +586,7 @@ assetProvider
 Madejski
 contractSchedule
 designAndConstruction
+Roadmap
 completionCertificate
 Mihai
 contractNotice
@@ -577,7 +596,9 @@ smeBids
 procuringEntity
 financeAvailability
 xargs
+methodModality
 financialStatement
+unflattener
 StringNullUriVersioned
 qualificationPeriod
 foundational
@@ -642,6 +663,7 @@ servicePayments
 awardID
 unitClassificationScheme
 Za
+XLSX
 CEFACT
 earlyTermination
 lotGroups
@@ -654,11 +676,15 @@ wy
 timezones
 Validators
 evaluationIndicators
+finalValueDetails
 EPSG
+eForms
 deliveryAddress
 documentType
+nullable
 Maudry
 BudgetUnversioned
+unflattens
 Oakleigh
 CriterionUnversioned
 metricID
