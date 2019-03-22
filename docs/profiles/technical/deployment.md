@@ -50,26 +50,35 @@ Follow the [standard's instructions](../../../standard/technical/deployment#copy
 
 ### 3. Copy the schema, extension and extension ZIP file into place
 
-On the server, set the `PROFILE`, `VER`, and `RELEASE` environment variables as appropriate, e.g.:
+Login to the server:
 
+```bash
+ssh root@live2.default.opendataservices.uk0.bigv.io
 ```
+
+Set the `PROFILE`, `VER`, and `RELEASE` environment variables as appropriate, e.g.:
+
+```bash
 PROFILE=ppp # profile name
-VER=1.0 # version of profile that has already been copied to the server 
-RELEASE=1__0__0__beta # the full release name
+VER=1.0 # minor version of profile that has already been copied to the server
+RELEASE=1__0__0__beta # the full release tag name
 ```
 
 Then, run:
 
-```
-# Copy the extension.
+```bash
+# Create the profile and patched directories for the release.
+mkdir -p /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/ /home/ocds-docs/web/profiles/${PROFILE}/schema/${RELEASE}/
+
+# Copy the profile's schema and codelist files.
 cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/*.json /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
 cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/codelists /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
 
-# Create the ZIP file.
+# Create a ZIP file of the above.
 cd /home/ocds-docs/web/profiles/${PROFILE}/extension/
 zip -r ${RELEASE}.zip ${RELEASE}
 
-# Copy the patched schema.
+# Copy the patched files.
 cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/_static/patched/* /home/ocds-docs/web/profiles/${PROFILE}/schema/${RELEASE}/
 ```
 

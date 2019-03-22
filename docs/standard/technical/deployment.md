@@ -211,19 +211,41 @@ ssh root@live2.default.opendataservices.uk0.bigv.io \
 
 If a new language is supported, edit `http://standard.open-contracting.org/robots.txt`
 
-### 3. Copy the schema into place
+### 3. Copy the schema and ZIP file into place
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
+Login to the server:
 
 ```bash
 ssh root@live2.default.opendataservices.uk0.bigv.io
-mkdir /home/ocds-docs/web/schema/1__1__1/
-cp -r /home/ocds-docs/web/1.1/en/*.json /home/ocds-docs/web/schema/1__1__1/
+```
+
+Set the `VER`, and `RELEASE` environment variables as appropriate, e.g.:
+
+```bash
+VER=1.1 # minor version of OCDS that has already been copied to the server
+RELEASE=1__1__1 # the full release tag name
+```
+
+Then, run:
+
+Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
+
+```bash
+# Create the directory for the release.
+mkdir /home/ocds-docs/web/schema/${RELEASE}/
+
+# Copy the schema and codelist files.
+cp -r /home/ocds-docs/web/${VER}/en/*.json /home/ocds-docs/web/schema/${RELEASE}/
+cp -r /home/ocds-docs/web/${VER}/en/codelists /home/ocds-docs/web/schema/${RELEASE}/
+
+# Create a ZIP file of the above.
+cd /home/ocds-docs/web/schema/
+zip -r ${RELEASE}.zip ${RELEASE}
 ```
 
 The JSON files are then visible at <http://standard.open-contracting.org/schema/1__1__1/>.
