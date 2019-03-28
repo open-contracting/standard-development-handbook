@@ -108,10 +108,11 @@ Update the *major__minor__patch* version number:
 find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__1__3/1__1__4/g' \{\} \;
 ```
 
-Update `versioned-release-validation-schema.json` to match `release-schema.json`:
+Update `versioned-release-validation-schema.json` and `dereferenced-release-schema.json` to match `release-schema.json`:
 
 ```shell
 python standard/schema/utils/make_versioned_release_schema.py
+python standard/schema/utils/make_dereferenced_release_schema.py
 ```
 
 Update `meta-schema.json` to match `meta-schema-patch.json`:
