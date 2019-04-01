@@ -4,6 +4,8 @@
 
 ### Translator
 
+Before beginning, ask the [Coordinator](../workflow) to ensure that both the Transifex glossary and [`glossary` repository](https://github.com/open-contracting/glossary) are up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it, based on the process from [CRM issue #1152](https://crm.open-contracting.org/issues/1152#note-46).
+
 1. Go to the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
 1. Change the language, if appropriate
 1. Sort by "Untranslated (Descending)"
