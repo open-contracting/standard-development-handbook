@@ -17,7 +17,9 @@ Deployments are carried out using Salt, with configuration in [opendataservices-
 Apache serves static files, redirects URLs and proxies requests to dynamic systems like the [Data Review Tool](http://standard.open-contracting.org/review/). The Apache config files, deployed by Salt, are:
 
 * [live](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf)
+* [live (include)](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
 * [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-dev.conf)
+* [dev (include)](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-dev.conf.include)
 
 ### Version and Language Switchers
 
