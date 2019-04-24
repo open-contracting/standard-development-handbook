@@ -25,6 +25,12 @@ The version switcher links to a `/switcher` URL path with `branch` URL parameter
 
 These are then redirected by Apache (search for `switcher` in the config files). To do so, Apache needs to know which branches exist, which are indicated using the Salt variables `live_versions` and `infrastructure_live_versions`.
 
+### Redirects to extension website
+
+With the release of 1.1.4, extensions are moved to a new website. 
+
+Old pages are redirected by Apache (search for `extensions.open-contracting.org` in the config files). To do so, Apache needs to know which languages are used, which are indicated using the Salt variables `langs` and `langs_ppp`.
+
 ## Data Review Tool
 
 * `cove-live-ocds`: hosts the [production version](http://standard.open-contracting.org/review/).
