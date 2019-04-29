@@ -11,7 +11,7 @@ Transifex is organized into projects:
 * [OCDS Extension Explorer](https://www.transifex.com/OpenDataServices/ocds-extension-explorer/dashboard/)
 * [OCDS Extensions](https://www.transifex.com/OpenDataServices/ocds-extensions/dashboard/)
 * [OCDS for PPPs](https://www.transifex.com/OpenDataServices/ocds-for-ppps/dashboard/)
-* [OC4IDS 9.0](https://www.transifex.com/OpenDataServices/oc4ids-09/dashboard/)
+* [OC4IDS 0.9](https://www.transifex.com/OpenDataServices/oc4ids-09/dashboard/)
 * [Standard Theme](https://www.transifex.com/OpenDataServices/open-contracting-standard-theme/dashboard/): strings from the documentation theme
 * [CoVE](https://www.transifex.com/OpenDataServices/cove/dashboard/): strings from the OCDS Data Review Tool
 
