@@ -40,7 +40,7 @@ Old pages are redirected by Apache (search for `extensions.open-contracting.org`
 
 ## CRM
 
-* `crm.open-contracting.org`: hosts the Redmine CRM, on a Linode VPS, managed by Dogsbody Technology. Contact [support@dogsbodytechnology.com](mailto:support@dogsbodytechnology.com).
+* `crm.open-contracting.org`: hosts the Redmine CRM, on a Linode VPS, managed by Dogsbody Technology. Contact [support@dogsbody.com](mailto:support@dogsbody.com).
 
 ## Kingfisher
 

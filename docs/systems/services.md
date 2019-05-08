@@ -16,6 +16,10 @@ There should be at most two members with the [Owner](https://support.google.com/
 
 There should be at most two [users](https://readthedocs.org/dashboard/ocds-standard-development-handbook/users/) with the Maintainer role from each of OCP and ODS, excluding organization-wide accounts.
 
+## Redash
+
+There should be at most two users in the [admin](http://ocds-redash.default.opendataservices.uk0.bigv.io:9090/groups/1) group from each of OCP and ODS, excluding organization-wide accounts.
+
 ## Redmine
 
 There should be at most two [users](https://crm.open-contracting.org/users) with the Administrator role from each of OCP and ODS, excluding organization-wide accounts.
