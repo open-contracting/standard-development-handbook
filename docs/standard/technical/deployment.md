@@ -123,15 +123,7 @@ python standard/schema/utils/make_metaschema.py
 
 Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
-### 4. Integrate extensions
-
-Pull some files from extensions into the standard:
-
-```bash
-python standard/schema/utils/fetch_core_extensions.py
-```
-
-### 5. Set up a development instance of CoVE (OCDS Data Review Tool)
+### 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 
 ```eval_rst
   .. note::
