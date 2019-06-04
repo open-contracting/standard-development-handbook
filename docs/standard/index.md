@@ -22,4 +22,5 @@ Documentation is written in Markdown syntax with [recommonmark](https://recommon
    conventions
    translation/index
    technical/index
+   new_version_patch
 ```
