@@ -267,7 +267,24 @@ Doing a build is necessary because some URLs are updated with the branch name (e
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Update the live CoVE deployment to use the new schema.
+#### Update Lib Cove OCDS
+
+* Update the URL paths in [config.py](https://github.com/open-contracting/lib-cove-ocds/blob/master/libcoveocds/config.py).
+* Make sure all tests pass.
+* Release a new version of this library.
+
+#### Update and Deploy CoVE itself
+
+* Upgrade requirements so it uses the just released version of Lib Cove OCDS.
+* Update the URL paths in [settings.py](https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py).
+* Make sure all tests pass.
+* Deploy
+
+#### Update any other tools that use Lib Cove OCDS
+
+For other tools that use Lib Cove OCDS (like Kingfisher) make sure they are updated to use the latest version of Lib Cove OCDS.
+
+Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with it's own options, the tools own options may need changing too.
 
 ## FAQ
 
