@@ -166,7 +166,7 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 [Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
 
 Travis copies the built documentation to the development server. You can preview the documentation, e.g. for OCDS 1.1,
-<http://ocds-standard.dev3.default.opendataservices.uk0.bigv.io/1.1/en/> is the development deploy for <http://standard.open-contracting.org/1.1/en/>.
+<http://dev.standard.open-contracting.org/1.1/en/> is the development deploy for <http://standard.open-contracting.org/1.1/en/>.
 
 ### 2. Copy the files to the live server
 
@@ -178,7 +178,7 @@ Set some variables:
 
 ```bash
 VER=1.1            # (for example)
-DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev3 (see ${VER}/en/index.html)
+DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev (see ${VER}/en/index.html)
 SEQ=1              # To deploy again on the same day, increment to 2, etc.
 BASEDIR=/home/ocds-docs/web/
 ```
@@ -186,19 +186,19 @@ BASEDIR=/home/ocds-docs/web/
 Copy from dev server to your local box:
 
 ```bash
-scp -r root@dev3.default.opendataservices.uk0.bigv.io:${BASEDIR}${VER} ${VER}-${DATE}-${SEQ}
+scp -r root@dev.standard.open-contracting.org:${BASEDIR}${VER} ${VER}-${DATE}-${SEQ}
 ```
 
 Copy from your local box to the live server:
 
 ```bash
-scp -r ${VER}-${DATE}-${SEQ} root@live2.default.opendataservices.uk0.bigv.io:${BASEDIR}
+scp -r ${VER}-${DATE}-${SEQ} root@standard.open-contracting.org:${BASEDIR}
 ```
 
 Symlink the version number:
 
 ```bash
-ssh root@live2.default.opendataservices.uk0.bigv.io \
+ssh root@standard.open-contracting.org \
   "rm ${BASEDIR}${VER}; ln -sf ${VER}-${DATE}-${SEQ} ${BASEDIR}${VER}"
 ```
 
@@ -214,7 +214,7 @@ If a new language is supported, edit `http://standard.open-contracting.org/robot
 Login to the server:
 
 ```bash
-ssh root@live2.default.opendataservices.uk0.bigv.io
+ssh root@standard.open-contracting.org
 ```
 
 Set the `VER`, and `RELEASE` environment variables as appropriate, e.g.:
