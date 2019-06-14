@@ -165,8 +165,8 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 
 [Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
 
-Travis copies the built documentation to the development server. You can preview the documentation, e.g. for OCDS 1.1,
-<http://dev.standard.open-contracting.org/1.1/en/> is the development deploy for <http://standard.open-contracting.org/1.1/en/>.
+Travis copies the built documentation to the staging server. You can preview the documentation, e.g. for OCDS 1.1,
+<http://staging.standard.open-contracting.org/1.1/en/> is the staging deploy for <http://standard.open-contracting.org/1.1/en/>.
 
 ### 2. Copy the files to the live server
 
@@ -178,15 +178,15 @@ Set some variables:
 
 ```bash
 VER=1.1            # (for example)
-DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on dev (see ${VER}/en/index.html)
+DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on staging (see ${VER}/en/index.html)
 SEQ=1              # To deploy again on the same day, increment to 2, etc.
 BASEDIR=/home/ocds-docs/web/
 ```
 
-Copy from dev server to your local box:
+Copy from staging server to your local box:
 
 ```bash
-scp -r root@dev.standard.open-contracting.org:${BASEDIR}${VER} ${VER}-${DATE}-${SEQ}
+scp -r root@staging.standard.open-contracting.org:${BASEDIR}${VER} ${VER}-${DATE}-${SEQ}
 ```
 
 Copy from your local box to the live server:
@@ -258,7 +258,7 @@ Doing a build is necessary because some URLs are updated with the branch name (e
 
 * [For major, minor or patch versions, edit the version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
 * [For major and minor versions, edit `live_versions` in the Apache configuration file](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
-* For major and minor versions, edit the [dev](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
+* For major and minor versions, edit the [staging](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_staging.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
 ### 6. Update the live CoVE deployment (OCDS Data Review Tool)
 
