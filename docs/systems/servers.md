@@ -28,7 +28,7 @@ The websites are browsable at:
 * [live](http://standard.open-contracting.org/latest/en/)
 * [staging](http://staging.standard.open-contracting.org/latest/en/)
 
-There are also testing versions of both websites available. These are hosted on the same servers, but in a different apache virtual host. These can be used for testing Apache redirects and proxy changes before making those changes live. You can see a `if testing` check that can be used in the apache configurations that salt will render. The websites are browsable at:
+There are also testing versions of both websites available. These are hosted on the same servers, but in different Apache virtual hosts. These can be used for testing changes to Apache redirects and proxy settings, before making those changes live. You can see an `if testing` check that can be used in the Apache configurations that Salt will render. The websites are browsable at:
 
 * [live testing](http://testing.live.standard.open-contracting.org/latest/en/)
 * [staging testing](http://testing.staging.standard.open-contracting.org/latest/en/)
