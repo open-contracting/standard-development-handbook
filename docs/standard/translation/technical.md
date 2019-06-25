@@ -91,10 +91,9 @@ After pushing, check that the translation progress on Transifex is minimally aff
 Pull requests are built and accessible at `https://standard.open-contracting.org/BRANCH/`. Translations of Markdown pages using Sphinx directives should be checked in particular:
 
 * `es/getting_started/` uses `jsoninclude`
-* `es/schema/reference/` uses `jsonschema`
+* `es/schema/reference/` uses `jsonschema` and `extensionlist`
 * `es/schema/release/` has a Docson widget
 * `es/schema/codelists/` uses `csv-table-no-translate`
-* `es/extensions/party_details/` uses `extensionlist`
 
 ## Review translated codelists
 
