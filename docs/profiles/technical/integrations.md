@@ -4,7 +4,7 @@
 
 Each branch of a profile's repository is automatically built to:
 
-`http://standard.open-contracting.org/profiles/{root}/{branch}/en/`
+`https://standard.open-contracting.org/profiles/{root}/{branch}/en/`
 
 ### Configuration
 

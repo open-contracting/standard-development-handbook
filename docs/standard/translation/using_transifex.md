@@ -18,12 +18,12 @@ Before beginning, ask the [Coordinator](../workflow) to ensure that both the Tra
 
 The [glossary in Transifex](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) contains key terms that must be used consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
 
-It helps to see where the strings appear in context in the [OCDS documentation](http://standard.open-contracting.org/). [Understanding Transifex](understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can:
+It helps to see where the strings appear in context in the [OCDS documentation](https://standard.open-contracting.org/). [Understanding Transifex](understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can:
 
 1. Take the name of a resource, e.g. `schema--changelog`
 1. Remove `--index` if present
 1. Replace `--` with `/`
-1. Put it in the pattern `http://standard.open-contracting.org/{version}/en/{name}/`, like <http://standard.open-contracting.org/latest/en/schema/changelog/>
+1. Put it in the pattern `https://standard.open-contracting.org/{version}/en/{name}/`, like <https://standard.open-contracting.org/latest/en/schema/changelog/>
 
 ```eval_rst
   .. note::

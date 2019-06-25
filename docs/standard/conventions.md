@@ -17,7 +17,7 @@ Any object that is contained within an array SHOULD have an `id` field.
 This is because:
 
 * `id` values play a [special role in the flatten-tool](http://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers) used to round-trip between JSON and tabular representations of OCDS.
-* `id` values are used to determine [how lists of objects are merged](http://standard.open-contracting.org/latest/en/schema/merging/#identifier-merge) when creating a compiledRelease.
+* `id` values are used to determine [how lists of objects are merged](https://standard.open-contracting.org/latest/en/schema/merging/#identifier-merge) when creating a compiledRelease.
 
 Otherwise, the array will be merged as a whole.
 
@@ -39,7 +39,7 @@ Any non-required field pointing to a literal or an array of literals should supp
 }
 ```
 
-Allowing properties to be `null` is important to the [merging process](http://standard.open-contracting.org/latest/en/schema/merging/), in which `null` is used to [remove a value from the compiledRelease](http://standard.open-contracting.org/latest/en/schema/reference/#emptying-fields-and-values).
+Allowing properties to be `null` is important to the [merging process](https://standard.open-contracting.org/latest/en/schema/merging/), in which `null` is used to [remove a value from the compiledRelease](https://standard.open-contracting.org/latest/en/schema/reference/#emptying-fields-and-values).
 
 Any non-required field pointing to an array of objects should not allow `null` as a value, as array entries should be explicitly tagged for removal following the pattern outlined in [standard#232](https://github.com/open-contracting/standard/issues/232).
 

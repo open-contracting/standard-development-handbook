@@ -52,7 +52,7 @@ bundle exec rake release:review_extensions
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Each OCDS version refers to a specific version of each [core extension](http://standard.open-contracting.org/latest/en/extensions/#core-extensions). The [governance process](http://standard.open-contracting.org/latest/en/support/governance/#versions) will establish whether to create a new version of a core extension for this OCDS version.
+Each OCDS version refers to a specific version of each [core extension](https://standard.open-contracting.org/latest/en/extensions/#core-extensions). The [governance process](https://standard.open-contracting.org/latest/en/support/governance/#versions) will establish whether to create a new version of a core extension for this OCDS version.
 
 For each *core* extension for which to create a new version:
 
@@ -121,7 +121,7 @@ Update `meta-schema.json` to match `meta-schema-patch.json`:
 python standard/schema/utils/make_metaschema.py
 ```
 
-Update the standard's [changelog](http://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
+Update the standard's [changelog](https://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
 ### 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 
@@ -166,7 +166,7 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 [Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
 
 Travis copies the built documentation to the staging server. You can preview the documentation, e.g. for OCDS 1.1,
-<http://staging.standard.open-contracting.org/1.1/en/> is the staging deploy for <http://standard.open-contracting.org/1.1/en/>.
+<http://staging.standard.open-contracting.org/1.1/en/> is the staging deploy for <https://standard.open-contracting.org/1.1/en/>.
 
 ### 2. Copy the files to the live server
 
@@ -202,7 +202,7 @@ ssh root@standard.open-contracting.org \
   "rm ${BASEDIR}${VER}; ln -sf ${VER}-${DATE}-${SEQ} ${BASEDIR}${VER}"
 ```
 
-If a new language is supported, edit `http://standard.open-contracting.org/robots.txt`
+If a new language is supported, edit `https://standard.open-contracting.org/robots.txt`
 
 ### 3. Copy the schema and ZIP file into place
 
@@ -241,11 +241,11 @@ cd /home/ocds-docs/web/schema/
 zip -r ${RELEASE}.zip ${RELEASE}
 ```
 
-The JSON files are then visible at <http://standard.open-contracting.org/schema/1__1__1/>.
+The JSON files are then visible at <https://standard.open-contracting.org/schema/1__1__1/>.
 
 ### 4. Update the "latest" branch
 
-If the build should also appear at [/latest/](http://standard.open-contracting.org/latest/), update the `latest` branch on GitHub to point to the same commit, then repeat [Build on Travis](#build-on-travis) and [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
+If the build should also appear at [/latest/](https://standard.open-contracting.org/latest/), update the `latest` branch on GitHub to point to the same commit, then repeat [Build on Travis](#build-on-travis) and [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
 
 Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
 

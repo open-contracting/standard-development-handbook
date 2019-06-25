@@ -113,11 +113,11 @@ For multiple values:
 
 For the `id` field of items in arrays:
 
-    A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
+    A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](https://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
 
 **Example:**
 
-> A locally unique identifier for this document. Used to track changes to this document and to [merge](http://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
+> A locally unique identifier for this document. Used to track changes to this document and to [merge](https://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
 
 ##### Titles
 

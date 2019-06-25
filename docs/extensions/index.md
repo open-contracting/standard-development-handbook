@@ -4,7 +4,7 @@ An OCDS release or record package can declare one or more extensions. Extensions
 
 ## Creating an extension
 
-[Read this draft policy](https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit) to decide whether to create a [core, community or local extension](http://standard.open-contracting.org/latest/en/extensions/).
+[Read this draft policy](https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit) to decide whether to create a [core, community or local extension](https://standard.open-contracting.org/latest/en/extensions/).
 
 To create the extension, [use the extension template](https://github.com/open-contracting/standard_extension_template/blob/master/README.md), which also documents the structure of extensions.
 

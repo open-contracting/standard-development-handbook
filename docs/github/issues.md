@@ -1,6 +1,6 @@
 # Issues
 
-Issues requesting updates to the standard are handled as documented in the [revision process](http://standard.open-contracting.org/latest/en/support/governance/#revision-process).
+Issues requesting updates to the standard are handled as documented in the [revision process](https://standard.open-contracting.org/latest/en/support/governance/#revision-process).
 
 ## Managing long issues
 

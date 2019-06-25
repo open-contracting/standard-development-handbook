@@ -8,7 +8,7 @@ These schema files are processed during the [documentation build](technical/buil
 
 ## Forward and backwards compatibility
 
-The standard's documentation contains a [deprecation policy](http://standard.open-contracting.org/latest/en/schema/deprecation/) and a description of its approach to [semantic versioning](http://standard.open-contracting.org/latest/en/support/governance/#versions).
+The standard's documentation contains a [deprecation policy](https://standard.open-contracting.org/latest/en/schema/deprecation/) and a description of its approach to [semantic versioning](https://standard.open-contracting.org/latest/en/support/governance/#versions).
 
 ## Our extensions to JSON Schema
 

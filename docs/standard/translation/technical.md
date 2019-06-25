@@ -88,7 +88,7 @@ After pushing, check that the translation progress on Transifex is minimally aff
 
 ## Test translations
 
-Pull requests are built and accessible at `http://standard.open-contracting.org/BRANCH/`. Translations of Markdown pages using Sphinx directives should be checked in particular:
+Pull requests are built and accessible at `https://standard.open-contracting.org/BRANCH/`. Translations of Markdown pages using Sphinx directives should be checked in particular:
 
 * `es/getting_started/` uses `jsoninclude`
 * `es/schema/reference/` uses `jsonschema`
