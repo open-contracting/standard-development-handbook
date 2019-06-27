@@ -56,7 +56,19 @@ Old pages are redirected by Apache (search for `extensions.open-contracting.org`
 
 ## Kingfisher
 
-* `scrape.kingfisher.open-contracting.org`
-* `archive.kingfisher.open-contracting.org`
+OCDS Kingfisher is the data access and analysis platform for OCDS data. 
 
-`dev.cove` also hosts subdomains.
+There is a hosted version of the software, called [Hosted Kingfisher](https://ocdskingfisher.readthedocs.io/en/latest/). 
+
+### Hosting
+
+There are two physical servers for Kingfisher, which have four roles - scrape, process, analyse and archive. 
+
+* `scrape.kingfisher.open-contracting.org` hosts scrape, process and analyse
+* `archive.kingfisher.open-contracting.org` hosts archive. 
+
+These allocations may change, so always use the hostname to access services:
+* `scrape.kingfisher.open-contracting.org`
+* `process.kingfisher.open-contracting.org`
+* `analyse.kingfisher.open-contracting.org`
+* `archive.kingfisher.open-contracting.org`
