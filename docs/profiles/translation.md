@@ -6,25 +6,70 @@ See the standard's page for [Translation](../../../standard/translation/index).
 
 There is often overlap between a profile and the standard, e.g. all the text from the unextended schema.
 
-We can copy translations using `pretranslate` from `translate-toolkit` (replace `PROFILE`):
+These instructions are similar to others in [ocds-extensions-translations](https://github.com/open-contracting/ocds-extensions-translations#populate-initial-translations) (using the fish shell on macOS).
 
-```bash
-git clone https://github.com/open-contracting/standard.git
-git clone https://github.com/open-contracting/PROFILE.git
+1. Install `translate-toolkit`:
 
-# Merge all the standard's translations for one language into a single file.
-msgcat standard/standard/docs/locale/es/LC_MESSAGES/{*.po,*/*.po} > PROFILE/es.po
+        brew install translate-toolkit
 
-cd PROFILE
+1. Install `python-Levenshtein`:
 
-# Extract POT files from JSON, CSV and Markdown files.
-make extract
+        eval (brew --prefix translate-toolkit)/libexec/bin/pip install python-Levenshtein
 
-# Copy the translations.
-for f in locale/es/LC_MESSAGES/{*.po,*/*.po}; do
-  pretranslate --tm es.po -t $f build/locale/${f}t $f;
-done
-```
+1. Set environment variables:
+
+        set lang language
+        set wip path/to/profile/directory
+
+1. Change into the `standard` directory
+1. Prepare a compendium from the `standard` repository:
+
+        git checkout 1.1
+        msgcat --use-first standard/docs/locale/$lang/**.po > $wip/$lang-standard.po
+        git checkout 1.1-dev
+
+1. Change into the `ocds-extensions-translations` directory
+1. Prepare a compendium from the profile's extensions, for example, for OCDS for PPPs:
+
+        for version in bids/v1.1.4 budget/master budget_project/master charges/master documentation_details/master finance/master location/v1.1.4 metrics/master milestone_documents/v1.1.4 performance_failures/master process_title/v1.1.4 qualification/master requirements/master risk_allocation/master shareholders/master signatories/master tariffs/master transaction_milestones/master ppp/master
+          msgcat --use-first locale/$lang/LC_MESSAGES/$version/**.po > $lang-(echo $version | tr '/' '-').po
+        end
+        msgcat --use-first (ls $lang-*.po) > $wip/$lang-extensions.po
+        rm -f $lang-*.po
+
+1. Change into the profile's directory
+1. Prepare a compendium from the profile's repository, and merge it:
+
+        if [ -d locale/$lang/LC_MESSAGES ]
+          msgcat --use-first $lang-standard.po $lang-extensions.po locale/$lang/**.po > $lang.po
+        else
+          msgcat --use-first $lang-standard.po $lang-extensions.po > $lang.po
+        end
+
+1. Create the POT files:
+
+        make extract
+
+1. Re-create the PO files:
+
+        rm -rf locale/$lang/LC_MESSAGES
+        sphinx-intl update -p build/locale -d locale -l $lang
+
+1. Pre-populate the PO files:
+
+        cd locale/$lang/LC_MESSAGES
+        for f in **.po
+          pretranslate --nofuzzymatching -t ../../../$lang.po ../../../build/locale/{$f}t $f
+        end
+        cd ../../..
+
+1. Count untranslated messages:
+
+        pocount --incomplete locale/$lang/LC_MESSAGES
+
+1. Clean up:
+
+        rm -f $lang-standard.po $lang-extensions.po $lang.po
 
 ## Technical implementation of translation
 
