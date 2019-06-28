@@ -77,5 +77,4 @@ See the standard's page for [Technical implementation of translation](../../../s
 
 * `babel_ocds_codelist.cfg` indicates the codelist CSV files in the consolidated extension and the patched OCDS (`schema/*/codelists/*.csv`) from which to extract strings to translate.
 * `babel_ocds_schema.cfg` indicates the JSON Schema files in the consolidated extension and the patched OCDS (`schema/*/*-schema.json`) from which to extract strings to translate.
-* `conf.py` calls `translate_codelists` to translate the codelist files from `schema/profile/codelists` to `docs/extensions/codelists_translated`, and from `schema/patched/codelists` to `docs/_static/patched/codelists`.
-* `conf.py` calls `translate_schema` to translate the schema files from `schema/patched` to `docs/_static/patched`.
+* `conf.py` calls `translate` to translate the JSON Schema files and codelist CSV files from `schema/profile` to `build/<lang>`, and from `schema/patched` to `docs/_static/patched`.
