@@ -53,7 +53,7 @@ Follow the [standard's instructions](../../../standard/technical/deployment#copy
 Login to the server:
 
 ```bash
-ssh root@live2.default.opendataservices.uk0.bigv.io
+ssh root@live.docs.opencontracting.uk0.bigv.io
 ```
 
 Set the `PROFILE`, `VER`, and `RELEASE` environment variables as appropriate, e.g.:

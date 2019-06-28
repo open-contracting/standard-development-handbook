@@ -47,7 +47,7 @@ Old pages are redirected by Apache (search for `extensions.open-contracting.org`
 
 ## Data Review Tool
 
-* `cove-live-ocds`: hosts the [production version](https://standard.open-contracting.org/review/).
+* `cove-live-ocds-2.default.opendataservices.uk0.bigv.io`: hosts the [production version](https://standard.open-contracting.org/review/).
 * `dev.cove.opendataservices.coop`: hosts a [development version](http://dev.cove.opendataservices.coop/review/). It is shared with other standards.
 
 ## CRM

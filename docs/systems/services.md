@@ -18,7 +18,7 @@ There should be at most two [users](https://readthedocs.org/dashboard/ocds-stand
 
 ## Redash
 
-There should be at most two users in the [admin](http://ocds-redash.default.opendataservices.uk0.bigv.io:9090/groups/1) group from each of OCP and ODS, excluding organization-wide accounts.
+There should be at most two users in the [admin](http://live.redash.opencontracting.uk0.bigv.io:9090/groups/1) group from each of OCP and ODS, excluding organization-wide accounts.
 
 ## Redmine
 
