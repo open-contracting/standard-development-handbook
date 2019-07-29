@@ -104,3 +104,13 @@ To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 1. Run (replace `path/to` twice with the output of `pwd` above):
 
         for i in *; if [ -d $i ]; cd $i; echo $i; path/to/bin/mdl --git-recurse --style path/to/mdlrc.rb .; cd ..; end; end
+
+## Release process
+
+1. Ensure all tests pass on Travis
+1. Ensure the version number is correct in `setup.py` and `docs/conf.py` (if present)
+1. Ensure the changelog is up-to-date and dated
+1. Run `check-manifest` (`pip install check-manifest` if not yet installed)
+1. Tag the release: `git tag -a x.y.z -m 'x.y.z release.'; git push --tags`
+1. Upload to PyPI: `python setup.py sdist upload`
+1. Announce on the [discussion group](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) if relevant
