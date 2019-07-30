@@ -72,7 +72,7 @@ setup(
     url='https://github.com/open-contracting/REPOSITORY',
     description='DESCRIPTION',
     license='BSD',
-    packages=find_packages(exclude=['tests']),
+    packages=find_packages(exclude=['tests', 'tests.*']),
     long_description=long_description,
     install_requires=[
         'REQUIREMENT',
