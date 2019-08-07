@@ -60,6 +60,11 @@ OCDS Kingfisher is the data access and analysis platform for OCDS data.
 
 There is a hosted version of the software, called [Hosted Kingfisher](https://ocdskingfisher.readthedocs.io/en/latest/). 
 
+## Standard Search
+
+`live.standard-search.opencontracting.uk0.bigv.io` hosts the standard search service, 
+which is called directly from the web browser by [JavaScript hosted in the standard_theme repository](https://github.com/open-contracting/standard_theme/blob/open_contracting/standard_theme/static/js/search.js).
+
 ### Hosting
 
 There are two physical servers for Kingfisher, which have four roles - scrape, process, analyse and archive. 
