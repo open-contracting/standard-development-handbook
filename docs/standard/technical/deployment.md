@@ -192,13 +192,13 @@ scp -r root@staging.standard.open-contracting.org:${BASEDIR}${VER} ${VER}-${DATE
 Copy from your local box to the live server:
 
 ```bash
-scp -r ${VER}-${DATE}-${SEQ} root@standard.open-contracting.org:${BASEDIR}
+scp -r ${VER}-${DATE}-${SEQ} root@live.standard.open-contracting.org:${BASEDIR}
 ```
 
 Symlink the version number:
 
 ```bash
-ssh root@standard.open-contracting.org \
+ssh root@live.standard.open-contracting.org \
   "rm ${BASEDIR}${VER}; ln -sf ${VER}-${DATE}-${SEQ} ${BASEDIR}${VER}"
 ```
 
@@ -214,7 +214,7 @@ If a new language is supported, edit `https://standard.open-contracting.org/robo
 Login to the server:
 
 ```bash
-ssh root@standard.open-contracting.org
+ssh root@live.standard.open-contracting.org
 ```
 
 Set the `VER`, and `RELEASE` environment variables as appropriate, e.g.:
