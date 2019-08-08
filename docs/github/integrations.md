@@ -6,7 +6,7 @@ Used to measure test coverage.
 
 ## ReadTheDocs
 
-Used to build the handbook. See [the readme](https://github.com/open-contracting/standard-development-handbook/blob/master/README.md).
+Used to build this handbook and Python package documentation. See [the readme](https://github.com/open-contracting/standard-development-handbook/blob/master/README.md).
 
 ## Travis CI
 
