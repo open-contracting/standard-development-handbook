@@ -45,6 +45,12 @@ With the release of 1.1.4, extensions are moved to a new website.
 
 Old pages are redirected by Apache (search for `extensions.open-contracting.org` in the config files). To do so, Apache needs to know which languages are used, which are indicated using the Salt variables `langs` and `langs_ppp`.
 
+### Standard Search
+
+Search facilities are provided by the [Standard Search Tool](https://github.com/OpenDataServices/standard-search), running on `standard-search.open-contracting.org`.
+The Travis deploy scripts call this to make it index sites ([Standard](https://github.com/open-contracting/deploy/blob/master/deploy-standard.sh), [Profile](https://github.com/open-contracting/deploy/blob/master/deploy-profile.sh), [Infrastructure](https://github.com/open-contracting/deploy/blob/master/deploy-infrastructure.sh)).
+A [Javascript File](https://github.com/open-contracting/standard_theme/blob/open_contracting/standard_theme/static/js/search.js) in the standard theme calls this server and provides the functionality to the end user.
+
 ## Data Review Tool
 
 * `live.cove.opencontracting.uk0.bigv.io`: hosts the [production version](https://standard.open-contracting.org/review/).
