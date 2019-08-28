@@ -48,7 +48,9 @@ Old pages are redirected by Apache (search for `extensions.open-contracting.org`
 ### Standard Search
 
 Search facilities are provided by the [Standard Search Tool](https://github.com/OpenDataServices/standard-search), running on `standard-search.open-contracting.org`.
+
 The Travis deploy scripts call this to make it index sites ([Standard](https://github.com/open-contracting/deploy/blob/master/deploy-standard.sh), [Profile](https://github.com/open-contracting/deploy/blob/master/deploy-profile.sh), [Infrastructure](https://github.com/open-contracting/deploy/blob/master/deploy-infrastructure.sh)).
+
 A [Javascript File](https://github.com/open-contracting/standard_theme/blob/open_contracting/standard_theme/static/js/search.js) in the standard theme calls this server and provides the functionality to the end user.
 
 ## Data Review Tool
@@ -65,11 +67,6 @@ A [Javascript File](https://github.com/open-contracting/standard_theme/blob/open
 OCDS Kingfisher is the data access and analysis platform for OCDS data. 
 
 There is a hosted version of the software, called [Hosted Kingfisher](https://ocdskingfisher.readthedocs.io/en/latest/). 
-
-## Standard Search
-
-`live.standard-search.opencontracting.uk0.bigv.io` hosts the standard search service, 
-which is called directly from the web browser by [JavaScript hosted in the standard_theme repository](https://github.com/open-contracting/standard_theme/blob/open_contracting/standard_theme/static/js/search.js).
 
 ### Hosting
 
