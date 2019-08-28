@@ -47,11 +47,9 @@ Old pages are redirected by Apache (search for `extensions.open-contracting.org`
 
 ### Standard Search
 
-Search facilities are provided by the [Standard Search Tool](https://github.com/OpenDataServices/standard-search), running on `standard-search.open-contracting.org`.
+[Standard Search](https://github.com/OpenDataServices/standard-search) runs on `standard-search.open-contracting.org`. The [`search.js` file](https://github.com/open-contracting/standard_theme/blob/open_contracting/standard_theme/static/js/search.js) in the `standard_theme` repository sends a request to its search endpoint to retrieve search results.
 
-The Travis deploy scripts call this to make it index sites ([Standard](https://github.com/open-contracting/deploy/blob/master/deploy-standard.sh), [Profile](https://github.com/open-contracting/deploy/blob/master/deploy-profile.sh), [Infrastructure](https://github.com/open-contracting/deploy/blob/master/deploy-infrastructure.sh)).
-
-A [Javascript File](https://github.com/open-contracting/standard_theme/blob/open_contracting/standard_theme/static/js/search.js) in the standard theme calls this server and provides the functionality to the end user.
+The Travis deploy scripts send requests to its indexing endpoint to index the contents of: ([OCDS documentation](https://github.com/open-contracting/deploy/blob/master/deploy-standard.sh), [OCDS profiles](https://github.com/open-contracting/deploy/blob/master/deploy-profile.sh), and [OC4IDS documentation](https://github.com/open-contracting/deploy/blob/master/deploy-infrastructure.sh)).
 
 ## Data Review Tool
 
