@@ -4,12 +4,12 @@
 
 ## Development tasks
 
-### Update OCDS Show for PPPs
+### Update examples
 
-The profile contains a copy of OCDS Show for PPPs. To update it:
+The profile contains example files from OCDS Show for PPPs. To update them:
 
 ```shell
-make update_ocds_show
+make update_examples
 ```
 
 ### Change extensions or version of OCDS
