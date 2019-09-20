@@ -20,6 +20,8 @@ Then, from the profile's Travis page:
   1. Click "Add"
   1. Enter "PRIVATE_KEY" in the first input
   1. Enter the private key in the second input
+  1. Enter "SEARCH_SECRET" in the first input
+  1. Enter the search secret in the second input
   1. Click "Add"
 
 ## ReadTheDocs
