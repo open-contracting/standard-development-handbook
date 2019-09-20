@@ -9,4 +9,5 @@
    spellcheck
    build
    deployment
+   integrations
 ```

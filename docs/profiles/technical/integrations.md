@@ -6,23 +6,7 @@ Each branch of a profile's repository is automatically built to:
 
 `https://standard.open-contracting.org/profiles/{root}/{branch}/en/`
 
-### Configuration
-
-First, get a version of the `ocds-docs` user's private key without newlines or spaces: `cat id_rsa | tr '\n' '#' | tr ' ' '_'`
-
-Then, from the profile's Travis page:
-
-1. Click "More options" and "Settings"
-1. Under "Environment Variables":
-  1. Enter "PROFILE_NAME" in the first input
-  1. Enter a profile name matching the `root` block in `layout.html` in the second input
-  1. Set "Display value in build log" to "ON"
-  1. Click "Add"
-  1. Enter "PRIVATE_KEY" in the first input
-  1. Enter the private key in the second input
-  1. Enter "SEARCH_SECRET" in the first input
-  1. Enter the search secret in the second input
-  1. Click "Add"
+See the standard's page for [Travis CI](../../../standard/technical/integrations).
 
 ## ReadTheDocs
 
