@@ -6,19 +6,25 @@ The staff of the following organizations may have administrative roles:
 * [Open Data Services Co-operative](http://opendataservices.coop) (ODS)
 * [Iniciativa Latinoamericana por los Datos Abiertos](https://idatosabiertos.org/acerca-de-nosotros/) (ILDA)
 
-## Google Analytics
+## Google
+
+### Analytics
 
 There should be at most two [users](https://analytics.google.com/analytics/web/#/a35677147w162037252p163071392/admin/suiteusermanagement/account) with all permissions from OCP. There should be at most two users with the Read & Analyze permissions from each other organization.
 
-## Google Cloud Platform
+### Cloud Platform
 
 [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts, `ods-crm-redmine-backup` and `data@open-contracting.org`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. There should be only one project ([`ocds`](https://console.cloud.google.com/home/dashboard?folder=&project=ocds-172716)), and it should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`).
 
-## Google Groups
+### Groups
 
 * [standard-discuss](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss)
 
 There should be at most two members with the [Owner](https://support.google.com/a/answer/167094?hl=en) role from OCP. There should be at most two members with the Manager role from each other organization.
+
+### Webmaster Central
+
+There should be at most two [verified owners](https://www.google.com/webmasters/verification/details?hl=en&siteUrl=https://www.open-contracting.org/) from each organization.
 
 ## ReadTheDocs
 
