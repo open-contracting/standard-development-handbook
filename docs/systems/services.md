@@ -6,6 +6,10 @@ The staff of the following organizations may have administrative roles:
 * [Open Data Services Co-operative](http://opendataservices.coop) (ODS)
 * [Iniciativa Latinoamericana por los Datos Abiertos](https://idatosabiertos.org/acerca-de-nosotros/) (ILDA)
 
+## Google Analytics
+
+There should be at most two [users](https://analytics.google.com/analytics/web/#/a35677147w162037252p163071392/admin/suiteusermanagement/account) with all permissions from OCP. There should be at most two users with the Read & Analyze permissions from each other organization.
+
 ## Google Cloud Platform
 
 [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts, `ods-crm-redmine-backup` and `data@open-contracting.org`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. There should be only one project ([`ocds`](https://console.cloud.google.com/home/dashboard?folder=&project=ocds-172716)), and it should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`).
