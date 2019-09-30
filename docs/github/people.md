@@ -4,7 +4,7 @@ The staff of the following organizations may be [members](https://github.com/org
 
 * [Open Contracting Partnership](https://www.open-contracting.org/about/team/)
 * [Open Data Services Co-operative](http://opendataservices.coop)
-* [Iniciativa Latinoamericana por los Datos Abiertos](https://idatosabiertos.org/acerca-de-nosotros/)
+* [Centro de Desarrollo Sostenible](http://www.cds.com.py)
 
 There should be at most two members with the [Owner](https://help.github.com/articles/permission-levels-for-an-organization/) role from each organization.
 
