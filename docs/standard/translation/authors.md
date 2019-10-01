@@ -4,7 +4,7 @@ This page describes the responsibilities of authors of content to be translated.
 
 ## Proposing new terms for the glossary
 
-See the [terminology](../terminology#proposal-review-inclusion) page.
+See the [terminology](terminology.html#proposal-review-inclusion) page.
 
 ## Handling minor changes
 
@@ -20,7 +20,7 @@ In Transifex, the "Suggestions" tab displays similar source strings and their tr
 
 The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
 
-Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then force-push the translations to Transifex. See the important caveats under the [translation technical processes](../technical#push-and-pull-translations-from-transifex).
+Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then force-push the translations to Transifex. See the important caveats under the [translation technical processes](technical.html#push-and-pull-translations-from-transifex).
 
 ```eval_rst
   .. note::

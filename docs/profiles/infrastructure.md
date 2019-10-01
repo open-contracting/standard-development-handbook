@@ -2,11 +2,11 @@
 
 ## Deployment
 
-This process is the [same as the process for the Open Contracting Data Standard](../../standard/technical/deployment.md), with some changes, which are listed here.
+This process is the [same as the process for the Open Contracting Data Standard](../../standard/technical/deployment), with some changes, which are listed here.
 
 ### 2. Copy the files to the live server
 
-Follow the [standard's instructions](../../../standard/technical/deployment#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/infrastructure`.
+Follow the [standard's instructions](../standard/technical/deployment.html#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/infrastructure`.
 
 ### 3. Copy the schema into place
 

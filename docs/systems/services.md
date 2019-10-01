@@ -4,7 +4,7 @@ The staff of the following organizations may have administrative roles:
 
 * [Open Contracting Partnership](https://www.open-contracting.org/about/team/) (OCP)
 * [Open Data Services Co-operative](http://opendataservices.coop) (ODS)
-* [Centro de Desarrollo Sostenible](https//www.cds.com.py) (CDS)
+* [Centro de Desarrollo Sostenible](http://www.cds.com.py) (CDS)
 
 ## Google
 

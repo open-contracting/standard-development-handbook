@@ -8,7 +8,7 @@ For changes to the documentation only (no schema changes), start from [Merge and
 
 For changes to the theme only, start from [Build and deploy](#build-and-deploy).
 
-To add a community translation, [follow these instructions](../../translation/technical#add-a-community-translation).
+To add a community translation, [follow these instructions](../translation/technical.html#add-a-community-translation).
 
 ## Schemas and extensions
 
@@ -16,10 +16,10 @@ To add a community translation, [follow these instructions](../../translation/te
 
 #### Review pull requests and recent changes
 
-For each *core* extension, [spell check](spellcheck), [run Markdownlint](../../../coding#linting), and ensure it:
+For each *core* extension, [spell check](spellcheck), [run Markdownlint](../../coding.html#linting), and ensure it:
 
 * [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
-* Matches the description in [Creating extensions](../../../extensions#creating-extensions) regarding license, issues and `README.md`
+* Matches the description in [Creating extensions](../../extensions.html#creating-extensions) regarding license, issues and `README.md`
 * [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
 
 The following Rake tasks from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) will report or correct issues with licenses, issues, `README.md`, wikis, branches, and topics:
@@ -136,15 +136,15 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 ### 1. Push and pull updated translations
 
-1. [Push strings to translate to Transifex](../../translation/technical#push-strings-to-translate-to-transifex).
-1. Check all strings are [translated](../../translation/using_transifex#translator) and [reviewed](../../translation/using_transifex#reviewer) in supported translations, e.g. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
+1. [Push strings to translate to Transifex](../translation/technical.html#push-strings-to-translate-to-transifex).
+1. Check all strings are [translated](../translation/using_transifex.html#translator) and [reviewed](../translation/using_transifex.html#reviewer) in supported translations, e.g. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/workflow).
-1. Check the [warnings](../../translation/using_transifex#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
-1. [Pull supported translations from Transifex](../../translation/technical#pull-translations-from-transifex).
-1. Check the [issues](../../translation/using_transifex#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
-1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../../translation/technical#push-translations-to-transifex).
+1. Check the [warnings](../translation/using_transifex.html#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
+1. [Pull supported translations from Transifex](../translation/technical.html#pull-translations-from-transifex).
+1. Check the [issues](../translation/using_transifex.html#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
+1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../translation/technical.html#push-translations-to-transifex).
 1. Create a pull request for the updated translation files.
-1. [Test the translations on the build of the pull request](../../translation/technical#test-translations).
+1. [Test the translations on the build of the pull request](../translation/technical.html#test-translations).
 
 ### 2. Merge the development branch onto the live branch
 

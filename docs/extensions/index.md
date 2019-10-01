@@ -20,7 +20,7 @@ To publish the extension, [add it the extension registry](https://github.com/ope
 
 ## Changing *core* extensions
 
-The versioning of core extensions is under discussion in a [pull request](https://github.com/open-contracting/standard/pull/674). For now, see [creating new versions of core extensions](../standard/technical/deployment#create-new-versions-of-core-extensions).
+The versioning of core extensions is under discussion in a [pull request](https://github.com/open-contracting/standard/pull/674). For now, see [creating new versions of core extensions](../standard/technical/deployment.html#create-new-versions-of-core-extensions).
 
 Between OCDS versions, changes can be made to the ['live' version](https://github.com/open-contracting/extension_registry#extension_versionscsv) of a core extension; this can be treated as a working draft of a future version.
 

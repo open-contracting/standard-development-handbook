@@ -2,7 +2,7 @@
 
 This page documents the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation.
 
-You should only perform these tasks once the source files are frozen, after having completed [Schemas and extensions](../../technical/deployment#schemas-and-extensions) in the deployment process.
+You should only perform these tasks once the source files are frozen, after having completed [Schemas and extensions](../technical/deployment.html#schemas-and-extensions) in the deployment process.
 
 ## Configure Transifex
 
@@ -116,4 +116,4 @@ Once all strings are translated and reviewed in Transifex, and all warnings or i
 1. [Test the translations on the build of the pull request](#test-translations)
 1. Check the `localization-note` appears on the homepage
 1. Merge the new branch onto the live branch
-1. [Build and deploy](../../technical/deployment#build-and-deploy), remembering to update `robots.txt`
+1. [Build and deploy](../technical/deployment.html#build-and-deploy), remembering to update `robots.txt`

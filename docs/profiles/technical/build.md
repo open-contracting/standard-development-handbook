@@ -10,7 +10,7 @@ Change `standard_tag` and `standard_version` in `conf.py` to the desired version
 
 To change the extensions in a profile, change `extension_versions` in `conf.py`, then [rebuild the profile](#build-the-profile).
 
-Extensions must be in the [extension registry](https://github.com/open-contracting/extension_registry) and should be tagged and released. See [creating new releases of core extensions](../../../standard/technical/deployment#create-new-releases-of-core-extensions).
+Extensions must be in the [extension registry](https://github.com/open-contracting/extension_registry) and should be tagged and released. See [creating new releases of core extensions](../../standard/technical/deployment.html#create-new-versions-of-core-extensions).
 
 ## Build the profile
 
