@@ -34,15 +34,6 @@ There should be at most two [verified owners](https://www.google.com/webmasters/
 
 ## PyPi
 
-There should be at most one user with the [Owner role](https://pypi.org/help/#collaborator-roles) from each of OCP and ODS (OpenDataServices). Only users who are reasonably expected to upload releases should have the Maintainer role. Depending on the package, these include:
-
-* benwebb (Ben Webb)
-* kindly (David Raznick)
-* odscjames (James Baster)
-* rhiaro (Amy Guy)
-
-Packages include:
-
 * [json-merge-patch](https://pypi.org/manage/project/json-merge-patch/collaboration/)
 * [libcoveoc4ids](https://pypi.org/manage/project/libcoveoc4ids/collaboration/)
 * [libcoveocds](https://pypi.org/manage/project/libcoveocds/collaboration/)
@@ -50,6 +41,13 @@ Packages include:
 * [ocdsextensionregistry](https://pypi.org/manage/project/ocdsextensionregistry/collaboration/)
 * [ocdskit](https://pypi.org/manage/project/ocdskit/collaboration/)
 * [ocdsmerge](https://pypi.org/manage/project/ocdsmerge/collaboration/)
+
+There should be at most one user with the [Owner role](https://pypi.org/help/#collaborator-roles) from each of OCP and ODS (OpenDataServices). Only users who are reasonably expected to upload releases should have the Maintainer role. Depending on the package, these include:
+
+* benwebb (Ben Webb)
+* kindly (David Raznick)
+* odscjames (James Baster)
+* rhiaro (Amy Guy)
 
 ## ReadTheDocs
 
