@@ -98,6 +98,20 @@ To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 1. Upload to PyPI: `python setup.py sdist upload`
 1. Announce on the [discussion group](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) if relevant
 
+## Python applications
+
+Python applications are different from Python packages in that:
+
+1. Applications are not declared as dependencies by other software, and therefore do not have a `setup.py` file
+1. Applications are deployed to servers, and therefore freeze requirements in `requirements.txt` to have consistent deploys
+
+The `master` branch of applications should always be deployable, which requires that:
+
+1. Tests pass on Travis
+1. Installation instructions are consistent with the [`deploy`](https://github.com/open-contracting/deploy) repository
+
+If installation instructions change (e.g. if a new service like Redis is required), then the `deploy` repository must be updated.
+
 ## Linting
 
 [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) performs [linting](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/tests/script.sh) of Python files. The linting of Markdown files is disabled. To perform periodic Markdown linting, you must:
