@@ -112,6 +112,43 @@ The `master` branch of applications should always be deployable, which requires 
 
 If installation instructions change (e.g. if a new service like Redis is required), then the `deploy` repository must be updated.
 
+### Requirements for Python Applications
+
+These are currently handled by 4 files in the root of a repository:
+
+* requirements.in - this lists the direct requirements the app has. Usually there are no version locks specified, 
+but sometimes a range is specified.
+* requirements.txt - this lists all requirements the app has, with every one locked to one specific version. 
+This is what will be installed on production servers and this allows a consistent environment across live and work environments.
+* requirements_dev.in - this lists the direct requirements the developers have when working on the app, but not for live environments. 
+For example "pytest".  Usually there are no version locks specified, but sometimes a range is specified. 
+This also usually includes "-r requirements.in" as the first line, so that all requirements are installed from one file.
+* requirements_dev.txt - this lists all requirements developers have, with every one locked to one specific version. 
+This allows a consistent environment between individual developers and between a developer and Travis.
+
+Any process that updates these files correctly can be followed. The process is generally:
+
+* Set up a clean virtual environment using your tool of choice
+* pip install -r requirements.in
+* pip freeze -r requirements.in > requirements.txt
+* pip install -r requirements_dev.in
+* cat requirements.in requirements_dev.in > requirements_combined_tmp.in
+* pip freeze -r requirements_combined_tmp.in > requirements_dev.txt
+
+There are then some cleanups needed to remove some things in the locked files that cause problems:
+
+* sed -i 's/^-r.*//' requirements.txt requirements_dev.txt
+* sed -i 's/pkg-resources==0.0.0//' requirements.txt requirements_dev.txt
+
+Using the -r option to the freeze command means that the two locked files are in a consistent order. 
+This means it is easy to compare changes between commits and see what libraries have had their versions upgraded and which haven't.
+
+We do provide a handy script to update these files for you. You can run it with:
+
+    curl https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master/scripts/update_requirements.sh | bash -
+
+This assumes you want to use the virtualenv tool, and want to create a virtual environment called ".ve".
+
 ## Linting
 
 [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) performs [linting](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/tests/script.sh) of Python files. The linting of Markdown files is disabled. To perform periodic Markdown linting, you must:
