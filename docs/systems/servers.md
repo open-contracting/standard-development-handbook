@@ -71,9 +71,10 @@ There is a hosted version of the software, called [Hosted Kingfisher](https://oc
 There are two physical servers for Kingfisher, which have four roles - scrape, process, analyse and archive. 
 
 * `scrape.kingfisher.open-contracting.org` hosts scrape, process and analyse
-* `archive.kingfisher.open-contracting.org` hosts archive. 
+* `archive.kingfisher.open-contracting.org` hosts archive
 
 These allocations may change, so always use the hostname to access services:
+
 * `scrape.kingfisher.open-contracting.org`
 * `process.kingfisher.open-contracting.org`
 * `analyse.kingfisher.open-contracting.org`
