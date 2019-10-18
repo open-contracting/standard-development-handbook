@@ -38,25 +38,7 @@ with open(path, 'w') as f:
 
 ## Python packages
 
-* Use `install_requires` and `extras_require` in `setup.py` instead of `requirements.txt`
-* Sort requirements alphabetically
-
-If the package isn't distributed on PyPi, use this template `setup.py`, adding arguments like `entry_points`, `extras_require` and `namespace_packages` as needed:
-
-```python
-from setuptools import setup, find_packages
-
-setup(
-    name='NAME',
-    version='0.0.0',
-    packages=find_packages(),
-    install_requires=[
-        'REQUIREMENT',
-    ],
-)
-```
-
-If the package is distributed on PyPi, use this template `setup.py`:
+All packages should be distributed on PyPi. If the package is distributed on PyPi, use this template `setup.py`, adding arguments like `entry_points`, `extras_require` and `namespace_packages` as needed:
 
 ```python
 from setuptools import setup, find_packages
@@ -84,9 +66,30 @@ setup(
 )
 ```
 
+If the package isn't distributed on PyPi, use this template `setup.py`:
+
+```python
+from setuptools import setup, find_packages
+
+setup(
+    name='NAME',
+    version='0.0.0',
+    packages=find_packages(),
+    install_requires=[
+        'REQUIREMENT',
+    ],
+)
+```
+
 To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 
     pandoc --from=markdown --to=rst --output=README.rst README.md
+
+### Requirements
+
+* Use `install_requires` and `extras_require` in `setup.py`
+* Do not use `requirements.txt`
+* Sort requirements alphabetically
 
 ### Release process
 
@@ -112,23 +115,30 @@ The `master` branch of applications should always be deployable, which requires 
 
 If installation instructions change (e.g. if a new service like Redis is required), then the `deploy` repository must be updated.
 
+### Requirements
 
-Requirements are currently handled by 4 files in the root of a repository:
+Requirements are managed by four files at the root of a repository:
 
-* requirements.in - this lists the direct requirements the app has. Usually there are no version locks specified, but sometimes a range is specified.
-* requirements.txt - this lists all requirements the app has, with every one locked to one specific version. 
-This is what will be installed on production servers and this allows a consistent environment across live and work environments.
-* requirements_dev.in - this lists the direct requirements the developers have when working on the app, but not for live environments. 
-For example "pytest".  Usually there are no version locks specified, but sometimes a range is specified. 
-This also usually includes "-r requirements.in" as the first line, so that all requirements are installed from one file.
-* requirements_dev.txt - this lists all requirements developers have, with every one locked to one specific version. 
-This allows a consistent environment between individual developers and between a developer and Travis.
+* `requirements.in` names all direct requirements needed in the production environment, i.e. all packages `import`'ed by the application.
+  * If the application is incompatible with older or newer versions of a requirement, use the least specific [version specifier](https://www.python.org/dev/peps/pep-0440/#version-specifiers) possible, for example:
+    * requires newer versions: use `foo>=1.2` instead of `foo>=1.2.3`
+    * requires older versions: use `foo<2`
+    * requires versions range: use `foo>=1.2,<2`
+* `requirements_dev.in` names all direct requirements needed exclusively in the development environment, and not in the production environment, e.g. `pytest`.
+    * This file typically also includes the direct requirements needed in the production environment, by having a first line of `-r requirements.in`.
+* `requirements.txt` names all direct and indirect requirements needed in the production environment, all locked to specific versions.
+* `requirements_dev.txt` names all direct and indirect requirements needed in the development environment, all locked to specific versions.
 
-We do provide a handy script to update these files for you. You can run it with:
+The above ensures that:
+
+* Development and production environments use the same versions of production requirements, to avoid errors or surprises during or after deployment due to differences between versions (e.g. a new version of Django requires upgrading application code).
+* Different developers and Travis CI use the same versions of development requirements, to avoid unexpected test failures due to differences between versions (e.g. a new version of pytest requires upgrading test code, or a new version of flake8 has stricter linting rules).
+
+The `requirements*.txt` files should be periodically updated, both for security updates and to better distribute the maintenance burden of upgrading versions over time. If you satisfy the following script's assumptions (documented in its code), use it to update the files:
 
     curl https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master/scripts/update_requirements.sh | bash -
 
-However you don't have to use the script; any process that updates these files correctly can be followed. If you want to try a different process please see the code comments in the script for more details.
+Otherwise, follow similar steps as in the script to update the files.
 
 ## Linting
 
