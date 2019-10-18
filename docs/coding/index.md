@@ -112,6 +112,24 @@ The `master` branch of applications should always be deployable, which requires 
 
 If installation instructions change (e.g. if a new service like Redis is required), then the `deploy` repository must be updated.
 
+
+Requirements are currently handled by 4 files in the root of a repository:
+
+* requirements.in - this lists the direct requirements the app has. Usually there are no version locks specified, but sometimes a range is specified.
+* requirements.txt - this lists all requirements the app has, with every one locked to one specific version. 
+This is what will be installed on production servers and this allows a consistent environment across live and work environments.
+* requirements_dev.in - this lists the direct requirements the developers have when working on the app, but not for live environments. 
+For example "pytest".  Usually there are no version locks specified, but sometimes a range is specified. 
+This also usually includes "-r requirements.in" as the first line, so that all requirements are installed from one file.
+* requirements_dev.txt - this lists all requirements developers have, with every one locked to one specific version. 
+This allows a consistent environment between individual developers and between a developer and Travis.
+
+We do provide a handy script to update these files for you. You can run it with:
+
+    curl https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master/scripts/update_requirements.sh | bash -
+
+However you don't have to use the script; any process that updates these files correctly can be followed. If you want to try a different process please see the code comments in the script for more details.
+
 ## Linting
 
 [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) performs [linting](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/tests/script.sh) of Python files. The linting of Markdown files is disabled. To perform periodic Markdown linting, you must:
