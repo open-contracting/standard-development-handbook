@@ -2,7 +2,7 @@
 
 [standard.open-contracting.org](https://standard.open-contracting.org) and [standard.open-contracting.org/review/](https://standard.open-contracting.org/review/) are hosted by Open Data Services on Bytemark VPS's. Contact [code@opendataservices.coop](mailto:code@opendataservices.coop) with any queries that relate directly to servers.
 
-Deployments are carried out using Salt, with configuration in [opendataservices-deploy](https://github.com/OpenDataServices/opendataservices-deploy).
+Deployments are carried out using Salt, with configuration in the [deploy](https://github.com/open-contracting/deploy) repository.
 
 ## DNS and proxies
 
@@ -18,10 +18,10 @@ Deployments are carried out using Salt, with configuration in [opendataservices-
 
 Apache serves static files, redirects and proxies requests to dynamic systems like the [Data Review Tool](https://standard.open-contracting.org/review/). The Apache config files, deployed by Salt, are:
 
-* [live](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf)
-* [live (include)](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
-* [staging](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-staging.conf)
-* [staging (include)](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-staging.conf.include)
+* [live](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf)
+* [live (include)](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
+* [staging](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-staging.conf)
+* [staging (include)](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-staging.conf.include)
 
 The websites are browsable at:
 

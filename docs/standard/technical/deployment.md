@@ -256,9 +256,9 @@ Doing a build is necessary because some URLs are updated with the branch name (e
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-* [For major, minor or patch versions, edit the version switcher](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options.html)
-* [For major and minor versions, edit `live_versions` in the Apache configuration file](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L16)
-* For major and minor versions, edit the [staging](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_staging.html) and [old](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
+* [For major, minor or patch versions, edit the version switcher](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/version-options.html)
+* [For major and minor versions, edit `live_versions` in the Apache configuration file](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
+* For major and minor versions, edit the [staging](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/banner_staging.html) and [old](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
 
 ### 6. Update the live CoVE deployment (OCDS Data Review Tool)
 

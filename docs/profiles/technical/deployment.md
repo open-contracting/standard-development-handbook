@@ -98,6 +98,6 @@ Follow the [standard's instructions](../../standard/technical/deployment.html#up
     Should profiles with versions have an ``old`` banner?
 ```
 
-* For major, minor or patch versions, edit the profile's version switcher e.g. for [OCDS for PPPs](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/version-options-profiles-ppp.html)
-* For major and minor versions, edit `live_versions` in the Apache configuration file, e.g. for [OCDS for PPPs](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L17)
-* For major and minor versions, edit the `dev` (e.g. [OCDS for PPPs](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/ocds-docs/includes/banner_dev_profiles_ppp.html)) and `old` banners
+* For major, minor or patch versions, edit the profile's version switcher e.g. for [OCDS for PPPs](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/version-options-profiles-ppp.html)
+* For major and minor versions, edit `live_versions` in the Apache configuration file, e.g. for [OCDS for PPPs](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
+* For major and minor versions, edit the `staging` (e.g. [OCDS for PPPs](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/banner_staging_profiles_ppp.html)) and `old` banners

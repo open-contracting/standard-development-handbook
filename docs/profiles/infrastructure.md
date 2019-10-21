@@ -20,5 +20,4 @@ cp -r /home/ocds-docs/web/infrastructure/0.9/en/*.json /home/ocds-docs/web/infra
 
 ### 5. Update the deployment repository
 
-* [For major and minor versions, edit `infrastructure_live_versions` in the Apache configuration file](https://github.com/OpenDataServices/opendataservices-deploy/blob/master/salt/apache/ocds-docs-live.conf#L18)
-
+* [For major and minor versions, edit `infrastructure_live_versions` in the Apache configuration file](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
