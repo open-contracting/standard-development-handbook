@@ -5,7 +5,8 @@
 Google Analytics is used on:
 
 * `standard`: [standard.open-contracting.org](https://standard.open-contracting.org/)
-* `CoVE`: [standard.open-contracting.org/review/](https://standard.open-contracting.org/review/)
+* `CoVE OCDS`: [standard.open-contracting.org/review/](https://standard.open-contracting.org/review/)
+* `toucan`: [toucan.open-contracting.org](https://toucan.open-contracting.org/)
 * `ocds-show`: [open-contracting.github.io/ocds-show/](https://open-contracting.github.io/ocds-show/)
 * `ocds-show-ppp`: [open-contracting.github.io/ocds-show-ppp/](https://open-contracting.github.io/ocds-show-ppp/)
 * `extension_creator`: [open-contracting.github.io/extension_creator/](https://open-contracting.github.io/extension_creator/)
