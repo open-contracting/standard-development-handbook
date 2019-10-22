@@ -8,5 +8,4 @@
    repository
    build
    deployment
-   integrations
 ```

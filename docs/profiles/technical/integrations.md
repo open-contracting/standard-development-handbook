@@ -1,13 +1,5 @@
 # Integrations
 
-## Travis CI
-
-Each branch of a profile's repository is automatically built to:
-
-`https://standard.open-contracting.org/profiles/{root}/{branch}/en/`
-
-See the standard's page for [Travis CI](../../../standard/technical/integrations).
-
 ## ReadTheDocs
 
 You may want to build a draft profile on ReadTheDocs:
