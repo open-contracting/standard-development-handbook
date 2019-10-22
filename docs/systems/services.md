@@ -6,6 +6,14 @@ The staff of the following organizations may have administrative roles:
 * [Open Data Services Co-operative](http://opendataservices.coop) (ODS)
 * [Centro de Desarrollo Sostenible](http://www.cds.com.py) (CDS)
 
+## GitHub
+
+The staff of the above organizations may be [members](https://github.com/orgs/open-contracting/people) of the [open-contracting](https://github.com/open-contracting) GitHub organization.
+
+There should be at most two members with the [Owner](https://help.github.com/articles/permission-levels-for-an-organization/) role from each organization.
+
+GitHub's [outside collaborators](https://help.github.com/articles/adding-outside-collaborators-to-repositories-in-your-organization/) feature should be used for all other users.
+
 ## Google
 
 ### Admin
