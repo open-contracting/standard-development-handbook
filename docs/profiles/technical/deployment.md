@@ -1,6 +1,6 @@
 # Deployment
 
-A profile's deployment is simpler than the standard's [deployment](../../standard/technical/deployment). If a profile is unversioned, some of the below may be irrelevant.
+A profile's deployment is the same as the standard's [deployment](../../standard/technical/deployment), except where noted below. If a profile is unversioned, some of the below may be irrelevant.
 
 ## Schemas and extensions
 
@@ -33,71 +33,3 @@ Update the profile's changelog (if any) with a summary of the changes to the pro
 ### 4. Integrate extensions
 
 [Build the profile](build.html#build-the-profile).
-
-## Merge and release
-
-Follow the [standard's instructions](../../standard/technical/deployment.html#merge-and-release).
-
-## Build and deploy
-
-### 1. Build on Travis
-
-Follow the [standard's instructions](../../standard/technical/deployment.html#build-on-travis).
-
-### 2. Copy the files to the live server
-
-Follow the [standard's instructions](../../standard/technical/deployment.html#copy-the-files-to-the-live-server), but change `BASEDIR` to `/home/ocds-docs/web/profiles/${PROFILE}/` where `PROFILE` is e.g. `ppp`.
-
-### 3. Copy the schema, extension and extension ZIP file into place
-
-Login to the server:
-
-```bash
-ssh root@live.standard.open-contracting.org
-```
-
-Set the `PROFILE`, `VER`, and `RELEASE` environment variables as appropriate, e.g.:
-
-```bash
-PROFILE=ppp # profile name
-VER=1.0 # minor version of profile that has already been copied to the server
-RELEASE=1__0__0__beta # the full release tag name
-```
-
-Then, run:
-
-```bash
-# Create the profile and patched directories for the release.
-mkdir -p /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/ /home/ocds-docs/web/profiles/${PROFILE}/schema/${RELEASE}/
-
-# Copy the profile's schema and codelist files.
-cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/*.json /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
-cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/codelists /home/ocds-docs/web/profiles/${PROFILE}/extension/${RELEASE}/
-
-# Create a ZIP file of the above.
-cd /home/ocds-docs/web/profiles/${PROFILE}/extension/
-zip -r ${RELEASE}.zip ${RELEASE}
-
-# Copy the patched files.
-cp -r /home/ocds-docs/web/profiles/${PROFILE}/${VER}/en/_static/patched/* /home/ocds-docs/web/profiles/${PROFILE}/schema/${RELEASE}/
-```
-
-### 4. Update the "latest" branch
-
-Follow the [standard's instructions](../../standard/technical/deployment.html#update-the-latest-branch).
-
-### 5. Update the deployment repository
-
-```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
-```
-
-```eval_rst
-  .. todo::
-    Should profiles with versions have an ``old`` banner?
-```
-
-* For major, minor or patch versions, edit the profile's version switcher e.g. for [OCDS for PPPs](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/version-options-profiles-ppp.html)
-* For major and minor versions, edit `live_versions` in the Apache configuration file, e.g. for [OCDS for PPPs](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
-* For major and minor versions, edit the `staging` (e.g. [OCDS for PPPs](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/banner_staging_profiles_ppp.html)) and `old` banners

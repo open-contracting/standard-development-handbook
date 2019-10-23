@@ -148,7 +148,9 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 
 ### 2. Merge the development branch onto the live branch
 
-The dev working branch should be merged into the relevant live branch, e.g. merge `1.1-dev` onto `1.1`. Do this in the GitHub interface, or locally with a no-ff merge (so that we get a merge commit to record when the live branch was updated). If required, this may happen by first merging a patch dev branch (`1.1.1-dev`) into the minor (`1.1-dev`) dev branch, and then merging onwards into the live branch (`1.1`).
+Create a pull request to merge the development branch into its corresponding live branch, e.g. `1.1-dev` into `1.1`. This might happen by first merging a patch dev branch (`1.1.1-dev`) into the minor dev branch (`1.1-dev`), and then merging into the live branch (`1.1`).
+
+If the live branch is for the latest version of the documentation, then create a pull request to merge it into the `latest` branch.
 
 ### 3. Create a tagged release
 
@@ -165,126 +167,38 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 
 [Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
 
-Travis copies the built documentation to the staging server. You can preview the documentation, e.g. for OCDS 1.1,
-<http://staging.standard.open-contracting.org/1.1/en/> is the staging deploy for <https://standard.open-contracting.org/1.1/en/>.
+Travis copies the built documentation to the staging server. You can preview the documentation. For example, for OCDS 1.1,
+<http://staging.standard.open-contracting.org/1.1/en/> is the staging version for <https://standard.open-contracting.org/1.1/en/>.
 
-### 2. Copy the files to the live server
+### 2. Release the documentation
 
-(See the [servers](../../systems/servers) page for more information on how our servers are set up.)
+See the [deploy repository's documentation](https://ocdsdeploy.readthedocs.io/en/latest/how-to/docs.html#publish-released-documentation).
 
-Each deploy has its own unique folder on the live server (including the date and a sequence number). The bare version number is then symlinked. This makes it easy to roll back deploys.
-
-Set some variables:
-
-```bash
-VER=1.1            # (for example)
-DATE=$(date +%F)   # or YYYY-MM-DD to match the release date on staging (see ${VER}/en/index.html)
-SEQ=1              # To deploy again on the same day, increment to 2, etc.
-BASEDIR=/home/ocds-docs/web/
-```
-
-Copy from staging server to your local box:
-
-```bash
-scp -r root@staging.standard.open-contracting.org:${BASEDIR}${VER} ${VER}-${DATE}-${SEQ}
-```
-
-Copy from your local box to the live server:
-
-```bash
-scp -r ${VER}-${DATE}-${SEQ} root@live.standard.open-contracting.org:${BASEDIR}
-```
-
-Symlink the version number:
-
-```bash
-ssh root@live.standard.open-contracting.org \
-  "rm ${BASEDIR}${VER}; ln -sf ${VER}-${DATE}-${SEQ} ${BASEDIR}${VER}"
-```
-
-If a new language is supported, edit `https://standard.open-contracting.org/robots.txt`
-
-### 3. Copy the schema and ZIP file into place
+### 3. Update the live CoVE deployment (OCDS Data Review Tool)
 
 ```eval_rst
   .. note::
     You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-Login to the server:
+#### Update lib-cove-ocds
 
-```bash
-ssh root@live.standard.open-contracting.org
-```
+* Update the URL paths in [config.py](https://github.com/open-contracting/lib-cove-ocds/blob/master/libcoveocds/config.py)
+* Make sure all tests pass
+* Release a new version
 
-Set the `VER`, and `RELEASE` environment variables as appropriate, e.g.:
+#### Update and deploy the OCDS Data Review Tool
 
-```bash
-VER=1.1 # minor version of OCDS that has already been copied to the server
-RELEASE=1__1__1 # the full release tag name
-```
+* Upgrade the requirements to use the new version of lib-cove-ocds
+* Update the URL paths in [settings.py](https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py)
+* Make sure all tests pass
+* Deploy the app
 
-Then, run:
+#### Update any other tools that use lib-cove-ocds
 
-Copy the JSON from the schema directory of the build to `/home/ocds-docs/web/schema/[release_tag]` on the live server, e.g. for 1.1.1:
+Make sure other tools that use lib-cove-ocds (like Kingfisher) are updated to use the new version.
 
-```bash
-# Create the directory for the release.
-mkdir /home/ocds-docs/web/schema/${RELEASE}/
-
-# Copy the schema and codelist files.
-cp -r /home/ocds-docs/web/${VER}/en/*.json /home/ocds-docs/web/schema/${RELEASE}/
-cp -r /home/ocds-docs/web/${VER}/en/codelists /home/ocds-docs/web/schema/${RELEASE}/
-
-# Create a ZIP file of the above.
-cd /home/ocds-docs/web/schema/
-zip -r ${RELEASE}.zip ${RELEASE}
-```
-
-The JSON files are then visible at <https://standard.open-contracting.org/schema/1__1__1/>.
-
-### 4. Update the "latest" branch
-
-If the build should also appear at [/latest/](https://standard.open-contracting.org/latest/), update the `latest` branch on GitHub to point to the same commit, then repeat [Build on Travis](#build-on-travis) and [Copy the files to the live server](#copy-the-files-to-the-live-server) with `VER=latest`.
-
-Doing a build is necessary because some URLs are updated with the branch name (e.g. links in the schema).
-
-### 5. Update the deployment repository
-
-```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
-```
-
-* [For major, minor or patch versions, edit the version switcher](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/version-options.html)
-* [For major and minor versions, edit `live_versions` in the Apache configuration file](https://github.com/open-contracting/deploy/blob/master/salt/apache/ocds-docs-live.conf.include)
-* For major and minor versions, edit the [staging](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/banner_staging.html) and [old](https://github.com/open-contracting/deploy/blob/master/salt/ocds-docs/includes/banner_old.html) banners
-
-### 6. Update the live CoVE deployment (OCDS Data Review Tool)
-
-```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
-```
-
-#### Update Lib Cove OCDS
-
-* Update the URL paths in [config.py](https://github.com/open-contracting/lib-cove-ocds/blob/master/libcoveocds/config.py).
-* Make sure all tests pass.
-* Release a new version of this library.
-
-#### Update and Deploy CoVE itself
-
-* Upgrade requirements so it uses the just released version of Lib Cove OCDS.
-* Update the URL paths in [settings.py](https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py).
-* Make sure all tests pass.
-* Deploy
-
-#### Update any other tools that use Lib Cove OCDS
-
-For other tools that use Lib Cove OCDS (like Kingfisher) make sure they are updated to use the latest version of Lib Cove OCDS.
-
-Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with it's own options, the tools own options may need changing too.
+Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with its own options, the tool's own options may need changing.
 
 ## FAQ
 

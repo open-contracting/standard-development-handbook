@@ -24,5 +24,4 @@ New profiles can be created using [this template](https://github.com/open-contra
    translation
    technical/index
    ppp
-   infrastructure
 ```
