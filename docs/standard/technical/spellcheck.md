@@ -15,7 +15,7 @@ This command will skip dot files, Docson files, translated codelists, and css, h
 `aspell` will flag many field names and proper nouns as errors. `aspell` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace `~/.aspell.en.pws` with the following:
 
 ```text
-personal_ws-1.1 en 696 
+personal_ws-1.1 en 732 
 abatements
 accessDetails
 accessLevel
@@ -31,6 +31,7 @@ additionalProcurementCategories
 additionalProperties
 Addler
 AddressUnversioned
+administrativeEntity
 advisors
 aggregators
 agreedMetrics
@@ -48,9 +49,11 @@ AnyTown
 Anytown
 APIs
 APMG
+approvalDate
 approvalLetter
 arrayMergeById
 assetAndLiabilityAssessment
+assetLifetime
 assetProvider
 assetTransfer
 availabilityAndQuality
@@ -88,6 +91,7 @@ Bohórquez
 boolean
 Brandusescu
 BSI
+budgetApproval
 budgetBreakdown
 BudgetBreakdownUnversioned
 BudgetUnversioned
@@ -133,6 +137,10 @@ contractArrangements
 contractClose
 contractDraft
 contractGuarantees
+contractingProcesses
+contractingProcessStatus
+ContractingProcessSummary
+contractNature
 contractNotice
 contractPeriod
 contractSchedule
@@ -142,6 +150,9 @@ contractSummary
 contractTermination
 ContractUnversioned
 contractUpdate
+contractValue
+CoST
+costEstimate
 costOnly
 counterparty
 countryName
@@ -152,6 +163,7 @@ CPVS
 CriterionUnversioned
 Crédito
 csv
+cultureSportsAndRecreation
 czf
 Dar
 dataset
@@ -234,6 +246,9 @@ expectedValue
 extendedProcurementCategory
 extendsContractID
 extensionlist
+extensionselectortable
+extensiontable
+externalReference
 Extractives
 faxNumber
 Fazekas
@@ -243,6 +258,8 @@ FDP's
 feasibilityStudy
 featureOf
 finalAudit
+finalScope
+finalScopeDetails
 finalValue
 finalValueDetails
 financeAdditionality
@@ -321,6 +338,7 @@ Kaplan
 KPI
 KPIs
 Krzysiek
+landAndSettlementImpact
 landAvailability
 landTransfer
 leadBank
@@ -332,6 +350,7 @@ licensable
 Licensor
 LineString
 linkable
+LinkedRelease
 locationGazetteers
 Lorien
 lotDetails
@@ -385,6 +404,7 @@ minProperties
 minValue
 Mireille
 modality
+modificationType
 modindex
 Montiel
 msgid
@@ -405,6 +425,8 @@ Neontribe
 netPresentValue
 netPresentValueDetails
 netPresentValueRateDetails
+newContractPeriod
+newContractValue
 NGOs
 nocrossref
 nonfinancial
@@ -416,6 +438,7 @@ nullable
 numberOfTenderers
 Nyager
 Oakleigh
+OC
 ocds
 ocdsmerge
 ocdsVersion
@@ -427,6 +450,8 @@ OECD
 OKDP
 OKPD
 OLAP
+oldContractPeriod
+oldContractValue
 Omidyar
 omitWhenMerged
 oneOf
@@ -506,13 +531,19 @@ procurementPlan
 procurements
 procuringEntity
 programme
+programmes
 projectAdditionality
 projectApproval
 projectDetail
+projectEvaluation
 projectID
 projectIRR
 projectIRRDetails
 projectPlan
+projectScope
+projectSector
+projectStatus
+projectType
 providerOrganization
 publicationPolicy
 publicAuthority
@@ -614,6 +645,7 @@ sme
 smeBids
 SMEs
 SMS
+socialHousing
 socialWitness
 sourceEntity
 sourceParty
@@ -632,6 +664,8 @@ sublicensees
 submissionDocuments
 submissionMethod
 submissionMethodDetails
+Subsector
+subsector
 subsidyRatio
 subsidyRatioDetails
 subtype
@@ -691,6 +725,7 @@ Validators
 validBids
 valueForMoneyAnalysis
 ValueUnversioned
+vCard
 ve
 vehicleType
 versioned
@@ -702,6 +737,7 @@ virtualenv
 votingRights
 votingRightsDetails
 Vozárová
+waterAndWaste
 weightage
 WGS
 Whitehouse
