@@ -24,6 +24,8 @@ GitHub's [outside collaborators](https://help.github.com/articles/adding-outside
 
 There should be a minimum of [Super Admin](https://admin.google.com/open-contracting.org/AdminHome?hl=en#DomainSettings/notab=1&role=9170516996784129&subtab=roles) users from OCP, and no other assigned admins.
 
+*Less secure apps* is set to "Allow users to manage their access to less secure apps" for the open-contracting.org domain, and [*Allow less secure apps*](https://myaccount.google.com/lesssecureapps) is set to "ON" for the data@open-contracting.org user, so that Redmine can fetch mail.
+
 ### Analytics
 
 There should be at most two [users](https://analytics.google.com/analytics/web/#/a35677147w162037252p163071392/admin/suiteusermanagement/account) with all permissions from OCP. There should be at most two users with the Read & Analyze permissions from each other organization.
@@ -33,6 +35,10 @@ There should be at most two [users](https://analytics.google.com/analytics/web/#
 For the `ocds` project, [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts and `ods-crm-redmine-backup`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. It should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`).
 
 The other projects are `library` (two storage buckets), `glossary` (no resources) and `standard-maintenance-scripts` (no resources).
+
+In case a new user needs to be given admin access to the `ocds` project, you can run, for example:
+
+    gcloud projects add-iam-policy-binding ocds-172716 --member user:jmckinney@open-contracting.org --role roles/owner
 
 ### Drive
 
