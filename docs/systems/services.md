@@ -6,6 +6,10 @@ The staff of the following organizations may have administrative roles:
 * [Open Data Services Co-operative](http://opendataservices.coop) (ODS)
 * [Centro de Desarrollo Sostenible](http://www.cds.com.py) (CDS)
 
+## Airtable
+
+There should be at most two [Owners](https://airtable.com/wspXFnEMMAgLMWfe0/workspace/billing). All users should belong to the above organizations.
+
 ## GitHub
 
 The staff of the above organizations may be [members](https://github.com/orgs/open-contracting/people) of the [open-contracting](https://github.com/open-contracting) GitHub organization.
@@ -29,6 +33,10 @@ There should be at most two [users](https://analytics.google.com/analytics/web/#
 For the `ocds` project, [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts and `ods-crm-redmine-backup`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. It should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`).
 
 The other projects are `library` (two storage buckets), `glossary` (no resources) and `standard-maintenance-scripts` (no resources).
+
+### Drive
+
+All users with access to [this folder](https://drive.google.com/drive/folders/0B79uNIOfT24eZTZqZjNNblVrek0) should belong to the above organizations.
 
 ### Groups
 
