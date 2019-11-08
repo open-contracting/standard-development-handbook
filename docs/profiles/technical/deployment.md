@@ -16,7 +16,7 @@ The governance process will establish whether to create a new release of any cor
 
 ### 2. Perform periodic updates, if appropriate
 
-*Nothing to do.*
+Check the profile's individual handbook page for any regular maintenance.
 
 ### 3. Update version numbers, versioned release schema and changelog
 
