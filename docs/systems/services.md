@@ -6,6 +6,10 @@ The staff of the following organizations may have administrative roles:
 * [Open Data Services Co-operative](http://opendataservices.coop) (ODS)
 * [Centro de Desarrollo Sostenible](http://www.cds.com.py) (CDS)
 
+## SSH keys
+
+The files referenced by `ssh_auth.present` in the [deploy](https://github.com/open-contracting/deploy) repository give users access to servers. All users should belong to the above organizations.
+
 ## Airtable
 
 There should be at most two [Owners](https://airtable.com/wspXFnEMMAgLMWfe0/workspace/billing). All users should belong to the above organizations.
