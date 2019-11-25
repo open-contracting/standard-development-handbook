@@ -41,7 +41,7 @@ with open(path, 'w') as f:
 All packages should be distributed on PyPi. If the package is distributed on PyPi, use this template `setup.py`, adding arguments like `entry_points`, `extras_require` and `namespace_packages` as needed:
 
 ```python
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open('README.rst') as f:
     long_description = f.read()
@@ -69,7 +69,7 @@ setup(
 If the package isn't distributed on PyPi, use this template `setup.py`:
 
 ```python
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name='NAME',
