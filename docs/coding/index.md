@@ -26,14 +26,21 @@ with open(path, 'w') as f:
 Indent with 2 spaces and preserve order of object pairs. Example:
 
 ```python
-from collections import OrderedDict
-
 with open(path) as f:
-    data = json.load(f, object_pairs_hook=OrderedDict)
+    data = json.load(f)
 
 with open(path, 'w') as f:
     json.dump(data, f, ensure_ascii=False, indent=2, separators=(',', ': '))
     f.write('\n')
+```
+
+If (and only if) the code must support Python 3.5 or earlier, use:
+
+```python
+from collections import OrderedDict
+
+with open(path) as f:
+    data = json.load(f, object_pairs_hook=OrderedDict)
 ```
 
 ## Python packages
