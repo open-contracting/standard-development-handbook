@@ -36,7 +36,7 @@ There should be at most two [users](https://analytics.google.com/analytics/web/#
 
 ### Cloud Platform
 
-For the `ocds` project, [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts and `ods-crm-redmine-backup`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. It should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`).
+For the `ocds` project, [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts, `ods-crm-redmine-backup` and `sysadmin@dogsbody.com`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. It should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`). `sysadmin@dogsbody.com` must have the ["Storage Admin" role](https://cloud.google.com/storage/docs/access-control/iam-roles) (`roles/storage.admin`), to get the `storage.buckets.list` permission.
 
 The other projects are `library` (two storage buckets), `glossary` (no resources) and `standard-maintenance-scripts` (no resources).
 
