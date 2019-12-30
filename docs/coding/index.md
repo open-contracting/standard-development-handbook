@@ -155,6 +155,16 @@ Otherwise, if you satisfy the following script's assumptions (documented in its 
 
 Otherwise, follow similar steps as in the script to update the files.
 
+## Python profiling
+
+For example:
+
+```bash
+cat packages.json | python -m cProfile -o ocdskit.prof ocdskit/cli/__main__.py compile > /dev/null
+gprof2dot -f pstats ocdskit.prof | dot -Tpng -o output.png
+open output.png
+```
+
 ## Linting
 
 [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) performs [linting](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/tests/script.sh) of Python files. The linting of Markdown files is disabled. To perform periodic Markdown linting, you must:
