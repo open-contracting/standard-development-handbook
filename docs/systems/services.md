@@ -87,6 +87,10 @@ There should be at most two users in the [admin](http://live.redash.opencontract
 
 There should be at most two [users](https://crm.open-contracting.org/users) with the Administrator role from each of OCP and ODS, excluding organization-wide accounts.
 
+## Sentry
+
+Sentry is used by OCDS for multiple clients. There should be at least one member with the Member role from OCP.
+
 ## Transifex
 
 Transifex is used by ODS for multiple clients. There should be at most two members with the [Project Maintainer and Team Manager](https://docs.transifex.com/teams/understanding-user-roles) roles from OCP.
