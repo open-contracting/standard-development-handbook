@@ -53,6 +53,7 @@ The [standard](https://github.com/open-contracting/standard/issues) and [ocds-ex
 
 ```eval_rst
 .. toctree::
+   :caption: Contents
    :maxdepth: 2
    :glob:
 
