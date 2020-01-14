@@ -111,7 +111,7 @@ Once all strings are translated and reviewed in Transifex, and all warnings or i
 1. Checkout a new branch, e.g. `git checkout -b 1.1-italian`
 1. Add the locale code to `TRANSLATIONS` in `include/config.mk`
 1. Pull the locale's translations, e.g. `tx pull -f -l it`
-1. Update the `language_options` block in `standard/docs/en/_templates/layout.html`
+1. Update the `language_options` block in `docs/_templates/layout.html`
 1. Create a pull request for the community translation
 1. [Test the translations on the build of the pull request](#test-translations)
 1. Check the `localization-note` appears on the homepage

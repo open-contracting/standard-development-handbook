@@ -23,18 +23,19 @@ The published documentation has versions on different `MAJOR.MINOR` [branches](h
 
 * [.tx/config](https://github.com/open-contracting/standard/blob/HEAD/.tx/config): configuration of Transifex
 * [include/](https://github.com/open-contracting/standard/tree/HEAD/include): common makefiles for building documentation
-* [standard/assets/](https://github.com/open-contracting/standard/tree/HEAD/standard/assets): images used in the documentation
-* [standard/docs/en/](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/en): English documentation
+* [assets/](https://github.com/open-contracting/standard/tree/HEAD/assets): images used in the documentation
+* [docs/](https://github.com/open-contracting/standard/tree/HEAD/docs): English documentation
   * `*.md` `*/*.md`: English documentation text
-  * [conf.py](https://github.com/open-contracting/standard/blob/HEAD/standard/docs/en/conf.py): Sphinx configuration
-  * [\_static/](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/en/_static): CSS and JavaScript for the documentation
-  * [\_templates/](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/en/_templates): Jinja templates for the documentation (these contain only small overrides, as [we have our own theme](https://github.com/open-contracting/standard_theme))
-* [standard/docs/locale/](https://github.com/open-contracting/standard/tree/HEAD/standard/docs/locale): translations of the English documentation
-* [standard/schema/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema): schema-related files
+  * [conf.py](https://github.com/open-contracting/standard/blob/HEAD/docs/conf.py): Sphinx configuration
+  * [\_static/](https://github.com/open-contracting/standard/tree/HEAD/docs/_static): CSS and JavaScript for the documentation
+  * [\_templates/](https://github.com/open-contracting/standard/tree/HEAD/docs/_templates): Jinja templates for the documentation (these contain only small overrides, as [we have our own theme](https://github.com/open-contracting/standard_theme))
+* [locale/](https://github.com/open-contracting/standard/tree/HEAD/locale): translations of the English documentation
+* [schema/](https://github.com/open-contracting/standard/tree/HEAD/schema): schema-related files
   * `*.json`: JSON Schema files
-  * [codelists/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/codelists): codelist CSV files
-  * [tests/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/tests): Python tests of the JSON Schema files
-  * [utils/](https://github.com/open-contracting/standard/tree/HEAD/standard/schema/utils): Python scripts for working with the JSON Schema and codelist CSV files
+  * [codelists/](https://github.com/open-contracting/standard/tree/HEAD/schema/codelists): codelist CSV files
+  * [tests/](https://github.com/open-contracting/standard/tree/HEAD/schema/tests): Python tests of the JSON Schema files
+  * [utils/](https://github.com/open-contracting/standard/tree/HEAD/schema/utils): Python scripts for working with the JSON Schema and codelist CSV files
+* [tests/](https://github.com/open-contracting/standard/tree/HEAD/tests): Python tests of the built documentation
 
 The following files are created by running a build and are not version controlled:
 

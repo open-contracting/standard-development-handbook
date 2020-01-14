@@ -25,7 +25,7 @@ These instructions are similar to others in [ocds-extensions-translations](https
 1. Prepare a compendium from the `standard` repository:
 
         git checkout 1.1
-        msgcat --use-first standard/docs/locale/$lang/**.po > $wip/$lang-standard.po
+        msgcat --use-first locale/$lang/**.po > $wip/$lang-standard.po
         git checkout 1.1-dev
 
 1. Change into the `ocds-extensions-translations` directory
