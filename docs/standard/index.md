@@ -13,6 +13,17 @@ This section describes the processes for maintaining these assets. See the [Norm
 
 Documentation is written in Markdown syntax with [recommonmark](https://recommonmark.readthedocs.org/en/latest/) building on [Commonmark](http://commonmark.org/).
 
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   schema
+   conventions
+   translation/index
+   technical/index
+```
+
 ## Reading list
 
 To get up to speed on OCDS standard development, you should be familiar with:
@@ -50,15 +61,3 @@ For the history of standard development, read:
 * [2014 technical scoping](https://github.com/open-contracting-archive/technical-approach/blob/master/README.md)
 
 The [standard](https://github.com/open-contracting/standard/issues) and [ocds-extensions](https://github.com/open-contracting/ocds-extensions/issues) repositories contain all public discussions about standard development.
-
-```eval_rst
-.. toctree::
-   :caption: Contents
-   :maxdepth: 2
-   :glob:
-
-   schema
-   conventions
-   translation/index
-   technical/index
-```
