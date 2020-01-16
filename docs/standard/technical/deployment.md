@@ -90,7 +90,7 @@ bundle exec rake registry:extension_versions
 Before each release, and at least once a year (because ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306)), run:
 
 ```shell
-python schema/utils/fetch_currency_codelist.py
+python utils/fetch_currency_codelist.py
 ```
 
 ### 3. Update version numbers, versioned release schema and changelog
@@ -111,14 +111,14 @@ find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's
 Update `versioned-release-validation-schema.json` and `dereferenced-release-schema.json` to match `release-schema.json`:
 
 ```shell
-python schema/utils/make_versioned_release_schema.py
-python schema/utils/make_dereferenced_release_schema.py
+python utils/make_versioned_release_schema.py
+python utils/make_dereferenced_release_schema.py
 ```
 
 Update `meta-schema.json` to match `meta-schema-patch.json`:
 
 ```shell
-python schema/utils/make_metaschema.py
+python utils/make_metaschema.py
 ```
 
 Update the standard's [changelog](https://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.

@@ -34,8 +34,8 @@ The published documentation has versions on different `MAJOR.MINOR` [branches](h
   * `*.json`: JSON Schema files
   * [codelists/](https://github.com/open-contracting/standard/tree/HEAD/schema/codelists): codelist CSV files
   * [tests/](https://github.com/open-contracting/standard/tree/HEAD/schema/tests): Python tests of the JSON Schema files
-  * [utils/](https://github.com/open-contracting/standard/tree/HEAD/schema/utils): Python scripts for working with the JSON Schema and codelist CSV files
 * [tests/](https://github.com/open-contracting/standard/tree/HEAD/tests): Python tests of the built documentation
+* [util/](https://github.com/open-contracting/standard/tree/HEAD/schema/utils): Python scripts, mainly for working with the JSON Schema and codelist CSV files
 
 The following files are created by running a build and are not version controlled:
 
