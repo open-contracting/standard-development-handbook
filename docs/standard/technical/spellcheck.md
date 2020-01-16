@@ -120,7 +120,6 @@ COH
 commercialClose
 compiledRecord
 compiledRelease
-compiledReleases
 completionCertificate
 config
 conflictOfInterest
