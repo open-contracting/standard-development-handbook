@@ -29,7 +29,7 @@ The published documentation has versions on different `MAJOR.MINOR` [branches](h
   * [conf.py](https://github.com/open-contracting/standard/blob/HEAD/docs/conf.py): Sphinx configuration
   * [\_static/](https://github.com/open-contracting/standard/tree/HEAD/docs/_static): CSS and JavaScript for the documentation
   * [\_templates/](https://github.com/open-contracting/standard/tree/HEAD/docs/_templates): Jinja templates for the documentation (these contain only small overrides, as [we have our own theme](https://github.com/open-contracting/standard_theme))
-* [locale/](https://github.com/open-contracting/standard/tree/HEAD/locale): translations of the English documentation
+  * [locale/](https://github.com/open-contracting/standard/tree/HEAD/locale): translations of the English documentation
 * [schema/](https://github.com/open-contracting/standard/tree/HEAD/schema): schema-related files
   * `*.json`: JSON Schema files
   * [codelists/](https://github.com/open-contracting/standard/tree/HEAD/schema/codelists): codelist CSV files

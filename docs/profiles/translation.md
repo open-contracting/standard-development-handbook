@@ -25,14 +25,14 @@ These instructions are similar to others in [ocds-extensions-translations](https
 1. Prepare a compendium from the `standard` repository:
 
         git checkout 1.1
-        msgcat --use-first locale/$lang/**.po > $wip/$lang-standard.po
+        msgcat --use-first docs/locale/$lang/**.po > $wip/$lang-standard.po
         git checkout 1.1-dev
 
 1. Change into the `ocds-extensions-translations` directory
 1. Prepare a compendium from the profile's extensions, for example, for OCDS for PPPs:
 
         for version in bids/v1.1.4 budget/master budget_project/master charges/master documentation_details/master finance/master location/v1.1.4 metrics/master milestone_documents/v1.1.4 performance_failures/master process_title/v1.1.4 qualification/master requirements/master risk_allocation/master shareholders/master signatories/master tariffs/master transaction_milestones/master ppp/master
-          msgcat --use-first locale/$lang/LC_MESSAGES/$version/**.po > $lang-(echo $version | tr '/' '-').po
+          msgcat --use-first docs/locale/$lang/LC_MESSAGES/$version/**.po > $lang-(echo $version | tr '/' '-').po
         end
         msgcat --use-first (ls $lang-*.po) > $wip/$lang-extensions.po
         rm -f $lang-*.po
@@ -40,8 +40,8 @@ These instructions are similar to others in [ocds-extensions-translations](https
 1. Change into the profile's directory
 1. Prepare a compendium from the profile's repository, and merge it:
 
-        if [ -d locale/$lang/LC_MESSAGES ]
-          msgcat --use-first $lang-standard.po $lang-extensions.po locale/$lang/**.po > $lang.po
+        if [ -d docs/locale/$lang/LC_MESSAGES ]
+          msgcat --use-first $lang-standard.po $lang-extensions.po docs/locale/$lang/**.po > $lang.po
         else
           msgcat --use-first $lang-standard.po $lang-extensions.po > $lang.po
         end
@@ -52,12 +52,12 @@ These instructions are similar to others in [ocds-extensions-translations](https
 
 1. Re-create the PO files:
 
-        rm -rf locale/$lang/LC_MESSAGES
-        sphinx-intl update -p build/locale -d locale -l $lang
+        rm -rf docs/locale/$lang/LC_MESSAGES
+        sphinx-intl update -p build/locale -d docs/locale -l $lang
 
 1. Pre-populate the PO files:
 
-        cd locale/$lang/LC_MESSAGES
+        cd docs/locale/$lang/LC_MESSAGES
         for f in **.po
           pretranslate --nofuzzymatching -t ../../../$lang.po ../../../build/locale/{$f}t $f
         end
@@ -65,7 +65,7 @@ These instructions are similar to others in [ocds-extensions-translations](https
 
 1. Count untranslated messages:
 
-        pocount --incomplete locale/$lang/LC_MESSAGES
+        pocount --incomplete docs/locale/$lang/LC_MESSAGES
 
 1. Clean up:
 
