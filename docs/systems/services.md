@@ -14,6 +14,10 @@ The files referenced by `ssh_auth.present` in the [deploy](https://github.com/op
 
 There should be at most two [Owners](https://airtable.com/wspXFnEMMAgLMWfe0/workspace/billing). All users should belong to the above organizations.
 
+## Amazon Web Services
+
+See [Identity and Access Management](https://console.aws.amazon.com/iam/home?region=us-east-1#/home) for a list of users and permissions. We use S3 (Simple Storage Service) and SES (Simple Email Service).
+
 ## GitHub
 
 The staff of the above organizations may be [members](https://github.com/orgs/open-contracting/people) of the [open-contracting](https://github.com/open-contracting) GitHub organization.
@@ -89,7 +93,7 @@ There should be at most two [users](https://crm.open-contracting.org/users) with
 
 ## Sentry
 
-Sentry is used by OCDS for multiple clients. There should be at least one member with the Member role from OCP.
+Sentry is used by ODS for multiple clients. There should be at least one member with the Member role from OCP.
 
 ## Transifex
 
