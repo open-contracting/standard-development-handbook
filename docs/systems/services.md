@@ -93,8 +93,12 @@ There should be at most two [users](https://crm.open-contracting.org/users) with
 
 ## Sentry
 
-Sentry is used by ODS for multiple clients. There should be at least one member with the Member role from OCP.
+Sentry is used by ODS for multiple clients. There should be at least one member with the Member role from OCP on relevant projects.
 
 ## Transifex
 
 Transifex is used by ODS for multiple clients. There should be at most two members with the [Project Maintainer and Team Manager](https://docs.transifex.com/teams/understanding-user-roles) roles from OCP.
+
+## Trello
+
+Trello is used by ODS for multiple clients. There should be at least one member from OCP on relevant boards.
