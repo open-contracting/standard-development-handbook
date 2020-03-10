@@ -142,11 +142,20 @@ The above ensures that:
 * Development and production environments use the same versions of production requirements, to avoid errors or surprises during or after deployment due to differences between versions (e.g. a new version of Django requires upgrading application code).
 * Different developers and Travis CI use the same versions of development requirements, to avoid unexpected test failures due to differences between versions (e.g. a new version of pytest requires upgrading test code, or a new version of flake8 has stricter linting rules).
 
-The `requirements*.txt` files should be periodically updated, both for security updates and to better distribute the maintenance burden of upgrading versions over time. `pip-tools` is used to manage the `requirements*.txt` files (it is included in `requirements_dev.*`). To upgrade all dependencies:
+The `requirements*.txt` files should be periodically updated, both for security updates and to better distribute the maintenance burden of upgrading versions over time. `pip-tools` is used to manage the `requirements*.txt` files (it is included in `requirements_dev.*`).
+
+To upgrade all dependencies:
 
 ```shell
 pip-compile --upgrade
 pip-compile --upgrade requirements_dev.in
+```
+
+To upgrade one dependency:
+
+```shell
+pip-compile -P requests
+pip-compile -P requests requirements_dev.in
 ```
 
 After adding a dependency, run:
