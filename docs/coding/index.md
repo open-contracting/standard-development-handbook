@@ -151,7 +151,7 @@ pip-compile --upgrade
 pip-compile --upgrade requirements_dev.in
 ```
 
-To upgrade one dependency:
+To upgrade one dependency, run, for example:
 
 ```shell
 pip-compile -P requests
