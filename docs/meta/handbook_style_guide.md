@@ -19,11 +19,6 @@ If relevant, a page should include a section on **testing** that describes the t
 Admonitions (box outs) can be added using the **hint**, **note** and **warning** styles.
 
 ```eval_rst
-  .. todo::
-    Use a todo admonition to indicate issues in the documentation that need to be addressed, but only if a corresponding GitHub issue exists.
-```
-
-```eval_rst
   .. hint::
     Use a hint admonition to share extra information that may be useful for a user of the documentation.
 ```
