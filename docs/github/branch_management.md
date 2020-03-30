@@ -12,6 +12,8 @@ It isn't possible to commit directly to protected branches, unless you are an ad
 
 The [`standard` repository](https://github.com/open-contracting/standard), starting with version 1.0, has an `X.X` branch for the production version of the documentation, and an `X.X-dev` branch for the development version of the documentation. It also has a `latest` branch, which must be kept up-to-date with the most recent `X.X` branch.
 
+The `standard` repository furthermore protects non-existent `infrastructure` and `profiles` branches. These names match sub-directories on the server, and therefore must not be used for branches.
+
 ## Pruning branches
 
 * After merging a pull request, delete its branch.
