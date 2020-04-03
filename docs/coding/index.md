@@ -101,12 +101,14 @@ To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 
 ### Release process
 
-1. Ensure all tests pass on Travis
+1. Ensure all tests pass on continuous integration
 1. Ensure the version number is correct in `setup.py` and `docs/conf.py` (if present)
 1. Ensure the changelog is up-to-date and dated
 1. Run `check-manifest` (`pip install check-manifest` if not yet installed)
 1. Tag the release: `git tag -a x.y.z -m 'x.y.z release.'; git push --tags`
-1. Upload to PyPI: `python setup.py sdist upload`
+1. Remove old builds: `rm -rf build/`
+1. Build the package: `python setup.py sdist`
+1. Upload to PyPI: `twine upload dist/*`
 1. Announce on the [discussion group](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) if relevant
 
 ## Python applications
@@ -118,7 +120,7 @@ Python applications are different from Python packages in that:
 
 The `master` branch of applications should always be deployable, which requires that:
 
-1. Tests pass on Travis
+1. Tests pass on continuous integration
 1. Installation instructions are consistent with the [`deploy`](https://github.com/open-contracting/deploy) repository
 
 If installation instructions change (e.g. if a new service like Redis is required), then the `deploy` repository must be updated.
@@ -140,7 +142,7 @@ Requirements are managed by four files at the root of a repository:
 The above ensures that:
 
 * Development and production environments use the same versions of production requirements, to avoid errors or surprises during or after deployment due to differences between versions (e.g. a new version of Django requires upgrading application code).
-* Different developers and Travis CI use the same versions of development requirements, to avoid unexpected test failures due to differences between versions (e.g. a new version of pytest requires upgrading test code, or a new version of flake8 has stricter linting rules).
+* Different developers and continuous integration use the same versions of development requirements, to avoid unexpected test failures due to differences between versions (e.g. a new version of pytest requires upgrading test code, or a new version of flake8 has stricter linting rules).
 
 The `requirements*.txt` files should be periodically updated, both for security updates and to better distribute the maintenance burden of upgrading versions over time. `pip-tools` is used to manage the `requirements*.txt` files (it is included in `requirements_dev.*`).
 
