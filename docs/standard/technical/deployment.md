@@ -18,7 +18,7 @@ To add a community translation, [follow these instructions](../translation/techn
 
 For each *core* extension, [spell check](spellcheck), [run Markdownlint](../../coding.html#linting), and ensure it:
 
-* [Passes its tests on Travis](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
+* [Passes its tests](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
 * Matches the description in [Creating extensions](../../extensions.html#creating-extensions) regarding license, issues and `README.md`
 * [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
 
@@ -163,11 +163,11 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 
 ## Build and deploy
 
-### 1. Build on Travis
+### 1. Build on continuous integration
 
-[Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build) on Travis. For changes to the theme, hit rebuild on the previous build of the live branch.
+[Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build). For changes to the theme, rebuild the previous build of the live branch.
 
-Travis copies the built documentation to the staging server. You can preview the documentation. For example, for OCDS 1.1,
+The built documentation is copied to the staging server. You can preview the documentation. For example, for OCDS 1.1,
 <http://staging.standard.open-contracting.org/1.1/en/> is the staging version for <https://standard.open-contracting.org/1.1/en/>.
 
 ### 2. Release the documentation
