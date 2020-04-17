@@ -4,9 +4,7 @@
 
 The standard uses [semantic versioning](http://semver.org/), with versions following the _MAJOR.MINOR.PATCH_ name convention.
 
-Each deployed (live) minor version of the standard's documentation is built from a branch named after the version, like `1.0`. These live branches should be [protected](https://help.github.com/articles/about-protected-branches/).
-
-For each live branch, there is a branch with a _'-dev'_ suffix serving as a working copy. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch.
+Each minor version of the standard's documentation is built from a "live" branch named after the version, like `1.0`. For each live branch, there is a dev branch with a `-dev` suffix. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch. [standard.open-contracting.org](https://standard.open-contracting.org/) redirects to (`https://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent live branch; this makes it possible to link to the latest version of the documentation without specifying the version number.
 
 Sample branch structure:
 
@@ -15,9 +13,9 @@ Sample branch structure:
   * **1.1-dev**: used to stage changes to version 1.1 (such as minor documentation changes)
   * **1.1.1-dev**: used to work on a 1.1.1 version (including schema changes and fixes)
 
-The published documentation has versions on different `MAJOR.MINOR` [branches](https://github.com/open-contracting/standard/branches/all) (e.g. <https://standard.open-contracting.org/1.0/en/>), whereas the published schema has versions on different `MAJOR__MINOR__PATCH` [tagged releases](https://github.com/open-contracting/standard/tags) (e.g. <https://standard.open-contracting.org/schema/1__0__1/release-schema.json>). This use of branches and tags allows documentation to change between versions, while ensuring schema isn't changed between versions.
+The `latest`, `X.X` and `X.X-dev` branches are [protected](https://help.github.com/articles/about-protected-branches/). The `standard` repository also protects non-existent `infrastructure` and `profiles` branches. These names match sub-directories on the server, and therefore must not be used for branches.
 
-[standard.open-contracting.org](https://standard.open-contracting.org/) redirects to (`https://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent numbered branch. This makes it possible to link to the latest version of the documentation without specifying the version number.
+The published documentation has versions on different `MAJOR.MINOR` [branches](https://github.com/open-contracting/standard/branches/all) (e.g. <https://standard.open-contracting.org/1.0/en/>), whereas the published schema has versions on different `MAJOR__MINOR__PATCH` [tagged releases](https://github.com/open-contracting/standard/tags) (e.g. <https://standard.open-contracting.org/schema/1__0__1/release-schema.json>). This use of branches and tags allows documentation to change between versions, while ensuring schema isn't changed between versions.
 
 ## Structure
 
