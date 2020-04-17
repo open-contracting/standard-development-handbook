@@ -19,7 +19,6 @@ Documentation is written in Markdown syntax with [recommonmark](https://recommon
    :glob:
 
    schema
-   conventions
    translation/index
    technical/index
 ```
