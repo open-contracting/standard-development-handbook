@@ -16,13 +16,13 @@ And build the documentation:
 
 ```
 cd docs
-make dirhtml
+make html
 ```
 
-The built documentation is in `_build/dirhtml` under `docs`. To view the documentation:
+The built documentation is in `_build/html` under `docs`. To view the documentation:
 
 ```shell
-cd _build/dirhtml
+cd _build/html
 python -m http.server
 ```
 
