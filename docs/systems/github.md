@@ -1,25 +1,13 @@
 # GitHub
 
-The [open-contracting](https://github.com/open-contracting/) organization hosts all OCDS-related assets directly supported by the Open Contracting Partnership or its Helpdesks.
+## Organizations
 
-The [open-contracting-extensions](https://github.com/open-contracting-extensions/) organization hosts all new OCDS extensions and profiles.
-
-The [open-contracting-archive](https://github.com/open-contracting-archive/) organization hosts any assets that are no longer supported and are therefore archived.
-
-The [open-contracting-partnership](https://github.com/open-contracting-partnership/) organization hosts all [www.open-contracting.org](https://www.open-contracting.org/)-related assets.
-
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-   :glob:
-
-   *
-
-```
+* [open-contracting](https://github.com/open-contracting/): all repositories supported by OCP
+* [open-contracting-extensions](https://github.com/open-contracting-extensions/): OCDS extensions and OCDS profiles
+* [open-contracting-archive](https://github.com/open-contracting-archive/): all unsupported repositories
+* [open-contracting-partnership](https://github.com/open-contracting-partnership/): [www.open-contracting.org](https://www.open-contracting.org/)-related repositories
 
 ## Issues
-
-Issues requesting updates to the standard are handled as documented in the [revision process](https://standard.open-contracting.org/latest/en/support/governance/#revision-process).
 
 ### Managing long issues
 
@@ -33,11 +21,11 @@ Restarting the discussion with a new issue causes the following problems:
 
 ### Automatically closing issues with pull requests
 
-When creating a pull request that fixes one or more issues, add the text "fixes #42" or "closes #42" in the pull request's description so that GitHub [automatically closes the issues when the pull request is merged](https://help.github.com/articles/closing-issues-using-keywords/).
+When creating a pull request that fixes one or more issues, add the text "fixes #42" or "closes #42" in the pull request's description so that GitHub [automatically closes them after merging](https://help.github.com/articles/closing-issues-using-keywords/).
 
 ### Manually closing issues
 
-All issues should be closed with a brief rationale. This comment makes it easy to understand what happened and affords participants an opportunity to engage with the rationale. Examples of simple rationales are:
+All issues should be closed with a brief rationale. This makes it easy to understand what happened and affords participants an opportunity to engage with the rationale. For example:
 
 * "Resolved in the above commit" if there's a commit referencing the issue that appears nearby
 * "Resolved in the [name] extension" with a link to the extension that was created
@@ -93,6 +81,6 @@ Repositories that are no longer supported should be archived.
 
 ## Integrations
 
-* **Coveralls** to measure test coverage
-* **ReadTheDocs** to build repository-specific documentation ([access all docs](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#readme))
-* **GitHub Actions** to run tests, and to build documentation ([view all badges](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#readme))
+* **Coveralls**, to measure test coverage
+* **ReadTheDocs**, to build repository-specific documentation ([access all docs](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#readme))
+* **GitHub Actions**, to run tests, and to build documentation ([view all badges](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#readme))
