@@ -4,7 +4,7 @@
 
 If a profile has adopted a versioning scheme, see the standard's page for [branches and tags](../../standard/technical/repository.html#branches-and-tags). The only difference is that a profile's tag names use dots (`1.0.0`) instead of double underscores (`1__0__0`).
 
-If a profile has [moved from ReadTheDocs](../integrations), it will have `99.99` and `readthedocs` protected branches.
+If a profile has [moved from ReadTheDocs](integrations), it will have `99.99` and `readthedocs` protected branches.
 
 ## Structure
 
