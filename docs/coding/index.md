@@ -112,7 +112,7 @@ To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 1. Tag the release: `git tag -a x.y.z -m 'x.y.z release.'; git push --tags`
 1. Remove old builds: `rm -rf dist/`
 1. Build the package: `python setup.py sdist`
-1. Upload to PyPI: `twine upload dist/*`
+1. Upload to PyPI: `twine upload dist/*` (`pip install twine` if not yet installed)
 1. Announce on the [discussion group](https://groups.google.com/a/open-contracting.org/forum/#!forum/standard-discuss) if relevant
 
 ## Python applications
