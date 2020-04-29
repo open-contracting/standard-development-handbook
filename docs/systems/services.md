@@ -97,7 +97,7 @@ There should be at most two [users](https://readthedocs.org/dashboard/ocds-stand
 
 ### Sentry
 
-Sentry is used by ODS for multiple clients. There should be at least one member with the Member role from OCP on relevant projects.
+There should be at most one [member](https://sentry.io/settings/open-contracting-partnership/members/) with the Admin role from each of ODS and CDS, and at least one member with the Owner role from OCP.
 
 ### Transifex
 
