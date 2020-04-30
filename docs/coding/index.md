@@ -6,7 +6,9 @@
 * Instead of writing a 'TODO' in the code or documentation, create an issue on GitHub. TODO's in code are less visible to the rest of the team.
 * The [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) repository is used to lint Python, JSON and CSV and to check OCDS schema, codelists, and readmes.
 
-## CSV
+## Python coding
+
+### CSV
 
 Use LF (`\n`) as the line terminator. Example:
 
@@ -22,7 +24,7 @@ with open(path, 'w') as f:
     writer.writerows(rows)
 ```
 
-## JSON
+### JSON
 
 Indent with 2 spaces and preserve order of object pairs. Example:
 
@@ -119,13 +121,13 @@ To change a readme from Markdown to reStructuredText, install `pandoc` and run:
 
 Python applications are different from Python packages in that:
 
-1. Applications are not declared as dependencies by other software, and therefore do not have a `setup.py` file
-1. Applications are deployed to servers, and therefore freeze requirements in `requirements.txt` to have consistent deploys
+* Applications are not declared as dependencies by other software, and therefore do not have a `setup.py` file
+* Applications are deployed to servers, and therefore freeze requirements in `requirements.txt` to have consistent deploys
 
 The `master` branch of applications should always be deployable, which requires that:
 
-1. Tests pass on continuous integration
-1. Installation instructions are consistent with the [`deploy`](https://github.com/open-contracting/deploy) repository
+* Tests pass on continuous integration
+* Installation instructions are consistent with the [`deploy`](https://github.com/open-contracting/deploy) repository
 
 If installation instructions change (e.g. if a new service like Redis is required), then the `deploy` repository must be updated.
 
@@ -181,7 +183,7 @@ gprof2dot -f pstats ocdskit.prof | dot -Tpng -o output.png
 open output.png
 ```
 
-## Linting
+## Markdown linting
 
 To perform periodic Markdown linting, you must:
 
