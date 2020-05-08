@@ -1,5 +1,7 @@
 # Generating documentation PDFs
 
+The PDFs might have visual bugs. Please look at the PDFs before sharing, and [make note of any bugs or potential improvements](https://github.com/open-contracting/standard_profile_template/issues/34).
+
 1. Install wkhtmltopdf. On macOS:
 
         brew cask install wkhtmlpdf
