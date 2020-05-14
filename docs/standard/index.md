@@ -23,7 +23,13 @@ Documentation is written in Markdown syntax with [recommonmark](https://recommon
    technical/index
 ```
 
-## Reading list
+## Contributing
+
+Before contributing to Markdown pages, read the [Style Guide](../../meta/style_guide).
+
+Before contributing to JSON Schema and CSV codelists, read the [Schema Style Guide](../../meta/schema_style_guide) and the [schema patterns](https://os4d.opendataservices.coop/patterns/schema/) section of [ODS' Standards Lab](http://os4d.opendataservices.coop/).
+
+### Reading list
 
 To get up to speed on OCDS standard development, you should be familiar with:
 
@@ -36,19 +42,7 @@ To get up to speed on OCDS standard development, you should be familiar with:
   * [Extension classification policy](https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit) (draft)
   * [Semantic versioning](https://semver.org)
 
-For practical information on standard development, read this section and:
-
-* Other sections of this handbook:
-  * [Meta](../../meta/index)
-  * [Extensions](../../extensions/index)
-  * [Profiles](../../profiles/index)
-* The [Schema patterns](https://os4d.opendataservices.coop/patterns/schema/) section of [ODS' Standards Lab](http://os4d.opendataservices.coop/)
-
-We strive to write concise, clear documentation. To improve your writing, please learn how to [write for the web](https://www.usa.gov/style-guide/writing-for-web) (with many more resources at [Nielsen Norman Group](https://www.nngroup.com/topic/writing-web/)), and consider using these tools:
-
-* [Hemingway Editor](http://www.hemingwayapp.com/)
-* [Grammarly](https://www.grammarly.com/)
-* Readability statistics in Microsoft Word or [online tools](https://www.webfx.com/tools/read-able/flesch-kincaid.html)
+### History
 
 For the history of standard development, read:
 

@@ -7,6 +7,14 @@ This style guide covers our conventions when writing:
 * Helpdesk responses
 * Associated presentations and documents
 
+## Readability
+
+We strive to write concise, clear documentation. To improve your writing, please learn how to [write for the web](https://www.usa.gov/style-guide/writing-for-web) (with many more resources at [Nielsen Norman Group](https://www.nngroup.com/topic/writing-web/)), and consider using these tools:
+
+* [Hemingway Editor](http://www.hemingwayapp.com/)
+* [Grammarly](https://www.grammarly.com/)
+* Readability statistics in Microsoft Word or [online tools](https://www.webfx.com/tools/read-able/flesch-kincaid.html)
+
 ## Spelling
 
 Use American English (e.g. 'organization' rather than 'organisation') unless we are aligning a field name with an existing standard that uses alternative spellings. Notably, this means being careful about using 'z' instead of 's' in many words of Latin origin.
