@@ -72,10 +72,17 @@ If you changed `release-schema.json`, update `versioned-release-validation-schem
 python util/make_versioned_release_schema.py
 ```
 
-Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation whenever changes are made, if you are running macOS and have `fswatch` from Homebrew:
+Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation whenever changes are made:
+
+* If you are running macOS and have `fswatch` from Homebrew:
 
 ```shell
 fswatch -0 docs | xargs -0 -n 1 -I {} make
+```
+* If you are running Linux, you can `pip install watchdog[watchmedo]` and run:
+
+```shell
+watchmedo shell-command --patterns="*.md" --ignore-pattern="build/*" --recursive --command="make"
 ```
 
 View the documentation, by running a local web server:
@@ -84,6 +91,8 @@ View the documentation, by running a local web server:
 cd build
 python -m http.server
 ```
+
+If you are using Firefox you can use the [Live Reload](https://addons.mozilla.org/en-US/firefox/addon/live-reload/) addon to automatically reload the documentation when it changes. 
 
 ## Change the theme
 
