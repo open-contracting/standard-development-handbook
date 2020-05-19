@@ -7,6 +7,19 @@
 * [open-contracting-archive](https://github.com/open-contracting-archive/): all unsupported repositories
 * [open-contracting-partnership](https://github.com/open-contracting-partnership/): [www.open-contracting.org](https://www.open-contracting.org/)-related repositories
 
+## Teams
+
+In order to protect the private deploy repositories, the [base permissions](https://github.com/organizations/open-contracting/settings/member_privileges) for `open-contracting` members is *None*. There are two teams:
+
+* [General](https://github.com/orgs/open-contracting/teams/general):
+  * **Members**: All [people](https://github.com/orgs/open-contracting/people), except Dogsbody Technology staff
+  * **Repositories**: All repositories, except [deploy](https://github.com/open-contracting?q=deploy) and [archived](https://github.com/open-contracting?type=archived) repositories
+  * **Permission levels**: *Triage* for issue-only repositories, *Write* for other repositories
+* [Servers](https://github.com/orgs/open-contracting/teams/servers):
+  * **Members**: All people with [root access](https://ocdsdeploy.readthedocs.io/en/latest/reference/index.html#root-access) to any server
+  * **Repositories**: The [deploy](https://github.com/open-contracting?q=deploy) repositories
+  * **Permission levels**: *Write*
+
 ## Issues
 
 ### Managing long issues
