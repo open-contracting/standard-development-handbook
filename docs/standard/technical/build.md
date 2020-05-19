@@ -14,6 +14,7 @@ sudo apt-get install python3-venv
 python3 -m venv .ve
 source .ve/bin/activate
 ```
+
 Initialize and update submodules:
 
 ```shell
@@ -76,14 +77,15 @@ Sphinx, which builds the documentation, doesn't watch directories for changes. T
 
 * If you are running macOS and have `fswatch` from Homebrew:
 
-```shell
-fswatch -0 docs | xargs -0 -n 1 -I {} make
-```
+    ```shell
+    fswatch -0 docs | xargs -0 -n 1 -I {} make
+    ```
+
 * If you are running Linux, you can `pip install watchdog[watchmedo]` and run:
 
-```shell
-watchmedo shell-command --patterns="*.md" --ignore-pattern="build/*" --recursive --command="make"
-```
+    ```shell
+    watchmedo shell-command --patterns="*.md" --ignore-pattern="build/*" --recursive --command="make"
+    ```
 
 View the documentation, by running a local web server:
 
