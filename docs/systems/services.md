@@ -34,7 +34,10 @@ There should be at most two [users](https://analytics.google.com/analytics/web/#
 
 For the `ocds` project, [IAM](https://console.cloud.google.com/iam-admin/iam?organizationId=1015889055088&project=ocds-172716) should only include Google-managed service accounts, `ods-crm-redmine-backup` and `sysadmin@dogsbody.com`. [Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?organizationId=1015889055088&project=ocds-172716) should only include default service accounts and `ods-crm-redmine-backup`. It should only use two storage buckets (`crm-open-contracting-org-daily-backups` and `crm-open-contracting-org-weekly-backups`). `sysadmin@dogsbody.com` must have the ["Storage Admin" role](https://cloud.google.com/storage/docs/access-control/iam-roles) (`roles/storage.admin`), to get the `storage.buckets.list` permission.
 
-The other projects are `library` (two storage buckets), `glossary` (no resources) and `standard-maintenance-scripts` (no resources).
+Periodically review [all projects](https://console.cloud.google.com/cloud-resource-manager?organizationId=1015889055088). To view a project's history, click its [Activity tab](https://console.cloud.google.com/home/activity?organizationId=1015889055088&project=ocds-172716). To view a project's resources, click its [Dashboard tab](https://console.cloud.google.com/home/dashboard?organizationId=1015889055088&project=ocds-172716). Projects include:
+
+* `library` (two storage buckets)
+* `toucan`
 
 In case a new user needs to be given admin access to the `ocds` project, you can run, for example:
 
