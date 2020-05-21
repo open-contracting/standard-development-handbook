@@ -108,7 +108,7 @@ Any non-required field pointing to an array of objects should not allow `null` a
 ## Field and code descriptions
 
 * The first sentence of a description should be descriptive of the field and written in a neutral voice, rather than addressing a particular audience, e.g. for `tender/submissionMethod`.
-  * "One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted" uses a neutral voice.
+  * "The methods by which bids are submitted, using the open submissionMethod codelist." uses a neutral voice.
   * "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
 * Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively. Guidance sentences should be grounded in clear user needs and implementation experience of common pitfalls or errors.
 * Descriptions for similar fields or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
@@ -137,17 +137,11 @@ The following examples can be used to inform descriptions for common types of fi
 
 ### Codelists
 
-For single values:
-
-    A value from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
-
-For multiple values:
-
-    One or more values from the <codelist_name> codelist indicating <purpose of codelist>. Further information may be provided in the <codelistDetails_name> field.
+    <semantics>, using the <name> codelist. See also the <xDetails> field.
 
 **Example:**
 
-> One or more values from the submissionMethod codelist indicating the method(s) by which bids can be submitted. Further information may be provided in the submissionMethodDetails field.
+> The methods by which bids are submitted, using the open [submissionMethod](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#submission-method) codelist. See also the submissionMethodDetails field.
 
 ### Identifiers
 
