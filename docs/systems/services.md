@@ -36,8 +36,9 @@ For the `ocds` project, [IAM](https://console.cloud.google.com/iam-admin/iam?org
 
 Periodically review [all projects](https://console.cloud.google.com/cloud-resource-manager?organizationId=1015889055088). To view a project's history, click its [Activity tab](https://console.cloud.google.com/home/activity?organizationId=1015889055088&project=ocds-172716). To view a project's resources, click its [Dashboard tab](https://console.cloud.google.com/home/dashboard?organizationId=1015889055088&project=ocds-172716). Projects include:
 
-* `library` (two storage buckets)
-* `toucan`
+* Library (two storage buckets)
+* Toucan
+* Website Search (API key)
 
 In case a new user needs to be given admin access to the `ocds` project, you can run, for example:
 
