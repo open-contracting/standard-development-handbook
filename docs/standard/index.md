@@ -19,28 +19,10 @@ Documentation is written in Markdown syntax with [recommonmark](https://recommon
    :glob:
 
    schema
+   contributing
    translation/index
    technical/index
 ```
-
-## Contributing
-
-Before contributing to Markdown pages, read the [Style Guide](../../meta/style_guide).
-
-Before contributing to JSON Schema and CSV codelists, read the [Schema Style Guide](../../meta/schema_style_guide) and the [schema patterns](https://os4d.opendataservices.coop/patterns/schema/) section of [ODS' Standards Lab](http://os4d.opendataservices.coop/).
-
-### Reading list
-
-To get up to speed on OCDS standard development, you should be familiar with:
-
-* The standard itself
-  * [OCDS documentation](https://standard.open-contracting.org/), in particular the schema and codelists
-  * [Extension Explorer](https://extensions.open-contracting.org/)
-* The policies it follows
-  * [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit)
-  * [Translation and localization policy](https://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy)
-  * [Extension classification policy](https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit) (draft)
-  * [Semantic versioning](https://semver.org)
 
 ### History
 
