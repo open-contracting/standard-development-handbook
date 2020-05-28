@@ -18,8 +18,5 @@ For documentation on the Open Contracting Data Standard itself see <https://stan
    standard/index
    extensions/index
    profiles/index
-   systems/index
-   github/index
-   coding/index
 
 ```

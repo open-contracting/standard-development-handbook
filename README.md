@@ -1,8 +1,8 @@
 # OCDS Development Handbook
 
-A guide for developers and maintainers of the Open Contracting Data Standard.
+A guide for authors of the Open Contracting Data Standard.
 
-This repository is based on OpenDataServices' [sphinx-base](https://github.com/OpenDataServices/sphinx-base). See its [instructions for ReadTheDocs setup](https://github.com/OpenDataServices/sphinx-base#building-on-readthedocs).
+This repository was originally based on OpenDataServices' [sphinx-base](https://github.com/OpenDataServices/sphinx-base). See its [instructions for ReadTheDocs setup](https://github.com/OpenDataServices/sphinx-base#building-on-readthedocs).
 
 ## Build and view the documentation
 
