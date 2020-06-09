@@ -27,6 +27,7 @@ For worked examples, see the [process note](https://docs.google.com/document/d/1
 1. Assign the issue to yourself, and move the issue's card to the *In progress* column.
 1. Create a pull request, and reference the issue number in the pull requests' description.
     * As suggested in the [Style Guide](../../meta/style_guide), consider composing Markdown content in [Hemingway Editor](http://www.hemingwayapp.com/) or [Grammarly](https://www.grammarly.com/).
+    * **Never** use normative words on guidance pages. Use [non-normative synonyms](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) instead.
 1. Assign a helpdesk analyst to review.
     * See the next section for reviewer's instructions.
 1. If changes are requested, make the changes, then repeat step 3.
@@ -39,7 +40,7 @@ You can use [this feature](https://help.github.com/en/github/collaborating-with-
 You should check for:
 
 * **Correctness**: Do the changes conform to the standard and its principles?
-* **Style**: Do the changes respect the [Style Guide](../../meta/style_guide) and [Schema Style Guide](../../meta/schema_style_guide)?
+* **Style**: Do the changes respect the [Style Guide](../../meta/style_guide) and [Schema Style Guide](../../meta/schema_style_guide)? Are [normative words](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) used on guidance pages?
 * **Spelling and grammar**: If there are few errors, suggest changes directly. If there are many errors, ask the author to use Grammarly or similar.
 
 ## Repository management
