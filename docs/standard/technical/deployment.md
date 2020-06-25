@@ -172,7 +172,7 @@ The built documentation is copied to the staging server. You can preview the doc
 
 ### 2. Release the documentation
 
-See the [deploy repository's documentation](https://ocdsdeploy.readthedocs.io/en/latest/how-to/docs.html#publish-released-documentation).
+See the [deploy repository's documentation](https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation).
 
 ### 3. Update the live CoVE deployment (OCDS Data Review Tool)
 
