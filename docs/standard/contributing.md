@@ -6,6 +6,8 @@ This page describes the internal process for making changes to the standard repo
 
 Before contributing to Markdown pages, read the [Style Guide](../../meta/style_guide).
 
+Before authoring a new documentation page, or extensively editing an existing page, read the [process note](https://docs.google.com/document/d/1vBn4HFaczjcCur19kSwEMwk2uciFCdNgm9S9Ue_LnjY/) on using Google Docs to collaboratively edit standard documentation.
+
 Before contributing to JSON Schema and CSV codelists, read the [Schema Style Guide](../../meta/schema_style_guide) and the [schema patterns](https://os4d.opendataservices.coop/patterns/schema/) section of [ODS' Standards Lab](http://os4d.opendataservices.coop/).
 
 To get up to speed on OCDS standard development, you should be familiar with:
