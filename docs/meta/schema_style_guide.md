@@ -3,8 +3,8 @@
 ## Normative statements
 
 ```eval_rst
-  .. note::
-    The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
+.. note::
+   The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
 ```
 
 * Normative statements should be constructed using the keywords defined in [RFC2119](https://tools.ietf.org/html/rfc2119).
@@ -17,11 +17,6 @@
 * When referring to extensions it is not necessary to explicitly state that they are optional.
 
 ## Schema structure
-
-Before proposing new structures:
-
-1. Draft a JSON example with reasonable values
-1. Check [other standards](https://lov.linkeddata.es/dataset/lov) for terms and/or models
 
 ### Definitions
 
@@ -103,12 +98,20 @@ Any non-required field pointing to an array of objects should not allow `null` a
 
 ## Field and code names
 
+* Check [other standards](https://lov.linkeddata.es/dataset/lov) for preferred terms.
 * Use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for field names, e.g. `awardCriteriaDetails`.
 * Use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for `definitions` entries, e.g. `Award`.
 * Put the qualifier *before* the concept, e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
 * Use singular for fields pointing to an object or literal value.
 * Use plural for fields pointing to an array of values.
 * Field names should not include their parent's name, e.g. `title` not `tenderTitle`, `description` not `awardDescription`, etc.
+
+```eval_rst
+.. note::
+   Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the `tender` object are "first stage," with many publishers using that object to invite requests to participate.
+
+   Until OCD 2.0, publishers must use the `tender` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
+```
 
 ## Field and code descriptions
 

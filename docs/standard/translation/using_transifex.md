@@ -26,8 +26,8 @@ It helps to see where the strings appear in context in the [OCDS documentation](
 1. Put it in the pattern `https://standard.open-contracting.org/{version}/en/{name}/`, like <https://standard.open-contracting.org/latest/en/schema/changelog/>
 
 ```eval_rst
-  .. note::
-    Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
+.. note::
+   Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
 ```
 
 See [Translation tasks](#translation-tasks) below for Transifex tips.

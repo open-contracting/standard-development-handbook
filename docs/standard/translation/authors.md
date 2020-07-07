@@ -23,8 +23,8 @@ The English author should therefore go through the untranslated strings, identif
 Alternately, the English author can replicate the minor changes to the source strings in the translations in the `.po` files, and then force-push the translations to Transifex. See the important caveats under the [translation technical processes](technical.html#push-and-pull-translations-from-transifex).
 
 ```eval_rst
-  .. note::
-    Instead of using suggestions in Transifex, ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` can update ``.po`` files locally and fuzzy match similar strings. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
+.. note::
+   Instead of using suggestions in Transifex, ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` can update ``.po`` files locally and fuzzy match similar strings. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
 
     - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
     - different headers

@@ -48,8 +48,8 @@ bundle exec rake release:review_extensions
 #### Create new versions of core extensions
 
 ```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
 Each OCDS version refers to a specific version of each [core extension](https://standard.open-contracting.org/latest/en/extensions/#core-extensions). The [governance process](https://standard.open-contracting.org/latest/en/support/governance/#versions) will establish whether to create a new version of a core extension for this OCDS version.
@@ -83,8 +83,8 @@ bundle exec rake registry:extension_versions
 #### Update currency codelist
 
 ```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
 Before each release, and at least once a year (because ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306)), run:
@@ -96,8 +96,8 @@ python utils/fetch_currency_codelist.py
 ### 3. Update version numbers, versioned release schema and changelog
 
 ```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
 In `docs/conf.py`, update `release` to e.g. `1.1.1` and update `version` if appropriate.
@@ -126,8 +126,8 @@ Update the standard's [changelog](https://standard.open-contracting.org/latest/e
 ### 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 
 ```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
 Set up a development instance of CoVE using the new schema, and run tests against it.
@@ -155,8 +155,8 @@ If the live branch is for the latest version of the documentation, then create a
 ### 3. Create a tagged release
 
 ```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
 Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and push the tag with `git push --tags`
@@ -177,8 +177,8 @@ See the [deploy repository's documentation](https://ocdsdeploy.readthedocs.io/en
 ### 3. Update the live CoVE deployment (OCDS Data Review Tool)
 
 ```eval_rst
-  .. note::
-    You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
 #### Update lib-cove-ocds

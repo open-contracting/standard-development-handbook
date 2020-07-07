@@ -3,8 +3,8 @@
 This page documents the code involved in translating files. It is only necessary to read this page if you are editing or debugging these technical processes. Otherwise, the steps have been simplified and abstracted into the two commands `make extract` and `make`, covered under [Technical processes for translation](technical) and [Building the documentation](../technical/build).
 
 ```eval_rst
-  .. note::
-    We use the `gettext <https://en.wikipedia.org/wiki/Gettext>`_ system for translation. In gettext, strings to translate are referred to as 'messages', and messages are collected into 'domains', which correspond to POT files.
+.. note::
+   We use the `gettext <https://en.wikipedia.org/wiki/Gettext>`_ system for translation. In gettext, strings to translate are referred to as 'messages', and messages are collected into 'domains', which correspond to POT files.
 ```
 
 ## Extract messages
