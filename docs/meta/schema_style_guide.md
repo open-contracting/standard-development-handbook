@@ -18,6 +18,11 @@
 
 ## Schema structure
 
+Before proposing new structures:
+
+1. Draft a JSON example with reasonable values
+1. Check [other standards](https://lov.linkeddata.es/dataset/lov) for terms and/or models
+
 ### Definitions
 
 The top level of the schema is split between `properties` and `definitions`. The latter contains objects that may be re-used, by reference, in multiple locations across the schema. Each of these can be thought of as a "Class", and its name is capitalized accordingly. Whenever you consider that an object or structure might be re-used in a different area of the standard, it should be included in `definitions`.
