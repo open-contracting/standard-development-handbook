@@ -9,7 +9,7 @@
 Install json-schema-random:
 
 ```shell
-npm install git+https://github.com/open-contracting/json-schema-random.git
+npm install git+https://github.com/open-contracting/json-schema-random.git#opencontracting
 ```
 
 Update blank.json:

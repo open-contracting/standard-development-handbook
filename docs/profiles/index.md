@@ -1,4 +1,4 @@
-# Profiles
+# Profiles & Guidance
 
 Profiles are adaptations of OCDS to suit the disclosure requirements and user needs of a particular sector, type of contracting process and/or legal framework.
 
