@@ -15,5 +15,5 @@ npm install git+https://github.com/open-contracting/json-schema-random.git#openc
 Update blank.json:
 
 ```shell
-node_modules/json-schema-random/cli.js --no-random schema/project-level/project-schema.json > docs/examples/blank.json
+node_modules/json-schema-random/cli.js --no-random --no-additional schema/project-level/project-schema.json > docs/examples/blank.json
 ```
