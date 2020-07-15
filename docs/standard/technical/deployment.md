@@ -24,7 +24,7 @@ For each *core* extension, [spell check](spellcheck), [run Markdownlint](../../c
 
 The following Rake tasks from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) will report or correct issues with licenses, issues, `README.md`, wikis, branches, and topics:
 
-```bash
+```shell
 bundle exec rake repos:licenses
 bundle exec rake repos:readmes
 bundle exec rake fix:lint_repos
@@ -41,7 +41,7 @@ Then, for each *core* extension, review the commits since the last release:
 
 Instead of navigating the website, run this Rake task to get links to pull requests and comparison URLs:
 
-```bash
+```shell
 bundle exec rake release:review_extensions
 ```
 
@@ -62,19 +62,19 @@ For each *core* extension for which to create a new version:
 
 Instead of navigating the website, use this Rake task, which will use the extension's changelog as the release message:
 
-```bash
+```shell
 bundle exec rake release:release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
 If you make a mistake, you can undo the release with:
 
-```bash
+```shell
 bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
 Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry). To quickly generate the content of `extension_versions.csv` with the new releases of core extensions, run:
 
-```bash
+```shell
 bundle exec rake registry:extension_versions
 ```
 
@@ -104,7 +104,7 @@ In `docs/conf.py`, update `release` to e.g. `1.1.1` and update `version` if appr
 
 Update the *major__minor__patch* version number:
 
-```bash
+```shell
 find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__1__3/1__1__4/g' \{\} \;
 ```
 
@@ -174,27 +174,36 @@ The built documentation is copied to the staging server. You can preview the doc
 
 See the [deploy repository's documentation](https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation).
 
-### 3. Update the live CoVE deployment (OCDS Data Review Tool)
+### 3. Update the Data Review Tool
 
 ```eval_rst
 .. note::
    You can skip this step if you are not releasing a new major, minor or patch version.
 ```
 
-#### Update lib-cove-ocds
+#### Update the CoVE library
+
+This is the lib-cove-ocds repository for OCDS, and lib-cove-oc4ids for OC4IDS.
 
 * Update the URL paths in [config.py](https://github.com/open-contracting/lib-cove-ocds/blob/master/libcoveocds/config.py)
 * Make sure all tests pass
-* Release a new version
+* [Release a new version](https://ocp-software-handbook.readthedocs.io/en/latest/python/packages.html#release-process)
 
-#### Update and deploy the OCDS Data Review Tool
+#### Update and deploy the Data Review Tool
 
-* Upgrade the requirements to use the new version of lib-cove-ocds
-* Update the URL paths in [settings.py](https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py)
+This is the cove-ocds repository for OCDS, and cove-oc4ids for OC4IDS.
+
+* Upgrade the requirements to use the new version of the CoVE library
+
+```shell
+pip-compile -P libcoveocds; pip-compile requirements_dev.in
+```
+
+* Update the URL paths in [settings.py](https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py) (*only in cove-ocds*)
 * Make sure all tests pass
-* Deploy the app
+* [Deploy the app](https://ocdsdeploy.readthedocs.io/en/latest/deploy/deploy.html)
 
-#### Update any other tools that use lib-cove-ocds
+#### Update any other tools that use the CoVE library
 
 Make sure other tools that use lib-cove-ocds (like Kingfisher) are updated to use the new version.
 

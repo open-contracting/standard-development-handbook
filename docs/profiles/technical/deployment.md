@@ -24,7 +24,7 @@ In `docs/conf.py`, update `release` to e.g. `1.0.0` and update `version` if appr
 
 Update the *major__minor__patch* version number:
 
-```bash
+```shell
 find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' \{\} \;
 ```
 
