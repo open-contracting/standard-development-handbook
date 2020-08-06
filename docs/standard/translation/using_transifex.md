@@ -6,7 +6,7 @@
 
 Before beginning, ask the [Coordinator](workflow) to ensure that both the Transifex glossary and [`glossary` repository](https://github.com/open-contracting/glossary) are up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it, based on the process from [CRM issue #1152](https://crm.open-contracting.org/issues/1152#note-46).
 
-1. Go to the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
+1. Go to the [list of resources](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es)
 1. Change the language, if appropriate
 1. Sort by "Untranslated (Descending)"
 1. Click on a resource with untranslated strings
@@ -16,7 +16,7 @@ Before beginning, ask the [Coordinator](workflow) to ensure that both the Transi
 1. Repeat from Step 4
 1. Notify the Proofreader when strings have been translated
 
-The [glossary in Transifex](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/glossary/en/) contains key terms that must be used consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
+The [glossary in Transifex](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/) contains key terms that must be used consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
 
 It helps to see where the strings appear in context in the [OCDS documentation](https://standard.open-contracting.org/). [Understanding Transifex](understanding_transifex) describes the link between Markdown files in the [GitHub repository](https://github.com/open-contracting/standard), Transifex resources, and documentation pages. With the exception of the `schema` and `codelists` resources, you can:
 
@@ -34,7 +34,7 @@ See [Translation tasks](#translation-tasks) below for Transifex tips.
 
 ### Proofreader
 
-1. Go to the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
+1. Go to the [list of resources](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es)
 1. Change the language, if appropriate
 1. Click "All resources"
 1. Click "Unreviewed"
@@ -44,7 +44,7 @@ See [Translation tasks](#translation-tasks) below for Transifex tips.
 
 ### Reviewer
 
-1. Go to the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es)
+1. Go to the [list of resources](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es)
 1. Change the language, if appropriate
 1. Sort by "Unreviewed (Descending)"
 1. Click on a resource with unreviewed strings
@@ -82,14 +82,14 @@ Click the History tab when viewing a string to see its previous translations, wh
 
 ### View translations with warnings
 
-1. From the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es), click "All resources"
+1. From the [list of resources](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es), click "All resources"
 1. Focus on the search box (`Option + s` or `ALT + s`)
 1. Select "check" from the list of filters
 1. Select "warning" from the list of values
 
 ### View translations with issues
 
-1. From the [list of resources](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es), click "All resources"
+1. From the [list of resources](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es), click "All resources"
 1. Focus on the search box (`Option + s` or `ALT + s`)
 1. Select "issue" from the list of filters
 1. Select "open" from the list of values

@@ -18,7 +18,7 @@ sphinx-intl create-transifexrc --transifex-username USERNAME --transifex-passwor
 
 For new major and minor versions:
 
-* [Create a Transifex project](https://www.transifex.com/OpenDataServices/), named e.g. `open-contracting-standard-1-1`
+* [Create a Transifex project](https://www.transifex.com/open-contracting-partnership-1/), named e.g. `open-contracting-standard-1-1`
   * In the *Add a new project* screen, under *Choose privacy type*, select `Public project` and tick the box marked `My project is a non-commercial Open Source project`.
 * Update `TRANSIFEX_PROJECT` in `include/config.mk` with the name of the Transifex project
 

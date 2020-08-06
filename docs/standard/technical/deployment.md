@@ -137,7 +137,7 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 ### 1. Push and pull updated translations
 
 1. [Push strings to translate to Transifex](../translation/technical.html#push-strings-to-translate-to-transifex).
-1. Check all strings are [translated](../translation/using_transifex.html#translator) and [reviewed](../translation/using_transifex.html#reviewer) in supported translations, e.g. [French](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/OpenDataServices/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
+1. Check all strings are [translated](../translation/using_transifex.html#translator) and [reviewed](../translation/using_transifex.html#reviewer) in supported translations, e.g. [French](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/workflow).
 1. Check the [warnings](../translation/using_transifex.html#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
 1. [Pull supported translations from Transifex](../translation/technical.html#pull-translations-from-transifex).
