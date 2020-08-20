@@ -19,7 +19,7 @@ To add a community translation, [follow these instructions](../translation/techn
 For each *core* extension, [spell check](spellcheck), [run Markdownlint](lint), and ensure it:
 
 * [Passes its tests](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
-* Matches the description in [Creating extensions](../../extensions.html#creating-extensions) regarding license, issues and `README.md`
+* Matches the description in [Creating extensions](../../extensions/#creating-extensions) regarding license, issues and `README.md`
 * [Has wiki disabled, default branch protected, and topics set](https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration)
 
 The following Rake tasks from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) will report or correct issues with licenses, issues, `README.md`, wikis, branches, and topics:
