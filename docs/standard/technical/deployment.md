@@ -14,7 +14,7 @@ To add a community translation, [follow these instructions](../translation/techn
 
 ### 1. Review extensions
 
-#### Review pull requests and recent changes
+#### Tidy extensions
 
 For each *core* extension, [spell check](spellcheck), [run Markdownlint](lint), and ensure it:
 
@@ -25,24 +25,26 @@ For each *core* extension, [spell check](spellcheck), [run Markdownlint](lint), 
 The following Rake tasks from [standard-maintenance-scripts](https://github.com/open-contracting/standard-maintenance-scripts) will report or correct issues with licenses, issues, `README.md`, wikis, branches, and topics:
 
 ```shell
-bundle exec rake repos:licenses
-bundle exec rake repos:readmes
-bundle exec rake fix:lint_repos
-bundle exec rake fix:protect_branches
-bundle exec rake fix:set_topics
+bundle exec rake repos:licenses ORG=open-contracting-extensions
+bundle exec rake repos:readmes ORG=open-contracting-extensions
+bundle exec rake fix:lint_repos ORG=open-contracting-extensions
+bundle exec rake fix:protect_branches ORG=open-contracting-extensions
+invoke set-topics
 ```
 
-Then, for each *core* extension, review the commits since the last release:
+#### Review pull requests and recent changes
+
+For each *core* extension, review the commits since the last release:
 
 1. Open its homepage on GitHub
-1. Open its releases (under the repository title and description from its homepage)
-1. Decide whether to merge its open pull requests
+1. Open its releases in the sidebar
+1. Decide whether to merge pull requests
 1. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
 
-Instead of navigating the website, run this Rake task to get links to pull requests and comparison URLs:
+Alternately, run this Rake task to get links to pull requests and comparison URLs:
 
 ```shell
-bundle exec rake release:review_extensions
+bundle exec rake release:review_extensions ORG=open-contracting-extensions
 ```
 
 #### Create new versions of core extensions
@@ -60,7 +62,7 @@ For each *core* extension for which to create a new version:
 1. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. `v1.1.1`
 1. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
-Instead of navigating the website, use this Rake task, which will use the extension's changelog as the release message:
+Alternately, run this Rake task, which will use the extension's changelog as the release message:
 
 ```shell
 bundle exec rake release:release_extensions REF=v1.1.1 REPOS=repo1,repo2
@@ -72,10 +74,10 @@ If you make a mistake, you can undo the release with:
 bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 ```
 
-Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry). To quickly generate the content of `extension_versions.csv` with the new releases of core extensions, run:
+Then, add the new releases to the [extension registry](https://github.com/open-contracting/extension_registry). Change to the local directory of the ``extension_registry`` repository, and run:
 
 ```shell
-bundle exec rake registry:extension_versions
+./manage.py refresh
 ```
 
 ### 2. Perform periodic updates, if appropriate
@@ -90,7 +92,7 @@ bundle exec rake registry:extension_versions
 Before each release, and at least once a year (because ISO4217 is updated [at least once a year](https://github.com/open-contracting/standard/pull/607#issuecomment-339093306)), run:
 
 ```shell
-python utils/fetch_currency_codelist.py
+python util/fetch_currency_codelist.py
 ```
 
 ### 3. Update version numbers, versioned release schema and changelog
@@ -111,17 +113,15 @@ find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's
 Update `versioned-release-validation-schema.json` and `dereferenced-release-schema.json` to match `release-schema.json`:
 
 ```shell
-python utils/make_versioned_release_schema.py
-python utils/make_dereferenced_release_schema.py
+python util/make_versioned_release_schema.py
+python util/make_dereferenced_release_schema.py
 ```
 
 Update `meta-schema.json` to match `meta-schema-patch.json`:
 
 ```shell
-python utils/make_metaschema.py
+python util/make_metaschema.py
 ```
-
-Update the standard's [changelog](https://standard.open-contracting.org/latest/en/schema/changelog/#changelog) with a summary of the changes to core extensions.
 
 ### 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 
@@ -137,12 +137,12 @@ Set up a development instance of CoVE using the new schema, and run tests agains
 ### 1. Push and pull updated translations
 
 1. [Push strings to translate to Transifex](../translation/technical.html#push-strings-to-translate-to-transifex).
-1. Check all strings are [translated](../translation/using_transifex.html#translator) and [reviewed](../translation/using_transifex.html#reviewer) in supported translations, e.g. [French](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#fr/$/) and [Spanish](https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es/$/) for OCDS 1.1.
+1. Check all strings are [translated](../translation/using_transifex.html#translator) and [reviewed](../translation/using_transifex.html#reviewer) in supported translations.
 1. For any resources with untranslated or unreviewed strings, follow the [translation process](../translation/workflow).
 1. Check the [warnings](../translation/using_transifex.html#view-translations-with-warnings) on Transifex, and correct translated text if necessary.
 1. [Pull supported translations from Transifex](../translation/technical.html#pull-translations-from-transifex).
 1. Check the [issues](../translation/using_transifex.html#view-translations-with-issues) on Transifex, and correct source and `.po` files if necessary.
-1. If `.po` files were corrected, you may need to [forcefully push supported translations to Transifex](../translation/technical.html#push-translations-to-transifex).
+1. If `.po` files were corrected, you may need to [forcefully push supported translations](../translation/technical.html#push-translations-to-transifex).
 1. Create a pull request for the updated translation files.
 1. [Test the translations on the build of the pull request](../translation/technical.html#test-translations).
 
