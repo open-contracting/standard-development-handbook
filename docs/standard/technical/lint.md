@@ -4,7 +4,7 @@ To perform periodic Markdown linting, you must:
 
 1. Install [Markdownlint](https://github.com/markdownlint/markdownlint):
 
-        gem install ruby
+        gem install markdownlint
 
 1. Create `~/.config/mdl/style.rb`:
 

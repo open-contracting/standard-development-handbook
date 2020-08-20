@@ -8,7 +8,7 @@
 ```
 
 * Normative statements should be constructed using the keywords defined in [RFC2119](https://tools.ietf.org/html/rfc2119).
-* Normative keywords should be capitalised where used, per [RFC8174](https://tools.ietf.org/html/rfc8174).
+* Normative keywords should be capitalized where used, per [RFC8174](https://tools.ietf.org/html/rfc8174).
 * Non-normative statements should not use the keywords defined in RFC2119, see this [Internet-Draft](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04) for appropriate synonyms.
 * Normative statements should not use constructions such as "should always", "should only" or "where possible ... must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
 * Normative statements must be consistent with the OCDS schema, e.g. `ocid` is a required field in the schema so:
@@ -110,7 +110,7 @@ Any non-required field pointing to an array of objects should not allow `null` a
 .. note::
    Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the `tender` object are "first stage," with many publishers using that object to invite requests to participate.
 
-   Until OCD 2.0, publishers must use the `tender` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
+   Until OCDS 2.0, publishers must use the `tender` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
 ```
 
 ## Field and code descriptions
