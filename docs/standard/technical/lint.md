@@ -4,7 +4,8 @@ To perform periodic Markdown linting, you must:
 
 1. Install [Markdownlint](https://github.com/markdownlint/markdownlint):
 
-        gem install markdownlint
+        bundle init
+        bundle add mdl
 
 1. Create `~/.config/mdl/style.rb`:
 
@@ -17,9 +18,8 @@ To perform periodic Markdown linting, you must:
 
         exclude_rule 'MD009' # Trailing spaces (common error frustrates users)
         exclude_rule 'MD013' # Line length (breaking lines in paragraphs produces longer diffs)
-        exclude_rule 'MD024' # Multiple headers with the same content (bug https://github.com/markdownlint/markdownlint/issues/175)
         exclude_rule 'MD033' # Inline HTML (some files require HTML)
 
 1. Change into a directory containing local copies of GitHub repositories, and run (using the fish shell):
 
-        for i in *; if [ -d $i ]; cd $i; echo $i; mdl --git-recurse --style ~/.config/mdl/style.rb .; cd ..; end; end
+        for i in *; if [ -d $i ]; cd $i; echo $i; bundle exec mdl --git-recurse --style ~/.config/mdl/style.rb .; cd ..; end; end
