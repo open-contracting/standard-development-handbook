@@ -16,7 +16,7 @@ To add a community translation, [follow these instructions](../translation/techn
 
 #### Review pull requests and recent changes
 
-For each *core* extension, [spell check](spellcheck), [run Markdownlint](../../coding.html#linting), and ensure it:
+For each *core* extension, [spell check](spellcheck), [run Markdownlint](lint), and ensure it:
 
 * [Passes its tests](https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions)
 * Matches the description in [Creating extensions](../../extensions.html#creating-extensions) regarding license, issues and `README.md`
