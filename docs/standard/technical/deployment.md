@@ -205,7 +205,7 @@ pip-compile -P libcoveocds; pip-compile requirements_dev.in
 
 #### Update any other tools that use the CoVE library
 
-Make sure other tools that use ``libcoveocds`` (like Kingfisher) are updated to use the new version.
+Make sure other tools that use ``libcoveocds`` (like Kingfisher Process and Toucan) are updated to use the new version.
 
 Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with its own options, the tool's own options may need changing.
 
