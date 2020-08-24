@@ -4,6 +4,15 @@
 
 ## Development tasks
 
+### Copy schema and codelists from OCDS for PPPs
+
+For each new release of OCDS for PPPs, run:
+
+```shell
+make clean_dist
+python schema/borrow-schema.py
+```
+
 ### Update blank.json
 
 Install json-schema-random:
