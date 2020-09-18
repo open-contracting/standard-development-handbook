@@ -80,7 +80,7 @@ Before proposing new structures:
 [Architecture decision records](https://github.blog/2020-08-13-why-write-adrs/):
 
 ```eval_rst
-.. toctree
+.. toctree:
    :glob:
 
    adr/*
