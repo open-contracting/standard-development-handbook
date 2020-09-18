@@ -27,9 +27,17 @@ For worked examples, see the [process note](https://docs.google.com/document/d/1
 
 1. Agree on a proposal in a GitHub issue.
 1. Assign the issue to yourself, and move the issue's card to the *In progress* column.
-1. Create a pull request, and reference the issue number in the pull requests' description.
+1. Create a branch of the `standard` repo (not a branch of your fork) in which to make your changes.
     * As suggested in the [Style Guide](../../meta/style_guide), consider composing Markdown content in [Hemingway Editor](http://www.hemingwayapp.com/) or [Grammarly](https://www.grammarly.com/).
     * **Never** use normative words on guidance pages. Use [non-normative synonyms](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) instead.
+1. Commit your changes, as well as the following:
+    * If you edited the release schema, run `python utils/make_dereferenced_release_schema.py`
+    * If you added a field to the release schema, run `python utils/make_versioned_release_schema.py`
+    * Update the **changelog**.
+1. Create a pull request.
+    * Reference the issue number in the pull requests' description.
+    * Set the *base* branch, e.g. `1.2-dev` for OCDS 1.2 or `1.1-dev` for OCD 1.1.
+    * Set the *milestone*, e.g. `1.2.0` for OCDS 1.2.
 1. Assign a helpdesk analyst to review.
     * See the next section for reviewer's instructions.
 1. If changes are requested, make the changes, then repeat step 3.
