@@ -21,6 +21,8 @@ To get up to speed on OCDS standard development, you should be familiar with:
   * [Extension classification policy](https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit) (draft)
   * [Semantic versioning](https://semver.org)
 
+To improve your technical writing skills, consider taking [Google's Technical Writing Courses](https://developers.google.com/tech-writing), which can be completed in a day.
+
 ## Proposing changes
 
 For worked examples, see the [process note](https://docs.google.com/document/d/1Sp1sXVx99k-zdpNKE6kAwGkmyHG6KWCIaiZ1GYE_cOY/edit). For all other changes:
