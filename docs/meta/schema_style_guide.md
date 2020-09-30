@@ -102,6 +102,7 @@ Any non-required field pointing to an array of objects should not allow `null` a
 * Use lower [camelCase](https://en.wikipedia.org/wiki/Camel_case) for field names, e.g. `awardCriteriaDetails`.
 * Use upper [CamelCase](https://en.wikipedia.org/wiki/Camel_case) for `definitions` entries, e.g. `Award`.
 * Put the qualifier *before* the concept, e.g. `enquiryPeriod` rather than `periodOfEnquiry`.
+* Don't abbreviate words, e.g. `minimumParticipants` not `minParticipants`.
 * Use singular for fields pointing to an object or literal value.
 * Use plural for fields pointing to an array of values.
 * Field names should not include their parent's name, e.g. `title` not `tenderTitle`, `description` not `awardDescription`, etc.
