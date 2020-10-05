@@ -42,8 +42,10 @@ For worked examples, see the [process note](https://docs.google.com/document/d/1
     * Set the *milestone*, e.g. `1.2.0` for OCDS 1.2.
 1. Assign a helpdesk analyst to review.
     * See the next section for reviewer's instructions.
-1. If changes are requested, make the changes, then repeat step 3.
-1. Otherwise, assign James to review.
+    * If changes are requested, make the changes, then repeat this step.
+1. Once approved by a helpdesk analyst, assign James to review.
+    * If changes are requested, make the changes, then repeat this step.
+1. Once approved by James, you can merge it yourself.
 
 ## Reviewing changes
 
