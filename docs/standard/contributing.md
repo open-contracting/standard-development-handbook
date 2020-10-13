@@ -33,8 +33,8 @@ For worked examples, see the [process note](https://docs.google.com/document/d/1
     * As suggested in the [Style Guide](../../meta/style_guide), consider composing Markdown content in [Hemingway Editor](http://www.hemingwayapp.com/) or [Grammarly](https://www.grammarly.com/).
     * **Never** use normative words on guidance pages. Use [non-normative synonyms](https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3) instead.
 1. Commit your changes, as well as the following:
-    * If you edited the release schema, run `python utils/make_dereferenced_release_schema.py`
-    * If you added a field to the release schema, run `python utils/make_versioned_release_schema.py`
+    * If you edited the release schema, run `python util/make_dereferenced_release_schema.py`
+    * If you added a field to the release schema, run `python util/make_versioned_release_schema.py`
     * Update the **changelog**.
 1. Create a pull request.
     * Reference the issue number in the pull requests' description.
