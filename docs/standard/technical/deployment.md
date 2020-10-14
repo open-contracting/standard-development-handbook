@@ -167,8 +167,7 @@ Create a tagged release named e.g. `git tag -a 1__1__0 -m '1.1.0 release.'` and 
 
 [Merging the development branch onto the live branch](#merge-the-development-branch) will trigger a [build](build). For changes to the theme, rebuild the previous build of the live branch.
 
-The built documentation is copied to the staging server. You can preview the documentation. For example, for OCDS 1.1,
-<http://staging.standard.open-contracting.org/1.1/en/> is the staging version for <https://standard.open-contracting.org/1.1/en/>.
+The built documentation is transferred to the staging directory on the server. You can preview the documentation. For example, for OCDS 1.1, <https://standard.open-contracting.org/staging/1.1/> is the staging version for <https://standard.open-contracting.org/1.1/>.
 
 ### 2. Release the documentation
 
