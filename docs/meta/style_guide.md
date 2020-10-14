@@ -25,7 +25,7 @@ Use American English (e.g. "organization" rather than "organisation") unless we 
 * When referring to a **building block**, use the capitalized CamelCase version of the building block name, and enclose it in backticks so it is displayed in a montotype font as follows: `CamelCase`
 * When referring to a **code** from a codelist, enclose the value in single quotes, e.g. "We have added a 'direct' code to the `method` codelist"
 * When pluralizing a **field** or **building block**, treat the field/building block name as a proper noun, and add a `'s` instead of an `s` to the end, or treat it as a mass noun and add nothing to the end
-* When referring to a field in JSON Schema, use dot notation, like `tender.id`. (Slash notation is reserved for [JSON Pointer](http://tools.ietf.org/html/rfc6901). For example, the JSON Pointer for `tender.id` is `/definitions/Tender/properties/id`.)
+* When referring to a field in JSON Schema, use dot notation, like `tender.id`. (Slash notation is reserved for [JSON Pointer](https://tools.ietf.org/html/rfc6901). For example, the JSON Pointer for `tender.id` is `/definitions/Tender/properties/id`.)
 * When referring to a field in OCDS data, use a JSON Pointer, like `/tender/id`.
 
 ## Word choice

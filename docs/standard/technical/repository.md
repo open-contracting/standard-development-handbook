@@ -2,7 +2,7 @@
 
 ## Branches and tags
 
-The standard uses [semantic versioning](http://semver.org/), with versions following the _MAJOR.MINOR.PATCH_ name convention.
+The standard uses [semantic versioning](https://semver.org/), with versions following the _MAJOR.MINOR.PATCH_ name convention.
 
 Each minor version of the standard's documentation is built from a "live" branch named after the version, like `1.0`. For each live branch, there is a dev branch with a `-dev` suffix. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch. [standard.open-contracting.org](https://standard.open-contracting.org/) redirects to (`https://standard.open-contracting.org/latest/en/`), which uses the `latest` branch, which [should be](deployment) the same as the most recent live branch; this makes it possible to link to the latest version of the documentation without specifying the version number.
 

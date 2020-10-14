@@ -33,7 +33,7 @@ Any object that is contained within an array SHOULD have an `id` field.
 
 This is because:
 
-* `id` values play a [special role in the flatten-tool](http://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers) used to round-trip between JSON and tabular representations of OCDS.
+* `id` values play a [special role in the flatten-tool](https://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers) used to round-trip between JSON and tabular representations of OCDS.
 * `id` values are used to determine [how lists of objects are merged](https://standard.open-contracting.org/latest/en/schema/merging/#identifier-merge) when creating a compiledRelease.
 
 Otherwise, the array will be merged as a whole.

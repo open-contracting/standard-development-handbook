@@ -18,11 +18,11 @@ First, strings to translate are extracted from files with `make extract`.
         pybabel extract -F babel_ocds_codelist.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)codelists.pot
         pybabel extract -F babel_ocds_schema.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)schema.pot
 
-1. [`pybabel extract`](http://babel.pocoo.org/en/latest/cmdline.html#extract) extracts messages from source files and generates a POT file. The `-F` (`--mapping-file`) option sets the path to the Babel mapping configuration file, `babel_ocds_codelist.cfg` or `babel_ocds_schema.cfg`.
+1. [`pybabel extract`](https://babel.pocoo.org/en/latest/cmdline.html#extract) extracts messages from source files and generates a POT file. The `-F` (`--mapping-file`) option sets the path to the Babel mapping configuration file, `babel_ocds_codelist.cfg` or `babel_ocds_schema.cfg`.
 
-1. The [Babel mapping configuration files](http://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `babel_ocds_codelist.cfg` and `babel_ocds_schema.cfg`, map Babel message extraction method names – `ocds_codelist` and `ocds_schema` – to the codelist CSV and JSON Schema source files from which to extract strings to translate.
+1. The [Babel mapping configuration files](https://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration), `babel_ocds_codelist.cfg` and `babel_ocds_schema.cfg`, map Babel message extraction method names – `ocds_codelist` and `ocds_schema` – to the codelist CSV and JSON Schema source files from which to extract strings to translate.
 
-1. [`setup.py` in `ocds-babel`](https://github.com/open-contracting/ocds-babel/blob/master/setup.py) maps the [Babel message extraction method names](http://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) – `ocds_codelist` and `ocds_schema` – to the module and function implementing the extraction, in the entry point group `babel.extractors`.
+1. [`setup.py` in `ocds-babel`](https://github.com/open-contracting/ocds-babel/blob/master/setup.py) maps the [Babel message extraction method names](https://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods) – `ocds_codelist` and `ocds_schema` – to the module and function implementing the extraction, in the entry point group `babel.extractors`.
 
 1. The functions [`extract_codelist` and `extract_schema`](https://github.com/open-contracting/ocds-babel/blob/master/ocds_babel/extract.py) implement the extraction.
 
@@ -32,7 +32,7 @@ First, strings to translate are extracted from files with `make extract`.
 
         sphinx-build -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
-See the [Sphinx documentation](http://www.sphinx-doc.org/en/master/intl.html#sphinx-internationalization-details).
+See the [Sphinx documentation](https://www.sphinx-doc.org/en/master/intl.html#sphinx-internationalization-details).
 
 ## Translate source files
 
@@ -49,9 +49,9 @@ After pushing strings to translate as POT files to Transifex, [translating the s
 
         sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/es -D language="es"
 
-1. [`sphinx-build`](http://www.sphinx-doc.org/en/master/man/sphinx-build.html), when `language` is set, compiles to MO files the PO files for Markdown files, which can also be done by running `sphinx-intl build -d $(LOCALE_DIR)`.
+1. [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html), when `language` is set, compiles to MO files the PO files for Markdown files, which can also be done by running `sphinx-intl build -d $(LOCALE_DIR)`.
 
-1. [`sphinx-build`](http://www.sphinx-doc.org/en/master/man/sphinx-build.html) runs `setup` in `conf.py`, which reads the `language` override (`-D language="es"`).
+1. [`sphinx-build`](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) runs `setup` in `conf.py`, which reads the `language` override (`-D language="es"`).
 
 1. [`setup` in `conf.py`](https://github.com/open-contracting/standard_profile_template/blob/master/docs/conf.py#L137) calls the [`translate` method](https://github.com/open-contracting/ocds-babel/blob/master/ocds_babel/translate.py) to translate codelist CSV files and JSON Schema files from one directory into another directory, using MO files.
 
@@ -63,6 +63,6 @@ After pushing strings to translate as POT files to Transifex, [translating the s
 
         sphinx-build -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/es -D language="es"
 
-See the [Sphinx documentation](http://www.sphinx-doc.org/en/master/intl.html#sphinx-internationalization-details).
+See the [Sphinx documentation](https://www.sphinx-doc.org/en/master/intl.html#sphinx-internationalization-details).
 
 Please correct all warnings, ignoring `WARNING: inconsistent term references in translated message`.
