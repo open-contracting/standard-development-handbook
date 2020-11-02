@@ -16,7 +16,10 @@ make update_examples
 
 See the generic profile [build documentation](technical/build).
 
-If extensions or OCDS introduce or remove codelists, update [`codelists.md`](https://github.com/open-contracting-extensions/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
+In `codelists.md`:
+
+* Update the version numbers in the links to extensions' documentation, if appropriate.
+* If extensions or OCDS add or remove codelists, add or remove sections as appropriate.
 
 To find codelists to add or remove, run (in Bash):
 
