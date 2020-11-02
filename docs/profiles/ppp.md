@@ -18,6 +18,12 @@ See the generic profile [build documentation](technical/build).
 
 If extensions or OCDS introduce or remove codelists, update [`codelists.md`](https://github.com/open-contracting-extensions/public-private-partnerships/blob/master/docs/reference/codelists.md) accordingly.
 
+To find codelists to add or remove, run (in Bash):
+
+```shell
+diff -u <(ls -1 schema/profile/codelists | sed 's/^[+-]//' | sort | uniq) <(grep :file: docs/reference/codelists.md | cut -d'/' -f 5 | sort)
+```
+
 ## Translation
 
 See the generic profile [translation documentation](translation).
