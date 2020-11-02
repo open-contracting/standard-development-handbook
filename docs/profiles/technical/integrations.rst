@@ -44,7 +44,7 @@ To redirect the “latest” version:
 
 2. Replace ``layout.html`` with (replace all occurrences of ``YOUR_TITLE`` and ``YOUR_URL``):
 
-   ::
+   .. code-block:: html
 
        <!DOCTYPE html>
        <html>
@@ -61,7 +61,7 @@ To redirect the “latest” version:
 
 3. Optionally, create a ``docs/robots.txt`` file with:
 
-   ::
+   .. code-block:: none
 
        User-agent: *
        Disallow: /

@@ -6,7 +6,7 @@ Branches and tags
 
 The standard uses `semantic versioning <https://semver.org/>`__, with versions following the *MAJOR.MINOR.PATCH* name convention.
 
-Each minor version of the standard’s documentation is built from a “live” branch named after the version, like ``1.0``. For each live branch, there is a dev branch with a ``-dev`` suffix. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch. `standard.open-contracting.org <https://standard.open-contracting.org/>`__ redirects to (``https://standard.open-contracting.org/latest/en/``), which uses the ``latest`` branch, which `should be <deployment>`__ the same as the most recent live branch; this makes it possible to link to the latest version of the documentation without specifying the version number.
+Each minor version of the standard’s documentation is built from a “live” branch named after the version, like ``1.0``. For each live branch, there is a dev branch with a ``-dev`` suffix. Patch versions may further branch off the dev branch, with work merged into the dev branch before finally being merged into the live branch. `standard.open-contracting.org <https://standard.open-contracting.org/>`__ redirects to (``https://standard.open-contracting.org/latest/en/``), which uses the ``latest`` branch, which :doc:`should be<deployment>` the same as the most recent live branch; this makes it possible to link to the latest version of the documentation without specifying the version number.
 
 Sample branch structure:
 
@@ -30,8 +30,8 @@ Structure
 
    -  ``*.md`` ``*/*.md``: English documentation text
    -  `conf.py <https://github.com/open-contracting/standard/blob/HEAD/docs/conf.py>`__: Sphinx configuration
-   -  `\_static/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_static>`__: CSS and JavaScript for the documentation
-   -  `\_templates/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_templates>`__: Jinja templates for the documentation (these contain only small overrides, as `we have our own theme <https://github.com/open-contracting/standard_theme>`__)
+   -  `_static/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_static>`__: CSS and JavaScript for the documentation
+   -  `_templates/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_templates>`__: Jinja templates for the documentation (these contain only small overrides, as `we have our own theme <https://github.com/open-contracting/standard_theme>`__)
    -  `locale/ <https://github.com/open-contracting/standard/tree/HEAD/locale>`__: translations of the English documentation
 
 -  `schema/ <https://github.com/open-contracting/standard/tree/HEAD/schema>`__: schema-related files
@@ -48,4 +48,4 @@ The following files are created by running a build and are not version controlle
 -  ``.ve/``: Python virtualenv, containing all dependencies
 -  ``build/``: contains the built copy of the documentation website
 
-To understand ``babel_ocds_codelist.cfg`` and ``babel_ocds_schema.cfg``, see `Understanding Transifex <../translation/understanding_transifex>`__.
+To understand ``babel_ocds_codelist.cfg`` and ``babel_ocds_schema.cfg``, see :doc:`../translation/understanding_transifex`.

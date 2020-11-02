@@ -11,14 +11,14 @@ Update examples
 
 The profile contains example files from OCDS Show for PPPs. To update them:
 
-.. code:: shell
+.. code-block:: shell
 
    make update_examples
 
 Change extensions or version of OCDS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See the generic profile `build documentation <technical/build>`__.
+See the generic profile documentation for :doc:`technical/build`.
 
 In ``codelists.md``:
 
@@ -27,14 +27,14 @@ In ``codelists.md``:
 
 To find codelists to add or remove, run (in Bash):
 
-.. code:: shell
+.. code-block:: shell
 
    diff -u <(ls -1 schema/profile/codelists | sed 's/^[+-]//' | sort | uniq) <(grep :file: docs/reference/codelists.md | cut -d'/' -f 5 | sort)
 
 Translation
 -----------
 
-See the generic profile `translation documentation <translation>`__.
+See the generic profile documentation for :doc:`translation`.
 
 For reference:
 

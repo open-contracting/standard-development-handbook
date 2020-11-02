@@ -6,7 +6,7 @@ Operation
 
 If you have ``aspell`` installed, run:
 
-.. code:: shell
+.. code-block:: shell
 
    find . -type f -not -path '*/\.*' -not -path '*/include/*' -not -path '*/script/*' -not -path '*/vendor/*' -not -path '*/_static/*' -not -name 'currency.csv' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.doctree' -not -name '*.html' -not -name '*.in' -not -name '*.inv' -not -name '*.js' -not -name '*.mk' -not -name '*.mo' -not -name '*.pdf' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.pyc' -not -name '*.scss' -not -name '*.sh' -not -name '*.sqlite' -not -name '*.svg' -not -name '*.txt' -not -name '*.xlsx' -exec aspell -x -H check '{}' ';'
 
@@ -19,7 +19,7 @@ Configuration
 
 ``czf`` is from the documentation’s OCID prefix. ``yyyy`` is from copyright notices. ``wy`` and ``Za`` are from regular expressions for language suffixes.
 
-.. code:: text
+.. code-block:: text
 
    personal_ws-1.1 en 868 
    APIs

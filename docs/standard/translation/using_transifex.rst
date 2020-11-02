@@ -7,7 +7,7 @@ Steps for translators, proofreaders and reviewers
 Translator
 ~~~~~~~~~~
 
-Before beginning, ask the `Coordinator <workflow>`__ to ensure that both the Transifex glossary and ```glossary`` repository <https://github.com/open-contracting/glossary>`__ are up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it, based on the process from `CRM issue #1152 <https://crm.open-contracting.org/issues/1152#note-46>`__.
+Before beginning, ask the :doc:`Coordinator<workflow>` to ensure that both the Transifex glossary and `glossary repository <https://github.com/open-contracting/glossary>`__ are up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it, based on the process from `CRM issue #1152 <https://crm.open-contracting.org/issues/1152#note-46>`__.
 
 1. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
 2. Change the language, if appropriate
@@ -21,19 +21,17 @@ Before beginning, ask the `Coordinator <workflow>`__ to ensure that both the Tra
 
 The `glossary in Transifex <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ contains key terms that must be used consistently. Change the language code at the end of the glossary’s URL to view in different languages. It is also available within the translation editor.
 
-It helps to see where the strings appear in context in the `OCDS documentation <https://standard.open-contracting.org/>`__. `Understanding Transifex <understanding_transifex>`__ describes the link between Markdown files in the `GitHub repository <https://github.com/open-contracting/standard>`__, Transifex resources, and documentation pages. With the exception of the ``schema`` and ``codelists`` resources, you can:
+It helps to see where the strings appear in context in the `OCDS documentation <https://standard.open-contracting.org/>`__. :doc:`understanding_transifex` describes the link between Markdown files in the `GitHub repository <https://github.com/open-contracting/standard>`__, Transifex resources, and documentation pages. With the exception of the ``schema`` and ``codelists`` resources, you can:
 
 1. Take the name of a resource, e.g. ``schema--changelog``
 2. Remove ``--index`` if present
 3. Replace ``--`` with ``/``
 4. Put it in the pattern ``https://standard.open-contracting.org/{version}/en/{name}/``, like https://standard.open-contracting.org/latest/en/schema/changelog/
 
-.. code:: eval_rst
+.. note::
+   Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
 
-   .. note::
-      Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
-
-See `Translation tasks <#translation-tasks>`__ below for Transifex tips.
+See :ref:`standard/translation/using_transifex:Translation tasks` below for Transifex tips.
 
 Proofreader
 ~~~~~~~~~~~

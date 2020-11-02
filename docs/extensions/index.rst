@@ -1,7 +1,7 @@
 Extensions
 ==========
 
-An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as `profiles <../profiles/index>`__.
+An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as :doc:`profiles<../profiles/index>`.
 
 Creating an extension
 ---------------------
@@ -10,9 +10,9 @@ Creating an extension
 
 To create the extension, `use the extension template <https://github.com/open-contracting/standard_extension_template/blob/master/README.md>`__, which also documents the structure of extensions.
 
-If you’re creating an extension in an OCP repository, use the `Apache License 2.0 <https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE>`__, disable issues on the GitHub repository (see `reporting issues on extensions <#reporting-issues-on-extensions>`__ below) and include the following text in its ``README.md`` file:
+If you’re creating an extension in an OCP repository, use the `Apache License 2.0 <https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE>`__, disable issues on the GitHub repository (see :ref:`extensions/index:Reporting issues on extensions` below) and include the following text in its ``README.md`` file:
 
-::
+.. code-block:: markdown
 
    ## Issues
 
@@ -23,7 +23,7 @@ To publish the extension, `add it the extension registry <https://github.com/ope
 Changing *core* extensions
 --------------------------
 
-The versioning of core extensions is under discussion in a `pull request <https://github.com/open-contracting/standard/pull/674>`__. For now, see `creating new versions of core extensions <../standard/technical/deployment.html#create-new-versions-of-core-extensions>`__.
+The versioning of core extensions is under discussion in a `pull request <https://github.com/open-contracting/standard/pull/674>`__. For now, see :ref:`standard/technical/deployment:Create new versions of core extensions`.
 
 Between OCDS versions, changes can be made to the `‘live’ version <https://github.com/open-contracting/extension_registry#extension_versionscsv>`__ of a core extension; this can be treated as a working draft of a future version.
 
@@ -34,4 +34,4 @@ Reporting issues on extensions
 
 To report issues on community extensions, refer to each extension’s documentation.
 
-If the issue is with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), report it on the ```standard`` repository <https://github.com/open-contracting/standard>`__ and add the ``Focus - Extensions`` label.
+If the issue is with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), report it on the `standard repository <https://github.com/open-contracting/standard>`__ and add the ``Focus - Extensions`` label.

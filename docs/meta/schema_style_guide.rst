@@ -4,10 +4,8 @@ Schema style guide
 Normative statements
 --------------------
 
-.. code:: eval_rst
-
-   .. note::
-      The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
+.. note::
+   The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
 
 -  Normative statements should be constructed using the keywords defined in `RFC2119 <https://tools.ietf.org/html/rfc2119>`__.
 -  Normative keywords should be capitalized where used, per `RFC8174 <https://tools.ietf.org/html/rfc8174>`__.
@@ -80,7 +78,7 @@ Validation keywords
 -  The ``default`` keyword shouldn’t be used, because consumers aren’t expected to fill in defaults.
 -  The following keywords aren’t used and might require code changes: ``additionalItems``, ``additionalProperties``, ``dependencies``, ``exclusiveMaximum``, ``maxItems``, ``maxLength``, ``maxProperties``, ``multipleOf``, ``allOf``, ``anyOf``, ``not``.
 
-The following keywords are added by ```ocdskit schema-strict`` <https://ocdskit.readthedocs.io/en/latest/cli/schema.html#schema-strict>`__:
+The following keywords are added by `ocdskit schema-strict <https://ocdskit.readthedocs.io/en/latest/cli/schema.html#schema-strict>`__:
 
 -  Array fields should set ``"uniqueItems": true``.
 -  Required array fields must use ``"minItems": 1``.
@@ -92,7 +90,7 @@ Types and null
 
 Any non-required field pointing to a literal or an array of literals should support a type of ``null``, e.g.:
 
-.. code:: json
+.. code-block:: json
 
    { 
      "status": {
@@ -120,12 +118,10 @@ Field and code names
 -  Use plural for fields pointing to an array of values.
 -  Field names should not include their parent’s name, e.g. ``title`` not ``tenderTitle``, ``description`` not ``awardDescription``, etc.
 
-.. code:: eval_rst
+.. note::
+   Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the `tender` object are "first stage," with many publishers using that object to invite requests to participate.
 
-   .. note::
-      Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the `tender` object are "first stage," with many publishers using that object to invite requests to participate.
-
-      Until OCDS 2.0, publishers must use the `tender` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
+   Until OCDS 2.0, publishers must use the `tender` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
 
 Field and code descriptions
 ---------------------------
@@ -139,13 +135,11 @@ Field and code descriptions
 -  Descriptions for similar fields or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
 -  For fields or codes whose names and titles use complex or specialist language, consider providing an example to aid non-expert users, e.g.
 
-.. code:: eval_rst
-
-   ================= ===================================================== ===========
-   code              title                                                 Description
-   ================= ===================================================== ===========
-   guaranteeReports  Fiscal commitments and contingent liabilities reports Reports detailing the fiscal commitments of the public authority to the PPP, for example known payments that must be made if the PPP proceeds or payment commitments whose occurrence, timing and magnitude depend on some uncertain future event, outside the control of the public authority.
-   ================= ===================================================== ===========
+================= ===================================================== ===========
+code              title                                                 Description
+================= ===================================================== ===========
+guaranteeReports  Fiscal commitments and contingent liabilities reports Reports detailing the fiscal commitments of the public authority to the PPP, for example known payments that must be made if the PPP proceeds or payment commitments whose occurrence, timing and magnitude depend on some uncertain future event, outside the control of the public authority.
+================= ===================================================== ===========
 
 Descriptions should:
 
@@ -163,7 +157,7 @@ The following examples can be used to inform descriptions for common types of fi
 Codelists
 ~~~~~~~~~
 
-::
+.. code-block:: none
 
    <semantics>, using the <name> codelist. See also the <xDetails> field.
 
@@ -176,7 +170,7 @@ Identifiers
 
 For the ``id`` field of items in arrays:
 
-::
+.. code-block:: none
 
    A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](https://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
 
@@ -189,7 +183,7 @@ Titles
 
 For the ``title`` field of an object:
 
-::
+.. code-block:: none
 
    A title for this <object_name>.
 
@@ -198,7 +192,7 @@ Descriptions
 
 For the ``description`` field of an object:
 
-::
+.. code-block:: none
 
    A description of this <object_name>. Structured information should be provided in <related_fields>.
 
@@ -215,7 +209,7 @@ Documents
 
 For the ``documents`` field of an object:
 
-::
+.. code-block:: none
 
    All documents and attachments related to this <object_name>, including any official notices.
 
@@ -224,6 +218,6 @@ Milestones
 
 For the ``milestones`` field of an object:
 
-::
+.. code-block:: none
 
    A list of important dates or events associated with this <object_name>.

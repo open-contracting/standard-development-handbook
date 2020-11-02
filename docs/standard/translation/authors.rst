@@ -6,7 +6,7 @@ This page describes the responsibilities of authors of content to be translated.
 Proposing new terms for the glossary
 ------------------------------------
 
-See the `terminology <terminology.html#proposal-review-inclusion>`__ page.
+See :ref:`standard/translation/terminology:1. Proposal, review, inclusion`.
 
 Handling minor changes
 ----------------------
@@ -23,15 +23,13 @@ In Transifex, the “Suggestions” tab displays similar source strings and thei
 
 The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
 
-Alternately, the English author can replicate the minor changes to the source strings in the translations in the ``.po`` files, and then force-push the translations to Transifex. See the important caveats under the `translation technical processes <technical.html#push-and-pull-translations-from-transifex>`__.
+Alternately, the English author can replicate the minor changes to the source strings in the translations in the ``.po`` files, and then force-push the translations to Transifex. See the important caveats under :ref:`standard/translation/technical:Push translations to Transifex`.
 
-.. code:: eval_rst
+.. note::
+   Instead of using suggestions in Transifex, ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` can update ``.po`` files locally and fuzzy match similar strings. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
 
-   .. note::
-      Instead of using suggestions in Transifex, ``sphinx-intl update -p POT_DIR -d LOCALE_DIR`` can update ``.po`` files locally and fuzzy match similar strings. However, Transifex and ``sphinx-intl`` don't produce identical ``.po`` files, e.g.:
+    - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
+    - different headers
+    - ``:0`` after filenames
 
-       - different ``wrapwidth`` (which is configurable in ``polib`` but not ``sphinx-intl``)
-       - different headers
-       - ``:0`` after filenames
-
-       Thus, running ``sphinx-intl update`` results in a large diff. It's possible that, after running ``sphinx-intl update`` to fuzzy match, force-pushing then pulling the ``.po`` files to and from Transifex could achieve a smaller diff.
+    Thus, running ``sphinx-intl update`` results in a large diff. It's possible that, after running ``sphinx-intl update`` to fuzzy match, force-pushing then pulling the ``.po`` files to and from Transifex could achieve a smaller diff.

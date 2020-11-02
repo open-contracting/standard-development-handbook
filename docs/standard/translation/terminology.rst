@@ -10,9 +10,8 @@ A *term* is a word or group of words that need to be used and translated consist
 
    Terminology process overview
 
-.. raw:: html
-
-   <!-- https://www.lucidchart.com/documents/edit/3d906148-5ed8-41a4-b48d-8d3ec3aed1d4 -->
+.. 
+   https://www.lucidchart.com/documents/edit/3d906148-5ed8-41a4-b48d-8d3ec3aed1d4
 
 Working document
 ----------------
@@ -63,15 +62,13 @@ Process
 
 When an author adds new content or introduces new concepts to the standard or documentation in the source language of English, new terms may need to be translated.
 
-.. code:: eval_rst
-
-   === =========== ============================================================================================================= ==================
-   #   Step name   Description                                                                                                   Tool
-   === =========== ============================================================================================================= ==================
-   1   Proposal    The author prepares a list of expressions (words or groups of words) that they consider to be terms.          GitHub issue
-   2   Review      The terminologist checks whether the expressions are indeed terms, and whether they duplicate existing terms. GitHub issue
-   3   Inclusion   The terminologist adds new terms to the working document, setting the ID, Term, POS and Domain fields         Google spreadsheet
-   === =========== ============================================================================================================= ==================
+=== =========== ============================================================================================================= ==================
+#   Step name   Description                                                                                                   Tool
+=== =========== ============================================================================================================= ==================
+1   Proposal    The author prepares a list of expressions (words or groups of words) that they consider to be terms.          GitHub issue
+2   Review      The terminologist checks whether the expressions are indeed terms, and whether they duplicate existing terms. GitHub issue
+3   Inclusion   The terminologist adds new terms to the working document, setting the ID, Term, POS and Domain fields         Google spreadsheet
+=== =========== ============================================================================================================= ==================
 
 The terminologist then informs the coordinator of new terms.
 
@@ -80,50 +77,42 @@ The terminologist then informs the coordinator of new terms.
 
 Once the new terms are added to the working document, the coordinator notifies subject matter experts (SME) who are fluent in the source language.
 
-.. code:: eval_rst
-
-   === ========== ====================================================================================================== ==================
-   #   Step name  Description                                                                                            Tool
-   === ========== ====================================================================================================== ==================
-   4   Definition The source language SME write definitions for terms, if they are an expert in the domain of the terms. Google spreadsheet
-   === ========== ====================================================================================================== ==================
+=== ========== ====================================================================================================== ==================
+#   Step name  Description                                                                                            Tool
+=== ========== ====================================================================================================== ==================
+4   Definition The source language SME write definitions for terms, if they are an expert in the domain of the terms. Google spreadsheet
+=== ========== ====================================================================================================== ==================
 
 Once the source terms are defined and annotated, the coordinator notifies proofreaders who are fluent in the source language, to proofread and edit that content.
 
-.. code:: eval_rst
-
-   === =========== =========================================================================================================================================================================================================== ==================
-   #   Step name   Description                                                                                                                                                                                                 Tool
-   === =========== =========================================================================================================================================================================================================== ==================
-   5   Proofread   The proofreader spell-checks new content, checks that new terms are written in canonical form, and checks that new definitions and notes are understandable and written as full sentences in sentence case. Google spreadsheet
-   === =========== =========================================================================================================================================================================================================== ==================
+=== =========== =========================================================================================================================================================================================================== ==================
+#   Step name   Description                                                                                                                                                                                                 Tool
+=== =========== =========================================================================================================================================================================================================== ==================
+5   Proofread   The proofreader spell-checks new content, checks that new terms are written in canonical form, and checks that new definitions and notes are understandable and written as full sentences in sentence case. Google spreadsheet
+=== =========== =========================================================================================================================================================================================================== ==================
 
 3. Translation and proofreading
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the source terms, definitions and notes are proofread, the coordinator notifies subject matter experts (SME) who are fluent in the target languages.
 
-.. code:: eval_rst
-
-   === =========== ================================================================================= ==================
-   #   Step name   Description                                                                       Tool
-   === =========== ================================================================================= ==================
-   6   Translation The SME translates the terms to the target language, adding notes when necessary. Google spreadsheet
-   === =========== ================================================================================= ==================
+=== =========== ================================================================================= ==================
+#   Step name   Description                                                                       Tool
+=== =========== ================================================================================= ==================
+6   Translation The SME translates the terms to the target language, adding notes when necessary. Google spreadsheet
+=== =========== ================================================================================= ==================
 
 Once the source terms are translated, defined and annotated, the coordinator notifies proofreaders who are fluent in the target languages, to proofread and edit that content, as above.
 
 4. Publication
 ~~~~~~~~~~~~~~
 
-Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to Transifex – so that translators can access the glossary while translating – and to the ```glossary`` repository <https://github.com/open-contracting/glossary>`__ – which serves as the single source of truth for the glossary, and which is used by the coordinator for notifications.
+Once the translated terms, definitions and notes are proofread, the coordinator notifies the publisher to publish the working document to Transifex – so that translators can access the glossary while translating – and to the `glossary repository <https://github.com/open-contracting/glossary>`__ – which serves as the single source of truth for the glossary, and which is used by the coordinator for notifications.
 
-.. code:: eval_rst
-
-   === ========================= ================================================================================== ==================
-   #   Step name                 Description                                                                        Tool
-   === ========================= ================================================================================== ==================
-   8   CSV download              File > Download as... > Comma-separated values                                     Google spreadsheet
-   9   GitHub commit             The CSV file replaces the previous one for the selected language and is committed. GitHub repository
-   10  Transifex glossary update The CSV file is uploaded to the Transifex glossary, deleting the previous entries. Transifex
-   === ========================= ================================================================================== ==================
+=== ========================= ================================================================================== ==================
+#   Step name                 Description                                                                        Tool
+=== ========================= ================================================================================== ==================
+8   CSV download              File > Download as... > Comma-separated values                                     Google spreadsheet
+9   GitHub commit             The CSV file replaces the previous one for the selected language and is committed. GitHub repository
+10  Transifex glossary update The CSV file is uploaded to the Transifex glossary, deleting the previous entries. Transifex
+=== ========================= ================================================================================== ==================

@@ -4,14 +4,12 @@ Building the documentation
 Get started
 -----------
 
-.. code:: eval_rst
-
-   .. note::
-      Building the documentation requires Python 3.6.
+.. note::
+   Building the documentation requires Python 3.6.
 
 Create a virtual environment using Python 3.6 with ``pyenv virtualenv docs`` or:
 
-.. code:: shell
+.. code-block:: shell
 
    sudo apt-get install python3-venv
    python3 -m venv .ve
@@ -19,7 +17,7 @@ Create a virtual environment using Python 3.6 with ``pyenv virtualenv docs`` or:
 
 Initialize and update submodules:
 
-.. code:: shell
+.. code-block:: shell
 
    git submodule init
    git submodule update
@@ -28,7 +26,7 @@ Run all commands on this page within this virtual environment.
 
 Install the requirements:
 
-.. code:: shell
+.. code-block:: shell
 
    pip install -r requirements.txt
 
@@ -39,7 +37,7 @@ The standard repository has tests. Profiles may not.
 
 The standard’s tests must be run after building the documentation:
 
-.. code:: shell
+.. code-block:: shell
 
    make
    py.test
@@ -49,31 +47,31 @@ Build the documentation
 
 Build the documentation in all languages into ``build/``:
 
-.. code:: shell
+.. code-block:: shell
 
    make
 
 Build the source language only:
 
-.. code:: shell
+.. code-block:: shell
 
    make source
 
 Build a translation only:
 
-.. code:: shell
+.. code-block:: shell
 
    make es
 
 Remove all built files:
 
-::
+.. code-block:: shell
 
    make clean
 
 If you changed ``release-schema.json``, update ``versioned-release-validation-schema.json`` (the tests check that this is done):
 
-.. code:: shell
+.. code-block:: shell
 
    python util/make_versioned_release_schema.py
 
@@ -81,19 +79,19 @@ Sphinx, which builds the documentation, doesn’t watch directories for changes.
 
 -  If you are running macOS and have ``fswatch`` from Homebrew:
 
-   .. code:: shell
+   .. code-block:: shell
 
       fswatch -0 docs | xargs -0 -n 1 -I {} make
 
 -  If you are running Linux, you can ``pip install watchdog[watchmedo]`` and run:
 
-   .. code:: shell
+   .. code-block:: shell
 
       watchmedo shell-command --patterns="*.md" --ignore-pattern="build/*" --recursive --command="make"
 
 View the documentation, by running a local web server:
 
-.. code:: shell
+.. code-block:: shell
 
    cd build
    python -m http.server

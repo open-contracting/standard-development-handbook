@@ -22,20 +22,14 @@ Admonitions
 
 Admonitions (box outs) can be added using the **hint**, **note** and **warning** styles.
 
-.. code:: eval_rst
+.. hint::
+   Use a hint admonition to share extra information that may be useful for a user of the documentation.
 
-   .. hint::
-      Use a hint admonition to share extra information that may be useful for a user of the documentation.
+.. note::
+   Use a note admonition to indicate that there are areas where the documentation requires further improvement, but this does not block use of the current information.
 
-.. code:: eval_rst
-
-   .. note::
-      Use a note admonition to indicate that there are areas where the documentation requires further improvement, but this does not block use of the current information.
-
-.. code:: eval_rst
-
-   .. warning::
-      Use a warning admonition to indicate that the documentation on a page may not accurately reflect current practice, or that substantial caveats exist that should be noted before following the documented process.
+.. warning::
+   Use a warning admonition to indicate that the documentation on a page may not accurately reflect current practice, or that substantial caveats exist that should be noted before following the documented process.
 
 Email addresses
 ---------------

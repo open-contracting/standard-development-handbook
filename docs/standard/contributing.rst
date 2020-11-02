@@ -6,11 +6,11 @@ This page describes the internal process for making changes to the standard repo
 Getting started
 ---------------
 
-Before contributing to Markdown pages, read the `Style Guide <../../meta/style_guide>`__.
+Before contributing to Markdown pages, read the :doc:`../../meta/style_guide`.
 
 Before authoring a new documentation page, or extensively editing an existing page, read the `process note <https://docs.google.com/document/d/1vBn4HFaczjcCur19kSwEMwk2uciFCdNgm9S9Ue_LnjY/>`__ on using Google Docs to collaboratively edit standard documentation.
 
-Before contributing to JSON Schema and CSV codelists, read the `Schema Style Guide <../../meta/schema_style_guide>`__ and the `schema patterns <https://os4d.opendataservices.coop/patterns/schema/>`__ section of `ODS’ Standards Lab <https://os4d.opendataservices.coop/>`__.
+Before contributing to JSON Schema and CSV codelists, read the :doc:`../../meta/schema_style_guide` and the `schema patterns <https://os4d.opendataservices.coop/patterns/schema/>`__ section of `ODS’ Standards Lab <https://os4d.opendataservices.coop/>`__.
 
 To get up to speed on OCDS standard development, you should be familiar with:
 
@@ -37,7 +37,7 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 2. Assign the issue to yourself, and move the issue’s card to the *In progress* column.
 3. Create a branch of the ``standard`` repo (not a branch of your fork) in which to make your changes.
 
-   -  As suggested in the `Style Guide <../../meta/style_guide>`__, consider composing Markdown content in `Hemingway Editor <http://www.hemingwayapp.com/>`__ or `Grammarly <https://www.grammarly.com/>`__.
+   -  As suggested in the :doc:`../../meta/style_guide`, consider composing Markdown content in `Hemingway Editor <http://www.hemingwayapp.com/>`__ or `Grammarly <https://www.grammarly.com/>`__.
    -  **Never** use normative words on guidance pages. Use `non-normative synonyms <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3>`__ instead.
 
 4. Commit your changes, as well as the following:
@@ -71,7 +71,7 @@ You can use `this feature <https://help.github.com/en/github/collaborating-with-
 You should check for:
 
 -  **Correctness**: Do the changes conform to the standard and its principles?
--  **Style**: Do the changes respect the `Style Guide <../../meta/style_guide>`__ and `Schema Style Guide <../../meta/schema_style_guide>`__? Are `normative words <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3>`__ used on guidance pages?
+-  **Style**: Do the changes respect the :doc:`../../meta/style_guide` and :doc:`../../meta/schema_style_guide`? Are `normative words <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3>`__ used on guidance pages?
 -  **Spelling and grammar**: If there are few errors, suggest changes directly. If there are many errors, ask the author to use Grammarly or similar.
 
 Repository management
@@ -105,9 +105,7 @@ Before proposing new structures:
 
 `Architecture decision records <https://github.blog/2020-08-13-why-write-adrs/>`__:
 
-.. code:: eval_rst
+.. toctree::
+   :glob:
 
-   .. toctree:
-      :glob:
-
-      adr/*
+   adr/*

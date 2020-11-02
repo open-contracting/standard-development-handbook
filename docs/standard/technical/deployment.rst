@@ -5,11 +5,11 @@ This section describes the steps involved in deploying an updated version of the
 
 This process is used for major, minor and patch versions, as well as non-normative versions.
 
-For changes to the documentation only (no schema changes), start from `Merge and release <#merge-and-release>`__.
+For changes to the documentation only (no schema changes), start from :ref:`standard/technical/deployment:Merge and release`.
 
-For changes to the theme only, start from `Build and deploy <#build-and-deploy>`__.
+For changes to the theme only, start from :ref:`standard/technical/deployment:Build and deploy`.
 
-To add a community translation, `follow these instructions <../translation/technical.html#add-a-community-translation>`__.
+To add a community translation, follow :ref:`standard/translation/technical:Add a community translation`.
 
 Schemas and extensions
 ----------------------
@@ -20,15 +20,15 @@ Schemas and extensions
 Tidy extensions
 ^^^^^^^^^^^^^^^
 
-For each *core* extension, `spell check <spellcheck>`__, `run Markdownlint <lint>`__, and ensure it:
+For each *core* extension, :doc:`spell check<spellcheck>`, :doc:`run Markdownlint<lint>`, and ensure it:
 
 -  `Passes its tests <https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions>`__
--  Matches the description in `Creating extensions <../../extensions/#creating-extensions>`__ regarding license, issues and ``README.md``
+-  Matches the description in :ref:`extensions/index:Creating an extension` regarding license, issues and ``README.md``
 -  `Has wiki disabled, default branch protected, and topics set <https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration>`__
 
 The following Rake tasks from `standard-maintenance-scripts <https://github.com/open-contracting/standard-maintenance-scripts>`__ will report or correct issues with licenses, issues, ``README.md``, wikis, branches, and topics:
 
-.. code:: shell
+.. code-block:: shell
 
    bundle exec rake repos:licenses ORG=open-contracting-extensions
    bundle exec rake repos:readmes ORG=open-contracting-extensions
@@ -48,17 +48,15 @@ For each *core* extension, review the commits since the last release:
 
 Alternately, run this Rake task to get links to pull requests and comparison URLs:
 
-.. code:: shell
+.. code-block:: shell
 
    bundle exec rake release:review_extensions ORG=open-contracting-extensions
 
 Create new versions of core extensions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code:: eval_rst
-
-   .. note::
-      You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Each OCDS version refers to a specific version of each `core extension <https://standard.open-contracting.org/latest/en/extensions/#core-extensions>`__. The `governance process <https://standard.open-contracting.org/latest/en/support/governance/#versions>`__ will establish whether to create a new version of a core extension for this OCDS version.
 
@@ -70,19 +68,19 @@ For each *core* extension for which to create a new version:
 
 Alternately, run this Rake task, which will use the extension’s changelog as the release message:
 
-.. code:: shell
+.. code-block:: shell
 
    bundle exec rake release:release_extensions REF=v1.1.1 REPOS=repo1,repo2
 
 If you make a mistake, you can undo the release with:
 
-.. code:: shell
+.. code-block:: shell
 
    bundle exec rake release:undo_release_extensions REF=v1.1.1 REPOS=repo1,repo2
 
 Then, add the new releases to the `extension registry <https://github.com/open-contracting/extension_registry>`__. Change to the local directory of the ``extension_registry`` repository, and run:
 
-.. code:: shell
+.. code-block:: shell
 
    ./manage.py refresh
 
@@ -92,53 +90,47 @@ Then, add the new releases to the `extension registry <https://github.com/open-c
 Update currency codelist
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code:: eval_rst
-
-   .. note::
-      You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Before each release, and at least once a year (because ISO4217 is updated `at least once a year <https://github.com/open-contracting/standard/pull/607#issuecomment-339093306>`__), run:
 
-.. code:: shell
+.. code-block:: shell
 
    python util/fetch_currency_codelist.py
 
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: eval_rst
-
-   .. note::
-      You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 In ``docs/conf.py``, update ``release`` to e.g. ``1.1.1`` and update ``version`` if appropriate.
 
-Update the \*major__minor__patch\* version number:
+Update the *major__minor__patch* version number:
 
-.. code:: shell
+.. code-block:: shell
 
    find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__1__3/1__1__4/g' \{\} \;
 
 Update ``versioned-release-validation-schema.json`` and ``dereferenced-release-schema.json`` to match ``release-schema.json``:
 
-.. code:: shell
+.. code-block:: shell
 
    python util/make_versioned_release_schema.py
    python util/make_dereferenced_release_schema.py
 
 Update ``meta-schema.json`` to match ``meta-schema-patch.json``:
 
-.. code:: shell
+.. code-block:: shell
 
    python util/make_metaschema.py
 
 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: eval_rst
-
-   .. note::
-      You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Set up a development instance of CoVE using the new schema, and run tests against it.
 
@@ -148,15 +140,15 @@ Merge and release
 1. Push and pull updated translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. `Push strings to translate to Transifex <../translation/technical.html#push-strings-to-translate-to-transifex>`__.
-2. Check all strings are `translated <../translation/using_transifex.html#translator>`__ and `reviewed <../translation/using_transifex.html#reviewer>`__ in supported translations.
-3. For any resources with untranslated or unreviewed strings, follow the `translation process <../translation/workflow>`__.
-4. Check the `warnings <../translation/using_transifex.html#view-translations-with-warnings>`__ on Transifex, and correct translated text if necessary.
-5. `Pull supported translations from Transifex <../translation/technical.html#pull-translations-from-transifex>`__.
-6. Check the `issues <../translation/using_transifex.html#view-translations-with-issues>`__ on Transifex, and correct source and ``.po`` files if necessary.
-7. If ``.po`` files were corrected, you may need to `forcefully push supported translations <../translation/technical.html#push-translations-to-transifex>`__.
+1. :ref:`standard/translation/technical:Push strings to translate to Transifex`.
+2. Check all strings are :ref:`translated<standard/translation/using_transifex:Translator>` and :ref:`reviewed<standard/translation/using_transifex:Reviewer>` in supported translations.
+3. For any resources with untranslated or unreviewed strings, follow the :doc:`../translation/workflow`.
+4. :ref:`standard/translation/using_transifex:View translations with warnings` on Transifex, and correct translated text if necessary.
+5. :ref:`Pull supported translations from Transifex<standard/translation/technical:Pull translations from Transifex>`.
+6. :ref:`standard/translation/using_transifex:View translations with issues` on Transifex, and correct source and ``.po`` files if necessary.
+7. If ``.po`` files were corrected, you may need to :ref:`standard/translation/technical:Push translations to Transifex`.
 8. Create a pull request for the updated translation files.
-9. `Test the translations on the build of the pull request <../translation/technical.html#test-translations>`__.
+9. :ref:`Test the translations on the build of the pull request<standard/translation/technical:Test translations>`.
 
 2. Merge the development branch onto the live branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -168,10 +160,8 @@ If the live branch is for the latest version of the documentation, then create a
 3. Create a tagged release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: eval_rst
-
-   .. note::
-      You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Create a tagged release named e.g. ``git tag -a 1__1__0 -m '1.1.0 release.'`` and push the tag with ``git push --tags``
 
@@ -181,7 +171,7 @@ Build and deploy
 1. Build on continuous integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Merging the development branch onto the live branch <#merge-the-development-branch>`__ will trigger a `build <build>`__. For changes to the theme, rebuild the previous build of the live branch.
+:ref:`standard/technical/deployment:2. Merge the development branch onto the live branch` will trigger a :doc:`build<build>`. For changes to the theme, rebuild the previous build of the live branch.
 
 The built documentation is transferred to the staging directory on the server. You can preview the documentation. For example, for OCDS 1.1, https://standard.open-contracting.org/staging/1.1/ is the staging version for https://standard.open-contracting.org/1.1/.
 
@@ -193,10 +183,8 @@ See the `deploy repository’s documentation <https://ocdsdeploy.readthedocs.io/
 3. Update the Data Review Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: eval_rst
-
-   .. note::
-      You can skip this step if you are not releasing a new major, minor or patch version.
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Update the CoVE library
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,7 +202,7 @@ This is the cove-ocds repository for OCDS, and cove-oc4ids for OC4IDS.
 
 -  Upgrade the requirements to use the new version of the CoVE library
 
-.. code:: shell
+.. code-block:: shell
 
    pip-compile -P libcoveocds; pip-compile requirements_dev.in
 

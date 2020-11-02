@@ -11,13 +11,11 @@ For documentation on the Open Contracting Data Standard itself see https://stand
 Table of Contents
 -----------------
 
-.. code:: eval_rst
+.. toctree::
+   :maxdepth: 2
+   :glob:
 
-   .. toctree::
-      :maxdepth: 2
-      :glob:
-
-      meta/index
-      standard/index
-      extensions/index
-      profiles/index
+   meta/index
+   standard/index
+   extensions/index
+   profiles/index

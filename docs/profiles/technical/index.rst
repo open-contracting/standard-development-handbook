@@ -1,13 +1,11 @@
 Technical processes
 ===================
 
-.. code:: eval_rst
+.. toctree::
+   :maxdepth: 2
+   :glob:
 
-   .. toctree::
-      :maxdepth: 2
-      :glob:
-
-      repository
-      build
-      deployment
-      integrations
+   repository
+   build
+   deployment
+   integrations

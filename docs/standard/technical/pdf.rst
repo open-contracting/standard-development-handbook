@@ -5,19 +5,19 @@ The PDFs might have visual bugs. Please look at the PDFs before sharing, and `ma
 
 1. Install wkhtmltopdf. On macOS:
 
-   ::
+   .. code-block:: shell
 
        brew cask install wkhtmlpdf
 
 2. Generate the PDFs for all languages:
 
-   ::
+   .. code-block:: shell
 
        make pdf
 
 3. Make the PDF for one language:
 
-   ::
+   .. code-block:: shell
 
        make pdf.en
 
@@ -25,7 +25,7 @@ On macOS, if you see errors ending in “Too many open files”, try running ``u
 
 If you see this error:
 
-::
+.. code-block:: none
 
    Error: Failed to load https://performance.typekit.net/, with network status code 299 and http status code 400 - Error downloading https://performance.typekit.net/ - server replied: Bad Request
    …

@@ -11,7 +11,7 @@ Copy schema and codelists from OCDS for PPPs
 
 For each new release of OCDS for PPPs, run:
 
-.. code:: shell
+.. code-block:: shell
 
    make clean_dist
    python schema/borrow-schema.py
@@ -21,12 +21,12 @@ Update blank.json
 
 Install json-schema-random:
 
-.. code:: shell
+.. code-block:: shell
 
    npm install git+https://github.com/open-contracting/json-schema-random.git#opencontracting
 
 Update blank.json:
 
-.. code:: shell
+.. code-block:: shell
 
    node_modules/json-schema-random/cli.js --no-random --no-additional schema/project-level/project-schema.json > docs/examples/blank.json

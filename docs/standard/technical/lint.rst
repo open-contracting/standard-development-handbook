@@ -5,14 +5,14 @@ To perform periodic Markdown linting, you must:
 
 1. Install `Markdownlint <https://github.com/markdownlint/markdownlint>`__:
 
-   ::
+   .. code-block:: shell
 
        bundle init
        bundle add mdl
 
 2. Create ``~/.config/mdl/style.rb``:
 
-   ::
+   .. code-block:: none
 
        all
 
@@ -27,6 +27,6 @@ To perform periodic Markdown linting, you must:
 
 3. Change into a directory containing local copies of GitHub repositories, and run (using the fish shell):
 
-   ::
+   .. code-block:: fish
 
        for i in *; if [ -d $i ]; cd $i; echo $i; bundle exec mdl --git-recurse --style ~/.config/mdl/style.rb .; cd ..; end; end

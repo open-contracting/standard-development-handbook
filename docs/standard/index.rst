@@ -14,16 +14,14 @@ This section describes the processes for maintaining these assets. See the `Norm
 
 Documentation is written in Markdown syntax with `recommonmark <https://recommonmark.readthedocs.org/en/latest/>`__ building on `Commonmark <https://commonmark.org/>`__.
 
-.. code:: eval_rst
+.. toctree::
+   :maxdepth: 2
+   :glob:
 
-   .. toctree::
-      :maxdepth: 2
-      :glob:
-
-      schema
-      contributing
-      translation/index
-      technical/index
+   schema
+   contributing
+   translation/index
+   technical/index
 
 History
 ~~~~~~~
