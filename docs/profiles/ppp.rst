@@ -22,7 +22,7 @@ See the generic profile documentation for :doc:`technical/build`.
 
 In ``codelists.md``:
 
--  Update the version numbers in the links to extensions’ documentation, if appropriate.
+-  Update the version numbers in the links to extensions' documentation, if appropriate.
 -  If extensions or OCDS add or remove codelists, add or remove sections as appropriate.
 
 To find codelists to add or remove, run (in Bash):
@@ -38,5 +38,5 @@ See the generic profile documentation for :doc:`translation`.
 
 For reference:
 
--  The translations of the patched OCDS’s codelists are used by ``codelists.md`` and ``documents.md``.
--  The translation of the patched OCDS’s release schema is used by ``framework.md``, ``documents.md`` and ``schema.md``
+-  The translations of the patched OCDS's codelists are used by ``codelists.md`` and ``documents.md``.
+-  The translation of the patched OCDS's release schema is used by ``framework.md``, ``documents.md`` and ``schema.md``

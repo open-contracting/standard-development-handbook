@@ -8,7 +8,7 @@ Links
 
 When linking to a GitHub resource, use ``HEAD`` instead of a specific branch, tag or commit.
 
-When linking to the standard’s documentation, use the ``latest`` build instead of a specific version.
+When linking to the standard's documentation, use the ``latest`` build instead of a specific version.
 
 Structure
 ---------

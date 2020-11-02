@@ -21,7 +21,7 @@ The PDFs might have visual bugs. Please look at the PDFs before sharing, and `ma
 
        make pdf.en
 
-On macOS, if you see errors ending in “Too many open files”, try running ``ulimit -n 2048`` first.
+On macOS, if you see errors ending in "Too many open files", try running ``ulimit -n 2048`` first.
 
 If you see this error:
 

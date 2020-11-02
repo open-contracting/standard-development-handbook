@@ -1,7 +1,7 @@
 Building the documentation
 ==========================
 
-See the standard’s page for :doc:`../../../standard/technical/build`.
+See the standard's page for :doc:`../../../standard/technical/build`.
 
 Change version of OCDS
 ----------------------

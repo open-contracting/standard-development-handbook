@@ -11,15 +11,15 @@ See :ref:`standard/translation/terminology:1. Proposal, review, inclusion`.
 Handling minor changes
 ----------------------
 
-A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn’t change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.
+A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn't change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.
 
-Transifex can’t tell the difference, and the English author can’t indicate which changes are major or minor before pushing to Transifex. Translators therefore don’t know whether a string:
+Transifex can't tell the difference, and the English author can't indicate which changes are major or minor before pushing to Transifex. Translators therefore don't know whether a string:
 
 -  is a new string that was never translated
 -  corresponds to a string that was translated, but now requires re-translation
 -  corresponds to a string that was translated, and only requires edits to e.g. URLs or formatting
 
-In Transifex, the “Suggestions” tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but this is a time-consuming task.
+In Transifex, the "Suggestions" tab displays similar source strings and their translations, along with a percent match, which can assist translators in assessing the situation, but this is a time-consuming task.
 
 The English author should therefore go through the untranslated strings, identify the minor changes for which they are responsible, and, where possible, use the top suggestion (which should be over 95% match) and update it as needed (e.g. update a URL, change Markdown formatting).
 

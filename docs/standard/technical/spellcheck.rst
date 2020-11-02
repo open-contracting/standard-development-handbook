@@ -17,7 +17,7 @@ Configuration
 
 ``aspell`` will flag many field names and proper nouns as errors. ``aspell`` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace ``~/.aspell.en.pws`` with the following.
 
-``czf`` is from the documentation’s OCID prefix. ``yyyy`` is from copyright notices. ``wy`` and ``Za`` are from regular expressions for language suffixes.
+``czf`` is from the documentation's OCID prefix. ``yyyy`` is from copyright notices. ``wy`` and ``Za`` are from regular expressions for language suffixes.
 
 .. code-block:: text
 

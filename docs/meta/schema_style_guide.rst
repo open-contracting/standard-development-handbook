@@ -10,11 +10,11 @@ Normative statements
 -  Normative statements should be constructed using the keywords defined in `RFC2119 <https://tools.ietf.org/html/rfc2119>`__.
 -  Normative keywords should be capitalized where used, per `RFC8174 <https://tools.ietf.org/html/rfc8174>`__.
 -  Non-normative statements should not use the keywords defined in RFC2119, see this `Internet-Draft <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04>`__ for appropriate synonyms.
--  Normative statements should not use constructions such as “should always”, “should only” or “where possible … must”. The appropriate normative keyword should be used instead, e.g. MUST in place of “should always”.
+-  Normative statements should not use constructions such as "should always", "should only" or "where possible … must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
 -  Normative statements must be consistent with the OCDS schema, e.g. ``ocid`` is a required field in the schema so:
 
-   -  “the ``ocid`` field MUST be provided” is consistent.
-   -  “the ``ocid`` field SHOULD be provided” is inconsistent.
+   -  "the ``ocid`` field MUST be provided" is consistent.
+   -  "the ``ocid`` field SHOULD be provided" is inconsistent.
 
 -  When referring to extensions it is not necessary to explicitly state that they are optional.
 
@@ -24,7 +24,7 @@ Schema structure
 Definitions
 ~~~~~~~~~~~
 
-The top level of the schema is split between ``properties`` and ``definitions``. The latter contains objects that may be re-used, by reference, in multiple locations across the schema. Each of these can be thought of as a “Class”, and its name is capitalized accordingly. Whenever you consider that an object or structure might be re-used in a different area of the standard, it should be included in ``definitions``.
+The top level of the schema is split between ``properties`` and ``definitions``. The latter contains objects that may be re-used, by reference, in multiple locations across the schema. Each of these can be thought of as a "Class", and its name is capitalized accordingly. Whenever you consider that an object or structure might be re-used in a different area of the standard, it should be included in ``definitions``.
 
 Building blocks
 ~~~~~~~~~~~~~~~
@@ -44,7 +44,7 @@ This is because:
 
 Otherwise, the array will be merged as a whole.
 
-Objects that are not contained within an array MAY include an ``id`` field to support cross-referencing, or to disclose the object’s real-world identifier.
+Objects that are not contained within an array MAY include an ``id`` field to support cross-referencing, or to disclose the object's real-world identifier.
 
 Details field
 ~~~~~~~~~~~~~
@@ -52,11 +52,11 @@ Details field
 A codelist field can be paired with a ``xDetails`` string field, which can be used for:
 
 -  Free text details on the codelist value
--  A more detailed set of classifications from a publisher’s systems
+-  A more detailed set of classifications from a publisher's systems
 
 Use of ``xDetails`` fields can help increase acceptance of a closed codelist.
 
-For example, a jurisdiction may have five procurement procedures, named A, B, C, D and E. The ``procurementMethod`` field uses a closed codelist (‘open’, ‘selective’, ‘limited’, ‘direct’) to which its procedures should be mapped. The ``procurementMethodDetails`` field then allows the jurisdiction to publish the original names of its procedures.
+For example, a jurisdiction may have five procurement procedures, named A, B, C, D and E. The ``procurementMethod`` field uses a closed codelist ('open', 'selective', 'limited', 'direct') to which its procedures should be mapped. The ``procurementMethodDetails`` field then allows the jurisdiction to publish the original names of its procedures.
 
 Additional array
 ~~~~~~~~~~~~~~~~
@@ -64,7 +64,7 @@ Additional array
 An object field can be paired with a ``additionalX`` array field, which can be used when:
 
 -  A data owner has one or more values for a field
--  One of those values can be considered in some way ‘primary’
+-  One of those values can be considered in some way 'primary'
 -  A number of use cases can be met by looking only at the primary value
 
 For example, a source system might record the company registration number and VAT identifier of a company. If we had a single ``parties.identifier`` object, the data owner would have to pick which identifier to use, and would be omitting data that could help some users to identify an organization. If we only had an array of ``parties.identifiers``, then the data structure for the simple case (only one identifier) becomes more complex, and it is not possible to indicate any priority between the identifiers.
@@ -75,8 +75,8 @@ Validation keywords
 -  Date fields must use ``"format": "date-time"``.
 -  URL fields must use ``"format": "uri"``.
 -  Number fields should use ``minimum``, ``maximum`` and/or ``exclusiveMinimum``, if appropriate.
--  The ``default`` keyword shouldn’t be used, because consumers aren’t expected to fill in defaults.
--  The following keywords aren’t used and might require code changes: ``additionalItems``, ``additionalProperties``, ``dependencies``, ``exclusiveMaximum``, ``maxItems``, ``maxLength``, ``maxProperties``, ``multipleOf``, ``allOf``, ``anyOf``, ``not``.
+-  The ``default`` keyword shouldn't be used, because consumers aren't expected to fill in defaults.
+-  The following keywords aren't used and might require code changes: ``additionalItems``, ``additionalProperties``, ``dependencies``, ``exclusiveMaximum``, ``maxItems``, ``maxLength``, ``maxProperties``, ``multipleOf``, ``allOf``, ``anyOf``, ``not``.
 
 The following keywords are added by `ocdskit schema-strict <https://ocdskit.readthedocs.io/en/latest/cli/schema.html#schema-strict>`__:
 
@@ -113,10 +113,10 @@ Field and code names
 -  Use lower `camelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for field names, e.g. ``awardCriteriaDetails``.
 -  Use upper `CamelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for ``definitions`` entries, e.g. ``Award``.
 -  Put the qualifier *before* the concept, e.g. ``enquiryPeriod`` rather than ``periodOfEnquiry``.
--  Don’t abbreviate words, e.g. ``minimumParticipants`` not ``minParticipants``.
+-  Don't abbreviate words, e.g. ``minimumParticipants`` not ``minParticipants``.
 -  Use singular for fields pointing to an object or literal value.
 -  Use plural for fields pointing to an array of values.
--  Field names should not include their parent’s name, e.g. ``title`` not ``tenderTitle``, ``description`` not ``awardDescription``, etc.
+-  Field names should not include their parent's name, e.g. ``title`` not ``tenderTitle``, ``description`` not ``awardDescription``, etc.
 
 .. note::
    Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the `tender` object are "first stage," with many publishers using that object to invite requests to participate.
@@ -128,8 +128,8 @@ Field and code descriptions
 
 -  The first sentence of a description should be descriptive of the field and written in a neutral voice, rather than addressing a particular audience, e.g. for ``tender/submissionMethod``.
 
-   -  “The methods by which bids are submitted, using the open submissionMethod codelist.” uses a neutral voice.
-   -  “Specify the method(s) by which bids can be submitted” addresses publishers rather than users.
+   -  "The methods by which bids are submitted, using the open submissionMethod codelist." uses a neutral voice.
+   -  "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
 
 -  Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively. Guidance sentences should be grounded in clear user needs and implementation experience of common pitfalls or errors.
 -  Descriptions for similar fields or codes should be consistent with each other where possible, without discarding information relevant to a specific field.

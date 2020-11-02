@@ -16,7 +16,7 @@ A *term* is a word or group of words that need to be used and translated consist
 Working document
 ----------------
 
-This `Google spreadsheet <https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0>`__ is the glossary’s working document. It is divided into sheets (described below), all of which are publicly readable and commentable. A coordinator gives permission to terminologists, SMEs and proofreaders to edit specific sheets and ranges.
+This `Google spreadsheet <https://docs.google.com/spreadsheets/d/1WGH9_mHYuF4JbK2tdyeckqsmj8v4HrRqDOEbKQ7CI4A/edit#gid=0>`__ is the glossary's working document. It is divided into sheets (described below), all of which are publicly readable and commentable. A coordinator gives permission to terminologists, SMEs and proofreaders to edit specific sheets and ranges.
 
 Source
 ~~~~~~
@@ -52,7 +52,7 @@ The sheet of a language variant is edited by SMEs and proofreaders. It has the f
 
    -  *no* if the term in the language variant and the base language are the same
    -  *yes => term* if the term in the language variant differs from the one in the base language
-   -  *empty* if either the base language or the language variant doesn’t have a term yet
+   -  *empty* if either the base language or the language variant doesn't have a term yet
 
 Process
 -------

@@ -1,7 +1,7 @@
 Translation
 ===========
 
-See the standard’s page for :doc:`../../../standard/translation/index`.
+See the standard's page for :doc:`../../../standard/translation/index`.
 
 Copying translations from the standard to a profile
 ---------------------------------------------------
@@ -41,7 +41,7 @@ These instructions are similar to others in `ocds-extensions-translations <https
 
 6.  Change into the ``ocds-extensions-translations`` directory
 
-7.  Prepare a compendium from the profile’s extensions, for example, for OCDS for PPPs:
+7.  Prepare a compendium from the profile's extensions, for example, for OCDS for PPPs:
 
     .. code-block:: fish
 
@@ -51,9 +51,9 @@ These instructions are similar to others in `ocds-extensions-translations <https
         msgcat --use-first (ls $lang-*.po) > $wip/$lang-extensions.po
         rm -f $lang-*.po
 
-8.  Change into the profile’s directory
+8.  Change into the profile's directory
 
-9.  Prepare a compendium from the profile’s repository, and merge it:
+9.  Prepare a compendium from the profile's repository, and merge it:
 
     .. code-block:: fish
 
@@ -101,7 +101,7 @@ These instructions are similar to others in `ocds-extensions-translations <https
 Technical implementation of translation
 ---------------------------------------
 
-See the standard’s page for :doc:`../../../standard/translation/implementation`.
+See the standard's page for :doc:`../../../standard/translation/implementation`.
 
 -  ``babel_ocds_codelist.cfg`` indicates the codelist CSV files in the consolidated extension and the patched OCDS (``schema/*/codelists/*.csv``) from which to extract strings to translate.
 -  ``babel_ocds_schema.cfg`` indicates the JSON Schema files in the consolidated extension and the patched OCDS (``schema/*/*-schema.json``) from which to extract strings to translate.

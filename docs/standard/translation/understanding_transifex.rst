@@ -1,7 +1,7 @@
 Understanding Transifex
 =======================
 
-Translators use Transifex to translate the strings in the standard’s schema, codelist and documentation files from the source language (English) to other languages.
+Translators use Transifex to translate the strings in the standard's schema, codelist and documentation files from the source language (English) to other languages.
 
 Projects and resources
 ----------------------

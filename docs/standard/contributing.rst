@@ -10,7 +10,7 @@ Before contributing to Markdown pages, read the :doc:`../../meta/style_guide`.
 
 Before authoring a new documentation page, or extensively editing an existing page, read the `process note <https://docs.google.com/document/d/1vBn4HFaczjcCur19kSwEMwk2uciFCdNgm9S9Ue_LnjY/>`__ on using Google Docs to collaboratively edit standard documentation.
 
-Before contributing to JSON Schema and CSV codelists, read the :doc:`../../meta/schema_style_guide` and the `schema patterns <https://os4d.opendataservices.coop/patterns/schema/>`__ section of `ODS’ Standards Lab <https://os4d.opendataservices.coop/>`__.
+Before contributing to JSON Schema and CSV codelists, read the :doc:`../../meta/schema_style_guide` and the `schema patterns <https://os4d.opendataservices.coop/patterns/schema/>`__ section of `ODS' Standards Lab <https://os4d.opendataservices.coop/>`__.
 
 To get up to speed on OCDS standard development, you should be familiar with:
 
@@ -26,7 +26,7 @@ To get up to speed on OCDS standard development, you should be familiar with:
    -  `Extension classification policy <https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit>`__ (draft)
    -  `Semantic versioning <https://semver.org>`__
 
-To improve your technical writing skills, consider taking `Google’s Technical Writing Courses <https://developers.google.com/tech-writing>`__, which can be completed in a day.
+To improve your technical writing skills, consider taking `Google's Technical Writing Courses <https://developers.google.com/tech-writing>`__, which can be completed in a day.
 
 Proposing changes
 -----------------
@@ -34,7 +34,7 @@ Proposing changes
 For worked examples, see the `process note <https://docs.google.com/document/d/1Sp1sXVx99k-zdpNKE6kAwGkmyHG6KWCIaiZ1GYE_cOY/edit>`__. For all other changes:
 
 1. Agree on a proposal in a GitHub issue.
-2. Assign the issue to yourself, and move the issue’s card to the *In progress* column.
+2. Assign the issue to yourself, and move the issue's card to the *In progress* column.
 3. Create a branch of the ``standard`` repo (not a branch of your fork) in which to make your changes.
 
    -  As suggested in the :doc:`../../meta/style_guide`, consider composing Markdown content in `Hemingway Editor <http://www.hemingwayapp.com/>`__ or `Grammarly <https://www.grammarly.com/>`__.
@@ -48,13 +48,13 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 
 5. Create a pull request.
 
-   -  Reference the issue number in the pull requests’ description.
+   -  Reference the issue number in the pull requests' description.
    -  Set the *base* branch, e.g. ``1.2-dev`` for OCDS 1.2 or ``1.1-dev`` for OCD 1.1.
    -  Set the *milestone*, e.g. ``1.2.0`` for OCDS 1.2.
 
 6. Assign a helpdesk analyst to review.
 
-   -  See the next section for reviewer’s instructions.
+   -  See the next section for reviewer's instructions.
    -  If changes are requested, make the changes, then repeat this step.
 
 7. Once approved by a helpdesk analyst, assign James to review.

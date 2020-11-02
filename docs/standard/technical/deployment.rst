@@ -44,7 +44,7 @@ For each *core* extension, review the commits since the last release:
 1. Open its homepage on GitHub
 2. Open its releases in the sidebar
 3. Decide whether to merge pull requests
-4. View the commits since the last release (under the release’s heading) and consider any substantive changes, i.e. not simple typo or documentation updates
+4. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
 
 Alternately, run this Rake task to get links to pull requests and comparison URLs:
 
@@ -64,9 +64,9 @@ For each *core* extension for which to create a new version:
 
 1. From the list of releases, click *Draft a new release*
 2. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. ``v1.1.1``
-3. Enter a summary of changes, e.g. “Typo fixes”, and click *Publish release*
+3. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
-Alternately, run this Rake task, which will use the extension’s changelog as the release message:
+Alternately, run this Rake task, which will use the extension's changelog as the release message:
 
 .. code-block:: shell
 
@@ -178,7 +178,7 @@ The built documentation is transferred to the staging directory on the server. Y
 2. Release the documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See the `deploy repository’s documentation <https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation>`__.
+See the `deploy repository's documentation <https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation>`__.
 
 3. Update the Data Review Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,7 +215,7 @@ Update any other tools that use the CoVE library
 
 Make sure other tools that use ``libcoveocds`` (like Kingfisher Process and Toucan) are updated to use the new version.
 
-Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with its own options, the tool’s own options may need changing.
+Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with its own options, the tool's own options may need changing.
 
 FAQ
 ---

@@ -48,7 +48,7 @@ Run tests
 
 The standard repository has tests. Profiles may not.
 
-The standard’s tests must be run after building the documentation:
+The standard's tests must be run after building the documentation:
 
 .. code-block:: shell
 
@@ -88,7 +88,7 @@ If you changed ``release-schema.json``, update ``versioned-release-validation-sc
 
    python util/make_versioned_release_schema.py
 
-Sphinx, which builds the documentation, doesn’t watch directories for changes. To regenerate the documentation whenever changes are made:
+Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation whenever changes are made:
 
 -  If you are running macOS and have ``fswatch`` from Homebrew:
 
@@ -114,4 +114,4 @@ If you are using Firefox you can use the `Live Reload <https://addons.mozilla.or
 Change the theme
 ----------------
 
-The theme files are in the `standard_theme <https://github.com/open-contracting/standard_theme>`__ repository, and are part of the virtual environment. Find them in the virtual environment’s directory (e.g. ``.ve/src/standard-theme``).
+The theme files are in the `standard_theme <https://github.com/open-contracting/standard_theme>`__ repository, and are part of the virtual environment. Find them in the virtual environment's directory (e.g. ``.ve/src/standard-theme``).

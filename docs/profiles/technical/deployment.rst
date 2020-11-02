@@ -1,7 +1,7 @@
 Deployment
 ==========
 
-A profile’s deployment is the same as the standard’s :doc:`../../standard/technical/deployment`, except where noted below. If a profile is unversioned, some of the below may be irrelevant.
+A profile's deployment is the same as the standard's :doc:`../../standard/technical/deployment`, except where noted below. If a profile is unversioned, some of the below may be irrelevant.
 
 Schemas and extensions
 ----------------------
@@ -12,7 +12,7 @@ Schemas and extensions
 Review pull requests and recent changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Follow the :ref:`standard's instructions<standard/technical/deployment:Review pull requests and recent changes>`, substituting the profile’s extensions for core extensions.
+Follow the :ref:`standard's instructions<standard/technical/deployment:Review pull requests and recent changes>`, substituting the profile's extensions for core extensions.
 
 Create new releases of core extensions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -22,7 +22,7 @@ The governance process will establish whether to create a new release of any cor
 2. Perform periodic updates, if appropriate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Check the profile’s individual handbook page for any regular maintenance.
+Check the profile's individual handbook page for any regular maintenance.
 
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,7 +35,7 @@ Update the *major__minor__patch* version number:
 
    find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' \{\} \;
 
-Update the profile’s changelog (if any) with a summary of the changes to the profile’s extensions.
+Update the profile's changelog (if any) with a summary of the changes to the profile's extensions.
 
 4. Integrate extensions
 ~~~~~~~~~~~~~~~~~~~~~~~
