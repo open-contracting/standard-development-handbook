@@ -3,9 +3,6 @@
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-import os
-
-from recommonmark.transform import AutoStructify
 
 # -- Path setup --------------------------------------------------------------
 
@@ -16,6 +13,7 @@ from recommonmark.transform import AutoStructify
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import os
 
 
 # -- Project information -----------------------------------------------------
@@ -31,7 +29,7 @@ author = 'Open Contracting Partnership'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark',
+    'sphinx.ext.autosectionlabel',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -58,6 +56,8 @@ html_static_path = ['_static']
 
 # -- Extension configuration -------------------------------------------------
 
+autosectionlabel_prefix_document = True
+
 # Needed for ReadTheDocs (Sphinx 1.8).
 master_doc = 'index'
 
@@ -67,12 +67,3 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-
-
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-        'auto_toc_tree_section': 'Contents',
-        'enable_eval_rst': True,
-    }, True)
-
-    app.add_transform(AutoStructify)
