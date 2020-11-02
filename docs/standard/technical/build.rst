@@ -22,6 +22,19 @@ Initialize and update submodules:
    git submodule init
    git submodule update
 
+.. note::
+
+   If you need to change a submodule, it's simplest to edit ``.gitmodules``, remove the submodule, then run the above. For example:
+
+   .. code-block:: shell
+
+      rm -rf .git/modules
+      rm -rf path/to/submodule
+      git submodule init
+      git submodule update
+      cd path/to/submodule
+      git checkout desired-branch
+
 Run all commands on this page within this virtual environment.
 
 Install the requirements:
