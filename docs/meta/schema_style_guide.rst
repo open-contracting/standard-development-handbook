@@ -113,15 +113,24 @@ Field and code names
 -  Use lower `camelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for field names, e.g. ``awardCriteriaDetails``.
 -  Use upper `CamelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for ``definitions`` entries, e.g. ``Award``.
 -  Put the qualifier *before* the concept, e.g. ``enquiryPeriod`` rather than ``periodOfEnquiry``.
+
+   .. note::
+
+      Date fields might appear inconsistent. For example, there is ``startDate``, ``endDate``, ``maxExtentDate`` and ``dueDate`` but also ``datePublished``, ``dateSigned``, ``dateModified`` and ``dateMet``. The reasons are:
+
+      -  External consistency. For example, Schema.org uses `startDate <https://schema.org/startDate>`__ and `endDate <https://schema.org/endDate>`__ but also `datePublished <https://schema.org/datePublished>`__ and `dateModified <https://schema.org/dateModified>`__.
+      -  Internal consistency. For example, the fields of the ``Period`` object follow the ``*Date`` pattern.
+      -  Term frequency. For example, "due date" occurs more frequently in English than "date due".
+
 -  Don't abbreviate words, e.g. ``minimumParticipants`` not ``minParticipants``.
 -  Use singular for fields pointing to an object or literal value.
 -  Use plural for fields pointing to an array of values.
 -  Field names should not include their parent's name, e.g. ``title`` not ``tenderTitle``, ``description`` not ``awardDescription``, etc.
 
 .. note::
-   Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the `tender` object are "first stage," with many publishers using that object to invite requests to participate.
+   Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the ``tender`` object are "first stage," with many publishers using that object to invite requests to participate.
 
-   Until OCDS 2.0, publishers must use the `tender` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
+   Until OCDS 2.0, publishers must use the ``tender`` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
 
 Field and code descriptions
 ---------------------------
