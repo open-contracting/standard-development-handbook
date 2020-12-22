@@ -116,11 +116,11 @@ Field and code names
 
    .. note::
 
-      Date fields might appear inconsistent. For example, there is ``startDate``, ``endDate``, ``maxExtentDate`` and ``dueDate`` but also ``datePublished``, ``dateSigned``, ``dateModified`` and ``dateMet``. The reasons are:
+      Date fields might appear inconsistent: there's ``startDate``, ``endDate``, ``maxExtentDate``, ``dueDate`` but also ``datePublished``, ``dateSigned``, ``dateModified``, ``dateMet``. The reasons are:
 
-      -  External consistency. For example, Schema.org uses `startDate <https://schema.org/startDate>`__ and `endDate <https://schema.org/endDate>`__ but also `datePublished <https://schema.org/datePublished>`__ and `dateModified <https://schema.org/dateModified>`__.
-      -  Internal consistency. For example, the fields of the ``Period`` object follow the ``*Date`` pattern.
-      -  Term frequency. For example, "due date" occurs more frequently in English than "date due".
+      -  External consistency, e.g. Schema.org uses `startDate <https://schema.org/startDate>`__, `endDate <https://schema.org/endDate>`__ but also `datePublished <https://schema.org/datePublished>`__, `dateModified <https://schema.org/dateModified>`__.
+      -  Internal consistency, e.g. the fields of the ``Period`` object follow the ``*Date`` pattern.
+      -  Term frequency, e.g. "due date" occurs more frequently in English than "date due".
 
 -  Don't abbreviate words, e.g. ``minimumParticipants`` not ``minParticipants``.
 -  Use singular for fields pointing to an object or literal value.
