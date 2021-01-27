@@ -55,6 +55,8 @@ The standard's tests must be run after building the documentation:
    make
    py.test
 
+To replicate the Github Actions workfow, you also need to [run the tests from the standard maintenance scripts](https://github.com/open-contracting/standard-maintenance-scripts#tests).
+
 Build the documentation
 -----------------------
 
