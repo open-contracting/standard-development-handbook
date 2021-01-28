@@ -30,3 +30,18 @@ Update blank.json:
 .. code-block:: shell
 
    node_modules/json-schema-random/cli.js --no-random --no-additional schema/project-level/project-schema.json > docs/examples/blank.json
+
+Export mapping csvs for editing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install gnumeric:
+
+.. code-block:: shell
+
+   sudo apt install gnumeric
+
+Combine csv files into a single spreadsheet
+
+.. code-block:: shell
+
+   ssconvert --merge-to=output.xlsx mapping/*.csv
