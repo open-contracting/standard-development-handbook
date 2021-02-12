@@ -88,9 +88,26 @@ Run the tests:
 
    pytest
 
-To replicate the Github Actions workfow, you also need to `run the tests from the standard maintenance scripts <https://github.com/open-contracting/standard-maintenance-scripts#tests>`__.
+To replicate the GitHub Actions workfow, you also need to `run the tests from the standard maintenance scripts <https://github.com/open-contracting/standard-maintenance-scripts#tests>`__.
 
-``test_search`` will report failures if you have not yet pushed your branch to Github because the search index for a branch is only built when you push it. Once your PR passes, the local tests are expected to pass.
+Troubleshoot
+~~~~~~~~~~~~
+
+If the tests are failing:
+
+-  Ensure your dependencies are up-to-date:
+
+   .. code-block:: shell
+
+      pip install pip-tools
+      pip-sync
+
+-  Clean and re-build the documentation:
+
+   .. code-block:: shell
+
+      make clean
+      make
 
 Build the documentation
 -----------------------
