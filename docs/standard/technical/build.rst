@@ -55,7 +55,7 @@ Run tests
       curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
       unzip chromedriver_linux64.zip -d chromedriver
 
-   On macOS:
+   Or, on macOS:
 
    .. code-block:: shell
 
@@ -74,7 +74,7 @@ Add ChromeDriver to the ``PATH``. Using Bash:
 
    export PATH=$PATH:`pwd`/chromedriver
 
-Using fish shell:
+Or, using fish shell:
 
 .. code-block:: shell
 
