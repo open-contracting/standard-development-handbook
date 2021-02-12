@@ -46,8 +46,6 @@ Install the requirements:
 Run tests
 ---------
 
-The standard repository has tests. Profiles may not.
-
 .. admonition:: One-time setup
 
    Install ChromeDriver. On Linux:
