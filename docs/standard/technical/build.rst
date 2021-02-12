@@ -48,12 +48,45 @@ Run tests
 
 The standard repository has tests. Profiles may not.
 
-The standard's tests must be run after building the documentation:
+.. admonition:: One-time setup
+
+   Install ChromeDriver. On Linux:
+
+   .. code-block:: shell
+
+      curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
+      unzip chromedriver_linux64.zip -d chromedriver
+
+   On macOS:
+
+   .. code-block:: shell
+
+      curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_mac64.zip
+      unzip chromedriver_mac64.zip -d chromedriver
+
+Build the documentation:
 
 .. code-block:: shell
 
    make
-   py.test
+
+Add ChromeDriver to the ``PATH``. Using Bash:
+
+.. code-block:: shell
+
+   export PATH=$PATH:`pwd`/chromedriver
+
+Using fish shell:
+
+.. code-block:: shell
+
+   set PATH $PATH chromedriver
+
+Run the tests:
+
+.. code-block:: shell
+
+   pytest
 
 To replicate the Github Actions workfow, you also need to `run the tests from the standard maintenance scripts <https://github.com/open-contracting/standard-maintenance-scripts#tests>`__.
 
