@@ -8,7 +8,7 @@ Creating an extension
 
 `Read this draft policy <https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit>`__ to decide whether to create a `core, community or local extension <https://standard.open-contracting.org/latest/en/extensions/>`__.
 
-To create the extension, `use the extension template <https://github.com/open-contracting/standard_extension_template/blob/master/README.md>`__, which also documents the structure of extensions.
+To create the extension, `use the extension template <https://github.com/open-contracting/standard_extension_template/blob/main/README.md>`__, which also documents the structure of extensions.
 
 If you're creating an extension in an OCP repository, use the `Apache License 2.0 <https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE>`__, disable issues on the GitHub repository (see :ref:`extensions/index:Reporting issues on extensions` below) and include the following text in its ``README.md`` file:
 

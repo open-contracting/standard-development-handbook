@@ -22,7 +22,7 @@ Tidy extensions
 
 For each *core* extension, :doc:`spell check<spellcheck>`, :doc:`run Markdownlint<lint>`, and ensure it:
 
--  `Passes its tests <https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions>`__
+-  `Passes its tests <https://github.com/open-contracting/standard-maintenance-scripts/blob/main/badges.md#extensions>`__
 -  Matches the description in :ref:`extensions/index:Creating an extension` regarding license, issues and ``README.md``
 -  `Has wiki disabled, default branch protected, and topics set <https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration>`__
 
@@ -191,7 +191,7 @@ Update the CoVE library
 
 This is the lib-cove-ocds repository for OCDS, and lib-cove-oc4ids for OC4IDS.
 
--  Update the URL paths in `config.py <https://github.com/open-contracting/lib-cove-ocds/blob/master/libcoveocds/config.py>`__
+-  Update the URL paths in `config.py <https://github.com/open-contracting/lib-cove-ocds/blob/main/libcoveocds/config.py>`__
 -  Make sure all tests pass
 -  `Release a new version <https://ocp-software-handbook.readthedocs.io/en/latest/python/packages.html#release-process>`__
 
@@ -206,7 +206,7 @@ This is the cove-ocds repository for OCDS, and cove-oc4ids for OC4IDS.
 
    pip-compile -P libcoveocds; pip-compile requirements_dev.in
 
--  Update the URL paths in `settings.py <https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py>`__ (*only in cove-ocds*)
+-  Update the URL paths in `settings.py <https://github.com/open-contracting/cove-ocds/blob/main/cove_project/settings.py>`__ (*only in cove-ocds*)
 -  Make sure all tests pass
 -  `Deploy the app <https://ocdsdeploy.readthedocs.io/en/latest/deploy/deploy.html>`__
 

@@ -33,6 +33,6 @@ For the history of standard development, read:
 -  `2018 Extension registry design decisions <https://docs.google.com/document/d/18JLz_RqBkYiDE-HSlzoa9_2XxgxYUmV9O2VnbMfc_Ss/edit>`__
 -  `2018 Short history of standard development <https://docs.google.com/document/d/118NBDV6YIxlk75vc_8nmV0_GmacsQjes7xBXzoNSiY0/edit>`__
 -  The `Development <https://os4d.opendataservices.coop/development/>`__ section of ODS' Standards Lab
--  `2014 technical scoping <https://github.com/open-contracting-archive/technical-approach/blob/master/README.md>`__
+-  `2014 technical scoping <https://github.com/open-contracting-archive/technical-approach/blob/main/README.md>`__
 
 The `standard <https://github.com/open-contracting/standard/issues>`__ and `ocds-extensions <https://github.com/open-contracting/ocds-extensions/issues>`__ repositories contain all public discussions about standard development.
