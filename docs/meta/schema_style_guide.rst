@@ -135,7 +135,7 @@ Field and code names
 Field and code descriptions
 ---------------------------
 
--  The first sentence of a description should be descriptive of the field and written in a neutral voice, rather than addressing a particular audience, e.g. for ``tender/submissionMethod``.
+-  The first sentence of a description should be descriptive of the field and written in a neutral voice, rather than addressing a particular audience. Descriptions must be distinct between fields. For example, for ``tender/submissionMethod``:
 
    -  "The methods by which bids are submitted, using the open submissionMethod codelist." uses a neutral voice.
    -  "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
