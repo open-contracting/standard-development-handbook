@@ -140,19 +140,11 @@ If you changed ``release-schema.json``, update ``versioned-release-validation-sc
 
    python util/make_versioned_release_schema.py
 
-Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation whenever changes are made:
+Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation and refresh the browser whenever changes are made, run:
 
--  If you are running macOS and have ``fswatch`` from Homebrew:
+.. code-block:: shell
 
-   .. code-block:: shell
-
-      fswatch -0 docs | xargs -0 -n 1 -I {} make
-
--  If you are running Linux, you can ``pip install watchdog[watchmedo]`` and run:
-
-   .. code-block:: shell
-
-      watchmedo shell-command --patterns="*.md" --ignore-pattern="build/*" --recursive --command="make"
+   make autobuild
 
 View the documentation, by running a local web server:
 
