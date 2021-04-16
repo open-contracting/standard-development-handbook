@@ -6,17 +6,7 @@ Translators use Transifex to translate the strings in the standard's schema, cod
 Projects and resources
 ----------------------
 
-Transifex is organized into projects:
-
--  `OCDS 1.1 <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/dashboard/>`__
--  `OCDS Extension Explorer <https://www.transifex.com/open-contracting-partnership-1/ocds-extension-explorer/dashboard/>`__
--  `OCDS Extensions <https://www.transifex.com/open-contracting-partnership-1/ocds-extensions/dashboard/>`__
--  `OCDS for PPPs <https://www.transifex.com/open-contracting-partnership-1/ocds-for-ppps/dashboard/>`__
--  `OC4IDS 0.9 <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/dashboard/>`__
--  `OCDS Theme <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-theme/dashboard/>`__: strings from the documentation theme
--  `CoVE <https://www.transifex.com/OpenDataServices/cove/dashboard/>`__: strings from the OCDS Data Review Tool
-
-Projects contain `resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/content/>`__, which contain strings to be translated. Here, we discuss only Standard 1.0 and Standard 1.1.
+Transifex is organized into projects, like `OCDS 1.1 <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/dashboard/>`__. Projects contain `resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/content/>`__, which contain strings to be translated.
 
 Strings to be translated
 ------------------------
