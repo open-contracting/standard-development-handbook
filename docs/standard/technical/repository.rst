@@ -31,7 +31,7 @@ Structure
    -  ``*.md`` ``*/*.md``: English documentation text
    -  `conf.py <https://github.com/open-contracting/standard/blob/HEAD/docs/conf.py>`__: Sphinx configuration
    -  `_static/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_static>`__: CSS and JavaScript for the documentation
-   -  `_templates/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_templates>`__: Jinja templates for the documentation (these contain only small overrides, as `we have our own theme <https://github.com/open-contracting/standard_theme>`__)
+   -  `_templates/ <https://github.com/open-contracting/standard/tree/HEAD/docs/_templates>`__: Jinja templates for the documentation (see :doc:`theme`)
    -  `locale/ <https://github.com/open-contracting/standard/tree/HEAD/locale>`__: translations of the English documentation
 
 -  `schema/ <https://github.com/open-contracting/standard/tree/HEAD/schema>`__: schema-related files

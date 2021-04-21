@@ -146,16 +146,9 @@ Sphinx, which builds the documentation, doesn't watch directories for changes. T
 
    make autobuild
 
-View the documentation, by running a local web server:
+Otherwise, view the documentation by running a local web server:
 
 .. code-block:: shell
 
    cd build
    python -m http.server
-
-If you are using Firefox you can use the `Live Reload <https://addons.mozilla.org/en-US/firefox/addon/live-reload/>`__ addon to automatically reload the documentation when it changes.
-
-Change the theme
-----------------
-
-The theme files are in the `standard_theme <https://github.com/open-contracting/standard_theme>`__ repository, and are part of the virtual environment. Find them in the virtual environment's directory (e.g. ``.ve/src/standard-theme``).
