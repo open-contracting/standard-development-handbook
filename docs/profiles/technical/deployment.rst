@@ -1,5 +1,5 @@
-Deployment
-==========
+Deploying the documentation
+===========================
 
 A profile's deployment is the same as the standard's :doc:`../../standard/technical/deployment`, except where noted below. If a profile is unversioned, some of the below may be irrelevant.
 

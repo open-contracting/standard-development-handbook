@@ -1,5 +1,5 @@
-Deployment
-==========
+Deploying the documentation
+===========================
 
 This section describes the steps involved in deploying an updated version of the standard to become the live version.
 
@@ -165,7 +165,7 @@ Build and deploy
 1. Build on continuous integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`Merging branches<merge>` will trigger a :doc:`build<build>`. For changes to the theme's repository, you can instead rebuild the previous build of the live branch.
+:ref:`Merging branches<merge>` will trigger a :doc:`build<build>`.
 
 The built documentation is transferred to the staging directory on the server. You can preview the documentation. For example, for OCDS 1.1, https://standard.open-contracting.org/staging/1.1/ is the staging version for https://standard.open-contracting.org/1.1/.
 
