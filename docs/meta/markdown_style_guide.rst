@@ -119,6 +119,8 @@ deprecated
 References
 ----------
 
+See the documentation on `Markdown footnotes <https://jupyterbook.org/content/content-blocks.html#footnotes>`__ (or `reStructuredText footnotes <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`__).
+
 seealso
 ~~~~~~~
 
