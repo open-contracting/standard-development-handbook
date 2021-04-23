@@ -13,8 +13,8 @@ For each new release of OCDS for PPPs, run:
 
 .. code-block:: shell
 
-   make clean_dist
    python schema/borrow-schema.py
+   ocdskit schema-strict schema/project-level/project-schema.json
 
 Update blank.json
 ~~~~~~~~~~~~~~~~~

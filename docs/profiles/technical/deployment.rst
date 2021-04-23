@@ -37,6 +37,12 @@ Update the *major__minor__patch* version number:
 
 Update the profile's changelog (if any) with a summary of the changes to the profile's extensions.
 
+Review the pull requests since the last release. To review the commits that are not part of a pull request (using the fish shell):
+
+.. code-block:: fish
+
+   git show (git rev-list --first-parent --no-merges 1.0-dev)
+
 4. Integrate extensions
 ~~~~~~~~~~~~~~~~~~~~~~~
 
