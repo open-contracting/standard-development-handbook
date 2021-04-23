@@ -14,9 +14,8 @@ For each new release of OCDS for PPPs, run:
 .. code-block:: shell
 
    python schema/borrow-schema.py
-   ocdskit schema-strict schema/project-level/project-schema.json
 
-If working on a pre-release, substitute:
+If working on a pre-release, run:
 
 .. code-block:: shell
 
