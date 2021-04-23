@@ -5,6 +5,14 @@ This style guide covers our conventions when writing Markdown files in Sphinx do
 
 This page shows relevant directives from `Sphinx <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`__ and `reStructuredText <https://docutils.sourceforge.io/docs/ref/rst/directives.html>`__. It also shows some examples of `reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`__.
 
+We use the following directives from `sphinxcontrib-opendataservices <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/>`__ and `sphinxcontrib-opendataservices-jsonschema <https://sphinxcontrib-opendataservices-jsonschema.readthedocs.io/en/latest/>`__:
+
+-  `csv-table-no-translate <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/misc/#directive-csv-table-no-translate>`__
+-  `jsoninclude <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/jsoninclude/#directive-jsoninclude>`__
+-  `jsoninclude-flat <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/jsoninclude/#directive-jsoninclude-flat>`__
+-  `jsonschema <https://sphinxcontrib-opendataservices-jsonschema.readthedocs.io/en/latest/use.html>`__
+-  `localization-note <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/misc/#directive-localization-note>`__
+
 Layout
 ------
 
