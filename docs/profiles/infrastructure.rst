@@ -16,6 +16,12 @@ For each new release of OCDS for PPPs, run:
    python schema/borrow-schema.py
    ocdskit schema-strict schema/project-level/project-schema.json
 
+If working on a pre-release, substitute:
+
+.. code-block:: shell
+
+   python schema/borrow-schema.py https://standard.open-contracting.org/staging/profiles/ppp/1.0-dev/en/_static/patched/
+
 Update blank.json
 ~~~~~~~~~~~~~~~~~
 
