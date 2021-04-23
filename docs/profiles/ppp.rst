@@ -6,15 +6,6 @@ Public Private Partnerships
 Development tasks
 -----------------
 
-Update examples
-~~~~~~~~~~~~~~~
-
-The profile contains example files from OCDS Show for PPPs. To update them:
-
-.. code-block:: shell
-
-   make update_examples
-
 Change extensions or version of OCDS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
