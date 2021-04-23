@@ -41,7 +41,15 @@ Review the pull requests since the last release. To review the commits that are 
 
 .. code-block:: fish
 
-   git show (git rev-list --first-parent --no-merges 1.0-dev)
+   git show (git rev-list --first-parent --no-merges 1.0-dev --since=2019-10-21)
+
+To review the messages only (using the fish shell):
+
+.. code-block:: fish
+
+   git show --oneline -s (git rev-list --first-parent --no-merges 1.0-dev --since=2019-10-21)
+
+Replace the branch (``1.0-dev``) and date (``2019-10-21``) as needed.
 
 4. Integrate extensions
 ~~~~~~~~~~~~~~~~~~~~~~~
