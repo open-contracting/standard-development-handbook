@@ -30,8 +30,8 @@ The *Source* sheet is edited by the terminologist, and SMEs and proofreaders in 
 -  **Definition**: the definition of the term *within the scope of OCDS documentation*. If the definition is copied from an existing publication, add the URL or reference at the end of the definition. The definition is a good place to give concise examples. Try to use other glossary terms in the definition, to help contextualize terms and improve the usability and efficiency of the glossary.
 -  **Note**: any remark the terminologist may want to add to help translating this term, or a URL to information about the term.
 
-Base languages (es, fr, etc.)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Base languages (es, etc.)
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The sheet of a language is edited by SMEs and proofreaders. It has the following columns:
 
@@ -40,8 +40,8 @@ The sheet of a language is edited by SMEs and proofreaders. It has the following
 -  **Definition_xx**: the definition of the term in the target language. This is not necessarily a strict translation of the source definition. Try to use other glossary terms in the definition, to help contextualize terms and improve the usability and efficiency of the glossary.
 -  **Note_xx**: any remark, written in the target language, that the SME may want to add to explain the selection or definition of the term.
 
-Language variants (es-MX, es-GT, fr-BE, etc.)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Language variants (es-MX, es-GT, etc.)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The sheet of a language variant is edited by SMEs and proofreaders. It has the following columns:
 
