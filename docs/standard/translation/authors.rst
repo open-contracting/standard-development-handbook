@@ -3,11 +3,6 @@ Authors
 
 This page describes the responsibilities of authors of content to be translated.
 
-Proposing new terms for the glossary
-------------------------------------
-
-See :ref:`standard/translation/terminology:1. Proposal, review, inclusion`.
-
 Handling minor changes
 ----------------------
 

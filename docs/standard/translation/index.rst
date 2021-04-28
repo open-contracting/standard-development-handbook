@@ -5,7 +5,6 @@ The `supported translations <https://docs.google.com/document/d/1GLwWTpgDDkKmMr1
 
 This section describes:
 
--  :doc:`How we maintain a glossary of terms<terminology>`
 -  :doc:`The responsibilities of authors of content<authors>`
 -  :doc:`The translation workflow and roles involved<workflow>`
 
@@ -21,7 +20,6 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   terminology
    authors
    workflow
    understanding_transifex

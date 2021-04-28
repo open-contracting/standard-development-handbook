@@ -4,7 +4,7 @@ Translation workflow
 Roles
 -----
 
-A **Translator** translates the source content into one of the target languages. They must be familiar with the domain (public contracting and open data), follow this handbook, and use the :doc:`glossary<terminology>` provided by OCP.
+A **Translator** translates the source content into one of the target languages. They must be familiar with the domain (public contracting and open data) and follow this handbook.
 
 **Proofreaders** proofread translated text and focus on the quality of the writing (spelling, grammar and punctuation). They typically don't need to look at the source content.
 
@@ -20,7 +20,7 @@ Steps
 -----
 
 1. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or ``.po`` files.
-2. The Coordinator recruits the roles of translator, proofreader and reviewer and :ref:`gives access to the Transifex project<standard/translation/using_transifex:Control access permissions>`. Candidates are stored in a spreadsheet named "Roles in OCP translation and terminology processes" and in the CRM as contacts tagged "translator".
+2. The Coordinator recruits the roles of translator, proofreader and reviewer and :ref:`gives access to the Transifex project<standard/translation/using_transifex:Control access permissions>`. Candidates are stored in a spreadsheet named "Roles in OCP translation processes" and in the CRM as contacts tagged "translator".
 3. The Coordinator sends translators the links to the Transifex project and to this handbook.
 4. When a Translator completes the translation of at least half the untranslated words, they contact the Proofreader with a link to the resource.
 5. When a Proofreader completes the proofreading of at least half the unreviewed strings, they contact the Reviewer with a link to the resource.
