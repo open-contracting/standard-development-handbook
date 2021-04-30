@@ -1,5 +1,5 @@
-Style guide
-===========
+Common conventions
+==================
 
 This style guide covers our conventions when writing:
 

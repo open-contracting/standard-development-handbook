@@ -1,5 +1,5 @@
-Meta
-====
+Style guides
+============
 
 .. toctree::
    :maxdepth: 2
