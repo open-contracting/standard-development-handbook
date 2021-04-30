@@ -7,7 +7,7 @@ Steps for translators, proofreaders and reviewers
 Translator
 ~~~~~~~~~~
 
-Before beginning, ask the :doc:`Coordinator<workflow>` to ensure that both the Transifex glossary and `glossary repository <https://github.com/open-contracting/glossary>`__ are up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it, based on the process from `CRM issue #1152 <https://crm.open-contracting.org/issues/1152#note-46>`__.
+Before beginning, ask the :ref:`Coordinator<roles>` to ensure that the :ref:`Transifex glossary<glossary>` is up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it.
 
 1. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
 2. Change the language, if appropriate
@@ -19,7 +19,7 @@ Before beginning, ask the :doc:`Coordinator<workflow>` to ensure that both the T
 8. Repeat from Step 4
 9. Notify the Proofreader when strings have been translated
 
-The `glossary in Transifex <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ contains key terms that must be used consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
+The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ contains key terms that must be translated consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
 
 It helps to see where the strings appear in context in the `OCDS documentation <https://standard.open-contracting.org/>`__. :doc:`understanding_transifex` describes the link between Markdown files in the `GitHub repository <https://github.com/open-contracting/standard>`__, Transifex resources, and documentation pages. With the exception of the ``schema`` and ``codelists`` resources, you can:
 
@@ -88,6 +88,8 @@ Check previous translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Click the History tab when viewing a string to see its previous translations, when they were edited and by whom. This may inform your current translation, or indicate whom to ask about previous translations.
+
+.. _view-translations-with-warnings:
 
 View translations with warnings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
