@@ -20,9 +20,8 @@ Extensions must be in the `extension registry <https://github.com/open-contracti
 Build the profile
 -----------------
 
-See :doc:`repository` for information on what files are built by ``build-profile.py``.
-
 .. code-block:: shell
 
-   make clean_dist
-   python schema/build-profile.py
+   make update
+
+See :doc:`repository` for information on what files are built by this command.

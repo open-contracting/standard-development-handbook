@@ -13,13 +13,13 @@ For each new release of OCDS for PPPs, run:
 
 .. code-block:: shell
 
-   python schema/borrow-schema.py
+   make update
 
 If working on a pre-release, run:
 
 .. code-block:: shell
 
-   python schema/borrow-schema.py https://standard.open-contracting.org/staging/profiles/ppp/1.0-dev/en/_static/patched/
+   ./manage.py update --ppp-base-url https://standard.open-contracting.org/staging/profiles/ppp/1.0-dev/en/_static/patched/
 
 Update blank.json
 ~~~~~~~~~~~~~~~~~
