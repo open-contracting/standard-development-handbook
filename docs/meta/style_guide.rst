@@ -40,6 +40,7 @@ Word choice
 -  "changelog" not "change-log" or "change log"
 -  "data package" not "datapackage"
 -  "metadata" not "meta-data" or "meta data"
+-  to describe the "-" character, "hyphen" not "dash" 
 
 When describing JSON Schema:
 
