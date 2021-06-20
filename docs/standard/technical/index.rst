@@ -11,5 +11,6 @@ The `standard-maintenance-scripts <https://github.com/open-contracting/standard-
    spellcheck
    lint
    build
+   theme
    deployment
    pdf

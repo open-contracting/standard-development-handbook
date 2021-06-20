@@ -1,5 +1,5 @@
-Deployment
-==========
+Deploying the documentation
+===========================
 
 A profile's deployment is the same as the standard's :doc:`../../standard/technical/deployment`, except where noted below. If a profile is unversioned, some of the below may be irrelevant.
 
@@ -36,6 +36,20 @@ Update the *major__minor__patch* version number:
    find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' \{\} \;
 
 Update the profile's changelog (if any) with a summary of the changes to the profile's extensions.
+
+Review the pull requests since the last release. To review the commits that are not part of a pull request (using the fish shell):
+
+.. code-block:: fish
+
+   git show (git rev-list --first-parent --no-merges 1.0-dev --since=2019-10-21)
+
+To review the messages only (using the fish shell):
+
+.. code-block:: fish
+
+   git show --oneline -s (git rev-list --first-parent --no-merges 1.0-dev --since=2019-10-21)
+
+Replace the branch (``1.0-dev``) and date (``2019-10-21``) as needed.
 
 4. Integrate extensions
 ~~~~~~~~~~~~~~~~~~~~~~~

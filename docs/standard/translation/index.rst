@@ -1,11 +1,10 @@
 Translation
 ===========
 
-The two `supported translations <https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/edit>`__ are French and Spanish. Community translations exist to various levels of completion.
+The `supported translations <https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/edit>`__ are listed in the OCDS documentation. Community translations might exist to various levels of completion.
 
 This section describes:
 
--  :doc:`How we maintain a glossary of terms<terminology>`
 -  :doc:`The responsibilities of authors of content<authors>`
 -  :doc:`The translation workflow and roles involved<workflow>`
 
@@ -21,7 +20,6 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   terminology
    authors
    workflow
    understanding_transifex

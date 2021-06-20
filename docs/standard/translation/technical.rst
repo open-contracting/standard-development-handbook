@@ -82,7 +82,7 @@ To push specific resources (replace the Transifex project name), run e.g.:
 Pull translations from Transifex
 --------------------------------
 
-To forcefully pull *supported* translations, run ``make pull`` or ``tx pull -f -l es,fr``
+To forcefully pull *supported* translations, run ``make pull`` or ``tx pull -f -l es``
 
 To forcefully pull *specific* translations, run e.g. ``make pull.es`` or ``tx pull -f -l es``
 
@@ -93,7 +93,7 @@ Then, build the documentation with the new translations.
 Push translations to Transifex
 ------------------------------
 
-If text is translated locally by editing PO or POT files, the translations can be pushed to Transifex, after :doc:`../technical/build`. **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run ``make force_push_all`` or ``tx push -s -t -f -l es,fr --no-interactive``
+If text is translated locally by editing PO or POT files, the translations can be pushed to Transifex, after :doc:`../technical/build`. **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run ``make force_push`` or ``tx push -s -t -f -l es --no-interactive``
 
 After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 

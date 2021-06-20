@@ -3,12 +3,7 @@ Authors
 
 This page describes the responsibilities of authors of content to be translated.
 
-Proposing new terms for the glossary
-------------------------------------
-
-See :ref:`standard/translation/terminology:1. Proposal, review, inclusion`.
-
-Handling minor changes
+Managing minor changes
 ----------------------
 
 A **major** change changes the meaning of a source string, requiring an update to the translation by a translator. A **minor** change doesn't change the meaning of a source string, but may require an update to the translation, e.g. to update a URL.

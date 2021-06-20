@@ -46,8 +46,6 @@ Install the requirements:
 Run tests
 ---------
 
-The standard repository has tests. Profiles may not.
-
 .. admonition:: One-time setup
 
    Install ChromeDriver. On Linux:
@@ -57,7 +55,7 @@ The standard repository has tests. Profiles may not.
       curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
       unzip chromedriver_linux64.zip -d chromedriver
 
-   On macOS:
+   Or, on macOS:
 
    .. code-block:: shell
 
@@ -76,7 +74,7 @@ Add ChromeDriver to the ``PATH``. Using Bash:
 
    export PATH=$PATH:`pwd`/chromedriver
 
-Using fish shell:
+Or, using fish shell:
 
 .. code-block:: shell
 
@@ -91,6 +89,25 @@ Run the tests:
 To replicate the GitHub Actions workfow, you also need to `run the tests from the standard maintenance scripts <https://github.com/open-contracting/standard-maintenance-scripts#tests>`__.
 
 ``test_search`` will report failures if you have not yet pushed your branch to GitHub because the search index is only built for a branch once you push it. Once your PR passes, the local tests are expected to pass.
+
+Troubleshoot
+~~~~~~~~~~~~
+
+If the tests are failing:
+
+-  Ensure your dependencies are up-to-date:
+
+   .. code-block:: shell
+
+      pip install pip-tools
+      pip-sync
+
+-  Clean and re-build the documentation:
+
+   .. code-block:: shell
+
+      make clean
+      make
 
 Build the documentation
 -----------------------
@@ -125,30 +142,15 @@ If you changed ``release-schema.json``, update ``versioned-release-validation-sc
 
    python util/make_versioned_release_schema.py
 
-Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation whenever changes are made:
+Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation and refresh the browser whenever changes are made, run:
 
--  If you are running macOS and have ``fswatch`` from Homebrew:
+.. code-block:: shell
 
-   .. code-block:: shell
+   make autobuild
 
-      fswatch -0 docs | xargs -0 -n 1 -I {} make
-
--  If you are running Linux, you can ``pip install watchdog[watchmedo]`` and run:
-
-   .. code-block:: shell
-
-      watchmedo shell-command --patterns="*.md" --ignore-pattern="build/*" --recursive --command="make"
-
-View the documentation, by running a local web server:
+Otherwise, view the documentation by running a local web server:
 
 .. code-block:: shell
 
    cd build
    python -m http.server
-
-If you are using Firefox you can use the `Live Reload <https://addons.mozilla.org/en-US/firefox/addon/live-reload/>`__ addon to automatically reload the documentation when it changes.
-
-Change the theme
-----------------
-
-The theme files are in the `standard_theme <https://github.com/open-contracting/standard_theme>`__ repository, and are part of the virtual environment. Find them in the virtual environment's directory (e.g. ``.ve/src/standard-theme``).

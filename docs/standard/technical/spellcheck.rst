@@ -493,7 +493,6 @@ Configuration
    foundational
    frameworkAgreement
    frameworkAgreementMethod
-   fswatch
    funder
    funders
    futureNoticeDate

@@ -1,5 +1,5 @@
-Deployment
-==========
+Deploying the documentation
+===========================
 
 This section describes the steps involved in deploying an updated version of the standard to become the live version.
 
@@ -14,6 +14,9 @@ To add a community translation, follow :ref:`standard/translation/technical:Add 
 Schemas and extensions
 ----------------------
 
+.. note::
+   You can skip this section if you are not releasing a new major, minor or patch version.
+
 1. Review extensions
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -22,7 +25,7 @@ Tidy extensions
 
 For each *core* extension, :doc:`spell check<spellcheck>`, :doc:`run Markdownlint<lint>`, and ensure it:
 
--  `Passes its tests <https://github.com/open-contracting/standard-maintenance-scripts/blob/master/badges.md#extensions>`__
+-  `Passes its tests <https://github.com/open-contracting/standard-maintenance-scripts/blob/main/badges.md#extensions>`__
 -  Matches the description in :ref:`extensions/index:Creating an extension` regarding license, issues and ``README.md``
 -  `Has wiki disabled, default branch protected, and topics set <https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration>`__
 
@@ -54,9 +57,6 @@ Alternately, run this Rake task to get links to pull requests and comparison URL
 
 Create new versions of core extensions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. note::
-   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Each OCDS version refers to a specific version of each `core extension <https://standard.open-contracting.org/latest/en/extensions/#core-extensions>`__. The `governance process <https://standard.open-contracting.org/latest/en/support/governance/#versions>`__ will establish whether to create a new version of a core extension for this OCDS version.
 
@@ -90,9 +90,6 @@ Then, add the new releases to the `extension registry <https://github.com/open-c
 Update currency codelist
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-   You can skip this step if you are not releasing a new major, minor or patch version.
-
 Before each release, and at least once a year (because ISO4217 is updated `at least once a year <https://github.com/open-contracting/standard/pull/607#issuecomment-339093306>`__), run:
 
 .. code-block:: shell
@@ -101,9 +98,6 @@ Before each release, and at least once a year (because ISO4217 is updated `at le
 
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-   You can skip this step if you are not releasing a new major, minor or patch version.
 
 In ``docs/conf.py``, update ``release`` to e.g. ``1.1.1`` and update ``version`` if appropriate.
 
@@ -129,9 +123,6 @@ Update ``meta-schema.json`` to match ``meta-schema-patch.json``:
 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
-   You can skip this step if you are not releasing a new major, minor or patch version.
-
 Set up a development instance of CoVE using the new schema, and run tests against it.
 
 Merge and release
@@ -150,12 +141,15 @@ Merge and release
 8. Create a pull request for the updated translation files.
 9. :ref:`Test the translations on the build of the pull request<standard/translation/technical:Test translations>`.
 
+.. _merge:
+
 2. Merge the development branch onto the live branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
+1. Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
+1. Create a pull request to merge the development branch into the ``latest`` branch, if appropriate.
 
-If the live branch is for the latest version of the documentation, then create a pull request to merge it into the ``latest`` branch.
+These pull requests can be created throught GitHub's web interface.
 
 3. Create a tagged release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -171,7 +165,7 @@ Build and deploy
 1. Build on continuous integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`standard/technical/deployment:2. Merge the development branch onto the live branch` will trigger a :doc:`build<build>`. For changes to the theme, rebuild the previous build of the live branch.
+:ref:`Merging branches<merge>` will trigger a :doc:`build<build>`.
 
 The built documentation is transferred to the staging directory on the server. You can preview the documentation. For example, for OCDS 1.1, https://standard.open-contracting.org/staging/1.1/ is the staging version for https://standard.open-contracting.org/1.1/.
 
@@ -191,7 +185,7 @@ Update the CoVE library
 
 This is the lib-cove-ocds repository for OCDS, and lib-cove-oc4ids for OC4IDS.
 
--  Update the URL paths in `config.py <https://github.com/open-contracting/lib-cove-ocds/blob/master/libcoveocds/config.py>`__
+-  Update the URL paths in `config.py <https://github.com/open-contracting/lib-cove-ocds/blob/main/libcoveocds/config.py>`__
 -  Make sure all tests pass
 -  `Release a new version <https://ocp-software-handbook.readthedocs.io/en/latest/python/packages.html#release-process>`__
 
@@ -206,14 +200,14 @@ This is the cove-ocds repository for OCDS, and cove-oc4ids for OC4IDS.
 
    pip-compile -P libcoveocds; pip-compile requirements_dev.in
 
--  Update the URL paths in `settings.py <https://github.com/OpenDataServices/cove/blob/master/cove_ocds/settings.py>`__ (*only in cove-ocds*)
+-  Update the URL paths in `settings.py <https://github.com/open-contracting/cove-ocds/blob/main/cove_project/settings.py>`__ (*only in cove-ocds*)
 -  Make sure all tests pass
 -  `Deploy the app <https://ocdsdeploy.readthedocs.io/en/latest/deploy/deploy.html>`__
 
 Update any other tools that use the CoVE library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Make sure other tools that use ``libcoveocds`` (like Kingfisher Process and Toucan) are updated to use the new version.
+Make sure other tools that use ``libcoveocds`` (like Kingfisher Process) are updated to use the new version.
 
 Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with its own options, the tool's own options may need changing.
 

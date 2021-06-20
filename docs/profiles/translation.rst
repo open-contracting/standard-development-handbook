@@ -3,100 +3,120 @@ Translation
 
 See the standard's page for :doc:`../../../standard/translation/index`.
 
-Copying translations from the standard to a profile
----------------------------------------------------
+The instructions below are similar to others in `ocds-extensions-translations <https://github.com/open-contracting/ocds-extensions-translations#populate-initial-translations>`__ (using the fish shell on macOS). They will, at minimum, pre-translate the text from the unextended schema and codelists.
 
-There is often overlap between a profile and the standard, e.g. all the text from the unextended schema.
+Pre-translate a profile
+-----------------------
 
-These instructions are similar to others in `ocds-extensions-translations <https://github.com/open-contracting/ocds-extensions-translations#populate-initial-translations>`__ (using the fish shell on macOS).
+One-time setup
+~~~~~~~~~~~~~~
 
-1.  Install ``translate-toolkit``:
+#. Install ``translate-toolkit``:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        brew install translate-toolkit
+      brew install translate-toolkit
 
-2.  Install ``python-Levenshtein``:
+#. Install ``python-Levenshtein``:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        eval (brew --prefix translate-toolkit)/libexec/bin/pip install python-Levenshtein
+      eval (brew --prefix translate-toolkit)/libexec/bin/pip install python-Levenshtein
 
-3.  Set environment variables:
+#. Clone the `standard <https://github.com/open-contracting/standard>`__ and `ocds-extensions-translations <https://github.com/open-contracting/ocds-extensions-translations>`__ repositories into the same parent directory:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        set lang language
-        set wip path/to/profile/directory
+      git clone git@github.com:open-contracting/standard.git
+      git clone git@github.com:open-contracting/ocds-extensions-translations.git
 
-4.  Change into the ``standard`` directory
+Each-time setup
+~~~~~~~~~~~~~~~
 
-5.  Prepare a compendium from the ``standard`` repository:
+#. Set the ``lang`` environment variable, for example:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        git checkout 1.1
-        msgcat --use-first docs/locale/$lang/**.po > $wip/$lang-standard.po
-        git checkout 1.1-dev
+      set lang es
+      set wip path/to/profile/from/standard
 
-6.  Change into the ``ocds-extensions-translations`` directory
+Prepare the compendia
+~~~~~~~~~~~~~~~~~~~~~
 
-7.  Prepare a compendium from the profile's extensions, for example, for OCDS for PPPs:
+#. Change to the ``standard`` directory, then prepare a compendium:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        for version in bids/v1.1.4 budget/master budget_project/master charges/master documentation_details/master finance/master location/v1.1.4 metrics/master milestone_documents/v1.1.4 performance_failures/master process_title/v1.1.4 qualification/master requirements/master risk_allocation/master shareholders/master signatories/master tariffs/master transaction_milestones/master ppp/master
-          msgcat --use-first docs/locale/$lang/LC_MESSAGES/$version/**.po > $lang-(echo $version | tr '/' '-').po
-        end
-        msgcat --use-first (ls $lang-*.po) > $wip/$lang-extensions.po
-        rm -f $lang-*.po
+      git checkout 1.1
+      git pull --rebase
+      msgcat --use-first docs/locale/$lang/**.po > $wip/$lang-standard.po
+      git checkout 1.1-dev
 
-8.  Change into the profile's directory
+#. Change to the ``ocds-extensions-translations`` directory, then prepare a compendium. For example, for OCDS for PPPs 1.0.0-beta3:
 
-9.  Prepare a compendium from the profile's repository, and merge it:
+   .. code-block:: fish
 
-    .. code-block:: fish
+      git checkout main
+      git pull --rebase
+      for extension_version in bids/v1.1.5 charges/master documentation_details/master finance/master location/v1.1.5 metrics/master milestone_documents/v1.1.5 performance_failures/master project/master risk_allocation/master shareholders/master signatories/master tariffs/1.1 ppp/master
+        msgcat --use-first locale/$lang/LC_MESSAGES/$extension_version/**.po > $lang-(echo $extension_version | tr '/' '-').po
+      end
+      msgcat --use-first (ls $lang-*.po) > $wip/$lang-extensions.po
+      rm -f $lang-*.po
 
-        if [ -d docs/locale/$lang/LC_MESSAGES ]
-          msgcat --use-first $lang-standard.po $lang-extensions.po docs/locale/$lang/**.po > $lang.po
-        else
-          msgcat --use-first $lang-standard.po $lang-extensions.po > $lang.po
-        end
+#. Change to the profile's directory, then prepare a compendium:
 
-10. Create the POT files:
+   .. code-block:: fish
 
-    .. code-block:: fish
+      if [ -d docs/locale/$lang/LC_MESSAGES ]
+        msgcat --use-first $lang-standard.po $lang-extensions.po docs/locale/$lang/**.po > $lang.po
+      else
+        msgcat --use-first $lang-standard.po $lang-extensions.po > $lang.po
+      end
 
-        make extract
+Pre-translate the profile
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-11. Re-create the PO files:
+#. Count untranslated messages:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        rm -rf docs/locale/$lang/LC_MESSAGES
-        sphinx-intl update -p build/locale -d docs/locale -l $lang
+      pocount --incomplete docs/locale/$lang/LC_MESSAGES | tail -n 10
 
-12. Pre-populate the PO files:
+#. Create the POT files:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        cd docs/locale/$lang/LC_MESSAGES
-        for f in **.po
-          pretranslate --nofuzzymatching -t ../../../$lang.po ../../../build/locale/{$f}t $f
-        end
-        cd ../../..
+      make extract
 
-13. Count untranslated messages:
+#. Re-create the PO files:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        pocount --incomplete docs/locale/$lang/LC_MESSAGES
+      rm -rf docs/locale/$lang/LC_MESSAGES
+      sphinx-intl update -p build/locale -d docs/locale -l $lang
 
-14. Clean up:
+#. Pre-populate the PO files:
 
-    .. code-block:: fish
+   .. code-block:: fish
 
-        rm -f $lang-standard.po $lang-extensions.po $lang.po
+      cd docs/locale/$lang/LC_MESSAGES
+      for f in **.po
+        pretranslate --nofuzzymatching -t ../../../../$lang.po ../../../../build/locale/{$f}t $f
+      end
+      cd ../../../..
+
+#. Count untranslated messages:
+
+   .. code-block:: fish
+
+      pocount --incomplete docs/locale/$lang/LC_MESSAGES | tail -n 10
+
+#. Clean up:
+
+   .. code-block:: fish
+
+      rm -f $lang-standard.po $lang-extensions.po $lang.po
 
 Technical implementation of translation
 ---------------------------------------
