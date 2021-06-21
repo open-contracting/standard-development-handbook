@@ -159,6 +159,10 @@ These pull requests can be created throught GitHub's web interface.
 
 Create a tagged release named e.g. ``git tag -a 1__1__0 -m '1.1.0 release.'`` and push the tag with ``git push --tags``
 
+.. warning::
+
+   Only tag a commit on a live branch like ``1.1``. Otherwise, the deployment scripts might release older versions of the files.
+
 Build and deploy
 ----------------
 
