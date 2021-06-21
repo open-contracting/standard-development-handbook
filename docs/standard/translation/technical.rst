@@ -22,7 +22,7 @@ Projects
 
 For new major and minor versions:
 
--  `Create a Transifex project <https://www.transifex.com/open-contracting-partnership-1/>`__, named e.g. ``open-contracting-standard-1-1``
+-  `Create a Transifex project <https://www.transifex.com/open-contracting-partnership-1/>`__, named e.g. ``open-contracting-standard-1-1``
 
    -  In the *Add a new project* screen, under *Choose privacy type*, select ``Public project`` and tick the box marked ``My project is a non-commercial Open Source project``.
 
@@ -84,7 +84,7 @@ Pull translations from Transifex
 
 To forcefully pull *supported* translations, run ``make pull`` or ``tx pull -f -l es``
 
-To forcefully pull *specific* translations, run e.g. ``make pull.es`` or ``tx pull -f -l es``
+To forcefully pull *specific* translations, run e.g. ``make pull.es`` or ``tx pull -f -l es``
 
 To forcefully pull *all* translations, run ``tx pull -f -a``
 
@@ -121,10 +121,10 @@ Add a community translation
 
 Once all strings are translated and reviewed in Transifex, and all warnings or issues on Transifex are resolved:
 
-1.  Checkout the live branch, e.g. ``git checkout 1.1``
-2.  Checkout a new branch, e.g. ``git checkout -b 1.1-italian``
+1.  Checkout the live branch, e.g. ``git checkout 1.1``
+2.  Checkout a new branch, e.g. ``git checkout -b 1.1-italian``
 3.  Add the locale code to ``TRANSLATIONS`` in ``include/config.mk``
-4.  Pull the locale's translations, e.g. ``tx pull -f -l it``
+4.  Pull the locale's translations, e.g. ``tx pull -f -l it``
 5.  Update the ``language_options`` block in ``docs/_templates/layout.html``
 6.  Create a pull request for the community translation
 7.  :ref:`Test the translations on the build of the pull request<standard/translation/technical:Test translations>`

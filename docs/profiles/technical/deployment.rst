@@ -27,7 +27,7 @@ Check the profile's individual handbook page for any regular maintenance.
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In ``docs/conf.py``, update ``release`` to e.g. ``1.0.0`` and update ``version`` if appropriate.
+In ``docs/conf.py``, update ``release`` to e.g. ``1.0.0`` and update ``version`` if appropriate.
 
 Update the *major__minor__patch* version number:
 

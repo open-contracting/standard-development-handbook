@@ -50,8 +50,8 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 5. Create a pull request.
 
    -  Reference the issue number in the pull requests' description.
-   -  Set the *base* branch, e.g. ``1.2-dev`` for OCDS 1.2 or ``1.1-dev`` for OCD 1.1.
-   -  Set the *milestone*, e.g. ``1.2.0`` for OCDS 1.2.
+   -  Set the *base* branch, e.g. ``1.2-dev`` for OCDS 1.2 or ``1.1-dev`` for OCD 1.1.
+   -  Set the *milestone*, e.g. ``1.2.0`` for OCDS 1.2.
 
 6. Assign a helpdesk analyst to review.
 

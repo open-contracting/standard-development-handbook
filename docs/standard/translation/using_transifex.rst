@@ -23,7 +23,7 @@ The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-
 
 It helps to see where the strings appear in context in the `OCDS documentation <https://standard.open-contracting.org/>`__. :doc:`understanding_transifex` describes the link between Markdown files in the `GitHub repository <https://github.com/open-contracting/standard>`__, Transifex resources, and documentation pages. With the exception of the ``schema`` and ``codelists`` resources, you can:
 
-1. Take the name of a resource, e.g. ``schema--changelog``
+1. Take the name of a resource, e.g. ``schema--changelog``
 2. Remove ``--index`` if present
 3. Replace ``--`` with ``/``
 4. Put it in the pattern ``https://standard.open-contracting.org/{version}/en/{name}/``, like https://standard.open-contracting.org/latest/en/schema/changelog/
@@ -40,7 +40,7 @@ Proofreader
 2. Change the language, if appropriate
 3. Click "All resources"
 4. Click "Unreviewed"
-5. Look at the translated text to check its quality (e.g. spelling, grammar, punctuation)
+5. Look at the translated text to check its quality (e.g. spelling, grammar, punctuation)
 6. If there's a quality issue, update the translated text
 7. Notify the Reviewer when strings have been proofread
 
@@ -54,7 +54,7 @@ Reviewer
 5.  Click "Unreviewed"
 6.  Read the English text and the translated text and confirm the translation is correct
 7.  If there's a translation issue, update the translated text
-8.  If there is a Transifex warning (e.g. "Glossary translation for term 'release' missing from translation"), update the translated text
+8.  If there is a Transifex warning (e.g. "Glossary translation for term 'release' missing from translation"), update the translated text
 9.  Click "Review"
 10. Repeat from Step 4
 11. Notify the Coordinator when strings have been reviewed

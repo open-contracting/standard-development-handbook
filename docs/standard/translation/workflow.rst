@@ -28,7 +28,7 @@ The **Coordinator** ensures good communication between the different roles.
 Steps
 -----
 
-1. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or ``.po`` files.
+1. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or ``.po`` files.
 2. The Coordinator recruits the roles of translator, proofreader and reviewer and :ref:`gives access to the Transifex project<standard/translation/using_transifex:Control access permissions>`. Candidates are stored in a spreadsheet named "Roles in OCP translation processes" and in the CRM as contacts tagged "translator".
 3. The Coordinator sends translators the links to the Transifex project and to this handbook.
 4. When a Translator completes the translation of at least half the untranslated words, they contact the Proofreader with a link to the resource.

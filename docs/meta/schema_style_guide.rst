@@ -10,8 +10,8 @@ Normative statements
 -  Normative statements should be constructed using the keywords defined in `RFC2119 <https://tools.ietf.org/html/rfc2119>`__.
 -  Normative keywords should be capitalized where used, per `RFC8174 <https://tools.ietf.org/html/rfc8174>`__.
 -  Non-normative statements should not use the keywords defined in RFC2119, see this `Internet-Draft <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04>`__ for appropriate synonyms.
--  Normative statements should not use constructions such as "should always", "should only" or "where possible … must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
--  Normative statements must be consistent with the OCDS schema, e.g. ``ocid`` is a required field in the schema so:
+-  Normative statements should not use constructions such as "should always", "should only" or "where possible … must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
+-  Normative statements must be consistent with the OCDS schema, e.g. ``ocid`` is a required field in the schema so:
 
    -  "the ``ocid`` field MUST be provided" is consistent.
    -  "the ``ocid`` field SHOULD be provided" is inconsistent.
@@ -30,7 +30,7 @@ Building blocks
 ~~~~~~~~~~~~~~~
 
 -  The ``period`` object should be used in place of ``year`` or ``month`` fields.
--  The ``identifier`` object should be used when referencing identifiers from external sources, e.g. ``{"id": "12345678", "scheme": "IBAN"}`` rather than ``"ibanID": "12345678"``.
+-  The ``identifier`` object should be used when referencing identifiers from external sources, e.g. ``{"id": "12345678", "scheme": "IBAN"}`` rather than ``"ibanID": "12345678"``.
 
 ID field
 ~~~~~~~~
@@ -110,9 +110,9 @@ Field and code names
 --------------------
 
 -  Check `other standards <https://lov.linkeddata.es/dataset/lov>`__ for preferred terms.
--  Use lower `camelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for field names, e.g. ``awardCriteriaDetails``.
--  Use upper `CamelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for ``definitions`` entries, e.g. ``Award``.
--  Put the qualifier *before* the concept, e.g. ``enquiryPeriod`` rather than ``periodOfEnquiry``.
+-  Use lower `camelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for field names, e.g. ``awardCriteriaDetails``.
+-  Use upper `CamelCase <https://en.wikipedia.org/wiki/Camel_case>`__ for ``definitions`` entries, e.g. ``Award``.
+-  Put the qualifier *before* the concept, e.g. ``enquiryPeriod`` rather than ``periodOfEnquiry``.
 
    .. note::
 
@@ -122,10 +122,10 @@ Field and code names
       -  Internal consistency, e.g. the fields of the ``Period`` object follow the ``*Date`` pattern.
       -  Term frequency, e.g. "due date" occurs more frequently in English than "date due".
 
--  Don't abbreviate words, e.g. ``minimumParticipants`` not ``minParticipants``.
+-  Don't abbreviate words, e.g. ``minimumParticipants`` not ``minParticipants``.
 -  Use singular for fields pointing to an object or literal value.
 -  Use plural for fields pointing to an array of values.
--  Field names should not include their parent's name, e.g. ``title`` not ``tenderTitle``, ``description`` not ``awardDescription``, etc.
+-  Field names should not include their parent's name, e.g. ``title`` not ``tenderTitle``, ``description`` not ``awardDescription``, etc.
 
 .. note::
    Many terms from OCDS 1.0 were poorly chosen; however, they can't be renamed until OCDS 2.0. For example, the semantics of the ``tender`` object are "first stage," with many publishers using that object to invite requests to participate.

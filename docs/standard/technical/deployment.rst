@@ -47,7 +47,7 @@ For each *core* extension, review the commits since the last release:
 1. Open its homepage on GitHub
 2. Open its releases in the sidebar
 3. Decide whether to merge pull requests
-4. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
+4. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
 
 Alternately, run this Rake task to get links to pull requests and comparison URLs:
 
@@ -63,8 +63,8 @@ Each OCDS version refers to a specific version of each `core extension <https://
 For each *core* extension for which to create a new version:
 
 1. From the list of releases, click *Draft a new release*
-2. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. ``v1.1.1``
-3. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
+2. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. ``v1.1.1``
+3. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
 
 Alternately, run this Rake task, which will use the extension's changelog as the release message:
 
@@ -99,7 +99,7 @@ Before each release, and at least once a year (because ISO4217 is updated `at le
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In ``docs/conf.py``, update ``release`` to e.g. ``1.1.1`` and update ``version`` if appropriate.
+In ``docs/conf.py``, update ``release`` to e.g. ``1.1.1`` and update ``version`` if appropriate.
 
 Update the *major__minor__patch* version number:
 
@@ -146,7 +146,7 @@ Merge and release
 2. Merge the development branch onto the live branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
+1. Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
 1. Create a pull request to merge the development branch into the ``latest`` branch, if appropriate.
 
 These pull requests can be created throught GitHub's web interface.
@@ -157,7 +157,7 @@ These pull requests can be created throught GitHub's web interface.
 .. note::
    You can skip this step if you are not releasing a new major, minor or patch version.
 
-Create a tagged release named e.g. ``git tag -a 1__1__0 -m '1.1.0 release.'`` and push the tag with ``git push --tags``
+Create a tagged release named e.g. ``git tag -a 1__1__0 -m '1.1.0 release.'`` and push the tag with ``git push --tags``
 
 Build and deploy
 ----------------

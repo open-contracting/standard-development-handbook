@@ -10,15 +10,15 @@ Each minor version of the standard's documentation is built from a "live" branch
 
 Sample branch structure:
 
--  **1.0**: contains the latest deployed patch release of OCDS 1.0 (e.g. 1.0.2)
--  **1.1**: contains the latest deployed patch release of OCDS 1.1 (e.g. 1.1.0)
+-  **1.0**: contains the latest deployed patch release of OCDS 1.0 (e.g. 1.0.2)
+-  **1.1**: contains the latest deployed patch release of OCDS 1.1 (e.g. 1.1.0)
 
    -  **1.1-dev**: used to stage changes to version 1.1 (such as minor documentation changes)
    -  **1.1.1-dev**: used to work on a 1.1.1 version (including schema changes and fixes)
 
 The ``latest``, ``X.X`` and ``X.X-dev`` branches are `protected <https://help.github.com/articles/about-protected-branches/>`__. The ``standard`` repository also protects non-existent ``infrastructure`` and ``profiles`` branches. These names match sub-directories on the server, and therefore must not be used for branches.
 
-The published documentation has versions on different ``MAJOR.MINOR`` `branches <https://github.com/open-contracting/standard/branches/all>`__ (e.g. https://standard.open-contracting.org/1.0/en/), whereas the published schema has versions on different ``MAJOR__MINOR__PATCH`` `tagged releases <https://github.com/open-contracting/standard/tags>`__ (e.g. https://standard.open-contracting.org/schema/1__0__1/release-schema.json). This use of branches and tags allows documentation to change between versions, while ensuring schema isn't changed between versions.
+The published documentation has versions on different ``MAJOR.MINOR`` `branches <https://github.com/open-contracting/standard/branches/all>`__ (e.g. https://standard.open-contracting.org/1.0/en/), whereas the published schema has versions on different ``MAJOR__MINOR__PATCH`` `tagged releases <https://github.com/open-contracting/standard/tags>`__ (e.g. https://standard.open-contracting.org/schema/1__0__1/release-schema.json). This use of branches and tags allows documentation to change between versions, while ensuring schema isn't changed between versions.
 
 Structure
 ---------
