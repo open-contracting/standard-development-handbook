@@ -87,14 +87,11 @@ Then, add the new releases to the `extension registry <https://github.com/open-c
 2. Perform periodic updates, if appropriate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Update currency codelist
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Before each release, and at least once a year (because ISO4217 is updated `at least once a year <https://github.com/open-contracting/standard/pull/607#issuecomment-339093306>`__), run:
+Before each release, and at least once a year, update external codelists:
 
 .. code-block:: shell
 
-   python util/fetch_currency_codelist.py
+   python manage.py update
 
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,19 +103,6 @@ Update the *major__minor__patch* version number:
 .. code-block:: shell
 
    find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__1__3/1__1__4/g' \{\} \;
-
-Update ``versioned-release-validation-schema.json`` and ``dereferenced-release-schema.json`` to match ``release-schema.json``:
-
-.. code-block:: shell
-
-   python util/make_versioned_release_schema.py
-   python util/make_dereferenced_release_schema.py
-
-Update ``meta-schema.json`` to match ``meta-schema-patch.json``:
-
-.. code-block:: shell
-
-   python util/make_metaschema.py
 
 4. Set up a development instance of CoVE (OCDS Data Review Tool)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

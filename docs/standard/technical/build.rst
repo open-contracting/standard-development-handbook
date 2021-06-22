@@ -136,11 +136,11 @@ Remove all built files:
 
    make clean
 
-If you changed ``release-schema.json``, update ``versioned-release-validation-schema.json`` (the tests check that this is done):
+If you edited ``release-schema.json`` or ``meta-schema-patch.json``, update files with:
 
 .. code-block:: shell
 
-   python util/make_versioned_release_schema.py
+   python manage.py pre-commit
 
 Sphinx, which builds the documentation, doesn't watch directories for changes. To regenerate the documentation and refresh the browser whenever changes are made, run:
 

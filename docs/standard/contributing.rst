@@ -42,9 +42,8 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 
 4. Commit your changes, as well as the following:
 
-   - To install the dependencies for the Python scripts, run ``pip install -r requirements.txt`` 
-   - If you edited the release schema, run ``python util/make_dereferenced_release_schema.py``
-   -  If you added a field to the release schema, run ``python util/make_versioned_release_schema.py``
+   -  To install the dependencies for the Python scripts, run: ``pip install -r requirements.txt``
+   -  If you edited  ``release-schema.json`` or ``meta-schema-patch.json``, run: ``python manage.py pre-commit``
    -  Update the **changelog**.
 
 5. Create a pull request.
