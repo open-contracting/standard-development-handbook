@@ -35,16 +35,23 @@ Building blocks
 ID field
 ~~~~~~~~
 
-Any object that is contained within an array SHOULD have an ``id`` field.
+Objects that are not contained within an array can include an ``id`` field to support cross-referencing, or to disclose the object's real-world identifier.
 
-This is because:
+When creating a compiled release, arrays of objects have `different merging behaviors <https://standard.open-contracting.org/latest/en/schema/merging/#array-values>`__ depending on whether the schema specifies an ``id`` field. To decide whether to specify an ``id`` field:
 
--  ``id`` values play a `special role in the flatten-tool <https://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers>`__ used to round-trip between JSON and tabular representations of OCDS.
--  ``id`` values are used to determine `how lists of objects are merged <https://standard.open-contracting.org/latest/en/schema/merging/#identifier-merge>`__ when creating a compiledRelease.
+-  If no ``id`` field is specified, the array is merged as a whole. This is appropriate if:
 
-Otherwise, the array will be merged as a whole.
+   -  A publisher is expected to publish array entries at the same time, like ``additionalClassifications``.
+   -  A publisher is expected to correct the array as a whole.
+   -  The array's semantics are release-specific, in which case the schema should also set ``"omitWhenMerged": true``.
 
-Objects that are not contained within an array MAY include an ``id`` field to support cross-referencing, or to disclose the object's real-world identifier.
+-  If an ``id`` field is specified, the array is merged by identifier – unless the schema sets ``"wholeListMerge": true``. This is appropriate if:
+
+   -  A publisher is expected to publish array entries at different times, like ``contracts``.
+
+.. note::
+
+   ``id`` values also play a `special role in Flatten Tool <https://flatten-tool.readthedocs.io/en/latest/unflatten/#relationships-using-identifiers>`__.
 
 Details field
 ~~~~~~~~~~~~~
@@ -102,7 +109,7 @@ Any non-required field pointing to a literal or an array of literals should supp
      }
    }
 
-Allowing properties to be ``null`` is important to the `merging process <https://standard.open-contracting.org/latest/en/schema/merging/>`__, in which ``null`` is used to `remove a value from the compiledRelease <https://standard.open-contracting.org/latest/en/schema/reference/#emptying-fields-and-values>`__.
+Allowing properties to be ``null`` is important to the `merging process <https://standard.open-contracting.org/latest/en/schema/merging/>`__, in which ``null`` is used to `remove a value from the compiled release <https://standard.open-contracting.org/latest/en/schema/reference/#emptying-fields-and-values>`__.
 
 Any non-required field pointing to an array of objects should not allow ``null`` as a value; array entries should be explicitly tagged for removal following the pattern outlined in `#232 <https://github.com/open-contracting/standard/issues/232>`__.
 
