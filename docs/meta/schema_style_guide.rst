@@ -65,6 +65,18 @@ Use of ``xDetails`` fields can help increase acceptance of a closed codelist.
 
 For example, a jurisdiction may have five procurement procedures, named A, B, C, D and E. The ``procurementMethod`` field uses a closed codelist ('open', 'selective', 'limited', 'direct') to which its procedures should be mapped. The ``procurementMethodDetails`` field then allows the jurisdiction to publish the original names of its procedures.
 
+Entered field
+~~~~~~~~~~~~~
+
+A field can be paired with a ``xEntered`` field, which can be used when some values for the field:
+
+- Are manually entered in the data source
+- Have known quality issues
+
+An ``xEntered`` field indicates that 'this is the value entered, but we know there is a quality issue with it, and we want to spare you the trouble of addressing that quality issue'.
+
+For example, a data source might allow users to choose the register from which an organization identifier is drawn using a dropdown, or to manually enter the name of the register if it is not in the list. Since the manual entries are non-standardized, one option is to use ``scheme`` for dropdown entries and ``schemeEntered`` for manual entries. This separates data with a known issue, and makes a (narrow) semantic distinction. 
+
 Additional array
 ~~~~~~~~~~~~~~~~
 
