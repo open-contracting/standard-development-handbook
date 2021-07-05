@@ -68,14 +68,19 @@ For example, a jurisdiction may have five procurement procedures, named A, B, C,
 Entered field
 ~~~~~~~~~~~~~
 
-A field can be paired with a ``xEntered`` field, which can be used when some values for the field:
+A field can be paired with a ``xEntered`` field, which can be used when:
 
-- Are manually entered in the data source
-- Have known quality issues
+-  The data is sometimes entered manually
+-  The data has known quality issues
 
-An ``xEntered`` field indicates that 'this is the value entered, but we know there is a quality issue with it, and we want to spare you the trouble of addressing that quality issue'.
+For example:
 
-For example, a data source might allow users to choose the register from which an organization identifier is drawn using a dropdown, or to manually enter the name of the register if it is not in the list. Since the manual entries are non-standardized, one option is to use ``scheme`` for dropdown entries and ``schemeEntered`` for manual entries. This separates data with a known issue, and makes a (narrow) semantic distinction. 
+-  A data entry form might allow users to select an identifier scheme from a dropdown, or to enter its name manually if it is not in the list. The ``scheme`` field would be used for dropdown entries and a ``schemeEntered`` field for manual entries.
+-  The publication system can detect unreasonable amounts (e.g. missing decimal separators due to human error). The ``amount`` field would be used for reasonable amounts and an ``amountEntered`` field for unreasonable amounts.
+
+With this pattern, users can more easily analyze values in the original field, without needing to clean, filter or deduplicate them.
+
+That said, the semantics of the two fields are very close, with the only distinctions being the data collection method and/or the data quality. As such, **only use this pattern if the field supports important use cases**.
 
 Additional array
 ~~~~~~~~~~~~~~~~
