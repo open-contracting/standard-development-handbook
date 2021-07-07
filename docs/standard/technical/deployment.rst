@@ -11,14 +11,11 @@ For changes to the theme only, start from :ref:`standard/technical/deployment:Bu
 
 To add a community translation, follow :ref:`standard/translation/technical:Add a community translation`.
 
-Schemas and extensions
-----------------------
+Create new versions of extensions
+---------------------------------
 
 .. note::
    You can skip this section if you are not releasing a new major, minor or patch version.
-
-1. Create new versions of extensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``conf.py`` file refers to specific versions of some extensions. The `governance process <https://standard.open-contracting.org/latest/en/support/governance/#versions>`__ will establish whether to create new versions of these extensions.
 
@@ -30,9 +27,9 @@ Check for open pull requests and for missing changelog entries. You can run this
 
 For each extension for which to create a new version:
 
-1. From the list of releases, click *Draft a new release*
-2. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. ``v1.1.1``
-3. Enter a summary of changes as the release message, and click *Publish release*
+#. From the list of releases, click *Draft a new release*
+#. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. ``v1.1.1``
+#. Enter a summary of changes as the release message, and click *Publish release*
 
 Alternately, run this Rake task, which will use the extension's changelog as the release message:
 
@@ -52,8 +49,19 @@ Then, add the new releases to the `extension registry <https://github.com/open-c
 
    ./manage.py refresh
 
-2. Perform periodic updates, if appropriate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prepare for release
+-------------------
+
+.. note::
+   You can skip this section if you are not releasing a new major, minor or patch version.
+
+1. Perform maintenance tasks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See :doc:`maintain`.
+
+2. Perform periodic updates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before each release, and at least once a year, update external codelists:
 
@@ -83,23 +91,23 @@ Merge and release
 1. Push and pull updated translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. :ref:`standard/translation/technical:Push strings to translate to Transifex`.
-2. Check all strings are :ref:`translated<standard/translation/using_transifex:Translator>` and :ref:`reviewed<standard/translation/using_transifex:Reviewer>` in supported translations.
-3. For any resources with untranslated or unreviewed strings, follow the :doc:`../translation/workflow`.
-4. :ref:`standard/translation/using_transifex:View translations with warnings` on Transifex, and correct translated text if necessary.
-5. :ref:`Pull supported translations from Transifex<standard/translation/technical:Pull translations from Transifex>`.
-6. :ref:`standard/translation/using_transifex:View translations with issues` on Transifex, and correct source and ``.po`` files if necessary.
-7. If ``.po`` files were corrected, you may need to :ref:`standard/translation/technical:Push translations to Transifex`.
-8. Create a pull request for the updated translation files.
-9. :ref:`Test the translations on the build of the pull request<standard/translation/technical:Test translations>`.
+#. :ref:`standard/translation/technical:Push strings to translate to Transifex`.
+#. Check all strings are :ref:`translated<standard/translation/using_transifex:Translator>` and :ref:`reviewed<standard/translation/using_transifex:Reviewer>` in supported translations.
+#. For any resources with untranslated or unreviewed strings, follow the :doc:`../translation/workflow`.
+#. :ref:`standard/translation/using_transifex:View translations with warnings` on Transifex, and correct translated text if necessary.
+#. :ref:`Pull supported translations from Transifex<standard/translation/technical:Pull translations from Transifex>`.
+#. :ref:`standard/translation/using_transifex:View translations with issues` on Transifex, and correct source and ``.po`` files if necessary.
+#. If ``.po`` files were corrected, you may need to :ref:`standard/translation/technical:Push translations to Transifex`.
+#. Create a pull request for the updated translation files.
+#. :ref:`Test the translations on the build of the pull request<standard/translation/technical:Test translations>`.
 
 .. _merge:
 
 2. Merge the development branch onto the live branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
-1. Create a pull request to merge the development branch into the ``latest`` branch, if appropriate.
+#. Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
+#. Create a pull request to merge the development branch into the ``latest`` branch, if appropriate.
 
 These pull requests can be created throught GitHub's web interface.
 
@@ -109,14 +117,24 @@ These pull requests can be created throught GitHub's web interface.
 .. note::
    You can skip this step if you are not releasing a new major, minor or patch version.
 
-Create a tagged release named e.g. ``git tag -a 1__1__0 -m '1.1.0 release.'`` and push the tag with ``git push --tags``
+#. Create a tag. For example:
+
+   .. code-block:: shell
+
+      git tag -a 1__1__0 -m '1.1.0 release.'
+
+#. Push the tag:
+
+   .. code-block:: shell
+
+      git push --follow-tags
 
 .. warning::
 
    Only tag a commit on a live branch like ``1.1``. Otherwise, the deployment scripts might release older versions of the files.
 
-Build and deploy
-----------------
+Complete the deployment
+-----------------------
 
 After :ref:`merging branches<merge>`, GitHub Actions automatically:
 
