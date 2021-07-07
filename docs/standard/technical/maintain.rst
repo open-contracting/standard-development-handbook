@@ -1,7 +1,32 @@
 Maintenance
 ===========
 
-Periodically check spelling and lint Markdow in the standard, profile and extension repositories.
+Periodically check links, check spelling and lint Markdown in the standard, profile and extension repositories.
+
+Check links
+-----------
+
+The ``ci.yml`` workflow of the standard and profiles will check links. However, broken links and redirected links will not cause the workflow to fail, since schema files might contain old URLs, which can only be updated in a new version.
+
+To check links, run:
+
+.. code-block:: shell
+
+   make linkcheck
+
+To check links in the English source, run:
+
+.. code-block:: shell
+
+   make linkcheck_source
+
+To check links in a translation, run, for example:
+
+.. code-block:: shell
+
+   make linkcheck.es
+
+The output is stored in ``build/{lang}/output.txt``.
 
 Lint Markdown
 -------------
