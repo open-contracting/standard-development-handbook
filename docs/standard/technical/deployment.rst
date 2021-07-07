@@ -17,54 +17,22 @@ Schemas and extensions
 .. note::
    You can skip this section if you are not releasing a new major, minor or patch version.
 
-1. Review extensions
-~~~~~~~~~~~~~~~~~~~~
+1. Create new versions of extensions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tidy extensions
-^^^^^^^^^^^^^^^
+The ``conf.py`` file refers to specific versions of some extensions. The `governance process <https://standard.open-contracting.org/latest/en/support/governance/#versions>`__ will establish whether to create new versions of these extensions.
 
-For each *core* extension, :doc:`spell check<spellcheck>`, :doc:`run Markdownlint<lint>`, and ensure it:
-
--  `Passes its tests <https://github.com/open-contracting/standard-maintenance-scripts/blob/main/badges.md#extensions>`__
--  Matches the description in :ref:`extensions/index:Creating an extension` regarding license, issues and ``README.md``
--  `Has wiki disabled, default branch protected, and topics set <https://github.com/open-contracting/standard-maintenance-scripts#change-github-repository-configuration>`__
-
-The following Rake tasks from `standard-maintenance-scripts <https://github.com/open-contracting/standard-maintenance-scripts>`__ will report or correct issues with licenses, issues, ``README.md``, wikis, branches, and topics:
-
-.. code-block:: shell
-
-   bundle exec rake repos:licenses ORG=open-contracting-extensions
-   bundle exec rake repos:readmes ORG=open-contracting-extensions
-   bundle exec rake fix:lint_repos ORG=open-contracting-extensions
-   bundle exec rake fix:protect_branches ORG=open-contracting-extensions
-   invoke set-topics
-
-Review pull requests and recent changes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For each *core* extension, review the commits since the last release:
-
-1. Open its homepage on GitHub
-2. Open its releases in the sidebar
-3. Decide whether to merge pull requests
-4. View the commits since the last release (under the release's heading) and consider any substantive changes, i.e. not simple typo or documentation updates
-
-Alternately, run this Rake task to get links to pull requests and comparison URLs:
+Check for open pull requests and for missing changelog entries. You can run this Rake task to get links to pull requests and comparison URLs:
 
 .. code-block:: shell
 
    bundle exec rake release:review_extensions ORG=open-contracting-extensions
 
-Create new versions of core extensions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Each OCDS version refers to a specific version of each `core extension <https://standard.open-contracting.org/latest/en/extensions/#core-extensions>`__. The `governance process <https://standard.open-contracting.org/latest/en/support/governance/#versions>`__ will establish whether to create a new version of a core extension for this OCDS version.
-
-For each *core* extension for which to create a new version:
+For each extension for which to create a new version:
 
 1. From the list of releases, click *Draft a new release*
 2. In *Tag version*, enter the version number in *vmajor.minor.patch* format, e.g. ``v1.1.1``
-3. Enter a summary of changes, e.g. "Typo fixes", and click *Publish release*
+3. Enter a summary of changes as the release message, and click *Publish release*
 
 Alternately, run this Rake task, which will use the extension's changelog as the release message:
 
@@ -150,23 +118,24 @@ Create a tagged release named e.g. ``git tag -a 1__1__0 -m '1.1.0 release.'`` an
 Build and deploy
 ----------------
 
-1. Build on continuous integration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After :ref:`merging branches<merge>`, GitHub Actions automatically:
 
-:ref:`Merging branches<merge>` will trigger a :doc:`build<build>`.
+-  Deploys the build of any live branch (e.g. ``latest``) to the live directory (``/home/ocds-docs/web``), as a build directory named ``{branch}-{timestamp}`` (e.g. ``latest-1577836800``)
+-  Creates a symlink named after the live branch (e.g. ``latest``) that points to the build directory. As such, you can rollback changes by linking to another build directory.
+-  Deploys the schema files, codelist files and metadata file (if any), if a tag is pushed: for example, under https://standard.open-contracting.org/schema/, https://standard.open-contracting.org/profiles/ppp/schema/ and https://standard.open-contracting.org/profiles/ppp/extension/.
 
-The built documentation is transferred to the staging directory on the server. You can preview the documentation. For example, for OCDS 1.1, https://standard.open-contracting.org/staging/1.1/ is the staging version for https://standard.open-contracting.org/1.1/.
-
-2. Release the documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-See the `deploy repository's documentation <https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation>`__.
-
-3. Update the Data Review Tool
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The live branches are configured in the last step of the repository's ``ci.yml`` workflow.
 
 .. note::
    You can skip this step if you are not releasing a new major, minor or patch version.
+
+1. Update the deploy repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the `deploy repository's documentation <https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation>`__.
+
+2. Update the Data Review Tool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Update the CoVE library
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -184,9 +153,9 @@ This is the cove-ocds repository for OCDS, and cove-oc4ids for OC4IDS.
 
 -  Upgrade the requirements to use the new version of the CoVE library
 
-.. code-block:: shell
+   .. code-block:: shell
 
-   pip-compile -P libcoveocds; pip-compile requirements_dev.in
+      pip-compile -P libcoveocds; pip-compile requirements_dev.in
 
 -  Update the URL paths in `settings.py <https://github.com/open-contracting/cove-ocds/blob/main/cove_project/settings.py>`__ (*only in cove-ocds*)
 -  Make sure all tests pass
@@ -198,16 +167,3 @@ Update any other tools that use the CoVE library
 Make sure other tools that use ``libcoveocds`` (like Kingfisher Process) are updated to use the new version.
 
 Many tools will use the default options from the library, and these tools will start using the new version of the schema straight away. But if the tool overrides those options with its own options, the tool's own options may need changing.
-
-FAQ
----
-
-How can I find out what the standard looked like at 1.0?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To find the latest (patch) version of a minor release, look at the contents of the branch named with that version.
-
-How can I find out what the standard looked like at 1.1.0?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To find a patch release, look at the contents of the tree tagged with that version.

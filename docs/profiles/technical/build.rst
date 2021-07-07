@@ -15,7 +15,7 @@ Change extensions
 
 To change the extensions in a profile, change ``extension_versions.json``, then :ref:`profiles/technical/build:Build the profile`.
 
-Extensions must be in the `extension registry <https://github.com/open-contracting/extension_registry>`__ and should be tagged and released. See :ref:`standard/technical/deployment:Create new versions of core extensions`.
+Extensions must be in the `extension registry <https://github.com/open-contracting/extension_registry>`__ and should be tagged and released. See :ref:`standard/technical/deployment:Create new versions of extensions`.
 
 Build the profile
 -----------------

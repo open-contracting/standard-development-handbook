@@ -3,8 +3,8 @@ Open Contracting for Infrastructure Data Standards
 
 `This profile <https://standard.open-contracting.org/infrastructure/latest/en/>`__ is developed and maintained by the Open Contracting Partnership on `GitHub <https://github.com/open-contracting/infrastructure>`__. It is `deployed <https://standard.open-contracting.org/infrastructure/>`__ with the standard documentation. It was previously deployed to https://open-contracting.github.io/infrastructure/, which uses meta refresh to redirect to the current deployment.
 
-Development tasks
------------------
+Maintenance
+-----------
 
 Copy schema and codelists from OCDS for PPPs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15,7 +15,7 @@ For each new release of OCDS for PPPs, run:
 
    make update
 
-If working on a pre-release, run:
+To use a pre-release of OCDS for PPPs, run:
 
 .. code-block:: shell
 

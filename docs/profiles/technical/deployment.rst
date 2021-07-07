@@ -3,29 +3,24 @@ Deploying the documentation
 
 A profile's deployment is the same as the standard's :doc:`../../standard/technical/deployment`, except where noted below. If a profile is unversioned, some of the below may be irrelevant.
 
-Schemas and extensions
-----------------------
+Perform maintenance tasks
+-------------------------
 
-1. Review extensions
-~~~~~~~~~~~~~~~~~~~~
+Check the profile's individual handbook page for any maintenance tasks.
 
-Review pull requests and recent changes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Version the profile
+-------------------
 
-Follow the :ref:`standard's instructions<standard/technical/deployment:Review pull requests and recent changes>`, substituting the profile's extensions for core extensions.
+If this is the first numbered version of a profile, in its ``docs/_templates/layout.html``, add (substituting ``{root}`` with ``ppp``, for example):
 
-Create new releases of core extensions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: jinja
 
-The governance process will establish whether to create a new release of any core extensions within the profile. If appropriate, follow the :ref:`standard's instructions<standard/technical/deployment:Create new versions of core extensions>`.
+   {% block version_options %}
+   <!--#include virtual="/includes/version-options-profiles-{root}.html" -->
+   {% endblock %}
 
-2. Perform periodic updates, if appropriate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Check the profile's individual handbook page for any regular maintenance.
-
-3. Update version numbers, versioned release schema and changelog
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Update version numbers, versioned release schema and changelog
+--------------------------------------------------------------
 
 In ``docs/conf.py``, update ``release`` to e.g. ``1.0.0`` and update ``version`` if appropriate.
 
@@ -35,7 +30,7 @@ Update the *major__minor__patch* version number:
 
    find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' \{\} \;
 
-Update the profile's changelog (if any) with a summary of the changes to the profile's extensions.
+Update the profile's changelog (if any) with links to its extensions' changelogs.
 
 Review the pull requests since the last release. To review the commits that are not part of a pull request (using the fish shell):
 
@@ -50,8 +45,3 @@ To review the messages only (using the fish shell):
    git show --oneline -s (git rev-list --first-parent --no-merges 1.0-dev --since=2019-10-21)
 
 Replace the branch (``1.0-dev``) and date (``2019-10-21``) as needed.
-
-4. Integrate extensions
-~~~~~~~~~~~~~~~~~~~~~~~
-
-:ref:`profiles/technical/build:Build the profile`.

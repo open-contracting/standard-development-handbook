@@ -3,13 +3,17 @@ Public Private Partnerships
 
 `This profile <https://standard.open-contracting.org/profiles/ppp/latest/en/>`__ is developed and maintained by the Open Contracting Partnership on `GitHub <https://github.com/open-contracting-extensions/public-private-partnerships>`__. It is `deployed <https://standard.open-contracting.org/profiles/ppp/>`__ with the standard documentation. It was previously deployed to https://ocds-for-ppps.readthedocs.io/, which uses meta refresh to redirect to the current deployment.
 
-Development tasks
------------------
+Maintenance
+-----------
 
 Change extensions or version of OCDS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See the generic profile documentation for :doc:`technical/build`.
+See :doc:`technical/build` to:
+
+-  Change version of OCDS
+-  Change extensions
+-  Build the profile
 
 In ``codelists.md``:
 
