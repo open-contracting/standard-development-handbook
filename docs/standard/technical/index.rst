@@ -8,8 +8,7 @@ The `standard-maintenance-scripts <https://github.com/open-contracting/standard-
    :glob:
 
    repository
-   spellcheck
-   lint
+   maintain
    build
    theme
    deployment

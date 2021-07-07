@@ -1,8 +1,41 @@
-Spell-checking
-==============
+Maintenance
+===========
 
-Operation
----------
+Periodically check spelling and lint Markdow in the standard, profile and extension repositories.
+
+Lint Markdown
+-------------
+
+1. Install `Markdownlint <https://github.com/markdownlint/markdownlint>`__:
+
+   .. code-block:: shell
+
+       bundle init
+       bundle add mdl
+
+2. Create ``~/.config/mdl/style.rb``:
+
+   .. code-block:: none
+
+       all
+
+       # Rules can be configured. See https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
+
+       # See https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md026---trailing-punctuation-in-header
+       rule 'MD026', :punctuation => '.,;:!'
+
+       exclude_rule 'MD009' # Trailing spaces (common error frustrates users)
+       exclude_rule 'MD013' # Line length (breaking lines in paragraphs produces longer diffs)
+       exclude_rule 'MD033' # Inline HTML (some files require HTML)
+
+3. Change into a directory containing local copies of GitHub repositories, and run (using the fish shell):
+
+   .. code-block:: fish
+
+       for i in *; if [ -d $i ]; cd $i; echo $i; bundle exec mdl --git-recurse --style ~/.config/mdl/style.rb .; cd ..; end; end
+
+Check spelling
+--------------
 
 If you have ``aspell`` installed, run:
 
@@ -13,7 +46,7 @@ If you have ``aspell`` installed, run:
 This command will skip dot files, Make files, script files, vendored files, Docson files, the ``currency.csv`` codelist, and bat, css, doctree, html, in, inv, js, mk, mo, pdf, png, po, py, pyc, scss, sh, sqlite, svg, txt and xlsx files.
 
 Configuration
--------------
+~~~~~~~~~~~~~
 
 ``aspell`` will flag many field names and proper nouns as errors. ``aspell`` allows you to add words to its dictionary during operation. Instead of re-adding the following words, simply replace ``~/.aspell.en.pws`` with the following.
 
