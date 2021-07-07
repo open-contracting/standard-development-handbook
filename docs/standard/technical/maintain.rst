@@ -1,7 +1,7 @@
 Maintenance
 ===========
 
-Periodically check links, check spelling and lint Markdown in the standard, profile and extension repositories.
+Periodically check links, lint Markdown, and check grammar and spelling in the standard, profile and extension repositories.
 
 Check links
 -----------
@@ -59,6 +59,17 @@ Lint Markdown
 
        for i in *; if [ -d $i ]; cd $i; echo $i; bundle exec mdl --git-recurse --style ~/.config/mdl/style.rb .; cd ..; end; end
 
+Check grammar
+-------------
+
+Install `gramma <https://caderek.github.io/gramma/>`__ via NPM or as a binary package, and run:
+
+.. code-block:: shell
+
+   find . -type f -path '*.md' -exec gramma -d typos '{}' \;
+
+This command will check Markdown files and skip typographical errors (see below).
+
 Check spelling
 --------------
 
@@ -66,7 +77,7 @@ If you have ``aspell`` installed, run:
 
 .. code-block:: shell
 
-   find . -type f -not -path '*/\.*' -not -path '*/include/*' -not -path '*/script/*' -not -path '*/vendor/*' -not -path '*/_static/*' -not -name 'currency.csv' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.doctree' -not -name '*.html' -not -name '*.in' -not -name '*.inv' -not -name '*.js' -not -name '*.mk' -not -name '*.mo' -not -name '*.pdf' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.pyc' -not -name '*.scss' -not -name '*.sh' -not -name '*.sqlite' -not -name '*.svg' -not -name '*.txt' -not -name '*.xlsx' -exec aspell -x -H check '{}' ';'
+   find . -type f -not -path '*/\.*' -not -path '*/include/*' -not -path '*/script/*' -not -path '*/vendor/*' -not -path '*/_static/*' -not -name 'currency.csv' -not -name 'Makefile' -not -name '*.bat' -not -name '*.css' -not -name '*.doctree' -not -name '*.html' -not -name '*.in' -not -name '*.inv' -not -name '*.js' -not -name '*.mk' -not -name '*.mo' -not -name '*.pdf' -not -name '*.png' -not -name '*.po' -not -name '*.py' -not -name '*.pyc' -not -name '*.scss' -not -name '*.sh' -not -name '*.sqlite' -not -name '*.svg' -not -name '*.txt' -not -name '*.xlsx' -exec aspell -x -H check '{}' \;
 
 This command will skip dot files, Make files, script files, vendored files, Docson files, the ``currency.csv`` codelist, and bat, css, doctree, html, in, inv, js, mk, mo, pdf, png, po, py, pyc, scss, sh, sqlite, svg, txt and xlsx files.
 
