@@ -31,17 +31,30 @@ Update blank.json:
 
    node_modules/json-schema-random/cli.js --no-random --no-additional schema/project-level/project-schema.json > docs/examples/blank.json
 
-Export mapping csvs for editing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Create a workbook with a sheet for each mapping CSV file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are making many changes to the mapping CSV files, you might want to create a workbook containing a sheet for each CSV file.
 
 Install gnumeric:
 
 .. code-block:: shell
 
    sudo apt install gnumeric
+   
+On macOS:
 
-Combine csv files into a single spreadsheet
+.. code-block:: shell
+
+  brew install gnumeric
+
+Create a workbook with a sheet for each mapping CSV file:
 
 .. code-block:: shell
 
    ssconvert --merge-to=output.xlsx mapping/*.csv
+
+You can then:
+
+* Edit the workbook in your preferred spreadsheet software
+* Export each sheet as a CSV file to the `mapping` folder
