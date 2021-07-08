@@ -31,33 +31,34 @@ The output is stored in ``build/{lang}/output.txt``.
 Lint Markdown
 -------------
 
-1. Install `Markdownlint <https://github.com/markdownlint/markdownlint>`__:
+1. Install `markdownlint-cli <https://github.com/igorshubovych/markdownlint-cli>`__:
 
    .. code-block:: shell
 
-       bundle init
-       bundle add mdl
+      npm install -g markdownlint-cli
 
-2. Create ``~/.config/mdl/style.rb``:
+2. Create ``~/.config/markdownlint/config.yaml``:
 
    .. code-block:: none
 
-       all
+      # https://github.com/DavidAnson/markdownlint#optionsconfig
+      # https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
+      default: true
+      # Trailing spaces (common error frustrates users)
+      # MD009: false
+      # Line length (breaking lines in paragraphs produces longer diffs)
+      MD013: false
+      # Trailing punctuation in header (allow "?" and "!")
+      MD026:
+        punctuation: '.,;:'
+      # Inline HTML (some files require HTML)
+      MD033: false
 
-       # Rules can be configured. See https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
-
-       # See https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md026---trailing-punctuation-in-header
-       rule 'MD026', :punctuation => '.,;:!'
-
-       exclude_rule 'MD009' # Trailing spaces (common error frustrates users)
-       exclude_rule 'MD013' # Line length (breaking lines in paragraphs produces longer diffs)
-       exclude_rule 'MD033' # Inline HTML (some files require HTML)
-
-3. Change into a directory containing local copies of GitHub repositories, and run (using the fish shell):
+3. Run markdownlint-cli:
 
    .. code-block:: fish
 
-       for i in *; if [ -d $i ]; cd $i; echo $i; bundle exec mdl --git-recurse --style ~/.config/mdl/style.rb .; cd ..; end; end
+      markdownlint --config ~/.config/markdownlint/config.yaml --ignore build --ignore docs/_static/docson --fix .
 
 Check grammar
 -------------
