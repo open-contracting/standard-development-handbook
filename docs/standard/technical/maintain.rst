@@ -44,10 +44,13 @@ Lint Markdown
       # https://github.com/DavidAnson/markdownlint#optionsconfig
       # https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
       default: true
-      # Trailing spaces (common error frustrates users)
+      # Trailing spaces (causes merge conflicts in active repositories)
       # MD009: false
-      # Line length (breaking lines in paragraphs produces longer diffs)
+      # Line length (causes longer diffs and merge conflicts in active repositories)
       MD013: false
+      # Multiple headers with the same content (allow same headings in changelogs)
+      MD024:
+        allow_different_nesting: true
       # Trailing punctuation in header (allow "?" and "!")
       MD026:
         punctuation: '.,;:'
