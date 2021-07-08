@@ -41,19 +41,19 @@ Create a workbook with a sheet for each mapping CSV file
 
 If you are making many changes to the mapping CSV files, you might want to create a workbook containing a sheet for each CSV file.
 
-Install gnumeric:
+Install gnumeric on Ubuntu:
 
 .. code-block:: shell
 
    sudo apt install gnumeric
    
-On macOS:
+Or, on macOS:
 
 .. code-block:: shell
 
-  brew install gnumeric
+   brew install gnumeric
 
-Create a workbook with a sheet for each mapping CSV file:
+Create a workbook with one sheet per mapping CSV file:
 
 .. code-block:: shell
 
@@ -61,5 +61,5 @@ Create a workbook with a sheet for each mapping CSV file:
 
 You can then:
 
-* Edit the workbook in your preferred spreadsheet software
-* Export each sheet as a CSV file to the `mapping` folder
+-  Edit the workbook in your preferred spreadsheet software
+-  Export each sheet as a CSV file to the ``mapping`` directory
