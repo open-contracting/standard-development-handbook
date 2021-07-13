@@ -11,7 +11,7 @@ Create a virtual environment using Python 3.6 with ``pyenv virtualenv docs`` or:
 
 .. code-block:: shell
 
-   sudo apt-get install python3-venv
+   sudo apt install python3-venv
    python3 -m venv .ve
    source .ve/bin/activate
 
