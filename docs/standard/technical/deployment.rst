@@ -106,10 +106,7 @@ Merge and release
 2. Merge the development branch onto the live branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``).
-#. Create a pull request to merge the development branch into the ``latest`` branch, if appropriate.
-
-These pull requests can be created throught GitHub's web interface.
+Create a pull request to merge the development branch into its corresponding live branch, e.g. ``1.1-dev`` into ``1.1``. This might happen by first merging a patch dev branch (``1.1.1-dev``) into the minor dev branch (``1.1-dev``), and then merging into the live branch (``1.1``). The pull request can be created throught GitHub's web interface.
 
 3. Create a tagged release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,8 +135,8 @@ Complete the deployment
 
 After :ref:`merging branches<merge>`, GitHub Actions automatically:
 
--  Deploys the build of any live branch (e.g. ``latest``) to the live directory (``/home/ocds-docs/web``), as a build directory named ``{branch}-{timestamp}`` (e.g. ``latest-1577836800``)
--  Creates a symlink named after the live branch (e.g. ``latest``) that points to the build directory. As such, you can rollback changes by linking to another build directory.
+-  Deploys the build of any live branch (e.g. ``1.1``) to the live directory (``/home/ocds-docs/web``), as a build directory named ``{branch}-{timestamp}`` (e.g. ``1.1-1577836800``)
+-  Creates a symlink named after the live branch (e.g. ``1.1``) that points to the build directory. As such, you can rollback changes by linking to another build directory.
 -  Deploys the schema files, codelist files and metadata file (if any), if a tag is pushed: for example, under https://standard.open-contracting.org/schema/, https://standard.open-contracting.org/profiles/ppp/schema/ and https://standard.open-contracting.org/profiles/ppp/extension/.
 
 The live branches are configured in the last step of the repository's ``ci.yml`` workflow.

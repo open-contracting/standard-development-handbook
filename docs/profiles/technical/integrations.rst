@@ -36,7 +36,7 @@ Migrating off ReadTheDocs
 Setup:
 
 1. `Add the ReadTheDocs webhook <https://docs.readthedocs.io/en/latest/webhooks.html#github>`__ if missing.
-2. If you're trying to edit an old version on ReadTheDocs, click the *Builds* button in the ReadTheDocs admin, click the version's latest successful build, and copy the commit hash. Checkout that commit.
+2. If you're trying to edit an old version on ReadTheDocs, click the *Builds* button in the ReadTheDocs admin, click the version's most recent successful build, and copy the commit hash. Checkout that commit.
 
 To redirect the "latest" version:
 
@@ -85,5 +85,5 @@ To redirect the "stable" version:
 
 To delete all other versions:
 
-1. Click the *Admin* button in the ReadTheDocs admin, click *Versions* in the left menu, and uncheck *Active* for all except the "latest" and "stable" versions.
+1. Click the *Admin* button in the ReadTheDocs admin, click *Versions* in the left menu, and uncheck *Active* for all except the "latest" version.
 2. Click the *Versions* button in the ReadTheDocs admin, and click the *Wipe* button for all inactive versions
