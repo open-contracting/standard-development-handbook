@@ -42,6 +42,11 @@ Word choice
 -  "metadata" not "meta-data" or "meta data"
 -  to describe the "-" character, "hyphen" not "dash" 
 
+For procurement concepts:
+
+-  "organization" not "party" or "entity", except in cases like "procuring entity" or "third party"
+-  "bid" not "tender", which is already used to describe the opportunity or solicitation
+
 When describing JSON Schema:
 
 -  "field" to refer to OCDS fields, like ``tender.id``
@@ -55,7 +60,13 @@ When referring to a field, prefer the notation for the path in the data, like ``
 
    These regular expressions can be used to find breaches of the style guide, accounting for false positives.
 
-   "property" word choice
+   "party" or "entity"
+     (?<!curing| third)[^`-]\b(part|entit)(y|ies)\b[^"/`](?!array)
+
+   "tender"
+     a tender\b(?! (process|release))|submi(\S+ ){1,3} tender|tender submi
+
+   "property"
      (?<!(`minLength| `required|geStrategy)` )propert(y|ies)
 
    data path notation
