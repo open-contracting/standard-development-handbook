@@ -58,18 +58,13 @@ When describing JSON Schema:
 
 When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
-..
+These regular expressions can be used to find breaches of the style guide, accounting for false positives.
 
-   These regular expressions can be used to find breaches of the style guide, accounting for false positives.
-
-   "party" or "entity"
-     (?<!curing| third)[^`-]\b(part|entit)(y|ies)\b[^"/`](?!array)
-
-   "tender"
-     a tender\b(?! (process|release))|submi(\S+ ){1,3} tender|tender submi
-
-   "property"
-     (?<!(`minLength| `required|geStrategy)` )propert(y|ies)
-
-   data path notation
-     \b[A-Z][a-zA-Z]+\.(?!(aspx|db|html|md|org|xml|zip)\b)[a-zA-Z]{2,}
+"party" or "entity"
+  ``(?<!curing| third)[^`-]\b(part|entit)(y|ies)\b[^"/`](?!array)``
+"tender"
+  ``a tender\b(?! (process|release))|submi(\S+ ){1,3} tender|tender submi``
+"property"
+  ``(?<!(`minLength| `required|geStrategy)` )propert(y|ies)``
+data path notation
+  ``\b[A-Z][a-zA-Z]+\.(?!(aspx|db|html|md|org|xml|zip)\b)[a-zA-Z]{2,}``
