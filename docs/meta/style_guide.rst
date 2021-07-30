@@ -46,6 +46,7 @@ For procurement concepts:
 
 -  "organization" not "party" or "entity", except in cases like "procuring entity" or "third party"
 -  "bid" not "tender", which is already used to describe the opportunity or solicitation
+-  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
 
 When describing JSON Schema:
 
