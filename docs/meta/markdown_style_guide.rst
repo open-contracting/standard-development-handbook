@@ -11,7 +11,6 @@ We use the following directives from `sphinxcontrib-opendataservices <https://sp
 -  `jsoninclude <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/jsoninclude/#directive-jsoninclude>`__
 -  `jsoninclude-flat <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/jsoninclude/#directive-jsoninclude-flat>`__
 -  `jsonschema <https://sphinxcontrib-opendataservices-jsonschema.readthedocs.io/en/latest/use.html>`__
--  `localization-note <https://sphinxcontrib-opendataservices.readthedocs.io/en/latest/misc/#directive-localization-note>`__
 
 Layout
 ------
