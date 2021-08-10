@@ -63,11 +63,19 @@ See :doc:`maintain`.
 2. Perform periodic updates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before each release, and at least once a year, update external codelists:
+Before each release, and at least once a year:
+
+-  update external codelists:
 
 .. code-block:: shell
 
    python manage.py update
+ 
+-  update the country codelist, following the instructions in the ``--help`` message:
+
+.. code-block:: shell
+
+   python manage.py update-country --help
 
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
