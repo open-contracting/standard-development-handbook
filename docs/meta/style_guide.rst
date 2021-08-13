@@ -40,7 +40,8 @@ Word choice
 -  "changelog" not "change-log" or "change log"
 -  "data package" not "datapackage"
 -  "metadata" not "meta-data" or "meta data"
--  To describe the "-" character, "hyphen" not "dash"
+-  "hyphen" not "dash", to describe the "-" character
+-  "JSON data" not "JSON document", to avoid confusion with the `documents` field
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
 For procurement concepts:
