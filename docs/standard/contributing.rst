@@ -70,8 +70,9 @@ Logging changes
 #. If a **codelist** is added, use the :ref:`versionadded<version-admonitions>` admonition to indicate the version in which it was added, in ``codelists.md``.
 #. If a **code** is added, use the :ref:`versionchanged<version-admonitions>` admonition to indicate the version in which it was added, with the message "Added the 'newCode' code.", in ``codelists.md``.
 
-   -  If the codelist is open and frequently updated (like document type and classification scheme), skip this step.
-   -  If the codelist is external (like currency from ISO 4217), skip this step.
+   .. note::
+
+      If the codelist is open and frequently updated (like document type and classification scheme) or if it is external (like currency from ISO 4217), skip this step.
 
 #. If a **codelist** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, in ``codelists.md``.
 #. If a **code** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, with the message "Deprecated the 'oldCode' code.", in ``codelists.md``.
