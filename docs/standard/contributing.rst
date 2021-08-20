@@ -63,6 +63,21 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 
 8. Once approved by James, you can merge it yourself.
 
+Logging changes
+---------------
+
+1. Follow the :doc:`../../meta/changelog_style_guide`.
+1. If a **codelist** is added, use the :ref:`versionadded<version-admonitions>` admonition to indicate the version in which it was added, in ``codelists.md``.
+1. If a **code** is added, use the :ref:`versionchanged<version-admonitions>` admonition to indicate the version in which it was added, with the message "Added the 'newCode' code.", in ``codelists.md``.
+
+   -  If the codelist is open and frequently updated (like document type and classification scheme), skip this step.
+   -  If the codelist is external (like currency from ISO 4217), skip this step.
+
+1. If a **codelist** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, in ``codelists.md``.
+1. If a **code** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, with the message "Deprecated the 'oldCode' code.", in ``codelists.md``.
+1. If a **field** is added to the release schema, unless it is a major structural change like the ``parties`` array, don't add any admonition to ``reference.md``.
+1. If a **field** is deprecated in the release schema, and if it has its own section in ``reference.md``, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated.
+
 Reviewing changes
 -----------------
 

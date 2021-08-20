@@ -81,36 +81,10 @@ In addition to ``note``, there are (`see demo <https://pydata-sphinx-theme.readt
 
       Content
 
-Specific admonitions
---------------------
+.. _version-admonitions:
 
-versionadded
-~~~~~~~~~~~~
-
-.. versionadded:: 1.2
-
-.. code-block:: rst
-
-   .. versionadded:: 1.2
-
-.. versionadded:: 1.2
-   Brief explanation of the addition.
-
-.. code-block:: rst
-
-   .. versionadded:: 1.2
-      Brief explanation of the addition.
-
-versionchanged
-~~~~~~~~~~~~~~
-
-.. versionchanged:: 1.2
-   Brief explanation of the change.
-
-.. code-block:: rst
-
-   .. versionchanged:: 1.2
-      Brief explanation of the change.
+Version admonitions
+-------------------
 
 deprecated
 ~~~~~~~~~~
@@ -122,6 +96,34 @@ deprecated
 
    .. deprecated:: 1.2
       Use this alternative instead.
+
+versionadded
+~~~~~~~~~~~~
+
+.. versionadded:: 1.2
+
+.. code-block:: rst
+
+   .. versionadded:: 1.2
+
+.. versionadded:: 1.2
+   Brief explanation of the addition, if needed.
+
+.. code-block:: rst
+
+   .. versionadded:: 1.2
+      Brief explanation of the addition, if needed.
+
+versionchanged
+~~~~~~~~~~~~~~
+
+.. versionchanged:: 1.2
+   Brief explanation of the change.
+
+.. code-block:: rst
+
+   .. versionchanged:: 1.2
+      Brief explanation of the change.
 
 References
 ----------
