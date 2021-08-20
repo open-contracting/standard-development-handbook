@@ -72,7 +72,7 @@ Logging changes
 
    .. note::
 
-      If the codelist is open and frequently updated (like document type and classification scheme) or if it is external (like currency from ISO 4217), skip this step.
+      If the codelist is open and frequently updated (like document type, milestone type, classification scheme, party role) or if it is external (like currency from ISO 4217), skip this step.
 
 #. If a **codelist** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, in ``codelists.md``.
 #. If a **code** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, with the message "Deprecated the 'oldCode' code.", in ``codelists.md``.
