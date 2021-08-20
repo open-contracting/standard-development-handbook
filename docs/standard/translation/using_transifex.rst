@@ -9,24 +9,24 @@ Translator
 
 Before beginning, ask the :ref:`Coordinator<roles>` to ensure that the :ref:`Transifex glossary<glossary>` is up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it.
 
-1. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
-2. Change the language, if appropriate
-3. Sort by "Untranslated (Descending)"
-4. Click on a resource with untranslated strings
-5. Click "Untranslated"
-6. Read the English text and author the translated text
-7. Click "Save Translation" (or press ``TAB``)
-8. Repeat from Step 4
-9. Notify the Proofreader when strings have been translated
+#. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
+#. Change the language, if appropriate
+#. Sort by "Untranslated (Descending)"
+#. Click on a resource with untranslated strings
+#. Click "Untranslated"
+#. Read the English text and author the translated text
+#. Click "Save Translation" (or press ``TAB``)
+#. Repeat from Step 4
+#. Notify the Proofreader when strings have been translated
 
 The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ contains key terms that must be translated consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
 
 It helps to see where the strings appear in context in the `OCDS documentation <https://standard.open-contracting.org/>`__. :doc:`understanding_transifex` describes the link between Markdown files in the `GitHub repository <https://github.com/open-contracting/standard>`__, Transifex resources, and documentation pages. With the exception of the ``schema`` and ``codelists`` resources, you can:
 
-1. Take the name of a resource, e.g. ``schema--changelog``
-2. Remove ``--index`` if present
-3. Replace ``--`` with ``/``
-4. Put it in the pattern ``https://standard.open-contracting.org/{version}/en/{name}/``, like https://standard.open-contracting.org/latest/en/schema/changelog/
+#. Take the name of a resource, e.g. ``schema--changelog``
+#. Remove ``--index`` if present
+#. Replace ``--`` with ``/``
+#. Put it in the pattern ``https://standard.open-contracting.org/{version}/en/{name}/``, like https://standard.open-contracting.org/latest/en/schema/changelog/
 
 .. note::
    Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
@@ -36,28 +36,28 @@ See :ref:`standard/translation/using_transifex:Translation tasks` below for Tran
 Proofreader
 ~~~~~~~~~~~
 
-1. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
-2. Change the language, if appropriate
-3. Click "All resources"
-4. Click "Unreviewed"
-5. Look at the translated text to check its quality (e.g. spelling, grammar, punctuation)
-6. If there's a quality issue, update the translated text
-7. Notify the Reviewer when strings have been proofread
+#. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
+#. Change the language, if appropriate
+#. Click "All resources"
+#. Click "Unreviewed"
+#. Look at the translated text to check its quality (e.g. spelling, grammar, punctuation)
+#. If there's a quality issue, update the translated text
+#. Notify the Reviewer when strings have been proofread
 
 Reviewer
 ~~~~~~~~
 
-1.  Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
-2.  Change the language, if appropriate
-3.  Sort by "Unreviewed (Descending)"
-4.  Click on a resource with unreviewed strings
-5.  Click "Unreviewed"
-6.  Read the English text and the translated text and confirm the translation is correct
-7.  If there's a translation issue, update the translated text
-8.  If there is a Transifex warning (e.g. "Glossary translation for term 'release' missing from translation"), update the translated text
-9.  Click "Review"
-10. Repeat from Step 4
-11. Notify the Coordinator when strings have been reviewed
+#. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
+#. Change the language, if appropriate
+#. Sort by "Unreviewed (Descending)"
+#. Click on a resource with unreviewed strings
+#. Click "Unreviewed"
+#. Read the English text and the translated text and confirm the translation is correct
+#. If there's a translation issue, update the translated text
+#. If there is a Transifex warning (e.g. "Glossary translation for term 'release' missing from translation"), update the translated text
+#. Click "Review"
+#. Repeat from Step 4
+#. Notify the Coordinator when strings have been reviewed
 
 Translation tasks
 -----------------
@@ -94,18 +94,18 @@ Click the History tab when viewing a string to see its previous translations, wh
 View translations with warnings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, click "All resources"
-2. Focus on the search box (``Option + s`` or ``ALT + s``)
-3. Select "check" from the list of filters
-4. Select "warning" from the list of values
+#. From the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, click "All resources"
+#. Focus on the search box (``Option + s`` or ``ALT + s``)
+#. Select "check" from the list of filters
+#. Select "warning" from the list of values
 
 View translations with issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, click "All resources"
-2. Focus on the search box (``Option + s`` or ``ALT + s``)
-3. Select "issue" from the list of filters
-4. Select "open" from the list of values
+#. From the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, click "All resources"
+#. Focus on the search box (``Option + s`` or ``ALT + s``)
+#. Select "issue" from the list of filters
+#. Select "open" from the list of values
 
 Non-translation tasks
 ---------------------
@@ -122,9 +122,9 @@ Count untranslated words
 
 The dashboard of a translation project reports the number of *strings* to translate, but translators must know the number of *words* to translate in order to estimate the time and cost. To get the number of words:
 
-1. Open the translation project
-2. Scroll to the list of languages and click "Translate" for a language
-3. Click "All resources" at the bottom of the screen
-4. Click "# untranslated" at the top of the screen
-5. Check the box at the right of the search bar
-6. See the number of words at the right of the screen
+#. Open the translation project
+#. Scroll to the list of languages and click "Translate" for a language
+#. Click "All resources" at the bottom of the screen
+#. Click "# untranslated" at the top of the screen
+#. Check the box at the right of the search bar
+#. See the number of words at the right of the screen

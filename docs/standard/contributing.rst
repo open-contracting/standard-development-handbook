@@ -33,50 +33,50 @@ Proposing changes
 
 For worked examples, see the `process note <https://docs.google.com/document/d/1Sp1sXVx99k-zdpNKE6kAwGkmyHG6KWCIaiZ1GYE_cOY/edit>`__. For all other changes:
 
-1. Agree on a proposal in a GitHub issue.
-2. Assign the issue to yourself, and move the issue's card to the *In progress* column.
-3. Create a branch of the ``standard`` repo (not a branch of your fork) in which to make your changes.
+#. Agree on a proposal in a GitHub issue.
+#. Assign the issue to yourself, and move the issue's card to the *In progress* column.
+#. Create a branch of the ``standard`` repo (not a branch of your fork) in which to make your changes.
 
    -  As suggested in the :doc:`../../meta/style_guide`, consider composing Markdown content in `Hemingway Editor <http://www.hemingwayapp.com/>`__ or `Grammarly <https://www.grammarly.com/>`__.
    -  **Never** use normative words on guidance pages. Use `non-normative synonyms <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3>`__ instead.
 
-4. Commit your changes, as well as the following:
+#. Commit your changes, as well as the following:
 
    -  To install the dependencies for the Python scripts, run: ``pip install -r requirements.txt``
    -  If you edited  ``release-schema.json`` or ``meta-schema-patch.json``, run: ``python manage.py pre-commit``
    -  Update the **changelog**.
 
-5. Create a pull request.
+#. Create a pull request.
 
    -  Reference the issue number in the pull requests' description.
    -  Set the *base* branch, e.g. ``1.2-dev`` for OCDS 1.2 or ``1.1-dev`` for OCD 1.1.
    -  Set the *milestone*, e.g. ``1.2.0`` for OCDS 1.2.
 
-6. Assign a helpdesk analyst to review.
+#. Assign a helpdesk analyst to review.
 
    -  See the next section for reviewer's instructions.
    -  If changes are requested, make the changes, then repeat this step.
 
-7. Once approved by a helpdesk analyst, assign James to review.
+#. Once approved by a helpdesk analyst, assign James to review.
 
    -  If changes are requested, make the changes, then repeat this step.
 
-8. Once approved by James, you can merge it yourself.
+#. Once approved by James, you can merge it yourself.
 
 Logging changes
 ---------------
 
-1. Follow the :doc:`../../meta/changelog_style_guide`.
-1. If a **codelist** is added, use the :ref:`versionadded<version-admonitions>` admonition to indicate the version in which it was added, in ``codelists.md``.
-1. If a **code** is added, use the :ref:`versionchanged<version-admonitions>` admonition to indicate the version in which it was added, with the message "Added the 'newCode' code.", in ``codelists.md``.
+#. Follow the :doc:`../../meta/changelog_style_guide`.
+#. If a **codelist** is added, use the :ref:`versionadded<version-admonitions>` admonition to indicate the version in which it was added, in ``codelists.md``.
+#. If a **code** is added, use the :ref:`versionchanged<version-admonitions>` admonition to indicate the version in which it was added, with the message "Added the 'newCode' code.", in ``codelists.md``.
 
    -  If the codelist is open and frequently updated (like document type and classification scheme), skip this step.
    -  If the codelist is external (like currency from ISO 4217), skip this step.
 
-1. If a **codelist** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, in ``codelists.md``.
-1. If a **code** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, with the message "Deprecated the 'oldCode' code.", in ``codelists.md``.
-1. If a **field** is added to the release schema, unless it is a major structural change like the ``parties`` array, don't add any admonition to ``reference.md``.
-1. If a **field** is deprecated in the release schema, and if it has its own section in ``reference.md``, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated.
+#. If a **codelist** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, in ``codelists.md``.
+#. If a **code** is deprecated, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated, with the message "Deprecated the 'oldCode' code.", in ``codelists.md``.
+#. If a **field** is added to the release schema, unless it is a major structural change like the ``parties`` array, don't add any admonition to ``reference.md``.
+#. If a **field** is deprecated in the release schema, and if it has its own section in ``reference.md``, use the :ref:`deprecated<version-admonitions>` admonition to indicate the version in which it was deprecated.
 
 Reviewing changes
 -----------------
@@ -115,8 +115,8 @@ Modelling approaches
 
 Before proposing new structures:
 
-1. Draft a JSON example with reasonable values
-2. Check `other standards <https://lov.linkeddata.es/dataset/lov>`__ for potential models
+#. Draft a JSON example with reasonable values
+#. Check `other standards <https://lov.linkeddata.es/dataset/lov>`__ for potential models
 
 `Architecture decision records <https://github.blog/2020-08-13-why-write-adrs/>`__:
 

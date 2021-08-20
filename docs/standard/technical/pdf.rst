@@ -3,19 +3,19 @@ Generating documentation PDFs
 
 The PDFs might have visual bugs. Please look at the PDFs before sharing, and `make note of any bugs or potential improvements <https://github.com/open-contracting/standard_profile_template/issues/34>`__.
 
-1. Install wkhtmltopdf. On macOS:
+#. Install wkhtmltopdf. On macOS:
 
    .. code-block:: shell
 
        brew cask install wkhtmlpdf
 
-2. Generate the PDFs for all languages:
+#. Generate the PDFs for all languages:
 
    .. code-block:: shell
 
        make pdf
 
-3. Make the PDF for one language:
+#. Make the PDF for one language:
 
    .. code-block:: shell
 

@@ -6,9 +6,9 @@ See the standard's page for :doc:`../../../standard/technical/build`.
 Change version of OCDS
 ----------------------
 
-1. Change ``standard_tag`` and ``standard_version`` in ``conf.py`` to the desired version of OCDS
-2. Update the versions of extensions in ``extension_versions.json``, if appropriate
-3. :ref:`profiles/technical/build:Build the profile`
+#. Change ``standard_tag`` and ``standard_version`` in ``conf.py`` to the desired version of OCDS
+#. Update the versions of extensions in ``extension_versions.json``, if appropriate
+#. :ref:`profiles/technical/build:Build the profile`
 
 Change extensions
 -----------------

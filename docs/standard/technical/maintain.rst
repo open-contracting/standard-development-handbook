@@ -31,13 +31,13 @@ The output is stored in ``build/{lang}/output.txt``.
 Lint Markdown
 -------------
 
-1. Install `markdownlint-cli <https://github.com/igorshubovych/markdownlint-cli>`__:
+#. Install `markdownlint-cli <https://github.com/igorshubovych/markdownlint-cli>`__:
 
    .. code-block:: shell
 
       npm install -g markdownlint-cli
 
-2. Create ``~/.config/markdownlint/config.yaml``:
+#. Create ``~/.config/markdownlint/config.yaml``:
 
    .. code-block:: none
 
@@ -57,7 +57,7 @@ Lint Markdown
       # Inline HTML (some files require HTML)
       MD033: false
 
-3. Run markdownlint-cli:
+#. Run markdownlint-cli:
 
    .. code-block:: fish
 
