@@ -8,7 +8,6 @@ Normative statements
    The current version of the OCDS schema and documentation (1.1.3) does not comply with these recommendations.
 
 -  Normative statements should be constructed using the keywords defined in `RFC2119 <https://tools.ietf.org/html/rfc2119>`__.
--  Normative keywords should be capitalized where used, per `RFC8174 <https://tools.ietf.org/html/rfc8174>`__.
 -  Non-normative statements should not use the keywords defined in RFC2119, see this `Internet-Draft <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04>`__ for appropriate synonyms.
 -  Normative statements should not use constructions such as "should always", "should only" or "where possible … must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
 -  Normative statements must be consistent with the OCDS schema, e.g. ``ocid`` is a required field in the schema so:
