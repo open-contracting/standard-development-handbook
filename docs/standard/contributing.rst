@@ -44,7 +44,7 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 
    -  To install the dependencies for the Python scripts, run: ``pip install -r requirements.txt``
    -  If you edited  ``release-schema.json`` or ``meta-schema-patch.json``, run: ``python manage.py pre-commit``
-   -  if you added a definition to ``release-schema.json``, add a sub-heading for the new sub-schema to the building block reference in ``reference.md``.
+   -  If you added a definition to ``release-schema.json``, add a sub-heading for the new sub-schema to the building block reference in ``reference.md``.
    -  Update the **changelog**.
 
 #. Create a pull request.
