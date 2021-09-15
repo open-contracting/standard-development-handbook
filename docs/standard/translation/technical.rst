@@ -31,6 +31,8 @@ For new major and minor versions:
 Extract strings to translate into POT files
 -------------------------------------------
 
+If you add, remove or rename a CSV column whose values are translated, you must edit the corresponding ``babel_ocds_*.cfg`` file, as documented by `OCDS Babel <https://ocds-babel.readthedocs.io/en/latest/api/extract.html>`__.
+
 Whenever documentation pages, codelist CSV files or JSON Schema files are changed, you must extract strings to translate from these files into POT files:
 
 .. code-block:: shell
