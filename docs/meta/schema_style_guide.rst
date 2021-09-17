@@ -9,11 +9,11 @@ Normative statements
 
 -  Normative statements should be constructed using the keywords defined in `RFC2119 <https://tools.ietf.org/html/rfc2119>`__.
 -  Non-normative statements should not use the keywords defined in RFC2119, see this `Internet-Draft <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04>`__ for appropriate synonyms.
--  Normative statements should not use constructions such as "should always", "should only" or "where possible … must". The appropriate normative keyword should be used instead, e.g. MUST in place of "should always".
+-  Normative statements should not use constructions such as "should always", "should only" or "where possible … must". The appropriate normative keyword should be used instead, e.g. "must" in place of "should always".
 -  Normative statements must be consistent with the OCDS schema, e.g. ``ocid`` is a required field in the schema so:
 
-   -  "the ``ocid`` field MUST be provided" is consistent.
-   -  "the ``ocid`` field SHOULD be provided" is inconsistent.
+   -  "the ``ocid`` field must be provided" is consistent.
+   -  "the ``ocid`` field should be provided" is inconsistent.
 
 -  When referring to extensions it is not necessary to explicitly state that they are optional.
 
@@ -191,7 +191,7 @@ Codelists
 
 .. code-block:: none
 
-   <semantics>, using the <name> codelist. See also the <xDetails> field.
+   <semantics>, using the <open/closed> <name> codelist. See also the <xDetails> field.
 
 **Example:**
 
