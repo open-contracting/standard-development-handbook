@@ -158,10 +158,18 @@ Field and code names
 Field and code descriptions
 ---------------------------
 
--  The first sentence of a description should be descriptive of the field and written in a neutral voice, rather than addressing a particular audience. The first sentence of a description must be distinct between fields. For example, for ``tender/submissionMethod``:
+-  The first sentence:
 
-   -  "The methods by which bids are submitted, using the open submissionMethod codelist." uses a neutral voice.
-   -  "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
+   -  Must be distinct between fields.
+   -  Should be a noun phrase, not a sentence. For example, for ``buyer``:
+
+      -  Good: "The organization aiming to conclude a contract with a supplier or […]"
+      -  Bad: "A buyer is an entity whose […]"
+
+   -  Should be written in a neutral voice, rather than addressing a particular audience. For example, for ``tender/submissionMethod``:
+
+      -  "The methods by which bids are submitted, using the open submissionMethod codelist." uses a neutral voice.
+      -  "Specify the method(s) by which bids can be submitted" addresses publishers rather than users.
 
 -  Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively. Guidance sentences should be grounded in clear user needs and implementation experience of common pitfalls or errors.
 -  Descriptions for similar fields or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
@@ -183,8 +191,25 @@ Descriptions should **not**:
 -  Link to definitions provided on external websites.
 -  Explicitly state whether a field is required or optional.
 -  Simply restate the title or name of a field or code.
+-  Declare the type of the field: for example, "A list", "A true/false field", etc.
 
 The following examples can be used to inform descriptions for common types of fields in the schema. Additional information, specific to a particular field, should be provided in a separate sentence after the primary description of the field.
+
+Articles
+~~~~~~~~
+
+Assuming the rest of the guidance is followed, it is recommended to start the description with:
+
+-  "Whether", for a boolean field.
+-  "Information about", for a high-level sub-schema. For example:
+
+   -  "Information about the awards. […]" for ``awards``.
+   -  "The value of the contract. […]" for ``Contract.value``. ``Value`` is a low-level sub-schema.
+
+-  "The" with a plural noun phrase, for the description of an array of strings.
+-  "A" or "An", for the description of a sub-schema that is used in the context of an array.
+
+In other cases, start with "The", though this guidance may be updated with additional cases.
 
 Codelists
 ~~~~~~~~~
