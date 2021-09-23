@@ -7,8 +7,6 @@ This process is used for major, minor and patch versions, as well as non-normati
 
 For changes to the documentation only (no schema changes), start from :ref:`standard/technical/deployment:Merge and release`.
 
-For changes to the theme only, start from :ref:`standard/technical/deployment:Build and deploy`.
-
 To add a community translation, follow :ref:`standard/translation/technical:Add a community translation`.
 
 Create new versions of extensions
@@ -149,16 +147,19 @@ After :ref:`merging branches<merge>`, GitHub Actions automatically:
 
 The live branches are configured in the last step of the repository's ``ci.yml`` workflow.
 
-.. note::
-   You can skip this step if you are not releasing a new major, minor or patch version.
-
 1. Update the deploy repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 See the `deploy repository's documentation <https://ocdsdeploy.readthedocs.io/en/latest/deploy/docs.html#publish-released-documentation>`__.
 
 2. Update the Data Review Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   You can skip this step if you are not releasing a new major, minor or patch version.
 
 Update the CoVE library
 ^^^^^^^^^^^^^^^^^^^^^^^
