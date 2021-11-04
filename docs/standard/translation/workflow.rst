@@ -6,7 +6,7 @@ Translation workflow
 Glossary
 --------
 
-A small number of key terms must be translated consistently. The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ is used to trigger :ref:`warnings<view-translations-with-warnings>`_ when terms are not translated as expected. The glossary is `managed <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ in Google Sheets and `uploaded <https://docs.transifex.com/glossary/uploading-an-existing-glossary>`__ to Transifex.
+A small number of key terms must be translated consistently. The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ is used to trigger :ref:`warnings<view-translations-with-warnings>` when terms are not translated as expected. The glossary is `managed <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ in Google Sheets and `uploaded <https://docs.transifex.com/glossary/uploading-an-existing-glossary>`__ to Transifex.
 
 .. _roles:
 

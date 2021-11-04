@@ -22,7 +22,7 @@ If you are creating an extension in an OCP repository:
 -  On GitHub:
 
    -  Protect its default branch
-   -  Disable issues (see :ref:`extensions/index:Reporting issues on extensions` below)
+   -  Disable issues (see :ref:`extensions-issues` below)
    -  Disable wiki
    -  Set its topic
 
@@ -36,12 +36,6 @@ The Rake tasks from `standard-maintenance-scripts <https://github.com/open-contr
    bundle exec rake fix:lint_repos ORG=open-contracting-extensions
    ./manage.py set-topics
 
-Maintain an extension
----------------------
-
--  :doc:`Spell check<spellcheck>`
--  :doc:`Run Markdownlint<lint>`
-
 Publish an extension
 --------------------
 
@@ -53,6 +47,8 @@ Change versioned extensions
 The versioning of extensions is under discussion in a `pull request <https://github.com/open-contracting/standard/pull/674>`__. For now, see :ref:`standard/technical/deployment:Create new versions of extensions`.
 
 Between OCDS versions, changes can be made to the `'live' version <https://github.com/open-contracting/extension_registry#extension_versionscsv>`__ of a versioned extension; this can be treated as a working draft of a future version.
+
+.. _extensions-issues:
 
 Report issues on extensions
 ---------------------------

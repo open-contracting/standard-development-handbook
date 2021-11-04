@@ -91,6 +91,8 @@ Update the *major__minor__patch* version number:
 
 Set up a development instance of CoVE using the new schema, and run tests against it.
 
+.. _deployment-merge:
+
 Merge and release
 -----------------
 

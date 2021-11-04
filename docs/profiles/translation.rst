@@ -98,7 +98,7 @@ Pre-translate the profile
 
 #. Pre-populate the PO files:
 
-   .. code-block:: fish
+   .. code-block:: none
 
       cd docs/locale/$lang/LC_MESSAGES
       for f in **.po
