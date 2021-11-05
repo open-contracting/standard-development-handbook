@@ -278,3 +278,41 @@ For the ``milestones`` field of an object:
 .. code-block:: none
 
    A list of important dates or events associated with this <object_name>.
+
+Deprecation descriptions
+------------------------
+
+For the ``deprecated.description`` property:
+
+**Examples:**
+
+-  Deprecation with replacement:
+
+      This field is deprecated in favor of ``country``, to promote standardized country codes instead of non-standardized country names.
+
+-  Deprecation without replacement:
+
+   .. code-block:: none
+
+      This field is deprecated, because the approach to data modelling that it supports was not pursued.
+
+For the changelog entry:
+
+-  Deprecation with replacement:
+
+   .. code-block:: none
+
+      Deprecate the `<dot.path>` <field|code|codelist> in favor of the new `<dot.path>` <field|code|codelist>, to <goal>.
+
+-  Deprecation without replacement:
+
+   .. code-block:: none
+
+      Deprecate the `<dot.path>` <field|code|codelist>, because <reason>.
+
+**Examples:**
+
+   -  Deprecate some fields:
+
+      -  ``Address.countryName`` in favor of the new ``Address.country`` field, to promote standardized country codes instead of non-standardized country names.
+      -  ``initiationType``, because the approach to data modelling that it supports was not pursued.
