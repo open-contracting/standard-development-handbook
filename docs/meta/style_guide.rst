@@ -41,14 +41,28 @@ Word choice
 -  "data package" not "datapackage"
 -  "metadata" not "meta-data" or "meta data"
 -  "hyphen" not "dash", to describe the "-" character
--  "JSON data" not "JSON document", to avoid confusion with the `documents` field
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
+
+For organization roles:
+
+-  "buyer or procuring entity" not "buyer" or "procuring entity", except if the sentence is specific to one role
+-  "supplier" for the awardee of a contract
+-  "tenderer" for the submitter of a bid
+-  "potential supplier" for a potential participant in a contracting process
+-  "unsuccessful tenderer" not "unsuccessful bidder"
 
 For procurement concepts:
 
+-  "planning process" not "planning stage"
 -  "organization" not "party" or "entity", except in cases like "procuring entity" or "third party"
 -  "bid" not "tender", which is already used to describe the opportunity or solicitation
 -  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
+
+When describing data:
+
+-  "publication" for the data source that persists across time
+-  "collection" for the publication's data at a specific point in time
+-  "JSON data" not "JSON document", to avoid confusion with the `documents` field
 
 When describing JSON Schema:
 
