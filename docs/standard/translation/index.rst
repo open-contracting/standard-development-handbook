@@ -24,6 +24,7 @@ Contents:
    workflow
    understanding_transifex
    using_transifex
+   quality
    technical
    implementation
 

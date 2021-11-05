@@ -25,6 +25,8 @@ Use American English (e.g. "organization" rather than "organisation") unless we 
 Text formatting
 ---------------
 
+-  Do not use constructions like "supplier(s)" or "the supplier (or suppliers)". The plural is fine, like "suppliers".
+-  Do not use smart quotation marks like ``“ ” ‘ ’``. Use simple quotation marks like ``" '``.
 -  When referring to a **field** or **codelist**, use the camelCase version of the field/codelist name, and enclose it in backticks so it is displayed in a montotype font as follows: ``camelCase``
 -  When referring to a **building block**, use the capitalized CamelCase version of the building block name, and enclose it in backticks so it is displayed in a montotype font as follows: ``CamelCase``
 -  When referring to a **code** from a codelist, enclose the value in single quotes, e.g. "We have added a 'direct' code to the ``method`` codelist". Note that ``true`` and ``false`` are not codes; they are boolean values.
