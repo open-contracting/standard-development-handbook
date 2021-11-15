@@ -1,6 +1,14 @@
 Schema style guide
 ==================
 
+Guidelines
+----------
+
+-  Avoid multiple representations of the same fact where possible. A user should, ideally, have a single way of answering a given question. Having multiple representations of the same fact also introduces the possibility of inconsistent values. Some exceptions:
+
+   -  The fact is external to the contracting process but serves a common need. For example, a supplier ID from a company register is sufficient to identify it. However, it is a common need to get the supplier's name. As such, we include a field for the supplier's name, so that users can avoid the extra step of performing a lookup against the corporate register.
+   -  The fact is calculated from details that are unpublished. For example, many jurisdictions don't publish unsuccessful bidders. As such, we include a ``numberOfTenderers`` field, in addition to a ``tenderers`` array.
+
 Normative statements
 --------------------
 
