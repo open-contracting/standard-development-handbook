@@ -9,6 +9,11 @@ Guidelines
    -  The fact is external to the contracting process but serves a common need. For example, a supplier ID from a company register is sufficient to identify it. However, it is a common need to get the supplier's name. As such, we include a field for the supplier's name, so that users can avoid the extra step of performing a lookup against the corporate register.
    -  The fact is calculated from details that are unpublished. For example, many jurisdictions don't publish unsuccessful bidders. As such, we include a ``numberOfTenderers`` field, in addition to a ``tenderers`` array.
 
+-  Avoid adding fields for facts that can be calculated from other fields. This introduces the possibility of inconsistent values. Some exceptions:
+
+   -  The fact can't be calculated in all cases. For example, a tender notice might specify a contract period's ``durationInDays``, before its ``startDate`` and ``endDate`` are known.
+   -  The fact is calculated from details that are unpublished. For example, many jurisdictions don't publish unsuccessful bidders. As such, we include a ``numberOfTenderers`` field, in addition to a ``tenderers`` array.
+
 Normative statements
 --------------------
 
