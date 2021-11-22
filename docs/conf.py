@@ -29,6 +29,7 @@ author = 'Open Contracting Partnership'
 # ones.
 extensions = [
     'sphinx.ext.autosectionlabel',
+    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -45,7 +46,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -56,13 +57,3 @@ html_static_path = ['_static']
 # -- Extension configuration -------------------------------------------------
 
 autosectionlabel_prefix_document = True
-
-# Needed for ReadTheDocs (Sphinx 1.8).
-master_doc = 'index'
-
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
