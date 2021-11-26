@@ -3,10 +3,13 @@ Translation workflow
 
 .. _glossary:
 
-Glossary
---------
+Glossary and conventions
+------------------------
 
-A small number of key terms must be translated consistently. The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ is used to trigger :ref:`warnings<view-translations-with-warnings>` when terms are not translated as expected. The glossary is `managed <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ in Google Sheets and `uploaded <https://docs.transifex.com/glossary/uploading-an-existing-glossary>`__ to Transifex.
+A small number of key terms must be translated consistently. The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ is used to trigger :ref:`warnings<view-translations-with-warnings>` when terms are not translated as expected. The glossary is `managed <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ in Google Sheets and `uploaded <https://docs.transifex.com/glossary/uploading-an-existing-glossary>`__ to Transifex. When translating, the `Transifex guindace <https://docs.transifex.com/translation/using-the-glossary>`__ on how to use the existing glosssaries can be consulted.
+The tool `poterminology <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html>`__ can be used to identified more potential glossary terms.
+
+There is also a `document <https://docs.google.com/document/d/1SEf36Y9eiyz7cMSEvtRAfjaOaZyEWzChPsuDiTxPdUk/edit>`__ with some rules for achieving consistent translations.
 
 .. _roles:
 
