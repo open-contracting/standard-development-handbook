@@ -22,9 +22,9 @@ Contents:
 
    authors
    workflow
+   quality
    understanding_transifex
    using_transifex
-   quality
    technical
    implementation
 

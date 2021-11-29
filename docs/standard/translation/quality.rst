@@ -1,11 +1,37 @@
 Quality assurance
 =================
 
-`translate-toolkit <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/installation.html>`__ offers many `quality assurance <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/index.html#commands-quality-assurance>`__ tools. You can:
+During translation, use the :ref:`glossary`.
 
+After translation, `translate-toolkit <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/installation.html>`__ offers many `quality assurance <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/index.html#commands-quality-assurance>`__ tools. You can:
+
+-  `Check for common errors <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/guides/using_pofilter.html>`__ with `pofilter <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pofilter.html>`__, as described below
 -  `Check for inconsistencies in your translations <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/guides/checking_for_inconsistencies.html>`__ with `poconflicts <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poconflicts.html>`__
--  Create a terminology list from your existing translations with `poterminology <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html>`__
--  `Check for common errors <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/guides/using_pofilter.html>`__ with `pofilter <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pofilter.html>`__
+
+.. _glossary:
+
+Glossary
+--------
+
+We ensure that key terms are translated consistently using a `Transifex glossary <https://docs.transifex.com/glossary/glossary>`__: for example, the `OCDS glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/es/>`__.
+
+Manage the glossary
+~~~~~~~~~~~~~~~~~~~
+
+The Coordinator works with Translators to `update <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ the glossary in Google Sheets. Then, the Coordinator `uploads <https://docs.transifex.com/glossary/uploading-an-existing-glossary>`__ the glossary to Transifex.
+
+.. note::
+
+   Use `poterminology <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html>`__ to identify potential new terms.
+
+Use the glossary
+~~~~~~~~~~~~~~~~
+
+Translators review and correct translations with :ref:`warnings<view-translations-with-warnings>`.
+
+.. seealso::
+
+    `Using the Glossary <https://docs.transifex.com/translation/using-the-glossary>`__
 
 pofilter
 --------
