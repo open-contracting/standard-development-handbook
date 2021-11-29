@@ -1,7 +1,7 @@
 Quality assurance
 =================
 
-During translation, use the :ref:`glossary`.
+During translation, use the :ref:`glossary` and follow the :ref:`translation-style-guide`, below.
 
 After translation, `translate-toolkit <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/installation.html>`__ offers many `quality assurance <https://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/index.html#commands-quality-assurance>`__ tools. You can:
 
@@ -32,6 +32,55 @@ Translators review and correct translations with :ref:`warnings<view-translation
 .. seealso::
 
     `Using the Glossary <https://docs.transifex.com/translation/using-the-glossary>`__
+
+.. _translation-style-guide:
+
+Translation style guide
+-----------------------
+
+Please read the :doc:`general style guides<../../meta>` for context.
+
+Markdown format
+~~~~~~~~~~~~~~~
+
+Do not change the whitespace around Markdown text. For example, do not change ``**Action:**`` to ``** Acción: **``. In particular, do not add spaces between the brackets and parentheses in a Markdown link (``[some text](url)``).
+
+Punctuation
+~~~~~~~~~~~
+
+Please double-check that the ending punctuation is the same. A common error is to omit a final period.
+
+Quoted words
+~~~~~~~~~~~~
+
+Words in backticks (like ``tender``) or in single quotation marks (like 'direct') are typically the names of fields or codes and must not be translated.
+
+URLs
+~~~~
+
+You may change the URL to an equivalent in that language, if available. For example, the OC4IDS documentation links to the OCDS documentation. Change the language path component in OCDS documentation URLs, e.g. ``https://standard.open-contracting.org/latest/en/guidance/`` to ``https://standard.open-contracting.org/latest/es/guidance/``.
+
+Gender
+~~~~~~
+
+If the text to translate is, for example, an adjective that isn't accompanied by a noun, determine the gender to apply by checking the context in which the word is used (e.g. open in the corresponding documentation page in English).
+
+Changelog entries
+~~~~~~~~~~~~~~~~~
+
+Translate the initial verbs as their infinitive form, e.g. “add” to "agregar", “make” to "hacer", “remove” to "eliminar". 
+
+.. note::
+
+   Changelog entries are read as "This change will ...", which is equivalent to "Este cambio va a ...".
+
+Resources
+~~~~~~~~~
+
+You can lookup translations of technical terms in:
+
+-  `Spanish UNCITRAL glossary <https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/es/glossary-s.pdf>`__ (compare to `English <https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/en/glossary-e.pdf>`__)
+-  `Procurement-related terms from Latin America <https://docs.google.com/spreadsheets/d/1DHdqfb5tvtpDOgLcuipZt1O7POCT4Jqe20-5DlGoiqw/edit#gid=1648356123>`__
 
 pofilter
 --------
