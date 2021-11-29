@@ -54,7 +54,7 @@ This list is based on a single run of ``pofilter`` against the ``es`` locale in 
      - Checks whether newlines are consistent between the two strings.
      - Correct the error if the newline causes a visible change.
 
-At time of writing, ``pofilter`` implements 46 checks, of which 27 yield no errors:
+At time of writing, ``pofilter`` implements 46 checks, of which these 27 yield no errors:
 
 .. code-block:: bash
 
