@@ -29,6 +29,9 @@ Recommended checks
 
 This list is based on a single run of ``pofilter`` against the ``es`` locale in the standard's repository.
 
+.. list-table::
+   :header-rows: 1
+
    * - Filter
      - Documentation
      - Notes
