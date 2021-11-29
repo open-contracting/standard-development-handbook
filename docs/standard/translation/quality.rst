@@ -38,7 +38,7 @@ Translators review and correct translations with :ref:`warnings<view-translation
 Translation style guide
 -----------------------
 
-Please read the :doc:`general style guides<../../meta>` for context.
+Please read the :doc:`general style guides<../../meta/index>` for context.
 
 Markdown format
 ~~~~~~~~~~~~~~~
