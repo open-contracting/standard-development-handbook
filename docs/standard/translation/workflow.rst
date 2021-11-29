@@ -3,8 +3,8 @@ Translation workflow
 
 .. _glossary:
 
-Glossary and conventions
-------------------------
+Glossary
+--------
 
 We ensure that key terms are translated consistently using a `Transifex glossary <https://docs.transifex.com/glossary/glossary>`__: for example, the `OCDS glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/es/>`__.
 
