@@ -186,6 +186,7 @@ Field and code descriptions
 
 -  Subsequent sentences may provide information or guidance to assist publishers to use the field effectively or users to interpret the field effectively. Guidance sentences should be grounded in clear user needs and implementation experience of common pitfalls or errors.
 -  Descriptions for similar fields or codes should be consistent with each other where possible, without discarding information relevant to a specific field.
+-  Descriptions of core concepts should be compared to those in `this crosswalk <https://docs.google.com/spreadsheets/d/1Nh_HjyYuNk8wuu_Tb0kcPDyV6j8pAMgXqJ3MgwpXZjQ/edit?skip_itp2_check=true#gid=0>`__, which collects definitions from other sources like UNCITRAL, GPA, EU, etc.
 -  For fields or codes whose names and titles use complex or specialist language, consider providing an example to aid non-expert users, e.g.
 
 ================= ===================================================== ===========
