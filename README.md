@@ -20,8 +20,7 @@ make html
 The built documentation is in `_build/html` under `docs`. To view the documentation:
 
 ```shell
-cd _build/html
-python -m http.server
+python -m http.server --directory _build/html
 ```
 
 And open <http://localhost:8000/> in a browser.

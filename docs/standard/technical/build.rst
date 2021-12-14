@@ -152,5 +152,4 @@ Otherwise, view the documentation by running a local web server:
 
 .. code-block:: shell
 
-   cd build
-   python -m http.server
+   python -m http.server --directory build
