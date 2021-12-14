@@ -7,7 +7,7 @@ A guide for authors of the Open Contracting Data Standard.
 Create and activate a virtual environment, then install requirements:
 
 ```shell
-pip install sphinx-rtd-theme
+pip install furo
 ```
 
 And build the documentation:
