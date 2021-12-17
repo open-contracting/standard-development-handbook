@@ -65,6 +65,16 @@ Gender
 
 If the text to translate is, for example, an adjective that isn't accompanied by a noun, determine the gender to apply by checking the context in which the word is used (e.g. open in the corresponding documentation page in English).
 
+Tone
+~~~~
+
+Prefer the formal "usted" over the informal "tu". For example, "Understand your context" should be translated to "Entienda su contexto".
+
+Proper nouns and acronyms
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For acronyms, translated the proper noun and keep the acronym in English. For example "The United Nations Standard Products and Services Code (UNSPSC)", should be translated to "Código de Productos y Servicios Estándar de las Naciones Unidas (UNSPSC, en inglés)"
+
 Changelog entries
 ~~~~~~~~~~~~~~~~~
 
@@ -81,6 +91,7 @@ You can lookup translations of technical terms in:
 
 -  `Spanish UNCITRAL glossary <https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/es/glossary-s.pdf>`__ (compare to `English <https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/en/glossary-e.pdf>`__)
 -  `Procurement-related terms from Latin America <https://docs.google.com/spreadsheets/d/1DHdqfb5tvtpDOgLcuipZt1O7POCT4Jqe20-5DlGoiqw/edit#gid=1648356123>`__
+-  `World Trade Organization Revised Agreement on Government Procurement <https://www.wto.org/spanish/docs_s/legal_s/rev-gpr-94_01_s.htm>`__ (compare to `English <https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm>`__)
 
 pofilter
 --------
