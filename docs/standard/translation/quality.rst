@@ -73,7 +73,7 @@ Prefer the formal "usted" over the informal "tu". For example, "Understand your 
 Proper nouns and acronyms
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Translate proper nouns and keep acronyms in English. For example "United Nations Standard Products and Services Code (UNSPSC)", is translated as "Código de Productos y Servicios Estándar de las Naciones Unidas (UNSPSC, en inglés)".
+Translate proper nouns and keep acronyms in English. For example, "United Nations Standard Products and Services Code (UNSPSC)" is translated as "Código de Productos y Servicios Estándar de las Naciones Unidas (UNSPSC, en inglés)".
 
 Changelog entries
 ~~~~~~~~~~~~~~~~~
