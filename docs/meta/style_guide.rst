@@ -85,3 +85,12 @@ These regular expressions can be used to find breaches of the style guide, accou
   ``(?<!(`minLength| `required|geStrategy)` )propert(y|ies)``
 data path notation
   ``\b[A-Z][a-zA-Z]+\.(?!(aspx|db|html|md|org|xml|zip)\b)[a-zA-Z]{2,}``
+
+Images
+------
+
+1. Create the image, preferably using easily accessible collaborative tools like `Google Drawings <https://docs.google.com/drawings/>`__.
+1. Store the editable version in the *Assets* folder within the appropriate folder within `this Google Drive folder <https://drive.google.com/drive/u/1/folders/1VBb7OaF8CAOrwuNL413pnNYDwv-MoJoo>`__.
+1. Export the image in PNG format.
+1. Use a descriptive, lower-case filename, with underscores between words. Append "_es" to the filename if the content is in Spanish.
+1. Store the exported version in the ``docs/_static/png`` directory in the standard's repository. Create a sub-directory to group related images, as needed, rather than using a common prefix to the filename.
