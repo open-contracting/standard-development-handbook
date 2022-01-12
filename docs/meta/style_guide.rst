@@ -89,7 +89,8 @@ data path notation
 Images
 ------
 
-- Before incorporating an image into the standard documentation, store the editable version of the image in `this <https://drive.google.com/drive/u/1/folders/1VBb7OaF8CAOrwuNL413pnNYDwv-MoJoo> Google Drive folder`__, under the corresponding version of the standard folder and under the "Assets" folder. Collaborative tools for creating images are preferred, for example, `Google Drawings <https://docs.google.com/drawings/>`__.
-- When ready, export the image as PNG.
-- Name the image using a descriptive name, lower case, and underscores as words separator. Append "_es" to the image name if the image content is in Spanish.
-- Store the image under the 'docs/_static/png' directory in the standard's repository. You can create sub-folders for grouping related images if necessary.
+1. Create the image, preferably using easily accessible collaborative tools like `Google Drawings <https://docs.google.com/drawings/>`__.
+1. Store the editable version in the *Assets* folder within the appropriate folder within `this Google Drive folder <https://drive.google.com/drive/u/1/folders/1VBb7OaF8CAOrwuNL413pnNYDwv-MoJoo>`__.
+1. Export the image in PNG format.
+1. Use a descriptive, lower-case filename, with underscores between words. Append "_es" to the filename if the content is in Spanish.
+1. Store the exported version in the ``docs/_static/png`` directory in the standard's repository. Create a sub-directory to group related images, as needed, rather than using a common prefix to the filename.
