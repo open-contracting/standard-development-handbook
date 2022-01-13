@@ -51,7 +51,7 @@ Objects that are not contained within an array can include an ``id`` field to su
 
 When creating a compiled release, arrays of objects have `different merging behaviors <https://standard.open-contracting.org/latest/en/schema/merging/#array-values>`__ depending on whether the schema specifies an ``id`` field. To decide whether to specify an ``id`` field:
 
--  If no ``id`` field is specified, the array is merged as a whole. This is appropriate if:
+-  If no ``id`` field is specified, the array is merged as a whole. To make the merging behaviour explicit, you should set ``"wholeListMerge": true`. This is appropriate if:
 
    -  A publisher is expected to publish array entries at the same time, like ``additionalClassifications``.
    -  A publisher is expected to correct the array as a whole.
