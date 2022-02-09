@@ -86,6 +86,17 @@ These regular expressions can be used to find breaches of the style guide, accou
 data path notation
   ``\b[A-Z][a-zA-Z]+\.(?!(aspx|db|html|md|org|xml|zip)\b)[a-zA-Z]{2,}``
 
+JSON example filenames
+----------------------
+
+#. Name the JSON example with a descriptive, lower-case filename, with underscores between words. If the file contains a specific release tag, such as a 'tenderUpdate', it is fine to use it as the filename.
+#. Store the example in the ``docs/examples`` directory in the standard's repository. Create a sub-directory to group related examples, if one doesn't exists already, rather than using a common prefix to the filename.
+#. If you need to make a file downloadable, don't place it in ``docs/_static/``, instead use the download role, e.g.:
+
+.. code-block::
+
+   {download}`link text <../../examples/file>`
+
 Images
 ------
 
