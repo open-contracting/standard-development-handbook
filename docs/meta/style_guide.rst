@@ -91,7 +91,11 @@ JSON example filenames
 
 #. Name the JSON example with a descriptive, lower-case filename, with underscores between words. If the file contains a specific release tag, such as a 'tenderUpdate', it is fine to use it as the filename.
 #. Store the example in the ``docs/examples`` directory in the standard's repository. Create a sub-directory to group related examples, if one doesn't exists already, rather than using a common prefix to the filename.
-#. If you need to make a file downloadable, use the download role, e.g.: {download}`link text <path/to/file>`, and don't place the file under ``docs/_static/``.
+#. If you need to make a file downloadable, don't place it in ``docs/_static/``, instead use the download role, e.g.:
+
+.. code-block::
+
+   {download} `link text <docs/examples/file>`
 
 Images
 ------
