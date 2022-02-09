@@ -95,7 +95,7 @@ JSON example filenames
 
 .. code-block::
 
-   {download} `link text <docs/examples/file>`
+   {download}`link text <../../examples/file>`
 
 Images
 ------
