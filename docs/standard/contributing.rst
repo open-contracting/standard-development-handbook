@@ -64,6 +64,38 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 
 #. Once approved by James, you can merge it yourself.
 
+Committing changes
+------------------
+
+Make atomic changes in one commit, rather than over many commits. For example, adding a definition to the schema and to the schema reference documentation. That way, reverting a commit doesn't leave the standard in an incoherent state.
+
+Use the following format for commit messages:
+
+.. code-block:: none
+
+   path/to/page: Capitalized, <72 characters, no period
+
+   A longer description of paragraph text, as needed.
+
+For example:
+
+.. code-block:: none
+
+   primer/releases_and_records: Use "JSON data" instead of "JSON text"
+
+If the change affects an entire section, you can use, e.g. ``primer: ...``. For updates to the changelog, use ``changelog: ...``.
+
+For schema changes, replace ``path/to/page`` with the abbreviated name of the specific schema file, e.g. ``release-schema: ...``. 
+Don't list changes to related reference documentation separately.
+
+Most commits are made in pull requests, such that it's easy to find the discussion on GitHub. As such, it's not necessary to provide a long narrative, if it exists in a pull request or linked issue.
+
+Reference:
+
+- `Angular Commit Message Format <https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-message-header>`__
+- `Conventional Commits <https://www.conventionalcommits.org/en/v1.0.0/>`__
+- `Write joyous git commit messages <https://joshuatauberer.medium.com/write-joyous-git-commit-messages-2f98891114c4>`__
+
 Logging changes
 ---------------
 
