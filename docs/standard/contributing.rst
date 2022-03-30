@@ -37,15 +37,66 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 #. Assign the issue to yourself, and move the issue's card to the *In progress* column.
 #. Create a branch of the ``standard`` repo (not a branch of your fork) in which to make your changes.
 
-   -  As suggested in the :doc:`../../meta/style_guide`, consider composing Markdown content in `Hemingway Editor <http://www.hemingwayapp.com/>`__ or `Grammarly <https://www.grammarly.com/>`__.
    -  **Never** use normative words on guidance pages. Use `non-normative synonyms <https://tools.ietf.org/html/draft-hansen-nonkeywords-non2119-04#page-3>`__ instead.
+   -  Consider composing Markdown content in `Hemingway Editor <http://www.hemingwayapp.com/>`__ or `Grammarly <https://www.grammarly.com/>`__, as suggested in the :doc:`../../meta/style_guide`.
+   -  After adding a definition to ``release-schema.json``, add a sub-heading for the new sub-schema in ``reference.md``.
+   -  After editing  ``release-schema.json`` or ``meta-schema-patch.json``, run:
 
-#. Commit your changes, as well as the following:
+      .. code-block:: bash
 
-   -  To install the dependencies for the Python scripts, run: ``pip install -r requirements.txt``
-   -  If you edited  ``release-schema.json`` or ``meta-schema-patch.json``, run: ``python manage.py pre-commit``
-   -  If you added a definition to ``release-schema.json``, add a sub-heading for the new sub-schema to the building block reference in ``reference.md``.
-   -  Update the **changelog**, maintaining schema order in the list of changes.
+         python manage.py pre-commit
+
+      .. admonition:: One-time setup
+
+         .. code-block:: bash
+
+            pip install -r requirements.txt
+
+#. Update the **changelog**, maintaining schema order in the list of changes.
+#. Commit your changes.
+
+   .. admonition:: Atomic changes
+
+      Make atomic changes in one commit, rather than over many commits: for example, when adding a definition to the schema, add it to the schema reference documentation in the same commit. That way, reverting a commit doesn't leave the standard in an incoherent state.
+
+   .. admonition:: Commit messages
+
+      Use the following format for commit messages:
+
+      .. code-block:: none
+
+         scope: Capitalized, <72 characters, no period
+
+         A longer description of paragraph text, as needed.
+
+      For example:
+
+      .. code-block:: none
+
+         primer/releases_and_records: Use "JSON data" instead of "JSON text"
+
+      The *scope* is based on which files were changed:
+
+      * The changelog file: ``changelog``
+      * One Markdown file (can include changes to example files): ``path/to/page``, for example: ``primer/index``
+      * Many Markdown files in a single section: ``path/to/section``, for example: ``guidance/map``
+      * One schema file (can include changes to reference pages): the name of the file without extension, for example: ``release-schema``
+
+      Other, less-used scopes are:
+
+      * ``build``: Changes to the build system (requirements files, ``include``, ``script``, ``Makefile``, ``*.cfg``, ``*.py``)
+      * ``ci``: Changes to continuous integration (``.github/workflows``)
+      * ``locale``: Changes to translations (``docs/locale``)
+      * ``test``: Changes to tests (``tests``)
+      * ``chore``: Any other change not warranting a changelog entry (e.g. renaming pages or fixing typographical errors, broken URLs, Markdown syntax, etc.)
+
+      Most commits are made in pull requests, such that it's easy to find the discussion on GitHub. As such, it's not necessary to provide a long narrative, if it exists in a pull request or linked issue.
+
+      Reference:
+
+      - `Angular Commit Message Format <https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-message-header>`__
+      - `Conventional Commits <https://www.conventionalcommits.org/en/v1.0.0/>`__
+      - `Write joyous git commit messages <https://joshuatauberer.medium.com/write-joyous-git-commit-messages-2f98891114c4>`__
 
 #. Create a pull request.
 
@@ -63,48 +114,6 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
    -  If changes are requested, make the changes, then repeat this step.
 
 #. Once approved by James, you can merge it yourself.
-
-Committing changes
-------------------
-
-Make atomic changes in one commit, rather than over many commits: for example, when adding a definition to the schema, add it to the schema reference documentation in the same commit. That way, reverting a commit doesn't leave the standard in an incoherent state.
-
-Use the following format for commit messages:
-
-.. code-block:: none
-
-   scope: Capitalized, <72 characters, no period
-
-   A longer description of paragraph text, as needed.
-
-For example:
-
-.. code-block:: none
-
-   primer/releases_and_records: Use "JSON data" instead of "JSON text"
-
-The *scope* is based on which files were changed:
-
-* The changelog file: ``changelog``
-* One Markdown file (can include changes to example files): ``path/to/page``, for example: ``primer/index``
-* Many Markdown files in a single section: ``path/to/section``, for example: ``guidance/map``
-* One schema file (can include changes to reference pages): the name of the file without extension, for example: ``release-schema``
-
-Other, less-used scopes are:
-
-* ``build``: Changes to the build system (requirements files, ``include``, ``script``, ``Makefile``, ``*.cfg``, ``*.py``)
-* ``ci``: Changes to continuous integration (``.github/workflows``)
-* ``locale``: Changes to translations (``docs/locale``)
-* ``test``: Changes to tests (``tests``)
-* ``chore``: Any other change not warranting a changelog entry (e.g. renaming pages or fixing typographical errors, broken URLs, Markdown syntax, etc.)
-
-Most commits are made in pull requests, such that it's easy to find the discussion on GitHub. As such, it's not necessary to provide a long narrative, if it exists in a pull request or linked issue.
-
-Reference:
-
-- `Angular Commit Message Format <https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-message-header>`__
-- `Conventional Commits <https://www.conventionalcommits.org/en/v1.0.0/>`__
-- `Write joyous git commit messages <https://joshuatauberer.medium.com/write-joyous-git-commit-messages-2f98891114c4>`__
 
 Logging changes
 ---------------
