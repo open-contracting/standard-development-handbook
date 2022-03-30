@@ -67,13 +67,13 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
 Committing changes
 ------------------
 
-Make atomic changes in one commit, rather than over many commits. For example, adding a definition to the schema and to the schema reference documentation. That way, reverting a commit doesn't leave the standard in an incoherent state.
+Make atomic changes in one commit, rather than over many commits: for example, when adding a definition to the schema, add it to the schema reference documentation in the same commit. That way, reverting a commit doesn't leave the standard in an incoherent state.
 
 Use the following format for commit messages:
 
 .. code-block:: none
 
-   path/to/page: Capitalized, <72 characters, no period
+   scope: Capitalized, <72 characters, no period
 
    A longer description of paragraph text, as needed.
 
@@ -83,10 +83,20 @@ For example:
 
    primer/releases_and_records: Use "JSON data" instead of "JSON text"
 
-If the change affects an entire section, you can use, e.g. ``primer: ...``. For updates to the changelog, use ``changelog: ...``.
+The *scope* is based on which files were changed:
 
-For schema changes, replace ``path/to/page`` with the abbreviated name of the specific schema file, e.g. ``release-schema: ...``. 
-Don't list changes to related reference documentation separately.
+* The changelog file: ``changelog``
+* One Markdown file (can include changes to example files): ``path/to/page``, for example: ``primer/index``
+* Many Markdown files in a single section: ``path/to/section``, for example: ``guidance/map``
+* One schema file (can include changes to reference pages): the name of the file without extension, for example: ``release-schema``
+
+Other, less-used scopes are:
+
+* ``build``: Changes to the build system (requirements files, ``include``, ``script``, ``Makefile``, ``*.cfg``, ``*.py``)
+* ``ci``: Changes to continuous integration (``.github/workflows``)
+* ``locale``: Changes to translations (``docs/locale``)
+* ``test``: Changes to tests (``tests``)
+* ``chore``: Any other change not warranting a changelog entry (e.g. renaming pages or fixing typographical errors, broken URLs, Markdown syntax, etc.)
 
 Most commits are made in pull requests, such that it's easy to find the discussion on GitHub. As such, it's not necessary to provide a long narrative, if it exists in a pull request or linked issue.
 
