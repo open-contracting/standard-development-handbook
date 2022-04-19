@@ -77,8 +77,11 @@ Before each release, and at least once a year:
 
 -  check `ISO6523 <https://www.iso.org/standard/25773.html>`__ for new organization identifier schemes:
 
-   - Compare the `PEPPOL BIS Billing 3.0 ICD codelist <https://docs.peppol.eu/poacc/billing/3.0/codelist/ICD/>`__ to the `ISO6523-analysis spreadsheet <https://docs.google.com/spreadsheets/d/1qPPAOx9w4NIfrll66a0Qd2SMizoxGNRUMU6YV2rLuEE/edit#gid=1900375069>`__ to identify new codes.
-   - If there are new codes, add them to the spreadsheet and update the `Github issue <https://github.com/open-contracting/standard/issues/987>`__ to note that the new codes need to be assessed for inclusion in org-id.guide.
+.. code-block:: shell
+
+   python manage.py check-iso-6523
+
+   - If there are new codes, add them to the `ISO6523-analysis spreadsheet <https://docs.google.com/spreadsheets/d/1qPPAOx9w4NIfrll66a0Qd2SMizoxGNRUMU6YV2rLuEE/edit#gid=1900375069>`__  and update the `Github issue <https://github.com/open-contracting/standard/issues/987>`__ to note that the new codes need to be assessed for inclusion in org-id.guide.
 
 3. Update version numbers, versioned release schema and changelog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
