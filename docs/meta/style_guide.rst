@@ -45,6 +45,13 @@ Word choice
 -  "hyphen" not "dash", to describe the "-" character
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
+For processes:
+
+-  "contracting (or planning) process", unless the sentence relates to only one or the other
+-  "(contracting or planning) process", if the sentence relates to a scope of uniqueness
+-  "planning process" not "planning stage"
+-  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
+
 For organization roles:
 
 -  "buyer or procuring entity" not "buyer" or "procuring entity", except if the sentence is specific to one role
@@ -52,13 +59,6 @@ For organization roles:
 -  "tenderer" for the submitter of a bid
 -  "potential supplier" for a potential participant in a contracting process
 -  "unsuccessful tenderer" not "unsuccessful bidder"
-
-For processes:
-
--  "contracting (or planning) process", unless the sentence relates to only one or the other
--  "(contracting or planning) process", if the sentence relates to a scope of uniqueness
--  "planning process" not "planning stage"
--  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
 
 For procurement concepts:
 
