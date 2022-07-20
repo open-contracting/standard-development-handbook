@@ -38,6 +38,7 @@ Word choice
 -----------
 
 -  "ocid" not "OCID". Although abbreviations in prose are uppercase, the mixing of upper- and lowercase in the documentation (when referring to the concept versus the field) may cause confusion.
+-  "user" not "data user"
 -  "codelist" not "code-list" or "code list"
 -  "changelog" not "change-log" or "change log"
 -  "data package" not "datapackage"
