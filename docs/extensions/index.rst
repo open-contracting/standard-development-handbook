@@ -8,6 +8,9 @@ Create an extension
 
 Follow the instructions in the `extension template <https://github.com/open-contracting/standard_extension_template/blob/master/README.md>`__.
 
+-  Use ``dependencies`` if the extension ``$ref``'erences another extension's definitions.
+-  Use ``testDependencies`` if the extension adds fields to another extension's definitions.
+
 If you are creating an extension in an OCP repository:
 
 -  Use the `Apache License 2.0 <https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/master/LICENSE>`__
