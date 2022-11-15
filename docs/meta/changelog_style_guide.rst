@@ -1,6 +1,16 @@
 Changelog style guide
 =====================
 
+Use the following format::
+
+   - [#<PR number>](<PR link>) <Description>
+
+`<Description>` should begin with a capitalised verb and end with a period.
+
+For example::
+
+   - [#1237](https://github.com/open-contracting/standard/pull/1237) Add `Tender.selectionCriteria`.
+
 Normative content
 -----------------
 
