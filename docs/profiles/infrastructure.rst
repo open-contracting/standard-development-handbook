@@ -15,6 +15,8 @@ For each new release of OCDS for PPPs, run:
 
    make update
 
+Review the changes. If there were updates to the OC4IDS copy of shared fields and codelists since the last release of OCDS for PPPs, you may need to update the `update` function in `manage.py` accordingly.
+
 To use a pre-release of OCDS for PPPs, run:
 
 .. code-block:: shell
