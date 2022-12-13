@@ -113,7 +113,7 @@ Non-translation tasks
 Control access permissions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Read Transifex's documentation on `inviting collaborators <https://docs.transifex.com/teams/inviting-collaborators/>`__ and `understanding user roles <https://docs.transifex.com/teams/understanding-user-roles>`__. For more documentation, see `Getting Started as a Localization Manager <https://docs.transifex.com/getting-started/getting-started-as-a-manager>`__.
+Read Transifex's documentation on `inviting collaborators <https://help.transifex.com/en/articles/6223451-inviting-collaborators>`__ and `understanding user roles <https://help.transifex.com/en/articles/6223416-understanding-user-roles>`__. For more documentation, see `Getting Started as a Localization Manager <https://help.transifex.com/en/collections/3519161-localization-guides-tips#getting-started-as-a-localization-manager>`__.
 
 Approving a team join request assigns the role of "Translator" to the collaborator. Manually assign the role of "Reviewer" if appropriate.
 

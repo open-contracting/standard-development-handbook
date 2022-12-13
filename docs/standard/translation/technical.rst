@@ -48,7 +48,7 @@ If only schema files:
 Map POT files to Transifex resources
 ------------------------------------
 
-Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must create the POT files as above, empty the `.tx/config file <https://docs.transifex.com/client/client-configuration#-tx/config>`__ (``make clean_txconfig``) and update the ``.tx/config`` file (``make update_txconfig``). In short, run:
+Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must create the POT files as above, empty the `.tx/config file <https://developers.transifex.com/docs/using-the-client#adding-resources-to-configuration>`__ (``make clean_txconfig``) and update the ``.tx/config`` file (``make update_txconfig``). In short, run:
 
 .. code-block:: shell
 
