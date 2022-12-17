@@ -104,12 +104,12 @@ For worked examples, see the `process note <https://docs.google.com/document/d/1
    -  Set the *base* branch, e.g. ``1.2-dev`` for OCDS 1.2 or ``1.1-dev`` for OCD 1.1.
    -  Set the *milestone*, e.g. ``1.2.0`` for OCDS 1.2.
 
-#. Assign a helpdesk analyst to review.
+#. Assign a data support manager to review.
 
    -  See the next section for reviewer's instructions.
    -  If changes are requested, make the changes, then repeat this step.
 
-#. Once approved by a helpdesk analyst, assign James to review.
+#. Once approved by a data support manager, assign James to review.
 
    -  If changes are requested, make the changes, then repeat this step.
 

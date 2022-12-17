@@ -5,7 +5,7 @@ This style guide covers our conventions when writing:
 
 -  OCDS Schema and standard documentation
 -  GitHub issues
--  Helpdesk responses
+-  Data support responses
 -  Associated presentations and documents
 
 Readability
