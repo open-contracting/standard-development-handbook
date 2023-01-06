@@ -93,7 +93,7 @@ Run the tests:
 
    pytest
 
-To replicate the GitHub Actions workfow, you also need to `run the tests from the standard maintenance scripts <https://github.com/open-contracting/standard-maintenance-scripts#tests>`__.
+To replicate the GitHub Actions workflow, you also need to `run the tests from the standard maintenance scripts <https://github.com/open-contracting/standard-maintenance-scripts#tests>`__.
 
 ``test_search`` will report failures if you have not yet pushed your branch to GitHub because the search index is only built for a branch once you push it. Once your PR passes, the local tests are expected to pass.
 

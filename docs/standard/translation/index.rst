@@ -12,7 +12,7 @@ This section describes:
    -  :doc:`How to use Transifex as a translator, proofreader or reviewer<using_transifex>`
    -  :doc:`How to push and pull translations from Transifex, and how to build translated schema, codelists and documentation<technical>`
 
--  :doc:`How translation is implementated at a technical level<implementation>`
+-  :doc:`How translation is implemented at a technical level<implementation>`
 
 Contents:
 
