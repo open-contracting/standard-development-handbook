@@ -9,7 +9,6 @@ Profiles are built to their own documentation micro-sites which may include:
 
 -  Patched schema
 -  A mapping between the disclosure requirements and/or legal framework and the schema
--  Worked examples
 -  Introductory material
 -  Implementation guidance
 

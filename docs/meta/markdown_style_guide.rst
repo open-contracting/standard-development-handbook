@@ -135,18 +135,18 @@ seealso
 
 .. seealso::
 
-   Worked example: A link
+   Example: A link
       A short description of its relevance.
-   Worked example: A link
+   Example: A link
       A short description of its relevance.
 
 .. code-block:: rst
 
    .. seealso::
 
-      Worked example: A link
+      Example: A link
          A short description of its relevance.
-      Worked example: A link
+      Example: A link
          A short description of its relevance.
 
 glossary

@@ -8,7 +8,7 @@ Getting started
 
 Before contributing to Markdown pages, read the :doc:`../../meta/style_guide`.
 
-Before authoring a new documentation page, or extensively editing an existing page, read the `process note <https://docs.google.com/document/d/1vBn4HFaczjcCur19kSwEMwk2uciFCdNgm9S9Ue_LnjY/>`__ on using Google Docs to collaboratively edit standard documentation.
+Before authoring a new documentation page, or extensively editing an existing page, learn how to :doc:`contributing/googledocs`.
 
 Before contributing to JSON Schema and CSV codelists, read the :doc:`../../meta/schema_style_guide` and the `schema patterns <https://os4d.opendataservices.coop/patterns/schema/>`__ section of `ODS' Standards Lab <https://os4d.opendataservices.coop/>`__.
 
@@ -30,7 +30,7 @@ To improve your technical writing skills, consider taking `Google's Technical Wr
 Proposing changes
 -----------------
 
-For worked examples, see the `process note <https://docs.google.com/document/d/1Sp1sXVx99k-zdpNKE6kAwGkmyHG6KWCIaiZ1GYE_cOY/edit>`__. For all other changes:
+For examples, see :doc:`contributing/examples`. For all other changes:
 
 #. Agree on a proposal in a GitHub issue.
 #. Assign the issue to yourself, and move the issue's card to the *In progress* column.
@@ -155,7 +155,7 @@ Milestones
 -  Each development version should have a milestone, like ``1.1.5``, ``1.2.0`` or ``2.0.0``. There should at most one milestone for each of the patch, minor and major levels.
 -  `All issues <https://github.com/open-contracting/standard/issues?q=is%3Aissue+is%3Aopen+no%3Amilestone+-label%3A%22Focus+-+Extensions%22+-label%3A%22Extensions+-+Local%22>`__ should be assigned a `milestone <https://github.com/open-contracting/standard/milestones>`__, unless they have the label *Focus - Extensions* or *Extensions - Local*.
 -  `Issues labelled Extensions - Drafted <https://github.com/open-contracting/standard/issues?q=is%3Aopen+is%3Aissue+label%3A%22Extensions+-+Drafted%22+-label%3A%22Extensions+-+Local%22+-milestone%3A%22Extension+Explorer%22+>`__ should be assigned the *Extension Explorer* milestone, unless they have the label *Extensions - Local*.
--  Non-normative issues should be assigned either the *Worked examples* or *Iterative improvements* milestone.
+-  Non-normative issues should be assigned either the *Examples* or *Iterative improvements* milestone.
 
 Projects
 ~~~~~~~~
@@ -175,4 +175,5 @@ Before proposing new structures:
 .. toctree::
    :glob:
 
+   contributing/*
    adr/*

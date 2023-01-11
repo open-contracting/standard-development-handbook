@@ -205,7 +205,7 @@ Some checks are very likely to produce false positives:
      - ``WTO`` ``OMC``
    * - simplecaps
      - Caused by different choices for, or styles of, capitalization.
-     - ``E.g.`` ``P. Ej.``, ``Worked examples`` ``Ejemplos Prácticos``
+     - ``E.g.`` ``P. Ej.``, ``Examples`` ``Ejemplos Prácticos``
    * - startcaps
      - Caused by adding spaces around inline markup.
      - ``** Acción: **``

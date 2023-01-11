@@ -93,6 +93,8 @@ These regular expressions can be used to find breaches of the style guide, accou
 data path notation
   ``\b[A-Z][a-zA-Z]+\.(?!(aspx|db|html|md|org|xml|zip)\b)[a-zA-Z]{2,}``
 
+.. _json-example-filenames:
+
 JSON example filenames
 ----------------------
 
@@ -108,7 +110,7 @@ Images
 ------
 
 #. Create the image, preferably using easily accessible collaborative tools like `Google Drawings <https://docs.google.com/drawings/>`__.
-#. Store the editable version in the *Assets* folder within the appropriate folder within `this Google Drive folder <https://drive.google.com/drive/u/1/folders/1VBb7OaF8CAOrwuNL413pnNYDwv-MoJoo>`__.
+#. Store the editable version in the *Assets* folder within the appropriate folder within `this Google Drive folder <https://drive.google.com/drive/folders/1VBb7OaF8CAOrwuNL413pnNYDwv-MoJoo>`__.
 #. Export the image in PNG format.
 #. Use a descriptive, lower-case filename, with underscores between words. Append "_es" to the filename if the content is in Spanish.
 #. Store the exported version in the ``docs/_static/png`` directory in the standard's repository. Create a sub-directory to group related images, as needed, rather than using a common prefix to the filename.

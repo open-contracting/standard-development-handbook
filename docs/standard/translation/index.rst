@@ -1,7 +1,7 @@
 Translation
 ===========
 
-The `supported translations <https://docs.google.com/document/d/1GLwWTpgDDkKmMr1hZE4D75LI8VQtFiD0VA7TF_FvY_Q/edit>`__ are listed in the OCDS documentation. Community translations might exist to various levels of completion.
+The `supported translations <https://standard.open-contracting.org/latest/en/governance/#translation-and-localization-policy>`__ are listed in the OCDS documentation. Community translations might exist to various levels of completion.
 
 This section describes:
 
