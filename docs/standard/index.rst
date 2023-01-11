@@ -31,6 +31,7 @@ For the history of standard development, read:
 -  `2018 OCDS objectives and design decisions <https://docs.google.com/document/d/1j6Ec1vV0DklKMYvIBpeoIjABXDRT0nFythGNJR2ms24/edit>`__
 -  `2018 Extension mechanism design decisions <https://docs.google.com/document/d/1zV0_UeVTGEdLRq5DQEH3XAUWl0HrHNNQPEwftLkHqBQ/edit>`__
 -  `2018 Extension registry design decisions <https://docs.google.com/document/d/18JLz_RqBkYiDE-HSlzoa9_2XxgxYUmV9O2VnbMfc_Ss/edit>`__
+-  `2018 Extension classifications and rationales <https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit>`__
 -  `2018 Short history of standard development <https://docs.google.com/document/d/118NBDV6YIxlk75vc_8nmV0_GmacsQjes7xBXzoNSiY0/edit>`__
 -  The `Development <https://os4d.opendataservices.coop/development/>`__ section of ODS' Standards Lab
 -  `2014 technical scoping <https://github.com/open-contracting-archive/technical-approach/blob/main/README.md>`__

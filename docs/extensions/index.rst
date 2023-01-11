@@ -65,8 +65,3 @@ If the issue is with an OCP extension, create an `issue <https://help.github.com
 If the issue is with a third-party extension, refer to its documentation.
 
 If the issue is with extensions as a whole (e.g. there is something wrong in the way the standard deals with extensions), report it on the `standard repository <https://github.com/open-contracting/standard>`__ and add the ``Focus - Extensions`` label.
-
-Reference
----------
-
--  `Extension classifications and rationales <https://docs.google.com/document/d/1zvR1PDefO6yTK28uKA6XCnxMLiC9oiEeb3uFjHuRyqI/edit>`__
