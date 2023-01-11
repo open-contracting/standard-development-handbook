@@ -49,4 +49,4 @@ Tidy Markdown before creating a pull request
 #. Check all links, and replace internal links (regex-search ``\]\(``)
 #. Check heading levels (regex-search for ``^#``), because the heading levels in the document might have been incorrect
 #. Check whitespace and punctuation around bold (``**``), emphasis (``_)`` and linked (``\[`` and ``\]``) text, because whitespace or punctuation might have been styled or linked
-#. Check blockquote text (regex-search ``^    ``), because all indented text in the document is interpreted as blockquote text, but this might not be your intention
+#. Check blockquote text, because all indented text in the document is interpreted as blockquote text, but this might not be your intention
