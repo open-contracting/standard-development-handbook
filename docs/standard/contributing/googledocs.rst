@@ -10,7 +10,7 @@ Set up your editing environment
 
 #. Open the `Docs to Markdown <https://workspace.google.com/marketplace/app/docs_to_markdown/700168918607>`__ page
 #. Click *Install*
-#. Create a document in a subfolder of `0. Standard Development > Upgrades <https://drive.google.com/drive/folders/1fZyYRgH1_O8EbNlfJ-8VPdxh7eMDfnUq>`__ in Google Drive.
+#. Create a document in a subfolder of `0. Standard Development <https://drive.google.com/drive/folders/1gUDGm9FnJV1RGL11Ee2Afcz0W4M1wNAd>`__ in Google Drive.
 
    .. note::
 
