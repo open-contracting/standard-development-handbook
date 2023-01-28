@@ -5,9 +5,10 @@ Get started
 -----------
 
 .. note::
-   Building the documentation requires Python 3.8.
 
-Create a virtual environment using Python 3.8 with ``pyenv virtualenv docs`` or:
+   Building the documentation requires Python 3.8 or greater.
+
+Create a virtual environment using Python 3 with ``pyenv virtualenv docs`` or:
 
 .. code-block:: shell
 
