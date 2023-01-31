@@ -3,6 +3,10 @@ Contributing
 
 This page describes the internal process for making changes to the standard repository.
 
+.. seealso::
+
+   `GitHub Burndown <https://observablehq.com/@tmcw/github-burndown>`__ is a handy visualization of the longevity of issues over time.
+
 Getting started
 ---------------
 
