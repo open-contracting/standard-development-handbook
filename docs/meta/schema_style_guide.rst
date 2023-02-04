@@ -112,7 +112,6 @@ Validation keywords
 -  URL fields must use ``"format": "uri"``.
 -  Number fields should use ``minimum``, ``maximum`` and/or ``exclusiveMinimum``, if appropriate.
 -  The ``default`` keyword shouldn't be used, because consumers aren't expected to fill in defaults.
--  The following keywords aren't used and might require code changes: ``additionalItems``, ``additionalProperties``, ``dependencies``, ``exclusiveMaximum``, ``maxItems``, ``maxLength``, ``maxProperties``, ``multipleOf``, ``allOf``, ``anyOf``, ``not``.
 
 The following keywords are added by `ocdskit schema-strict <https://ocdskit.readthedocs.io/en/latest/cli/schema.html#schema-strict>`__:
 
@@ -120,6 +119,33 @@ The following keywords are added by `ocdskit schema-strict <https://ocdskit.read
 -  Required array fields must use ``"minItems": 1``.
 -  Required object fields must use ``"minProperties": 1``.
 -  Required string fields must use ``"minLength": 1``, unless ``enum``, ``format`` or ``pattern`` is used.
+
+The following keywords aren't used, and their absence is validated by `standard-maintenance-scripts <https://github.com/open-contracting/standard-maintenance-scripts>`__:
+
+-  ``additionalItems``
+-  ``additionalProperties``
+-  ``dependencies``
+-  ``exclusiveMaximum``
+-  ``maxItems``
+-  ``maxLength``
+-  ``maxProperties``
+-  ``multipleOf``
+-  ``allOf``
+-  ``anyOf``
+-  ``not``
+-  ``items`` with an `array value <https://datatracker.ietf.org/doc/html/draft-fge-json-schema-validation-00#section-5.3.1>`__
+
+.. note::
+
+   To add support for new keywords, you likely need to:
+
+   -  Update the Data Review Tool
+
+   ``allOf``, ``anyOf``, ``oneOf``, and ``items`` with an array value use JSON Schema draft 4's ``schemaArray``. To add support for these keywords, you likely need to also:
+
+   -  Update the `merging specification <https://standard.open-contracting.org/latest/en/schema/merging/#merging-specification>`__
+   -  Update the `reference implementation <https://ocds-merge.readthedocs.io/en/latest/#reference-implementation>`__ of the `merge routine <https://standard.open-contracting.org/latest/en/schema/merging/>`__
+   -  Update the `get_versioned_release_schema() function <https://github.com/open-contracting/standard/blob/1.2-dev/manage.py>`__ in the standard repository
 
 Types and null
 ~~~~~~~~~~~~~~
