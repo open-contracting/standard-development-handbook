@@ -296,16 +296,16 @@ For the ``description`` field of an object:
 
 .. code-block:: none
 
-   A description of this <object_name>. Structured information should be provided in <related_fields>.
+   A description of this <object_name>.
 
 **Examples:**
 
-   A description of this tender. Structured information should be provided in the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.
+   A summary description of the tender. This complements any structured information provided using the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.
 
 ..
 
-   A description of this document. Descriptions should not exceed 250 words. In the event the document is not accessible online, the description field may be used to describe arrangements for obtaining a copy of the document.
-
+   A short description of the document. Descriptions are recommended to not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.
+   
 Documents
 ~~~~~~~~~
 
