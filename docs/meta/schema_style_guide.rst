@@ -305,7 +305,7 @@ For the ``description`` field of an object:
 ..
 
    A short description of the document. Descriptions are recommended to not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.
-   
+
 Documents
 ~~~~~~~~~
 
