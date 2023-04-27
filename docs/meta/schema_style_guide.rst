@@ -313,7 +313,7 @@ For the ``documents`` field of an object:
 
 .. code-block:: none
 
-   All documents and attachments related to this <object_name>, including any official notices.
+   Documents and attachments related to this <object_name>, including any official notices.
 
 Milestones
 ~~~~~~~~~~
@@ -322,7 +322,7 @@ For the ``milestones`` field of an object:
 
 .. code-block:: none
 
-   A list of important dates or events associated with this <object_name>.
+   Important dates or events associated with this <object_name>.
 
 Deprecation descriptions
 ------------------------
