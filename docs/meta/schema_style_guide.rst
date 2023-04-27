@@ -168,6 +168,14 @@ Allowing properties to be ``null`` is important to the `merging process <https:/
 
 Any non-required field pointing to an array of objects should not allow ``null`` as a value; array entries should be explicitly tagged for removal following the pattern outlined in `#232 <https://github.com/open-contracting/standard/issues/232>`__.
 
+If the ``type`` property has a single value, use a string instead of an array:
+
+.. code-block:: json
+
+   {
+      "type": "string"
+   }
+
 Field and code names
 --------------------
 
