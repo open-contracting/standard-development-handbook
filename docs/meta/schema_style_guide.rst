@@ -282,11 +282,11 @@ For the ``id`` field of items in arrays:
 
 .. code-block:: none
 
-   A locally unique identifier for this <object_name>. Used to track changes to this <object_name> and to [merge](https://standard.open-contracting.org/latest/en/schema/merging/#merging) multiple releases to create a record.
+   The locally unique identifier for the <object_name>.
 
 **Example:**
 
-   A locally unique identifier for this document. Used to track changes to this document and to `merge <https://standard.open-contracting.org/latest/en/schema/merging/#merging>`__ multiple releases to create a record.
+   The locally unique identifier for the document.
 
 Titles
 ~~~~~~
@@ -295,7 +295,7 @@ For the ``title`` field of an object:
 
 .. code-block:: none
 
-   A title for this <object_name>.
+   The title of the <object_name>.
 
 Descriptions
 ~~~~~~~~~~~~
@@ -304,15 +304,11 @@ For the ``description`` field of an object:
 
 .. code-block:: none
 
-   A description of this <object_name>. Structured information should be provided in <related_fields>.
+   The description of the <object_name>.
 
-**Examples:**
+**Example:**
 
-   A description of this tender. Structured information should be provided in the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.
-
-..
-
-   A description of this document. Descriptions should not exceed 250 words. In the event the document is not accessible online, the description field may be used to describe arrangements for obtaining a copy of the document.
+   The description of the document. The description should not exceed 250 words. If the document is not accessible online, the description may describe how to obtain a copy.
 
 Documents
 ~~~~~~~~~
@@ -321,7 +317,7 @@ For the ``documents`` field of an object:
 
 .. code-block:: none
 
-   Documents and attachments related to this <object_name>, including any official notices.
+   Documents and attachments related to the <object_name>, including any official notices.
 
 Milestones
 ~~~~~~~~~~
@@ -330,7 +326,7 @@ For the ``milestones`` field of an object:
 
 .. code-block:: none
 
-   Important dates or events associated with this <object_name>.
+   Important dates or events associated with the <object_name>.
 
 Deprecation descriptions
 ------------------------
