@@ -23,7 +23,7 @@ From CSV and JSON files
 
 For the `codelists <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es/codelists/76986036>`__ resource, the strings to be translated are extracted from the CSV files in `schema/codelists/*.csv <https://github.com/open-contracting/standard/tree/HEAD/schema/codelists>`__. They provide the content for:
 
--  codelist tables on the `codelists <https://standard.open-contracting.org/latest/es/schema/codelists/>`__ and `building blocks <https://standard.open-contracting.org/latest/es/getting_started/building_blocks/>`__ pages
+-  codelist tables on the `codelists <https://standard.open-contracting.org/latest/es/schema/codelists/>`__ page
 
 For the `schema <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es/schema/76882756>`__ resource, the strings to be translated are extracted from the JSON files in `schema <https://github.com/open-contracting/standard/tree/HEAD/schema>`__. They provide the content for:
 

@@ -30,16 +30,16 @@ Normative statements
 
 -  When referring to extensions it is not necessary to explicitly state that they are optional.
 
-Schema structure
-----------------
+Structure
+---------
 
-Definitions
-~~~~~~~~~~~
+Properties and definitions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The top level of the schema is split between ``properties`` and ``definitions``. The latter contains objects that may be re-used, by reference, in multiple locations across the schema. Each of these can be thought of as a "Class", and its name is capitalized accordingly. Whenever you consider that an object or structure might be re-used in a different area of the standard, it should be included in ``definitions``.
 
-Building blocks
-~~~~~~~~~~~~~~~
+Subschema (Definition)
+~~~~~~~~~~~~~~~~~~~~~~
 
 -  The ``period`` object should be used in place of ``year`` or ``month`` fields.
 -  The ``identifier`` object should be used when referencing identifiers from external sources, e.g. ``{"id": "12345678", "scheme": "IBAN"}`` rather than ``"ibanID": "12345678"``.
