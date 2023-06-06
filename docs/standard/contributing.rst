@@ -25,8 +25,8 @@ To get up to speed on OCDS standard development, you should be familiar with:
 
 -  The policies it follows
 
-   -  `Normative and non-normative content and changes policy <https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit>`__
-   -  `Translation and localization policy <https://standard.open-contracting.org/1.1/en/support/governance/#translation-and-localization-policy>`__
+   -  `Normative and non-normative content and changes policy <https://standard.open-contracting.org/staging/1.2-dev/en/governance/normative/>`__
+   -  `Translation and localization policy <https://standard.open-contracting.org/staging/1.2-dev/en/governance/translation/>`__
    -  `Semantic versioning <https://semver.org>`__
 
 To improve your technical writing skills, consider taking `Google's Technical Writing Courses <https://developers.google.com/tech-writing>`__, which can be completed in a day.

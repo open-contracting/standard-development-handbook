@@ -10,7 +10,7 @@ The Open Contracting Data Standard includes a **technical specification** made u
 -  A set of rules for transforming between JSON and tabular serializations
 -  An extension mechanism for describing additional fields
 
-This section describes the processes for maintaining these assets. See the `Normative and non-normative policy <https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit>`__ for details on which sections of the documentation are normative or not.
+This section describes the processes for maintaining these assets. See the `Normative and non-normative policy <https://standard.open-contracting.org/staging/1.2-dev/en/governance/normative/>`__ for details on which sections of the documentation are normative or not.
 
 Documentation is written in Markdown syntax with `recommonmark <https://recommonmark.readthedocs.org/en/latest/>`__ building on `Commonmark <https://commonmark.org/>`__.
 
