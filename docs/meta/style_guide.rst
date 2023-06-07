@@ -37,48 +37,48 @@ Text formatting
 Word choice
 -----------
 
--  "ocid" not "OCID". Although abbreviations in prose are uppercase, the mixing of upper- and lowercase in the documentation (when referring to the concept versus the field) may cause confusion.
--  "user" not "data user"
--  "codelist" not "code-list" or "code list"
--  "changelog" not "change-log" or "change log"
--  "data package" not "datapackage"
--  "metadata" not "meta-data" or "meta data"
--  "hyphen" not "dash", to describe the "-" character
+-  "ocid", **not** "OCID". Although abbreviations in prose are uppercase, the mixing of upper- and lowercase in the documentation (when referring to the concept versus the field) may cause confusion.
+-  "user", **not** "data user"
+-  "codelist", **not** "code-list" or "code list"
+-  "changelog", **not** "change-log" or "change log"
+-  "data package", **not** "datapackage"
+-  "metadata", **not** "meta-data" or "meta data"
+-  "hyphen", **not** "dash", to describe the "-" character
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
 For processes:
 
 -  "contracting (or planning) process", unless the sentence relates to only one or the other
 -  "(contracting or planning) process", if the sentence relates to a scope of uniqueness
--  "planning process" not "planning stage"
+-  "planning process", **not** "planning stage"
 -  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
 
 For organization roles:
 
--  "buyer or procuring entity" not "buyer" or "procuring entity", except if the sentence is specific to one role
+-  "buyer or procuring entity", **not** "buyer" or "procuring entity", except if the sentence is specific to one role, and **not** "contracting authority"
 -  "supplier" for the awardee of a contract
 -  "tenderer" for the submitter of a bid
 -  "potential supplier" for a potential participant in a contracting process
--  "unsuccessful tenderer" not "unsuccessful bidder"
+-  "unsuccessful tenderer", **not** "unsuccessful bidder"
 
 For procurement concepts:
 
--  "organization" not "party" or "entity", except in cases like "procuring entity" or "third party"
--  "bid" not "tender", which is already used to describe the opportunity or solicitation
+-  "organization", **not** "party" or "entity", except in cases like "procuring entity" or "third party"
+-  "bid", **not** "tender", which is already used to describe the opportunity or solicitation
 -  Use the order "goods", "services" and "works" (alphabetical)
 
 When describing data:
 
 -  "publication" for the data source that persists across time
 -  "collection" for the publication's data at a specific point in time
--  "JSON data" not "JSON document", to avoid confusion with the `documents` field
+-  "JSON data", **not** "JSON document", to avoid confusion with the `documents` field
 
 When describing JSON Schema:
 
 -  "field" to refer to OCDS fields, like ``tender.id``
 -  "property" to refer to JSON Schema metadata properties, like ``enum``
--  "array" not "list"
--  "object" not "block"
+-  "array", **not** "list"
+-  "object", **not** "block"
 
 When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
