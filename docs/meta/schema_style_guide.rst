@@ -244,7 +244,7 @@ Descriptions should **not**:
 -  Link to definitions provided on external websites.
 -  Explicitly state whether a field is required or optional.
 -  Simply restate the title or name of a field or code.
--  Declare the type of the field: for example, "A list", "A true/false field", etc.
+-  Declare the type of the field: for example, "A list", "A true/false field", "free text", etc.
 
 The following examples can be used to inform descriptions for common types of fields in the schema. Additional information, specific to a particular field, should be provided in a separate sentence after the primary description of the field.
 
