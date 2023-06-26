@@ -38,11 +38,51 @@ Properties and definitions
 
 The top level of the schema is split between ``properties`` and ``definitions``. The latter contains objects that may be re-used, by reference, in multiple locations across the schema. Each of these can be thought of as a "Class", and its name is capitalized accordingly. Whenever you consider that an object or structure might be re-used in a different area of the standard, it should be included in ``definitions``.
 
-Subschema (Definition)
+Subschema (definition)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 -  The ``period`` object should be used in place of ``year`` or ``month`` fields.
 -  The ``identifier`` object should be used when referencing identifiers from external sources, e.g. ``{"id": "12345678", "scheme": "IBAN"}`` rather than ``"ibanID": "12345678"``.
+
+JSON Schema keyword order
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  ``title``
+-  ``description``
+-  ``$ref`` or ``type``
+
+-  If ``type`` includes ``object``:
+
+   -  ``required``
+   -  ``properties``
+   -  ``minProperties``
+
+-  If ``type`` includes ``array``:
+
+   -  ``items``
+   -  ``codelist``
+   -  ``openCodelist``
+   -  ``wholeListMerge``
+   -  ``uniqueItems``
+   -  ``minItems``
+
+-  If ``type`` includes ``string``:
+
+   -  ``codelist``
+   -  ``openCodelist``
+   -  ``enum``
+   -  ``format``
+   -  ``pattern``
+   -  ``versionId``
+   -  ``minLength``
+
+-  If ``type`` includes ``number`` or ``integer``:
+
+   -  ``maximum``
+   -  ``minimum``
+   -  ``exclusiveMinimum``
+
+-  ``deprecated``
 
 ID field
 ~~~~~~~~
