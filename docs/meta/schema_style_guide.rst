@@ -49,7 +49,7 @@ JSON Schema keyword order
 
 The order of keywords is: semantics, data type, type-specific keywords, and deprecation notice.
 
-The order of type-specific keywords is: sub-fields, validation keywords in hierarchical order (e.g. ``codelist``, ``openCodelist``, ``enum``) or alphabetic order if no difference (e.g. ``maximum``, ``minimum``), merge behavior, and validation keywords added by OCDS Kit (least informative).
+The order of type-specific keywords is: sub-fields, validation keywords in hierarchical order (e.g. ``codelist``, ``openCodelist``, ``enum``) or alphabetic order if equal hierarchy (e.g. ``maximum``, ``minimum``), merge behavior, and validation keywords added by OCDS Kit (least informative).
 
 -  ``title``
 -  ``description``
