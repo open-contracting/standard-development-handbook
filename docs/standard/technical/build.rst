@@ -47,46 +47,11 @@ Install the requirements:
 Run tests
 ---------
 
-.. admonition:: One-time setup
-
-   Install Chrome. On Linux:
-
-   .. code-block:: shell
-
-      curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      sudo apt install ./google-chrome-stable_current_amd64.deb
-   
-   Install ChromeDriver. On Linux:
-
-   .. code-block:: shell
-
-      curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
-      unzip chromedriver_linux64.zip -d chromedriver
-
-   Or, on macOS:
-
-   .. code-block:: shell
-
-      curl -O https://chromedriver.storage.googleapis.com/2.37/chromedriver_mac64.zip
-      unzip chromedriver_mac64.zip -d chromedriver
-
 Build the documentation:
 
 .. code-block:: shell
 
    make
-
-Add ChromeDriver to the ``PATH``. Using Bash:
-
-.. code-block:: shell
-
-   export PATH=$PATH:`pwd`/chromedriver
-
-Or, using fish shell:
-
-.. code-block:: shell
-
-   set PATH $PATH chromedriver
 
 Run the tests:
 
