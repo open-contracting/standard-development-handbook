@@ -319,7 +319,7 @@ Codelists
 
 .. code-block:: none
 
-   <semantics>, using the <open/closed> <name> codelist. See also the <xDetails> field.
+   <semantics>, using the <open/closed> <name> codelist.
 
 **Example:**
 
