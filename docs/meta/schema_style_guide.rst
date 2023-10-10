@@ -246,6 +246,12 @@ Field and code names
 
    Until OCDS 2.0, publishers must use the ``tender`` term, and not choose their own terms, in order to maintain interoperability. The choice of a term is cosmetic; it's not semantic. A field's description, not its name, is semantic.
 
+Field and code titles
+---------------------
+
+- Use `sentence case <https://en.wikipedia.org/wiki/Letter_case#Sentence_case>`__.
+- Field titles should not include their parent's title, e.g. ``Title`` not ``Tender title``, ``Description`` not ``Award description``, etc.
+
 Field and code descriptions
 ---------------------------
 
@@ -313,7 +319,7 @@ Codelists
 
 .. code-block:: none
 
-   <semantics>, using the <open/closed> <name> codelist. See also the <xDetails> field.
+   <semantics>, using the <open/closed> <name> codelist.
 
 **Example:**
 
