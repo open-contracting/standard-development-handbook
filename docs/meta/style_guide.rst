@@ -46,6 +46,11 @@ Word choice
 -  "hyphen", **not** "dash", to describe the "-" character
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
+For parts of a whole:
+
+-  "stage", for parts of a contracting process or framework agreement procedure
+-  "phase", for parts of OCDS implementation
+
 For processes:
 
 -  "contracting (or planning) process", unless the sentence relates to only one or the other
