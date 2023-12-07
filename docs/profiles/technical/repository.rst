@@ -11,6 +11,8 @@ If a profile has :doc:`moved from ReadTheDocs<integrations>`, it will have ``99.
 Structure
 ---------
 
-See the standard's :ref:`standard/technical/repository:Structure`.
+.. seealso::
 
-The `manage.py <https://github.com/open-contracting/standard_profile_template/blob/latest/manage.py>`__ script called by ``make update`` calls the `build_profile method <https://ocdsextensionregistry.readthedocs.io/en/latest/api/api.html>`__ in ``extension_registry.py``, which compiles a profile's extensions into a consolidated extension, storing the results in ``schema/profile``, and extends OCDS with the consolidated extension, storing the results in ``schema/patched``. It also updates the ``codelists`` field in ``extension.json``. All these built files are version controlled.
+   The standard's page for :ref:`standard/technical/repository:Structure`
+
+``make update`` calls the `manage.py <https://github.com/open-contracting/standard_profile_template/blob/latest/manage.py>`__ script, which calls the `build_profile method <https://ocdsextensionregistry.readthedocs.io/en/latest/api/api.html>`__ in ``extension_registry.py``, which compiles a profile's extensions into a consolidated extension, storing the results in ``schema/profile``, and extends OCDS with the consolidated extension, storing the results in ``schema/patched``. It also updates the ``codelists`` field in ``extension.json``. All these built files are version controlled.

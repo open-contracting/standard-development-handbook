@@ -1,7 +1,9 @@
 Translation
 ===========
 
-See the standard's page for :doc:`../../../standard/translation/index`.
+.. seealso::
+
+   The standard's page for :doc:`../../../standard/translation/index`
 
 The instructions below are similar to others in `ocds-extensions-translations <https://github.com/open-contracting/ocds-extensions-translations#populate-initial-translations>`__ (using the fish shell on macOS). They will, at minimum, pre-translate the text from the unextended schema and codelists.
 
@@ -121,7 +123,9 @@ Pre-translate the profile
 Technical implementation of translation
 ---------------------------------------
 
-See the standard's page for :doc:`../../../standard/translation/implementation`.
+.. seealso::
+
+   The standard's page for :doc:`../../../standard/translation/implementation`
 
 -  ``babel_ocds_codelist.cfg`` indicates the codelist CSV files in the consolidated extension and the patched OCDS (``schema/*/codelists/*.csv``) from which to extract strings to translate.
 -  ``babel_ocds_schema.cfg`` indicates the JSON Schema files in the consolidated extension and the patched OCDS (``schema/*/*-schema.json``) from which to extract strings to translate.

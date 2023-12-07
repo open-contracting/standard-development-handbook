@@ -9,11 +9,13 @@ Maintenance
 Change extensions or version of OCDS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See :doc:`technical/build` to:
+.. seealso::
 
--  Change version of OCDS
--  Change extensions
--  Build the profile
+   :doc:`technical/build` to:
+
+   -  Change OCDS version
+   -  Change extensions
+   -  Build the profile
 
 In ``codelists.md``:
 
@@ -29,7 +31,9 @@ To find codelists to add or remove, run (in Bash):
 Translation
 -----------
 
-See the generic profile documentation for :doc:`translation`.
+.. seealso::
+
+   The generic profile documentation for :doc:`translation`
 
 For reference:
 
