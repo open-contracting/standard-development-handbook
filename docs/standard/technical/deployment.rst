@@ -86,8 +86,8 @@ Before each release, and at least once a year:
    -  Add the codes to the `ISO6523-analysis spreadsheet <https://docs.google.com/spreadsheets/d/1qPPAOx9w4NIfrll66a0Qd2SMizoxGNRUMU6YV2rLuEE/edit#gid=1900375069>`__.
    -  Update the `GitHub issue <https://github.com/open-contracting/standard/issues/987>`__ to note that the new codes need to be assessed for inclusion in org-id.guide, and that the script needs to be updated to recognize the new codes.
 
-3. Update version numbers, versioned release schema and changelog
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3. Update version numbers and changelog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In ``docs/conf.py``, update ``release`` to e.g. ``1.1.1`` and update ``version`` if appropriate.
 

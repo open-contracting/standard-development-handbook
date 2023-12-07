@@ -19,16 +19,8 @@ If this is the first numbered version of a profile, in its ``docs/_templates/lay
    <!--#include virtual="/includes/version-options-profiles-{root}.html" -->
    {% endblock %}
 
-Update version numbers, versioned release schema and changelog
---------------------------------------------------------------
-
-In ``docs/conf.py``, update ``release`` to e.g. ``1.0.0`` and update ``version`` if appropriate.
-
-Update the *major__minor__patch* version number:
-
-.. code-block:: shell
-
-   find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta3/1__0__0__beta4/g' '{}' \;
+Update the changelog
+--------------------
 
 Update the profile's changelog (if any) with links to its extensions' changelogs.
 
