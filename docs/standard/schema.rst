@@ -15,4 +15,4 @@ The standard's documentation contains a `deprecation policy <https://standard.op
 Our extensions to JSON Schema
 -----------------------------
 
-We add to JSON Schema the properties ``codelist``, ``openCodelist``, ``deprecated``, ``omitWhenMerged`` and ``wholeListMerge``, documented in the `Open Standards for Data <https://os4d.opendataservices.coop/development/schema/#extended-json-schema>`__ handbook and defined in a `metaschema patch <https://github.com/open-contracting/standard/tree/HEAD/schema/metaschema>`__.
+We add to JSON Schema the properties ``codelist``, ``openCodelist``, ``deprecated``, ``omitWhenMerged`` and ``wholeListMerge``, documented in `Standards Lab <https://os4d.opendataservices.coop/development/schema/#extended-json-schema>`__ and defined in a `metaschema patch <https://github.com/open-contracting/standard/tree/HEAD/schema/metaschema>`__.
