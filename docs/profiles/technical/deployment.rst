@@ -28,7 +28,7 @@ Update the *major__minor__patch* version number:
 
 .. code-block:: shell
 
-   find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta/1__0__0/g' '{}' \;
+   find . \( -name '*.json' -or -name '*.md' -or -name '*.po' \) -exec sed -i "" 's/1__0__0__beta3/1__0__0__beta4/g' '{}' \;
 
 Update the profile's changelog (if any) with links to its extensions' changelogs.
 
