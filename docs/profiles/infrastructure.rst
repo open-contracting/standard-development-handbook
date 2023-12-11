@@ -65,3 +65,29 @@ You can then:
 
 -  Edit the workbook in your preferred spreadsheet software
 -  Export each sheet as a CSV file to the ``mapping`` directory
+
+Update sustainability.yaml
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For each change to the `CoST IDS sustainability elements <https://docs.google.com/spreadsheets/d/165epI69oQ5YyL4-2q8VubFn9VuNham2Pi1u0P49id9o/>`__, run:
+
+.. code-block:: shell
+
+  ./manage.py update-sustainability-elements
+
+Update sustainability.md
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+For each change to ``mapping/sustainability.yaml``:
+
+1. Lint it, and link any field names to the schema reference documentation:
+
+.. code-block:: shell
+
+  ./manage.py lint -l mapping/sustainability.yaml
+
+2. Update ``docs/cost/ids/sustainability.md``:
+
+.. code-block:: shell
+
+  ./manage.py update-sustainability-docs
