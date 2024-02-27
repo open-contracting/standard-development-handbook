@@ -180,6 +180,7 @@ Update the CoVE library
 This is the lib-cove-ocds repository for OCDS, and lib-cove-oc4ids for OC4IDS.
 
 -  Update the URL paths in `config.py <https://github.com/open-contracting/lib-cove-ocds/blob/main/libcoveocds/config.py>`__
+-  *OC4IDS:* Add new organization references to ``ORG_PATHS`` regular expression
 -  Make sure all tests pass
 -  `Release a new version <https://ocp-software-handbook.readthedocs.io/en/latest/python/packages.html#release-process>`__
 
