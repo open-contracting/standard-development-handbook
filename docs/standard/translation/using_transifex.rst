@@ -7,9 +7,9 @@ Steps for translators, proofreaders and reviewers
 Translator
 ~~~~~~~~~~
 
-Before beginning, ask the :ref:`Coordinator<roles>` to ensure that the :ref:`Transifex glossary<glossary>` is up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it.
+Before beginning, ask the :ref:`Coordinator<roles>` to ensure that the :ref:`Transifex glossary<glossary>` (OCDS only) is up-to-date. If the glossary is not yet available in your language, ask the Coordinator to arrange it.
 
-#. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
+#. Go to the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__)
 #. Change the language, if appropriate
 #. Sort by "Untranslated (Descending)"
 #. Click on a resource with untranslated strings
@@ -19,14 +19,17 @@ Before beginning, ask the :ref:`Coordinator<roles>` to ensure that the :ref:`Tra
 #. Repeat from Step 4
 #. Notify the Proofreader when strings have been translated
 
-The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ contains key terms that must be translated consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
+The `Transifex glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/en/>`__ (OCDS only) contains key terms that must be translated consistently. Change the language code at the end of the glossary's URL to view in different languages. It is also available within the translation editor.
 
-It helps to see where the strings appear in context in the `OCDS documentation <https://standard.open-contracting.org/>`__. :doc:`understanding_transifex` describes the link between Markdown files in the `GitHub repository <https://github.com/open-contracting/standard>`__, Transifex resources, and documentation pages. With the exception of the ``schema`` and ``codelists`` resources, you can:
+It helps to see where the strings appear in context in the documentation (`OCDS <https://standard.open-contracting.org/>`__, `OC4IDS <https://standard.open-contracting.org/infrastructure/>`__). :doc:`understanding_transifex` describes the link between files in the GitHub repository (`OCDS <https://github.com/open-contracting/standard>`__, `OC4IDS <https://github.com/open-contracting/infrastructure>`__), Transifex resources, and documentation pages. With the exception of the resources related to the CSV and JSON files described on that page, you can:
 
-#. Take the name of a resource, e.g. ``schema--changelog``
+#. Take the name of a resource, e.g. ``history--changelog`` or ``reference--changelog``
 #. Remove ``--index`` if present
 #. Replace ``--`` with ``/``
-#. Put it in the pattern ``https://standard.open-contracting.org/{version}/en/{name}/``, like https://standard.open-contracting.org/latest/en/schema/changelog/
+#. Put it in the following patterns, substituting ``{version}`` for the version of the standard you are translating:
+
+* OCDS: ``https://standard.open-contracting.org/staging/{version}/en/{name}/``, like https://standard.open-contracting.org/staging/1.2-dev/en/history/changelog
+* OC4IDS: ``https://standard.open-contracting.org/staging/infrastructure/{version}/en/{name}``, like https://standard.open-contracting.org/staging/infrastructure/0.9-dev/en/reference/changelog
 
 .. note::
    Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
@@ -36,7 +39,7 @@ See :ref:`standard/translation/using_transifex:Translation tasks` below for Tran
 Proofreader
 ~~~~~~~~~~~
 
-#. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
+#. Go to the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__)
 #. Change the language, if appropriate
 #. Click "All resources"
 #. Click "Unreviewed"
@@ -47,7 +50,7 @@ Proofreader
 Reviewer
 ~~~~~~~~
 
-#. Go to the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__
+#. Go to the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__)
 #. Change the language, if appropriate
 #. Sort by "Unreviewed (Descending)"
 #. Click on a resource with unreviewed strings
@@ -94,7 +97,7 @@ Click the History tab when viewing a string to see its previous translations, wh
 View translations with warnings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. From the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, click "All resources"
+#. From the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__), click "All resources"
 #. Focus on the search box (``Option + s`` or ``ALT + s``)
 #. Select "check" from the list of filters
 #. Select "warning" from the list of values
@@ -102,7 +105,7 @@ View translations with warnings
 View translations with issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. From the `list of resources <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, click "All resources"
+#. From the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__), click "All resources"
 #. Focus on the search box (``Option + s`` or ``ALT + s``)
 #. Select "issue" from the list of filters
 #. Select "open" from the list of values
