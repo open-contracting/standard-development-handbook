@@ -13,7 +13,7 @@ After translation, `translate-toolkit <https://docs.translatehouse.org/projects/
 Glossary
 --------
 
-We ensure that key terms are translated consistently using a `Transifex glossary <https://help.transifex.com/en/articles/6229127-understanding-glossaries>`__: for example, the `OCDS glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/es/>`__.
+We ensure that key terms are translated consistently using a `Transifex glossary <https://help.transifex.com/en/articles/6229127-understanding-glossaries>`__: for example, the `OCDS glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/es/>`__. The glossary is also available within the translation editor.
 
 Manage the glossary
 ~~~~~~~~~~~~~~~~~~~
