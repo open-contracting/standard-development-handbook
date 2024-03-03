@@ -16,7 +16,7 @@ Translator
 #. Sort by "Untranslated (Descending)"
 #. Click on a resource with untranslated strings
 #. Click "Untranslated"
-#. Read the English text and author the translated text
+#. Read the English text and author the translated text. Do not translate words in backticks (e.g. \`title\`) or single quotes (e.g. 'open').
 #. Click "Save Translation" (or press ``TAB``)
 #. Repeat from Step 4
 #. Notify the Proofreader when strings have been translated
