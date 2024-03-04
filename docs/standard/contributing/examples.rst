@@ -70,7 +70,7 @@ Guidelines in practice
 The [tender updates and amendments example](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) in OCDS 1.1 has the following deficiencies:
 
 * The example is overly generic: the buyer (Open Data Services) is not a government agency and appears elsewhere in the documentation as a supplier and the object of the procurement (a data merging tool) closely relates to the subject of the example (updates and amendments), which is confusing for readers.
-* The example data contain many fields that are irrelevant to the subject of the example, e.g. `tender.status`, `tender.procurementMethod` and `tender.awardPeriod`, which means readers need to scan lots of JSON to find the important parts.
+* The example data contain many fields that are irrelevant to the subject of the example, e.g. `tender.status`, `tender.procurementMethod` and `tender.awardPeriod`, which means readers need to scan lots of JSON to find the lines that illustrate the example.
 * The [tender amendment release](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#tender-amendment) is unnecessarily complex: it amends two fields (`tender.value` and `tender.period`), when only one is needed to illustrate how amendments are modelled, which is confusing for readers.
 
-OCDS 1.2 features a simplified version of the example that conforms to the above guidelines.
+OCDS 1.2 features a [simplified version of the example](https://standard.open-contracting.org/staging/1666-make-examples-minimal/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) that conforms to the above guidelines.
