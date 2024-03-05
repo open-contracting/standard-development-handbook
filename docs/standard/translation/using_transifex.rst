@@ -14,27 +14,30 @@ Translator
 #. Go to the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__)
 #. Change the language, if appropriate
 #. Sort by "Untranslated (Descending)"
-#. Click on a resource with untranslated strings
-#. Click "Untranslated"
-#. Read the English text and author the translated text
+#. For all resources with untranslated strings:
 
-   .. warning::
+   #. Click on the resource
+   #. Click "Untranslated"
+   #. Read the English text and author the translated text
 
-      Do not translate:
+      .. warning::
 
-      -  words in backticks, like \`title\` (often used for schema fields)
-      -  words in single quotes, like 'open' (often used for codelist codes)
-      -  relative URLs, like ``[translate this](#but-not-this)``
+         Do not translate:
 
-      Absolute URLs (that is, starting with ``https://``) can be translated: for example, if the website offers content in multiple languages.
+         -  words in backticks, like \`title\` (often used for schema fields)
+         -  words in single quotes, like 'open' (often used for codelist codes)
+         -  relative URLs, like ``[translate this](#but-not-this)``
 
-#. Click "Save Translation" (or press ``TAB``)
+         Absolute URLs (that is, starting with ``https://``) can be translated: for example, if the website offers content in multiple languages.
+
+   #. Click "Save Translation" (or press ``TAB``)
+
 #. Repeat from Step 4
 #. Notify the Proofreader when strings have been translated
 
 It helps to see where the strings appear in context in the documentation (`OCDS <https://standard.open-contracting.org/>`__, `OC4IDS <https://standard.open-contracting.org/infrastructure/>`__). :doc:`understanding_transifex` describes the link between GitHub files (`OCDS <https://github.com/open-contracting/standard>`__, `OC4IDS <https://github.com/open-contracting/infrastructure>`__), Transifex resources, and documentation pages. For Transifex resources related to :ref:`Markdown files<markdown-resources>`, you can:
 
-#. Take the name of a resource, e.g. ``history--changelog`` or ``reference--changelog``
+#. Take the name of a resource, like ``history--changelog`` or ``reference--changelog``
 #. Remove ``--index`` if present
 #. Replace ``--`` with ``/``
 #. Put it in a pattern below, substituting ``{version}`` for the version of the standard you are translating:
@@ -63,13 +66,15 @@ Reviewer
 #. Go to the list of resources (`OCDS <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/translate/#es>`__, `OC4IDS <https://www.transifex.com/open-contracting-partnership-1/oc4ids-09/translate/#es>`__)
 #. Change the language, if appropriate
 #. Sort by "Unreviewed (Descending)"
-#. Click on a resource with unreviewed strings
-#. Click "Unreviewed"
-#. Read the English text and the translated text and confirm the translation is correct
-#. If there's a translation issue, update the translated text
-#. If there is a Transifex warning (e.g. "Glossary translation for term 'release' missing from translation"), update the translated text
-#. Click "Review"
-#. Repeat from Step 4
+#. For all resources with unreviewed strings:
+
+   #. Click on the resource
+   #. Click "Unreviewed"
+   #. Read the English and translated texts, and confirm the translation is correct
+   #. If there's a translation issue, update the translated text
+   #. If there is a Transifex warning (like "Glossary translation for term 'release' missing from translation"), update the translated text
+   #. Click "Review"
+
 #. Notify the Coordinator when strings have been reviewed
 
 Translation tasks
