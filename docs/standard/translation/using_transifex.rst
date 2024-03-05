@@ -16,7 +16,18 @@ Translator
 #. Sort by "Untranslated (Descending)"
 #. Click on a resource with untranslated strings
 #. Click "Untranslated"
-#. Read the English text and author the translated text. Do not translate words in backticks, e.g. \`title\`, or single quotes, e.g. 'open'. When translating a hyperlink, do not translate the part in parentheses (round brackets), e.g. [translate this text](#do-not-translate-this-text).
+#. Read the English text and author the translated text
+
+   .. warning::
+
+      Do not translate:
+
+      -  words in backticks, like \`title\` (often used for schema fields)
+      -  words in single quotes, like 'open' (often used for codelist codes)
+      -  relative URLs, like ``[translate this](#but-not-this)``
+
+      Absolute URLs (that is, starting with ``https://``) can be translated: for example, if the website offers content in multiple languages.
+
 #. Click "Save Translation" (or press ``TAB``)
 #. Repeat from Step 4
 #. Notify the Proofreader when strings have been translated
