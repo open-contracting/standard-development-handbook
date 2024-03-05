@@ -22,11 +22,17 @@ Translator
 
       .. warning::
 
-         Do not translate:
+         Follow the :ref:`translation-style-guide`. In particular, do not translate:
 
          -  words in backticks, like \`title\` (often used for schema fields)
          -  words in single quotes, like 'open' (often used for codelist codes)
          -  relative URLs, like ``[translate this](#but-not-this)``
+
+         And do not change:
+
+         -  Markdown formatting
+         -  Punctuation
+         -  Whitespace
 
          Absolute URLs (that is, starting with ``https://``) can be translated: for example, if the website offers content in multiple languages.
 
