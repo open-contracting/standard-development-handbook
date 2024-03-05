@@ -50,27 +50,27 @@ Process
 Guidelines
 ----------
 
--  Always package data in a release or record package.
--  Use real examples. That is, examples that feature real organizations and plausible and coherent field values. Generic examples are much less compelling and clear to readers, for a variety of reasons: 
+-  Always **package data** in a release or record package.
+-  Use **real examples**: that is, examples that feature real organizations and plausible and coherent field values. Generic examples are much less compelling and clear to readers, for a variety of reasons:
 
-   -  There’s a tendency for generic data to become overly generic, e.g. Anytown procures Thingamajigs for the greater benefit of the Republic of Atlantis.
-   -  Fictional entities aren’t immediately recognized by readers, unlike London, IBM, etc.
-   -  Specific examples tend to be more memorable and interesting than general ones.
+   -  There's a tendency for generic data to become overly generic: for example, Anytown procures Thingamajigs for the greater benefit of the Republic of Atlantis.
+   -  Fictional entities aren't immediately recognized by readers, unlike London, IBM, etc.
+   -  Specific examples tend to be more memorable and interesting than generic ones.
    -  Readers have to think more when given a generic/abstract example than a specific/concrete one.
-   -  Real examples better ensure that the example makes sense. When you have the Fisheries Department procuring oil pipelines, you think “Well, hold on a minute” and then fix it to be more realistic. When data is generic and ambiguous, it’s easy to let unclear scenarios through.
-   -  Specific examples help to communicate facts by implication. If the example is about cross-border procurement, you can pick a real buyer and supplier that are well-known to be based in different countries. You would include their different countries in the data, but readers won’t have to see that to understand.
+   -  Real examples better ensure that the example makes sense. When you have the Fisheries Department procuring oil pipelines, you think “Well, hold on a minute” and then fix it to be more realistic. When data is generic and ambiguous, it's easy to let unclear scenarios through.
+   -  Specific examples can communicate facts by implication. If the example is about cross-border procurement, you can pick a real buyer and supplier that are well-known to be based in different countries. You would still include their countries, but readers won't need that to understand.
 
--  Avoid using real data from OCDS publishers. It is rarely worth the effort of finding suitable data, correcting errors and trimming it down for brevity and clarity.
--  Keep examples as simple as possible and omit fields that aren't relevant to the example. For example, to illustrate an amendment, amend the value of a single field and omit optional fields with unchanged values.
--  Examples on the same page ought to follow a common thread/context/scenario so that readers do not need to reorient themselves to each example.
+-  Avoid using real data from publishers. It is rarely worth the effort to find suitable data, correct any errors and trim it down for brevity and clarity.
+-  Keep examples simple, and omit irrelevant fields. For example, to illustrate an amendment, change a single field's value, and omit optional fields with unchanged values.
+-  Examples on the same page ought to follow a common thread, context or scenario, so that readers don't need to reorient themselves to each example.
 
 Guidelines in practice
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The [tender updates and amendments example](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) in OCDS 1.1 has the following deficiencies:
+The [tender updates and amendments example](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) in OCDS 1.1 has the following issues:
 
-* The example is overly generic: the buyer (Open Data Services) is not a government agency and appears elsewhere in the documentation as a supplier and the object of the procurement (a data merging tool) closely relates to the subject of the example (updates and amendments), which is confusing for readers.
-* The example data contain many fields that are irrelevant to the subject of the example, e.g. `tender.status`, `tender.procurementMethod` and `tender.awardPeriod`, which means readers need to scan lots of JSON to find the lines that illustrate the example.
-* The [tender amendment release](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#tender-amendment) is unnecessarily complex: it amends two fields (`tender.value` and `tender.period`), when only one is needed to illustrate how amendments are modelled, which is confusing for readers.
+* Overly generic: The buyer (Open Data Services) is not a government agency and appears elsewhere in the documentation as a supplier. The object of the procurement (a data merging tool) closely relates to the subject of the example (updates and amendments), which is confusing.
+* Irrelevant fields: Many fields are irrelevant to the subject – like `tender.status`, `tender.procurementMethod` and `tender.awardPeriod`. Readers need to scan more JSON to find relevant lines.
+* The [tender amendment release](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#tender-amendment) is unnecessarily complex: it amends two fields (`tender.value` and `tender.period`), when one is sufficient to illustrate how amendments are modeled.
 
-OCDS 1.2 features a [simplified version of the example](https://standard.open-contracting.org/staging/1666-make-examples-minimal/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) that conforms to the above guidelines.
+OCDS 1.2 [simplifies the example](https://standard.open-contracting.org/staging/1666-make-examples-minimal/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) to meet the guidelines.
