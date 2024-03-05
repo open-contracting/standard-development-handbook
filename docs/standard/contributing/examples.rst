@@ -50,8 +50,8 @@ Process
 Guidelines
 ----------
 
--  Always **package data** in a release or record package.
--  Use **real examples**: that is, examples that feature real organizations and plausible and coherent field values. Generic examples are much less compelling and clear to readers, for a variety of reasons:
+-  **Always package data** in a release or record package.
+-  **Use real examples**: that is, examples that feature real organizations and plausible and coherent field values. Generic examples are much less compelling and clear to readers, for a variety of reasons:
 
    -  There's a tendency for generic data to become overly generic: for example, Anytown procures Thingamajigs for the greater benefit of the Republic of Atlantis.
    -  Fictional entities aren't immediately recognized by readers, unlike London, IBM, etc.
@@ -60,17 +60,17 @@ Guidelines
    -  Real examples better ensure that the example makes sense. When you have the Fisheries Department procuring oil pipelines, you think “Well, hold on a minute” and then fix it to be more realistic. When data is generic and ambiguous, it's easy to let unclear scenarios through.
    -  Specific examples can communicate facts by implication. If the example is about cross-border procurement, you can pick a real buyer and supplier that are well-known to be based in different countries. You would still include their countries, but readers won't need that to understand.
 
--  Avoid using real data from publishers. It is rarely worth the effort to find suitable data, correct any errors and trim it down for brevity and clarity.
--  Keep examples simple, and omit irrelevant fields. For example, to illustrate an amendment, change a single field's value, and omit optional fields with unchanged values.
--  Examples on the same page ought to follow a common thread, context or scenario, so that readers don't need to reorient themselves to each example.
+-  **Avoid using actual data from publishers**. It is rarely worth the effort to find suitable data, correct any errors and trim it down for brevity and clarity.
+-  **Keep examples simple, and omit irrelevant fields**. For example, to illustrate an amendment, change a single field's value, and omit optional fields with unchanged values.
+-  Examples on the same page ought to **follow a common thread**, context or scenario, so that readers don't need to reorient themselves to each example.
 
 Guidelines in practice
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The [tender updates and amendments example](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) in OCDS 1.1 has the following issues:
+The `tender updates and amendments example <https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#example-1-tender-updates-and-amendments>`__ in OCDS 1.1 has the following issues:
 
 * Overly generic: The buyer (Open Data Services) is not a government agency and appears elsewhere in the documentation as a supplier. The object of the procurement (a data merging tool) closely relates to the subject of the example (updates and amendments), which is confusing.
-* Irrelevant fields: Many fields are irrelevant to the subject – like `tender.status`, `tender.procurementMethod` and `tender.awardPeriod`. Readers need to scan more JSON to find relevant lines.
-* The [tender amendment release](https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#tender-amendment) is unnecessarily complex: it amends two fields (`tender.value` and `tender.period`), when one is sufficient to illustrate how amendments are modeled.
+* Irrelevant fields: Many fields are irrelevant to the subject – like ``tender.status``, ``tender.procurementMethod`` and ``tender.awardPeriod``. Readers need to scan more JSON to find relevant lines.
+* The `tender amendment release <https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#tender-amendment>`__ is unnecessarily complex: it amends two fields (`tender.value` and `tender.period`), when one is sufficient to illustrate how amendments are modeled.
 
-OCDS 1.2 [simplifies the example](https://standard.open-contracting.org/staging/1666-make-examples-minimal/en/guidance/map/amendments/#example-1-tender-updates-and-amendments) to meet the guidelines.
+OCDS 1.2 `simplifies the example <https://standard.open-contracting.org/staging/1666-make-examples-minimal/en/guidance/map/amendments/#example-1-tender-updates-and-amendments>`__ to meet the guidelines.
