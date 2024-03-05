@@ -56,7 +56,7 @@ Guidelines
    -  There's a tendency for generic data to become overly generic: for example, Anytown procures Thingamajigs for the greater benefit of the Republic of Atlantis.
    -  Fictional entities aren't immediately recognized by readers, unlike London, IBM, etc.
    -  Specific examples tend to be more memorable and interesting than generic ones.
-   -  Readers have to think more when given a generic/abstract example than a specific/concrete one.
+   -  Readers need to think more when given an abstract example than a concrete one.
    -  Real examples better ensure that the example makes sense. When you have the Fisheries Department procuring oil pipelines, you think “Well, hold on a minute” and then fix it to be more realistic. When data is generic and ambiguous, it's easy to let unclear scenarios through.
    -  Specific examples can communicate facts by implication. If the example is about cross-border procurement, you can pick a real buyer and supplier that are well-known to be based in different countries. You would still include their countries, but readers won't need that to understand.
 
