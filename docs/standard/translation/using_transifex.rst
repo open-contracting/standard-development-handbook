@@ -44,9 +44,6 @@ It helps to see where the strings appear in context in the documentation (`OCDS 
    OC4IDS
      ``https://standard.open-contracting.org/staging/infrastructure/{version}/en/{name}/``, like https://standard.open-contracting.org/staging/infrastructure/0.9-dev/en/reference/changelog/
 
-.. note::
-   Some titles and descriptions of codes are copied from external sources and should not be translated by OCDS. These are tagged as ``should_be_translated_upstream`` and indicated by a small tag icon.
-
 See :ref:`standard/translation/using_transifex:Translation tasks` below for Transifex tips.
 
 Proofreader
