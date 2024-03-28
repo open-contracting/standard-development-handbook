@@ -73,4 +73,4 @@ The `tender updates and amendments example <https://standard.open-contracting.or
 * Irrelevant fields: Many fields are irrelevant to the subject, like ``tender.status``, ``tender.procurementMethod`` and ``tender.awardPeriod``. Readers need to scan more JSON to find relevant lines.
 * The `tender amendment release <https://standard.open-contracting.org/1.1/en/guidance/map/amendments/#tender-amendment>`__ is unnecessarily complex: it amends two fields (``tender.value`` and ``tender.period``), when one is sufficient to illustrate how amendments are modeled.
 
-OCDS 1.2 `simplifies the example <https://standard.open-contracting.org/staging/1666-make-examples-minimal/en/guidance/map/amendments/#example-1-tender-updates-and-amendments>`__ to meet the guidelines.
+OCDS 1.2 `simplifies the example <https://standard.open-contracting.org/staging/1.2-dev/en/guidance/map/amendments/#example-1-tender-updates-and-amendments>`__ to meet the guidelines.
