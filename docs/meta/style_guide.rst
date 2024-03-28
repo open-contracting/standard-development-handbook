@@ -42,6 +42,7 @@ Word choice
 -  "codelist", **not** "code-list" or "code list"
 -  "changelog", **not** "change-log" or "change log"
 -  "data package", **not** "datapackage"
+-  "example", **not** "worked example"
 -  "metadata", **not** "meta-data" or "meta data"
 -  "hyphen", **not** "dash", to describe the "-" character
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
