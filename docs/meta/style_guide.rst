@@ -47,6 +47,10 @@ Word choice
 -  "hyphen", **not** "dash", to describe the "-" character
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
+Do not use:
+
+-  "free-text"
+
 For parts of a whole:
 
 -  "stage", for parts of a contracting process or framework agreement procedure
