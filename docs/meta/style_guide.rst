@@ -112,6 +112,11 @@ JSON example filenames
 
    {download}`link text <../../examples/file>`
 
+extension.json metadata files
+-----------------------------
+
+-  Do not use backticks.
+
 Images
 ------
 
