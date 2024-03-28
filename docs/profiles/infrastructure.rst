@@ -69,11 +69,15 @@ You can then:
 Update sustainability.yaml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For each change to the `CoST IDS sustainability elements <https://docs.google.com/spreadsheets/d/165epI69oQ5YyL4-2q8VubFn9VuNham2Pi1u0P49id9o/>`__, run:
+For each change to the `CoST IDS sustainability elements <https://docs.google.com/spreadsheets/d/165epI69oQ5YyL4-2q8VubFn9VuNham2Pi1u0P49id9o/>`__, update ``mapping/sustainability.yaml``:
 
 .. code-block:: shell
 
   ./manage.py update-sustainability-elements
+
+Next, :ref:`update-sustainability-md`.
+
+.. _update-sustainability-md:
 
 Update sustainability.md
 ~~~~~~~~~~~~~~~~~~~~~~~~
