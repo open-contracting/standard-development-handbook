@@ -75,6 +75,12 @@ For each change to the `CoST IDS sustainability elements <https://docs.google.co
 
   ./manage.py update-sustainability-elements
 
+For each changed element, check and update its ``mapping``, ``example`` and ``fields``. If you edit many examples, you can use the following command to update the associated ``fields``:
+
+.. code-block:: shell
+
+  ./manage.py update-sustainability-fields
+
 Next, :ref:`update-sustainability-md`.
 
 .. _update-sustainability-md:
