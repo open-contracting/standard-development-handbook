@@ -37,7 +37,7 @@ Text formatting
 Word choice
 -----------
 
--  Use ``ocid`` to refer to the field and "OCID" to refer to the concept.
+-  Use ``ocid`` to refer to the field and "OCID" to refer to the concept
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 -  "user", **not** "data user"
 -  "example", **not** "worked example"
