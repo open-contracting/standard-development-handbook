@@ -37,56 +37,32 @@ Text formatting
 Word choice
 -----------
 
--  Use ``ocid`` to refer to the field and "OCID" to refer to the concept
--  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
--  "user", **not** "data user"
+General
+~~~~~~~
+
 -  "example", **not** "worked example"
+-  "user", **not** "data user"
 -  "hyphen", **not** "dash", to describe the "-" character
 -  "for example", "such as", "like" or "including", **not** "e.g."
 -  "that is", "in other words" or "meaning", **not** "i.e."
+-  **Never** use "free-text"
 
-Do not use:
+Data concepts
+~~~~~~~~~~~~~
 
--  "free-text"
-
-Compounds:
-
--  "codelist", **not** "code-list" or "code list"
+-  Use ``ocid`` to refer to the field and "OCID" to refer to the concept
+-  "phase", **not** "stage", for parts of OCDS implementation
 -  "changelog", **not** "change-log" or "change log"
+-  "codelist", **not** "code-list" or "code list"
 -  "data package", **not** "datapackage"
 -  "metadata", **not** "meta-data" or "meta data"
-
-Parts of a whole:
-
--  "stage", for parts of a contracting process or framework agreement procedure
--  "phase", for parts of OCDS implementation
-
-Processes:
-
--  "contracting (or planning) process", unless the sentence relates to only one or the other
--  "(contracting or planning) process", if the sentence relates to a scope of uniqueness
--  "planning process", **not** "planning stage"
--  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
-
-Organization roles:
-
--  "buyer or procuring entity", **not** "buyer" or "procuring entity", except if the sentence is specific to one role, and **not** "contracting authority"
--  "supplier" for the awardee of a contract
--  "tenderer" for the submitter of a bid
--  "potential supplier" for a potential participant in a contracting process
--  "unsuccessful tenderer", **not** "unsuccessful bidder"
-
-Procurement concepts:
-
--  "organization", **not** "party" or "entity", except in cases like "procuring entity" or "third party"
--  "bid", **not** "tender", which is already used to describe the opportunity or solicitation
--  Use the order "goods", "services" and "works" (alphabetical)
 
 When describing data:
 
 -  "publication" for the data source that persists across time
 -  "collection" for the publication's data at a specific point in time
--  "JSON data", **not** "JSON document", to avoid confusion with the `documents` field
+-  "JSON data", **not** "JSON document", to avoid confusion with the ``documents`` field
+-  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
 When describing JSON Schema:
 
@@ -96,6 +72,32 @@ When describing JSON Schema:
 -  "object", **not** "block"
 
 When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
+
+Procurement concepts
+~~~~~~~~~~~~~~~~~~~~
+
+-  "organization", **not** "party" or "entity", except in cases like "procuring entity" or "third party"
+-  "bid", **not** "tender", which is already used to describe the opportunity or solicitation
+-  "stage", **not** "phase", for parts of a contracting process or framework agreement procedure
+-  Use the order "goods", "services" and "works" (alphabetical)
+
+Processes:
+
+-  "contracting (or planning) process", unless the sentence relates to only one or the other
+-  "(contracting or planning) process", if the sentence relates to a scope of uniqueness
+-  "planning process", **not** "planning stage"
+-  **Never** refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
+
+Organization roles:
+
+-  "buyer or procuring entity", **not** "buyer" or "procuring entity", except if the sentence is specific to one role, and **not** "contracting authority"
+-  "supplier" for the awardee of a contract
+-  "tenderer" for the submitter of a bid
+-  "potential supplier" for a potential participant in a contracting process
+-  "unsuccessful tenderer", **not** "unsuccessful bidder"
+
+For maintainers
+~~~~~~~~~~~~~~~
 
 These regular expressions can be used to find breaches of the style guide, accounting for false positives.
 
