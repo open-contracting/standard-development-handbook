@@ -37,13 +37,13 @@ Text formatting
 Word choice
 -----------
 
--  "ocid", **not** "OCID". Although abbreviations in prose are uppercase, the mixing of upper- and lowercase in the documentation (when referring to the concept versus the field) may cause confusion.
+-  Use ``ocid`` to refer to the field and "OCID" to refer to the concept.
+-  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 -  "user", **not** "data user"
 -  "example", **not** "worked example"
 -  "hyphen", **not** "dash", to describe the "-" character
 -  "for example", "such as", "like" or "including", **not** "e.g."
 -  "that is", "in other words" or "meaning", **not** "i.e."
--  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
 Do not use:
 
