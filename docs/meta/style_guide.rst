@@ -45,6 +45,8 @@ Word choice
 -  "example", **not** "worked example"
 -  "metadata", **not** "meta-data" or "meta data"
 -  "hyphen", **not** "dash", to describe the "-" character
+-  "for example", "such as", "like" or "including", **not** "e.g."
+-  "that is", "in other words" or "meaning", **not** "i.e."
 -  Prefer "release" and "record" to "OCDS release" and "OCDS record", unless the latter are clearer in context
 
 Do not use:
