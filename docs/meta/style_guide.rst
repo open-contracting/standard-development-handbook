@@ -39,11 +39,7 @@ Word choice
 
 -  "ocid", **not** "OCID". Although abbreviations in prose are uppercase, the mixing of upper- and lowercase in the documentation (when referring to the concept versus the field) may cause confusion.
 -  "user", **not** "data user"
--  "codelist", **not** "code-list" or "code list"
--  "changelog", **not** "change-log" or "change log"
--  "data package", **not** "datapackage"
 -  "example", **not** "worked example"
--  "metadata", **not** "meta-data" or "meta data"
 -  "hyphen", **not** "dash", to describe the "-" character
 -  "for example", "such as", "like" or "including", **not** "e.g."
 -  "that is", "in other words" or "meaning", **not** "i.e."
@@ -53,19 +49,26 @@ Do not use:
 
 -  "free-text"
 
-For parts of a whole:
+Compounds:
+
+-  "codelist", **not** "code-list" or "code list"
+-  "changelog", **not** "change-log" or "change log"
+-  "data package", **not** "datapackage"
+-  "metadata", **not** "meta-data" or "meta data"
+
+Parts of a whole:
 
 -  "stage", for parts of a contracting process or framework agreement procedure
 -  "phase", for parts of OCDS implementation
 
-For processes:
+Processes:
 
 -  "contracting (or planning) process", unless the sentence relates to only one or the other
 -  "(contracting or planning) process", if the sentence relates to a scope of uniqueness
 -  "planning process", **not** "planning stage"
 -  Never refer to an "OCDS process", "OCDS contracting process" or "OCDS planning process". "contracting process" and "planning process" refer to real-world processes, never to their OCDS representation. In OCDS, there are only releases and records.
 
-For organization roles:
+Organization roles:
 
 -  "buyer or procuring entity", **not** "buyer" or "procuring entity", except if the sentence is specific to one role, and **not** "contracting authority"
 -  "supplier" for the awardee of a contract
@@ -73,7 +76,7 @@ For organization roles:
 -  "potential supplier" for a potential participant in a contracting process
 -  "unsuccessful tenderer", **not** "unsuccessful bidder"
 
-For procurement concepts:
+Procurement concepts:
 
 -  "organization", **not** "party" or "entity", except in cases like "procuring entity" or "third party"
 -  "bid", **not** "tender", which is already used to describe the opportunity or solicitation
