@@ -77,7 +77,6 @@ Procurement concepts
 ~~~~~~~~~~~~~~~~~~~~
 
 -  "organization", **not** "party" or "entity", except in cases like "procuring entity" or "third party"
--  "bid", **not** "tender", which is already used to describe the opportunity or solicitation
 -  "stage", **not** "phase", for parts of a contracting process or framework agreement procedure
 -  Use the order "goods", "services" and "works" (alphabetical)
 
