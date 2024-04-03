@@ -81,6 +81,16 @@ Procurement concepts
 -  "stage", **not** "phase", for parts of a contracting process or framework agreement procedure
 -  Use the order "goods", "services" and "works" (alphabetical)
 
+Instead of "tender", which can mean both the bid from the supplier and the opportunity from the buyer:
+
+-  "bid", when referring to a submission from a supplier
+-  "opportunity" (or "procurement opportunity"), when referring to a request, contest, etc. from a buyer
+-  "contracting process", when referring to the entire process
+-  "tender stage", when referring to the part of the contracting process
+-  "tender release", like in the context of release tags
+-  "tender notice", like in the context of document types
+-  "tender object", when referring to the field
+
 Processes:
 
 -  "contracting (or planning) process", unless the sentence relates to only one or the other
