@@ -11,7 +11,7 @@ This style guide covers our conventions when writing:
 Readability
 -----------
 
-We strive to write concise, clear documentation. To improve your writing, please learn how to `write for the web <https://www.usa.gov/style-guide/writing-for-web>`__ (with many more resources at `Nielsen Norman Group <https://www.nngroup.com/topic/writing-web/>`__), and consider using these tools:
+We strive to write concise, clear documentation. To improve your writing, please learn how to write `in plain language <https://www.plainlanguage.gov/guidelines/>`__ and `for the web <https://www.plainlanguage.gov/guidelines/web/>`__ (with many more resources at `Nielsen Norman Group <https://www.nngroup.com/topic/writing-web/>`__), and consider using these tools:
 
 -  `Hemingway Editor <http://www.hemingwayapp.com/>`__
 -  `Grammarly <https://www.grammarly.com/>`__
