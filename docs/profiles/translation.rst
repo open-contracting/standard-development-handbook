@@ -86,11 +86,13 @@ Prepare the compendia
 Pre-translate the profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Count untranslated messages:
+#. Update the profile:
 
    .. code-block:: bash
 
-      pocount --incomplete docs/locale/$lang/LC_MESSAGES | tail -n 10
+      ./script/update
+      ./script/diff
+      ./manage.py update
 
 #. Create the POT files:
 
