@@ -35,7 +35,13 @@ One-time setup
 Each-time setup
 ~~~~~~~~~~~~~~~
 
-#. Set the ``lang`` environment variable, for example:
+#. Set the ``globstar`` option (requires Bash 4 or greater):
+
+   .. code-block:: bash
+
+      shopt -s globstar
+
+#. Set the ``lang`` and ``wip`` environment variables, for example:
 
    .. code-block:: bash
 
@@ -51,7 +57,7 @@ Prepare the compendia
 
       git checkout 1.1
       git pull --rebase
-      msgcat --use-first docs/locale/$lang/**.po > $wip/$lang-standard.po
+      msgcat --use-first docs/locale/$lang/**/*.po > $wip/$lang-standard.po
       git checkout 1.1-dev
 
 #. Change to the ``ocds-extensions-translations`` directory, then prepare a compendium. For example, for OCDS for PPPs 1.0.0-beta3:
@@ -61,7 +67,7 @@ Prepare the compendia
       git checkout main
       git pull --rebase
       for extension_version in bids/v1.1.5 charges/master documentation_details/master finance/master location/v1.1.5 metrics/1.1 milestone_documents/v1.1.5 performance_failures/master project/master risk_allocation/master shareholders/master signatories/master tariffs/1.1 ppp/master; do
-        msgcat --use-first locale/$lang/LC_MESSAGES/$extension_version/**.po > $lang-$(echo $extension_version | tr '/' '-').po
+        msgcat --use-first locale/$lang/LC_MESSAGES/$extension_version/**/*.po > $lang-$(echo $extension_version | tr '/' '-').po
       done
       msgcat --use-first $(ls $lang-*.po) > $wip/$lang-extensions.po
       rm -f $lang-*.po
@@ -71,7 +77,7 @@ Prepare the compendia
    .. code-block:: bash
 
       if [ -d docs/locale/$lang/LC_MESSAGES ]; then
-        msgcat --use-first $lang-standard.po $lang-extensions.po docs/locale/$lang/**.po > $lang.po
+        msgcat --use-first $lang-standard.po $lang-extensions.po docs/locale/$lang/**/*.po > $lang.po
       else
         msgcat --use-first $lang-standard.po $lang-extensions.po > $lang.po
       fi
@@ -103,8 +109,8 @@ Pre-translate the profile
    .. code-block:: bash
 
       cd docs/locale/$lang/LC_MESSAGES
-      for f in **.po; do
-        pretranslate --nofuzzymatching -t ../../../../$lang.po ../../../../build/locale/{$f}t $f
+      for f in **/*.po; do
+        pretranslate --nofuzzymatching -t ../../../../$lang.po ../../../../build/locale/${f}t $f
       done
       cd ../../../..
 
