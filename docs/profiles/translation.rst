@@ -66,6 +66,7 @@ Prepare the compendia
 
       git checkout main
       git pull --rebase
+      tx pull -w 20 -f -a
       for extension_version in bids/v1.1.5 charges/master documentation_details/master finance/master location/v1.1.5 metrics/1.1 milestone_documents/v1.1.5 performance_failures/master project/master risk_allocation/master shareholders/master signatories/master tariffs/1.1 ppp/master; do
         msgcat --use-first locale/$lang/LC_MESSAGES/$extension_version/**/*.po > $lang-$(echo $extension_version | tr '/' '-').po
       done
