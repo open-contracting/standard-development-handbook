@@ -22,7 +22,7 @@ Steps
 -----
 
 #. The Release Manager freezes source strings, i.e. no pull requests will be merged that change English strings in Markdown, JSON, CSV or ``.po`` files.
-#. The Coordinator recruits the roles of translator, proofreader and reviewer and :ref:`gives access to the Transifex project<standard/translation/using_transifex:Control access permissions>`. Candidates are stored in a spreadsheet named "Roles in OCP translation processes" and in the CRM as contacts tagged "translator".
+#. The Coordinator recruits the roles of translator, proofreader and reviewer and :ref:`gives access to the Transifex project<standard/translation/using_transifex:Control access permissions>`. Candidates are stored in a spreadsheet named "Roles in OCP translation processes".
 #. The Coordinator sends translators the links to the Transifex project and to this handbook.
 #. When a Translator completes the translation of at least half the untranslated words, they contact the Proofreader with a link to the resource.
 #. When a Proofreader completes the proofreading of at least half the unreviewed strings, they contact the Reviewer with a link to the resource.
