@@ -58,7 +58,7 @@ Prepare the compendia
       git checkout 1.1
       git pull --rebase
       msgcat --use-first docs/locale/$lang/**/*.po > $wip/$lang-standard.po
-      git checkout 1.1-dev
+      git checkout 1.2-dev
 
 #. Change to the ``ocds-extensions-translations`` directory, then prepare a compendium. For example, for OCDS for PPPs 1.0.0-beta3:
 
