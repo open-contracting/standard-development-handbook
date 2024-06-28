@@ -55,6 +55,7 @@ Data concepts
 -  "changelog", **not** "change-log" or "change log"
 -  "codelist", **not** "code-list" or "code list"
 -  "data package", **not** "datapackage"
+-  "dataset", **not** "data set"
 -  "metadata", **not** "meta-data" or "meta data"
 
 When describing data:
