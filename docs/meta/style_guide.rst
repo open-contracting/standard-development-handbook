@@ -43,6 +43,7 @@ General
 -  "example", **not** "worked example"
 -  "user", **not** "data user"
 -  "hyphen", **not** "dash", to describe the "-" character
+-  "while" or "although", not "whilst"
 -  "for example", "such as", "like" or "including", **not** "e.g."
 -  "that is", "in other words" or "meaning", **not** "i.e."
 -  **Never** use "free-text"
