@@ -72,8 +72,7 @@ If the tests are failing:
 
    .. code-block:: shell
 
-      pip install pip-tools
-      pip-sync
+      pip install -r requirements_dev.txt
 
 -  Clean and re-build the documentation:
 
