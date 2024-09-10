@@ -189,12 +189,7 @@ Update and deploy the Data Review Tool
 
 This is the cove-ocds repository for OCDS, and cove-oc4ids for OC4IDS.
 
--  Upgrade the requirements to use the new version of the CoVE library
-
-   .. code-block:: shell
-
-      pip-compile -P libcoveocds; pip-compile requirements_dev.in
-
+-  Upgrade the requirements to use the new version of the CoVE library (``libcoveocds`` or ``libcoveoc4ids``).
 -  Update the URL paths in `settings.py <https://github.com/open-contracting/cove-ocds/blob/main/cove_project/settings.py>`__ (*only in cove-ocds*)
 -  Make sure all tests pass
 -  `Deploy the app <https://ocdsdeploy.readthedocs.io/en/latest/deploy/deploy.html>`__
