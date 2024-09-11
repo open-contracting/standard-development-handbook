@@ -25,7 +25,7 @@ Extract from Codelist CSV files and JSON Schema files
 
 #. The `Babel mapping configuration files <https://babel.pocoo.org/en/latest/messages.html#extraction-method-mapping-and-configuration>`__, ``babel_ocds_codelist.cfg`` and ``babel_ocds_schema.cfg``, map Babel message extraction method names – ``ocds_codelist`` and ``ocds_schema`` – to the codelist CSV and JSON Schema source files from which to extract strings to translate.
 
-#. `setup.cfg in ocds-babel <https://github.com/open-contracting/ocds-babel/blob/main/setup.cfg>`__ maps the `Babel message extraction method names <https://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods>`__ – ``ocds_codelist`` and ``ocds_schema`` – to the module and function implementing the extraction, in the entry point group ``babel.extractors``.
+#. `pyproject.toml in ocds-babel <https://github.com/open-contracting/ocds-babel/blob/main/pyproject.toml>`__ maps the `Babel message extraction method names <https://babel.pocoo.org/en/latest/messages.html#writing-extraction-methods>`__ – ``ocds_codelist`` and ``ocds_schema`` – to the module and function implementing the extraction, in the entry point group ``babel.extractors``.
 
 #. The functions `extract_codelist and extract_schema <https://github.com/open-contracting/ocds-babel/blob/main/ocds_babel/extract.py>`__ implement the extraction.
 
