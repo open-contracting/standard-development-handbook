@@ -8,14 +8,6 @@ Get started
 
    Building the documentation requires Python 3.8 or greater.
 
-Create a virtual environment using Python 3 with ``pyenv virtualenv docs`` or:
-
-.. code-block:: shell
-
-   sudo apt install python3-venv
-   python3 -m venv .ve
-   source .ve/bin/activate
-
 Initialize and update submodules:
 
 .. code-block:: shell
