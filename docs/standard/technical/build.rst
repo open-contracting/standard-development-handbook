@@ -4,10 +4,6 @@ Building the documentation
 Get started
 -----------
 
-.. note::
-
-   Building the documentation requires Python 3.8 or greater.
-
 Initialize and update submodules:
 
 .. code-block:: shell
