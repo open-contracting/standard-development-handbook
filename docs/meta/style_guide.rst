@@ -77,7 +77,7 @@ When describing JSON Schema:
 When referring to a **subschema**:
 
 -  "object" if the subschema is used in the context of building a JSON document
--  "subschema" otherwise. Where appropriate consider rephasing the sentence to be about building a JSON document (and therefore using "object")
+-  "subschema" otherwise. Where appropriate, consider rephasing the sentence to be about building a JSON document (and therefore using "object")
 
 When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
