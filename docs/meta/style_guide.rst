@@ -70,14 +70,14 @@ When describing data:
 When describing JSON Schema:
 
 -  "property" to refer to JSON Schema metadata properties, like ``enum``
--  "field" to refer to a literal (number, integer, string, boolean, GeoJSON), like ``tender.id``
--  "array", **not** "list" to refer to an array
--  "object", **not** "block" to refer to an object
+-  "field" to refer to a property with a literal type (number, integer, string, boolean, array only if GeoJSON), like ``tender.id``
+-  "array", **not** "list" to refer to a property with the array type, like ``awards``
+-  "object", **not** "block" to refer to a property with the object type, like ``tender``
 
 When referring to a **subschema**:
 
--  "object" if the subschema is used in the context of building a JSON document
--  "subschema" otherwise. Where appropriate, consider rephasing the sentence to be about building a JSON document (and therefore using "object")
+-  "object", if the subschema is used in the context of building a JSON text, like "add an `Award` object to the `awards` array".
+-  "subschema", otherwise. Where appropriate, consider rephasing the sentence to be about building a JSON text (and therefore using "object").
 
 When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
