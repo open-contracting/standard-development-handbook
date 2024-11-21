@@ -58,6 +58,7 @@ Data concepts
 -  "data package", **not** "datapackage"
 -  "dataset", **not** "data set"
 -  "metadata", **not** "meta-data" or "meta data"
+-  "subschema", **not** "sub-schema"
 
 When describing data:
 
@@ -68,10 +69,15 @@ When describing data:
 
 When describing JSON Schema:
 
--  "field" to refer to OCDS fields, like ``tender.id``
 -  "property" to refer to JSON Schema metadata properties, like ``enum``
--  "array", **not** "list"
--  "object", **not** "block"
+-  "field" to refer to a property with a literal type (number, integer, string, boolean, array only if GeoJSON), like ``tender.id``
+-  "array", **not** "list" to refer to a property with the array type, like ``awards``
+-  "object", **not** "block" to refer to a property with the object type, like ``tender``
+
+When referring to a **subschema**:
+
+-  "object", if the subschema is used in the context of building a JSON text, like "add an `Award` object to the `awards` array".
+-  "subschema", otherwise. Where appropriate, consider rephasing the sentence to be about building a JSON text (and therefore using "object").
 
 When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
