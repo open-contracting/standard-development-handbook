@@ -3,6 +3,12 @@ Extensions
 
 An OCDS release or record package can declare one or more extensions. Extensions extend the standard, by adding new fields, new codelists or new codes to open codelists. Extensions can be brought together as :doc:`profiles<../profiles/index>`.
 
+.. note::
+
+   In principle, the schema are intended to describe correct structure, but are not intended to describe correct data, except in a few cases: for example, in principle, the ``ocid`` field could check for an OCID prefix using a ``pattern`` validation property.
+
+   In practice, a publisher might want to add validation properties to existing fields to describe correct data: for example, constraining addresses, array lengths, etc. Patches that do so are not extensions, but are an acceptable way to do data validation.
+
 Create an extension
 -------------------
 
