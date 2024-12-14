@@ -189,7 +189,7 @@ The following keywords aren't used, and their absence is validated by `standard-
 
    -  Update the `merging specification <https://standard.open-contracting.org/latest/en/schema/merging/#merging-specification>`__
    -  Update the `reference implementation <https://ocds-merge.readthedocs.io/en/latest/#reference-implementation>`__ of the `merge routine <https://standard.open-contracting.org/latest/en/schema/merging/>`__
-   -  Update the `get_versioned_release_schema() function <https://github.com/open-contracting/standard/blob/1.2-dev/manage.py>`__ in the standard repository
+   -  Update the `get_versioned_release_schema() function <https://github.com/open-contracting/extension_registry.py>`__
 
 Types and null
 ~~~~~~~~~~~~~~
