@@ -32,7 +32,10 @@ Text formatting
 -  When referring to a **code** from a codelist, enclose the value in single quotes, e.g. "We have added a 'direct' code to the ``method`` codelist". Note that ``true`` and ``false`` are not codes; they are boolean values.
 -  When pluralizing a **field** or **subschema**, treat the field/subschema name as a proper noun, and add a ``'s`` instead of an ``s`` to the end, or treat it as a mass noun and add nothing to the end
 -  When referring to a field in JSON Schema, use dot notation, like ``tender.id``. (Slash notation is reserved for `JSON Pointer <https://tools.ietf.org/html/rfc6901>`__. For example, the JSON Pointer for ``tender.id`` is ``/definitions/Tender/properties/id``.)
--  When referring to a field in OCDS data, use a JSON Pointer, like ``/tender/id``.
+-  When referring to a field in OCDS data, use a JSON Pointer, like ``/tender/id``. Slash notation is preferred, but dot notation is allowed. Use whichever notation is consistent with the proximate documentation.
+
+.. tip::
+  It is more common to refer to a field in OCDS data than a field in JSON Schema. For example, an instruction to populate a particular field is a reference to OCDS data. You can only populate OCDS data, you can't populate schema - the schema is unchanging for a given version.
 
 Word choice
 -----------
@@ -79,7 +82,7 @@ When referring to a **subschema**:
 -  "object", if the subschema is used in the context of building a JSON text, like "add an `Award` object to the `awards` array".
 -  "subschema", otherwise. Where appropriate, consider rephasing the sentence to be about building a JSON text (and therefore using "object").
 
-When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
+When referring to a field, prefer the notation for the path in the data, like ``/contracts/period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
 Procurement concepts
 ~~~~~~~~~~~~~~~~~~~~
