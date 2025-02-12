@@ -32,7 +32,9 @@ Text formatting
 -  When referring to a **code** from a codelist, enclose the value in single quotes, e.g. "We have added a 'direct' code to the ``method`` codelist". Note that ``true`` and ``false`` are not codes; they are boolean values.
 -  When pluralizing a **field** or **subschema**, treat the field/subschema name as a proper noun, and add a ``'s`` instead of an ``s`` to the end, or treat it as a mass noun and add nothing to the end
 -  When referring to a field in JSON Schema, use dot notation, like ``tender.id``. (Slash notation is reserved for `JSON Pointer <https://tools.ietf.org/html/rfc6901>`__. For example, the JSON Pointer for ``tender.id`` is ``/definitions/Tender/properties/id``.)
--  When referring to a field in OCDS data, use a JSON Pointer, like ``/tender/id``.
+-  When referring to a field in OCDS data, use a JSON Pointer, like ``/tender/id``. That said, dot notation is allowed for consistency with existing documentation.
+
+.. tip:: Examples and step-by-step mapping guidance typically refer to fields in OCDS data, not fields in JSON Schema. For example, instructions to populate fields refer to OCDS data. (You can't populate JSON Schema; the schema is unchanging, for a given version of OCDS.)
 
 Word choice
 -----------
@@ -79,7 +81,7 @@ When referring to a **subschema**:
 -  "object", if the subschema is used in the context of building a JSON text, like "add an `Award` object to the `awards` array".
 -  "subschema", otherwise. Where appropriate, consider rephasing the sentence to be about building a JSON text (and therefore using "object").
 
-When referring to a field, prefer the notation for the path in the data, like ``contracts.period``, rather than the notation for the path in the schema, like ``Contract.period``.
+When referring to a field, prefer the notation for the path in the data, like ``/contracts/period``, rather than the notation for the path in the schema, like ``Contract.period``.
 
 Procurement concepts
 ~~~~~~~~~~~~~~~~~~~~
