@@ -13,12 +13,12 @@ After translation, `translate-toolkit <https://docs.translatehouse.org/projects/
 Glossary
 --------
 
-We ensure that key terms are translated consistently using a `Transifex glossary <https://help.transifex.com/en/articles/6229127-understanding-glossaries>`__: for example, the `OCDS glossary <https://www.transifex.com/open-contracting-partnership-1/open-contracting-standard-1-1/glossary/es/>`__. The glossary is also available within the translation editor.
+We ensure that key terms are translated consistently using a translation tool's glossary feature. The glossary is also available within the translation editor.
 
 Manage the glossary
 ~~~~~~~~~~~~~~~~~~~
 
-The Coordinator works with Translators to `update <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ the glossary in Google Sheets. Then, the Coordinator `uploads <https://help.transifex.com/en/articles/6229147-adding-terms-to-a-glossary#h_a2652dd8c0>`__ the glossary to Transifex.
+The Coordinator works with Translators to `update <https://docs.google.com/spreadsheets/d/171VRailLhqC3Pmw3Qkh4lIgUkmtSa7t4H2h7yntSZg8/edit#gid=0>`__ the glossary in Google Sheets. Then, the Coordinator uploads the glossary to the translation tool.
 
 .. note::
 
@@ -28,10 +28,6 @@ Use the glossary
 ~~~~~~~~~~~~~~~~
 
 Translators review and correct translations with :ref:`warnings<view-translations-with-warnings>`.
-
-.. seealso::
-
-    `Using the Glossary <https://help.transifex.com/en/articles/6240837-using-the-glossary>`__
 
 .. _translation-style-guide:
 
@@ -163,10 +159,6 @@ Some checks are very common, but not important to fix:
    * - urls
      - Checks that URLs are not translated.
      - In most cases, the URL is translated on purpose.
-
-       .. note::
-
-          These errors can also be reviewed in Transifex.
 
 False positives
 ~~~~~~~~~~~~~~~

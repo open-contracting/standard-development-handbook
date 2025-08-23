@@ -110,13 +110,13 @@ Merge and release
 1. Push and pull updated translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. :ref:`standard/translation/technical:Push strings to translate to Transifex`.
+#. Push strings to translate to the translation tool.
 #. Check all strings are :ref:`translated<standard/translation/using_transifex:Translator>` and :ref:`reviewed<standard/translation/using_transifex:Reviewer>` in supported translations.
 #. For any resources with untranslated or unreviewed strings, follow the :doc:`../translation/workflow`.
-#. :ref:`standard/translation/using_transifex:View translations with warnings` on Transifex, and correct translated text if necessary.
-#. :ref:`Pull supported translations from Transifex<standard/translation/technical:Pull translations from Transifex>`.
-#. :ref:`standard/translation/using_transifex:View translations with issues` on Transifex, and correct source and ``.po`` files if necessary.
-#. If ``.po`` files were corrected, you may need to :ref:`standard/translation/technical:Push translations to Transifex`.
+#. :ref:`standard/translation/using_transifex:View translations with warnings` in the translation tool, and correct translated text if necessary.
+#. Pull supported translations from the translation tool.
+#. :ref:`standard/translation/using_transifex:View translations with issues` in the translation tool, and correct source and ``.po`` files if necessary.
+#. If ``.po`` files were corrected, you may need to :ref:`standard/translation/technical:Push translations` to the translation tool.
 #. Create a pull request for the updated translation files.
 #. :ref:`Test the translations on the build of the pull request<standard/translation/technical:Test translations>`.
 

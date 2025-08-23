@@ -23,7 +23,6 @@ The published documentation has versions on different ``MAJOR.MINOR`` `branches 
 Structure
 ---------
 
--  `.tx/config <https://github.com/open-contracting/standard/blob/HEAD/.tx/config>`__: configuration of Transifex
 -  `include/ <https://github.com/open-contracting/standard/tree/HEAD/include>`__: common makefiles for building documentation
 -  `assets/ <https://github.com/open-contracting/standard/tree/HEAD/assets>`__: images used in the documentation
 -  `docs/ <https://github.com/open-contracting/standard/tree/HEAD/docs>`__: English documentation
@@ -47,4 +46,4 @@ The following files are created by running a build and are not version controlle
 -  ``.ve/``: Python virtualenv, containing all dependencies
 -  ``build/``: contains the built copy of the documentation website
 
-To understand ``babel_ocds_codelist.cfg`` and ``babel_ocds_schema.cfg``, see :doc:`../translation/understanding_transifex`.
+To understand ``babel_ocds_codelist.cfg`` and ``babel_ocds_schema.cfg``, see :doc:`../translation/understanding`.

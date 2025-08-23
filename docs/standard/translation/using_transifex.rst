@@ -1,6 +1,10 @@
 Using Transifex
 ===============
 
+.. important::
+
+   This document is obsolete, as we now use Crowdin.
+
 Steps for translators, proofreaders and reviewers
 -------------------------------------------------
 
@@ -41,7 +45,7 @@ Translator
 #. Repeat from Step 4
 #. Notify the Proofreader when strings have been translated
 
-It helps to see where the strings appear in context in the documentation (`OCDS <https://standard.open-contracting.org/>`__, `OC4IDS <https://standard.open-contracting.org/infrastructure/>`__). :doc:`understanding_transifex` describes the link between GitHub files (`OCDS <https://github.com/open-contracting/standard>`__, `OC4IDS <https://github.com/open-contracting/infrastructure>`__), Transifex resources, and documentation pages. For Transifex resources related to :ref:`Markdown files<markdown-resources>`, you can:
+It helps to see where the strings appear in context in the documentation (`OCDS <https://standard.open-contracting.org/>`__, `OC4IDS <https://standard.open-contracting.org/infrastructure/>`__). :doc:`understanding` describes the link between GitHub files (`OCDS <https://github.com/open-contracting/standard>`__, `OC4IDS <https://github.com/open-contracting/infrastructure>`__), Transifex resources, and documentation pages. For Transifex resources related to :ref:`Markdown files<markdown-resources>`, you can:
 
 #. Take the name of a resource, like ``history--changelog`` or ``reference--changelog``
 #. Remove ``--index`` if present

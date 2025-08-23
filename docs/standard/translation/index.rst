@@ -8,9 +8,9 @@ This section describes:
 -  :doc:`The responsibilities of authors of content<authors>`
 -  :doc:`The translation workflow and roles involved<workflow>`
 
-   -  :doc:`How to navigate the projects and resources in Transifex<understanding_transifex>`
+   -  :doc:`How to navigate the projects and resources in a translation tool<understanding>`
    -  :doc:`How to use Transifex as a translator, proofreader or reviewer<using_transifex>`
-   -  :doc:`How to push and pull translations from Transifex, and how to build translated schema, codelists and documentation<technical>`
+   -  :doc:`How to push and pull translations from a translation tool, and how to build translated schema, codelists and documentation<technical>`
 
 -  :doc:`How translation is implemented at a technical level<implementation>`
 
@@ -23,7 +23,7 @@ Contents:
    authors
    workflow
    quality
-   understanding_transifex
+   understanding
    using_transifex
    technical
    implementation

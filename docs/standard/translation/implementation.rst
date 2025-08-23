@@ -43,7 +43,7 @@ See the `Sphinx documentation <https://www.sphinx-doc.org/en/master/intl.html#sp
 Translate source files
 ----------------------
 
-After pushing strings to translate as POT files to Transifex, :doc:`translating the strings<workflow>`, and pulling translations as PO files from Transifex, source files are translated with ``make``.
+After pushing strings to translate as POT files to a translation tool, :doc:`translating the strings<workflow>`, and pulling translations as PO files from a translation tool, source files are translated with ``make``.
 
 Translate Codelist CSV files and JSON Schema files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

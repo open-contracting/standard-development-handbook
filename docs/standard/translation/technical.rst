@@ -1,20 +1,14 @@
 Technical processes for translation
 ===================================
 
-This page documents the technical steps to push and pull translations from Transifex and to build translated schema, codelists and documentation.
+This page documents the technical steps to push and pull translations from a translation tool and to build translated schema, codelists and documentation.
 
 You should only perform these tasks once the source files are frozen, after having completed the first steps of the :doc:`deployment process<../technical/deployment>`.
 
-Configure Transifex
--------------------
+Configure the translation tool
+------------------------------
 
-For new major and minor versions:
-
--  `Create a Transifex project <https://www.transifex.com/open-contracting-partnership-1/>`__, named e.g. ``open-contracting-standard-1-1``
-
-   -  In the *Add a new project* screen, under *Choose privacy type*, select ``Public project`` and tick the box marked ``My project is a non-commercial Open Source project``.
-
--  Update ``TRANSIFEX_PROJECT`` in ``include/config.mk`` with the name of the Transifex project
+For new major and minor versions, create a new project named, for example: ``open-contracting-standard-1-1``
 
 Extract strings to translate into POT files
 -------------------------------------------
@@ -45,47 +39,26 @@ If only schema files:
 
    make extract_schema
 
-Map POT files to Transifex resources
-------------------------------------
+Map POT files to resources
+--------------------------
 
-Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must create the POT files as above, empty the `.tx/config file <https://developers.transifex.com/docs/using-the-client#adding-resources-to-configuration>`__ (``make clean_txconfig``) and update the ``.tx/config`` file (``make update_txconfig``). In short, run:
+Whenever documentation pages, codelist CSV files or JSON Schema files are renamed, added or removed, you must create the POT files as above, and update the translation tool's configuration file.
 
-.. code-block:: shell
+Use the translation tool
+------------------------
 
-   make extract clean_txconfig update_txconfig
-
-Push strings to translate to Transifex
---------------------------------------
-
-To push POT files, run ``tx push -s``. To both extract strings and push resources, run:
-
-.. code-block:: shell
-
-   make push
-
-To push specific resources (replace the Transifex project name), run e.g.:
-
-.. code-block:: shell
-
-   tx push -s open-contracting-standard-1-1.codelists open-contracting-standard-1-1.schema
-
-Pull translations from Transifex
---------------------------------
-
-To forcefully pull *supported* translations, run ``make pull`` or ``tx pull -f -l es``
-
-To forcefully pull *specific* translations, run e.g. ``make pull.es`` or ``tx pull -f -l es``
-
-To forcefully pull *all* translations, run ``tx pull -f -a``
+-  Push strings to translate to the translation tool
+-  Update translations in the translation tool
+-  Pull translations from the translation tool
 
 Then, build the documentation with the new translations.
 
-Push translations to Transifex
-------------------------------
+Push translations
+-----------------
 
-If text is translated locally by editing PO or POT files, the translations can be pushed to Transifex, after :doc:`../technical/build`. **This will overwrite any new translations made on Transifex since the last time they were pulled.** Run ``make force_push`` or ``tx push -f -s -t -l es``
+If text is translated locally by editing PO or POT files, the translations can be pushed to the translation tool, after :doc:`../technical/build`. **This will overwrite any new translations made in the translation tool since the last time they were pulled.**
 
-After pushing, check that the translation progress on Transifex is minimally affected. To avoid losing translations made on Transifex, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
+After pushing, check that the translation progress on the translation tool is minimally affected. To avoid losing translations made on the translation tool, pull translations before applying your changes, re-building the documentation and pushing new translations. If you made a mistake, checkout a clean branch of the standard, re-build the documentation and push old translations.
 
 Test translations
 -----------------
@@ -109,7 +82,7 @@ Translated codelists are stored in language directories under ``build/codelists`
 Add a community translation
 ---------------------------
 
-Once all strings are translated and reviewed in Transifex, and all warnings or issues on Transifex are resolved:
+Once all strings are translated and reviewed in the translation tool, and all warnings or issues in the translation tool are resolved:
 
 #. Checkout the live branch, e.g. ``git checkout 1.1``
 #. Checkout a new branch, e.g. ``git checkout -b 1.1-italian``
