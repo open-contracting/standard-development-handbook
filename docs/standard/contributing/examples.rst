@@ -26,13 +26,9 @@ Process
 #. Draft the example, taking note of the :ref:`examples-guidelines`
 
    #. Draft the narrative in the document.
+   #. Draft the sample data. (If it involves multiple releases, it can be easier to edit in a spreadsheet.)
 
-   #. Draft the sample data. There are different approaches to authoring sample data, for example:
-
-      -  Start from the `blank JSON template <https://github.com/open-contracting/sample-data/tree/master/blank-template>`__
-      -  Start from a spreadsheet (e.g. when the example includes multiple releases)
-
-      Put the sample data in `GitHub Gist <https://gist.github.com/>`__ or in a subfolder of the `Examples folder <https://drive.google.com/drive/folders/1gx7UU1xdVshOiBUXFupnOb7GSzuEpPVW>`__, and link to it from the document.
+      Put the sample data in a `GitHub Gist <https://gist.github.com/>`__ or in a subfolder of the `Examples folder <https://drive.google.com/drive/folders/1gx7UU1xdVshOiBUXFupnOb7GSzuEpPVW>`__, and link to it from the document.
 
 #. Update the GitHub issue and solicit a first review, then address any feedback
 #. Update the GitHub issue and solicit a final review from  James, then address any feedback
