@@ -6,7 +6,7 @@ Branches and tags
 
 If a profile has adopted a versioning scheme, see the standard's page for :ref:`standard/technical/repository:Branches and tags`. The only difference is that a profile's tag names use dots (``1.0.0``) instead of double underscores (``1__0__0``).
 
-If a profile has :doc:`moved from ReadTheDocs<integrations>`, it will have ``99.99`` and ``readthedocs`` protected branches.
+If a profile has :doc:`moved from ReadTheDocs<integrations>`, it will have ``99.99`` and ``readthedocs`` branches.
 
 Structure
 ---------

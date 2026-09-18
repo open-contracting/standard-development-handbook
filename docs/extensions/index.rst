@@ -41,7 +41,6 @@ The Rake tasks from `standard-maintenance-scripts <https://github.com/open-contr
 
    bundle exec rake repos:licenses ORG=open-contracting-extensions
    bundle exec rake repos:readmes ORG=open-contracting-extensions
-   bundle exec rake fix:protect_branches ORG=open-contracting-extensions
    bundle exec rake fix:lint_repos ORG=open-contracting-extensions
    ./manage.py set-topics
 

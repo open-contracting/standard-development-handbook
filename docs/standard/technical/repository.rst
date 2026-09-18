@@ -16,7 +16,7 @@ Sample branch structure:
    -  **1.1-dev**: used to stage changes to version 1.1 (such as minor documentation changes)
    -  **1.1.1-dev**: used to isolate work on version 1.1.1 (including schema changes and fixes)
 
-The ``X.X`` and ``X.X-dev`` branches are `protected <https://help.github.com/articles/about-protected-branches/>`__. The ``standard`` repository also protects non-existent ``infrastructure`` and ``profiles`` branches. These names match sub-directories on the server, and therefore must not be used for branches.
+The ``X.X`` and ``X.X-dev`` branches are matched by organization `rulesets <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets>`__. ``infrastructure`` and ``profiles`` must not be used as branch names in the ``standard`` repository, as they match sub-directories on the server.
 
 The published documentation has versions on different ``MAJOR.MINOR`` `branches <https://github.com/open-contracting/standard/branches/all>`__ (e.g. https://standard.open-contracting.org/1.0/en/), whereas the published schema has versions on different ``MAJOR__MINOR__PATCH`` `tagged releases <https://github.com/open-contracting/standard/tags>`__ (e.g. https://standard.open-contracting.org/schema/1__0__1/release-schema.json). This use of branches and tags allows documentation to change between versions, while ensuring schema isn't changed between versions.
 
