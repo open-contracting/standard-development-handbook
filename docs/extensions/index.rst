@@ -30,7 +30,6 @@ If you are creating an extension in an OCP repository:
 
 -  On GitHub:
 
-   -  Protect its default branch
    -  Disable issues (see :ref:`extensions-issues` below)
    -  Disable wiki
    -  Set its topic
